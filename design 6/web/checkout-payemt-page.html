@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>NAURIO | Made to Crave</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-low": "#fff1e6",
+                        "tertiary-fixed": "#d5eba5",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#202f00",
+                        "on-surface-variant": "#5b403d",
+                        "secondary": "#5f5e5e",
+                        "primary": "#b7221c",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#141f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#eee0d5",
+                        "tertiary-fixed-dim": "#b9cf8b",
+                        "tertiary": "#52652d",
+                        "background": "#fff8f4",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#f3e6db",
+                        "on-surface": "#211a14",
+                        "surface-container": "#f9ebe1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#ff5748",
+                        "primary-fixed": "#ffdad5",
+                        "surface-variant": "#eee0d5",
+                        "inverse-surface": "#372f28",
+                        "outline-variant": "#e3beb9",
+                        "surface-bright": "#fff8f4",
+                        "on-secondary-container": "#636262",
+                        "on-background": "#211a14",
+                        "on-primary-fixed": "#410001",
+                        "surface-tint": "#b7221c",
+                        "surface-dim": "#e5d8cd",
+                        "outline": "#8f706b",
+                        "inverse-primary": "#ffb4aa",
+                        "tertiary-container": "#85995b",
+                        "surface": "#fff8f4",
+                        "inverse-on-surface": "#fceee3",
+                        "on-primary-fixed-variant": "#930006",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#5e0002",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary-container": "#e2dfde",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#3b4c17"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "1.5rem",
+                        "gutter-mobile": "1rem",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "space-lg": "1.5rem",
+                        "margin-mobile": "1.25rem",
+                        "space-xs": "0.25rem",
+                        "space-sm": "0.5rem",
+                        "space-xl": "2.5rem",
+                        "gutter-desktop": "2rem",
+                        "space-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-sm": [
+                            "Manrope"
+                        ],
+                        "headline-xl-mobile": [
+                            "Manrope"
+                        ],
+                        "title-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-hero": [
+                            "Manrope"
+                        ],
+                        "label-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-lg-mobile": [
+                            "Manrope"
+                        ],
+                        "label-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-hero-mobile": [
+                            "Manrope"
+                        ],
+                        "headline-lg": [
+                            "Manrope"
+                        ],
+                        "body-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-xl": [
+                            "Manrope"
+                        ],
+                        "title-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-md": [
+                            "Manrope"
+                        ],
+                        "body-md": [
+                            "Plus Jakarta Sans"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-sm": [
+                            "20px",
+                            {
+                                "lineHeight": "26px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-xl-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "38px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "title-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "24px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-hero": [
+                            "64px",
+                            {
+                                "lineHeight": "70px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "label-md": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.03em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "26px",
+                            {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-lg": [
+                            "14px",
+                            {
+                                "lineHeight": "18px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "display-hero-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "46px",
+                                "letterSpacing": "-0.025em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "headline-lg": [
+                            "36px",
+                            {
+                                "lineHeight": "42px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-xl": [
+                            "48px",
+                            {
+                                "lineHeight": "54px",
+                                "letterSpacing": "-0.025em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "title-md": [
+                            "16px",
+                            {
+                                "lineHeight": "22px",
+                                "letterSpacing": "-0.005em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-sm": [
+                            "11px",
+                            {
+                                "lineHeight": "14px",
+                                "letterSpacing": "0.04em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-sm": [
+                            "13px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "30px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-md": [
+                            "15px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                }
+            }
+        }</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-28 max-w-7xl mx-auto px-margin-desktop flex flex-col justify-between py-space-sm">
+            <div class="flex items-center justify-between gap-space-lg">
+                <div class="flex items-center gap-space-lg shrink-0">
+                    <div class="flex flex-col cursor-pointer"><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary leading-none uppercase">NAURIO</span><span
+                            class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase font-bold mt-0.5">Made
+                            to Crave</span></div>
+                    <div
+                        class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-md py-space-xs rounded-full cursor-pointer transition-colors">
+                        <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                        <div class="flex flex-col text-left"><span
+                                class="font-label-sm text-label-sm text-on-surface-variant font-bold leading-none">Deliver
+                                To:</span><span
+                                class="font-label-md text-label-md text-on-surface font-semibold max-w-[210px] truncate leading-tight">Connaught
+                                Place, Central Delhi</span></div><span
+                            class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+                    </div>
+                </div>
+                <div class="flex-1 max-w-xl mx-space-md">
+                    <div
+                        class="flex items-center w-full h-12 bg-surface-container-lowest rounded-full px-space-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] focus-within:shadow-[0_4px_16px_rgba(183,34,28,0.08)] transition-all">
+                        <span
+                            class="material-symbols-outlined text-on-surface-variant mr-space-sm text-[22px]">search</span><input
+                            class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant"
+                            placeholder="Search artisanal pizzas, gourmet burgers, bowls..." type="text" /><button
+                            class="bg-surface-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors ml-space-xs"
+                            type="button">Explore</button></div>
+                </div>
+                <div class="flex items-center gap-space-md shrink-0"><button
+                        class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full font-label-md text-label-md text-on-surface transition-colors"
+                        type="button"><span
+                            class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span>Get
+                            App</span></button>
+                    <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-fixed rounded-full">
+                        <span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">token</span><span
+                            class="font-label-md text-label-md text-on-tertiary-fixed font-bold">240 Coins</span></div>
+                    <button
+                        class="flex items-center gap-space-sm pl-space-xs pr-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-left transition-colors"
+                        type="button">
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span
+                            class="font-label-md text-label-md text-on-surface font-semibold">Account</span>
+                    </button><button
+                        class="flex items-center gap-space-sm px-space-lg py-space-sm bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-[0_4px_16px_rgba(255,87,72,0.3)]"
+                        type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span
+                            class="font-label-lg text-label-lg font-bold">Cart (3) • ₹1,293</span></button>
+                </div>
+            </div>
+            <nav class="flex items-center gap-space-xs pt-1"
+                data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-full"><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="home" href="#">Home</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="categories" href="#">Categories</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="offers-and-deals" href="#">Offers &amp; Deals</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="search" href="#">Search</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="cart" href="#">Cart</a><a aria-current="page"
+                    class="px-space-md py-1 transition-colors bg-surface-container-high text-on-surface font-bold rounded-full"
+                    data-path="checkout" href="#">Checkout</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="live-tracking" href="#">Live Tracking</a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-28 bg-surface">
+        <div class="flex flex-col w-full">
+            <div class="max-w-7xl mx-auto w-full px-margin-desktop py-space-xl">
+                <!-- SECTION 1: PAGE HEADER & STEPPER -->
+                <div class="flex flex-col gap-space-md mb-space-xl">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div class="space-y-space-xs">
+                            <div
+                                class="inline-flex items-center gap-space-xs bg-primary-fixed text-on-primary-fixed px-space-md py-1 rounded-full">
+                                <span class="material-symbols-outlined text-[16px] text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">lock</span>
+                                <span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Fast &amp;
+                                    Encrypted Checkout</span>
+                            </div>
+                            <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Almost There!
+                                Let's Complete Your Order.</h1>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Review your delivery
+                                address, select payment, and unlock your feast.</p>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full self-start md:self-auto shadow-sm">
+                            <span class="material-symbols-outlined text-tertiary text-[20px]">bolt</span>
+                            <span class="font-label-md text-label-md text-on-surface font-semibold">Priority
+                                Hearth-to-Table Kitchen Dispatch Active</span>
+                        </div>
+                    </div>
+                    <!-- Multi-step Progress Stepper -->
+                    <div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm mt-space-sm">
+                        <div class="grid grid-cols-4 gap-space-sm items-center">
+                            <!-- Step 1 -->
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[18px] font-bold">done</span>
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <span
+                                        class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Step
+                                        01</span>
+                                    <span class="font-label-md text-label-md font-bold text-on-surface truncate">Cart
+                                        Reviewed</span>
+                                </div>
+                                <div class="flex-1 h-1 bg-tertiary-fixed-dim rounded-full mx-space-xs hidden lg:block">
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <span
+                                        class="font-label-sm text-label-sm uppercase text-primary tracking-wider font-bold">Step
+                                        02</span>
+                                    <span class="font-label-md text-label-md font-bold text-on-surface truncate">Address
+                                        &amp; Timing</span>
+                                </div>
+                                <div
+                                    class="flex-1 h-1 bg-surface-container-highest rounded-full mx-space-xs hidden lg:block">
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="flex items-center gap-space-sm">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[18px]">credit_card</span>
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <span
+                                        class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Step
+                                        03</span>
+                                    <span
+                                        class="font-label-md text-label-md font-semibold text-on-surface truncate">Payment
+                                        Mode</span>
+                                </div>
+                                <div
+                                    class="flex-1 h-1 bg-surface-container-highest rounded-full mx-space-xs hidden lg:block">
+                                </div>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="flex items-center gap-space-sm opacity-60">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[18px]">moped</span>
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <span
+                                        class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Step
+                                        04</span>
+                                    <span class="font-label-md text-label-md font-medium text-on-surface truncate">Live
+                                        Tracking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION 2: TWO-COLUMN CHECKOUT LAYOUT -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+                    <!-- LEFT COLUMN: Checkout Details (approx 62% -> 7 cols on 12-grid) -->
+                    <div class="lg:col-span-7 flex flex-col gap-space-xl">
+                        <!-- STEP 1: DELIVERY ADDRESS SELECTION -->
+                        <section
+                            class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-sm flex flex-col gap-space-lg">
+                            <div class="flex items-center justify-between pb-space-xs">
+                                <div class="flex items-center gap-space-sm">
+                                    <div
+                                        class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary">
+                                        <span class="material-symbols-outlined text-[22px]">pin_drop</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-headline-sm text-headline-sm text-on-surface">1. Delivery
+                                            Address</h2>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">Choose your dining
+                                            location or drop point</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-xs bg-tertiary-fixed text-on-tertiary-fixed px-space-md py-1 rounded-full shadow-sm">
+                                    <span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+                                    <span class="font-label-sm text-label-sm font-bold">Deliver in 24–28 mins</span>
+                                </div>
+                            </div>
+                            <!-- Address Cards Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                                <!-- Card 1: Selected Home -->
+                                <div
+                                    class="relative bg-surface-container-low p-space-md rounded-2xl cursor-pointer shadow-md transition-all">
+                                    <div class="flex items-start justify-between mb-space-sm">
+                                        <div class="flex items-center gap-space-xs">
+                                            <span
+                                                class="px-space-sm py-0.5 bg-primary text-on-primary rounded-full font-label-sm text-label-sm uppercase font-bold flex items-center gap-1">
+                                                <span>HOME</span>
+                                                <span class="material-symbols-outlined text-[14px]">home</span>
+                                            </span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-0.5">
+                                                <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                                Active
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+                                            <span class="material-symbols-outlined text-[16px] font-bold">check</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-space-xs">
+                                        <span class="font-title-md text-title-md font-bold text-on-surface block">Rohan
+                                            Kapoor • +91 98712 34567</span>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                                            Flat 402, Tower B, Volante Residences, Sector 62, Noida, Uttar Pradesh –
+                                            201309
+                                        </p>
+                                        <div
+                                            class="bg-surface-container-lowest/80 p-space-xs rounded-xl font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs">
+                                            <span class="material-symbols-outlined text-[16px] text-primary">info</span>
+                                            <span class="truncate">Near City Park Gate 2 • Ring bell twice</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between pt-space-md mt-space-xs">
+                                        <button
+                                            class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1"
+                                            type="button">
+                                            <span class="material-symbols-outlined text-[16px]">edit</span> Edit Address
+                                        </button>
+                                        <span class="font-label-sm text-label-sm text-primary font-bold">Deliver Here
+                                            ✓</span>
+                                    </div>
+                                </div>
+                                <!-- Card 2: Work -->
+                                <div
+                                    class="bg-surface-container-lowest p-space-md rounded-2xl cursor-pointer hover:bg-surface-container-low transition-all flex flex-col justify-between shadow-sm">
+                                    <div>
+                                        <div class="flex items-start justify-between mb-space-sm">
+                                            <span
+                                                class="px-space-sm py-0.5 bg-surface-container-high text-on-surface rounded-full font-label-sm text-label-sm uppercase font-bold flex items-center gap-1">
+                                                <span>WORK</span>
+                                                <span
+                                                    class="material-symbols-outlined text-[14px]">corporate_fare</span>
+                                            </span>
+                                            <div
+                                                class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+                                            </div>
+                                        </div>
+                                        <div class="space-y-space-xs">
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block">Rohan
+                                                Kapoor</span>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                                                DLF Cyber City, Building 10-C, 7th Floor, DLF Phase 2, Gurugram, Haryana
+                                                – 122002
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-md flex items-center justify-between">
+                                        <button
+                                            class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface"
+                                            type="button">Edit</button>
+                                        <button
+                                            class="px-space-md py-1 bg-surface-container hover:bg-surface-container-high rounded-full font-label-sm text-label-sm text-on-surface font-semibold transition-colors"
+                                            type="button">
+                                            Select Address
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Card 3: Add New Delivery Address -->
+                                <div
+                                    class="md:col-span-2 p-space-md rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-low transition-all cursor-pointer flex items-center justify-between">
+                                    <div class="flex items-center gap-space-md">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+                                            <span class="material-symbols-outlined text-[24px]">add_location_alt</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-title-md text-title-md font-bold text-on-surface block">+
+                                                Add New Delivery Address</span>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">Save
+                                                residence, office, or private venue for rapid checkout</span>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+                                </div>
+                            </div>
+                            <!-- Delivery Instructions quick toggles -->
+                            <div class="space-y-space-xs pt-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant tracking-wider block">Gourmet
+                                    Delivery Preferences</span>
+                                <div class="flex flex-wrap gap-space-xs">
+                                    <button
+                                        class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-all flex items-center gap-1 shadow-sm"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[16px]">shield_person</span> Drop at
+                                        Security Desk
+                                    </button>
+                                    <button
+                                        class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-all flex items-center gap-1 shadow-sm"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[16px]">groups</span> Leave with
+                                        Neighbor
+                                    </button>
+                                    <button
+                                        class="px-space-md py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1 shadow-sm"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[16px]">pets</span> Beware of Pet 🐕
+                                    </button>
+                                    <button
+                                        class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[16px]">ring_volume</span> Call
+                                        Before Arriving
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- STEP 2: DELIVERY OPTIONS -->
+                        <section
+                            class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-sm flex flex-col gap-space-md">
+                            <div class="flex items-center gap-space-sm pb-space-xs">
+                                <div
+                                    class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[22px]">speed</span>
+                                </div>
+                                <div>
+                                    <h2 class="font-headline-sm text-headline-sm text-on-surface">2. Choose Delivery
+                                        Speed</h2>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Calibrated temperature
+                                        control dispatch tailored to your schedule</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-space-sm">
+                                <!-- Option 1: Express (Selected) -->
+                                <label
+                                    class="flex items-start gap-space-md p-space-md rounded-2xl bg-surface-container-low cursor-pointer shadow-sm">
+                                    <input checked="" class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="speed"
+                                        type="radio" />
+                                    <div
+                                        class="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+                                        <div class="space-y-0.5">
+                                            <div class="flex items-center gap-space-xs">
+                                                <span class="font-title-md text-title-md font-bold text-on-surface">⚡
+                                                    Priority Express (20–24 mins)</span>
+                                                <span
+                                                    class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Recommended</span>
+                                            </div>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">Hearth-to-door
+                                                direct dispatch with sealed thermal vault containment.</p>
+                                        </div>
+                                        <span
+                                            class="font-title-md text-title-md font-extrabold text-primary shrink-0">+₹25</span>
+                                    </div>
+                                </label>
+                                <!-- Option 2: Standard Delivery -->
+                                <label
+                                    class="flex items-start gap-space-md p-space-md rounded-2xl bg-surface hover:bg-surface-container-low cursor-pointer transition-colors shadow-sm">
+                                    <input class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="speed"
+                                        type="radio" />
+                                    <div
+                                        class="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+                                        <div class="space-y-0.5">
+                                            <span class="font-title-md text-title-md font-bold text-on-surface">Standard
+                                                Delivery (28–32 mins)</span>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">Reliable
+                                                batch-optimized transit with eco-insulated packaging.</p>
+                                        </div>
+                                        <span
+                                            class="font-title-md text-title-md font-bold text-tertiary shrink-0">Included
+                                            (FREE)</span>
+                                    </div>
+                                </label>
+                                <!-- Option 3: Schedule Order -->
+                                <label
+                                    class="flex items-start gap-space-md p-space-md rounded-2xl bg-surface hover:bg-surface-container-low cursor-pointer transition-colors shadow-sm">
+                                    <input class="mt-1 accent-primary w-4 h-4 cursor-pointer" name="speed"
+                                        type="radio" />
+                                    <div
+                                        class="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+                                        <div class="space-y-0.5">
+                                            <div class="flex items-center gap-space-xs">
+                                                <span class="font-title-md text-title-md font-bold text-on-surface">📅
+                                                    Schedule Order</span>
+                                                <span
+                                                    class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">Tasting
+                                                    Slot</span>
+                                            </div>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">Preset for
+                                                later tonight (e.g., 08:30 PM – 09:00 PM).</p>
+                                        </div>
+                                        <span
+                                            class="font-label-md text-label-md font-bold text-on-surface shrink-0">Select
+                                            Slot</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </section>
+                        <!-- STEP 3: CONTACT & DINER DETAILS -->
+                        <section
+                            class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-sm flex flex-col gap-space-md">
+                            <div class="flex items-center gap-space-sm pb-space-xs">
+                                <div
+                                    class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[22px]">account_circle</span>
+                                </div>
+                                <div>
+                                    <h2 class="font-headline-sm text-headline-sm text-on-surface">3. Contact &amp; Diner
+                                        Details</h2>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Order updates and
+                                        delivery partner concierge ping details</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                                <div class="bg-surface-container-low p-space-md rounded-2xl space-y-1">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Diner
+                                        Full Name</span>
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">Rohan
+                                        Kapoor</span>
+                                </div>
+                                <div class="bg-surface-container-low p-space-md rounded-2xl space-y-1">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Mobile
+                                            Number</span>
+                                        <span
+                                            class="font-label-sm text-label-sm text-tertiary font-bold flex items-center">
+                                            <span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                                        </span>
+                                    </div>
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">+91 98712
+                                        34567</span>
+                                </div>
+                                <div class="bg-surface-container-low p-space-md rounded-2xl space-y-1">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Email
+                                        Receipt</span>
+                                    <span
+                                        class="font-title-md text-title-md font-semibold text-on-surface truncate block">rohan.kapoor@naurio.craft</span>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- STEP 4: PAYMENT METHODS -->
+                        <section
+                            class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-sm flex flex-col gap-space-lg">
+                            <div class="flex items-center justify-between pb-space-xs">
+                                <div class="flex items-center gap-space-sm">
+                                    <div
+                                        class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary">
+                                        <span class="material-symbols-outlined text-[22px]">payments</span>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-headline-sm text-headline-sm text-on-surface">4. Select Payment
+                                            Method</h2>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">Instant, protected
+                                            checkouts via RBI-compliant channels</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1 rounded-full text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+                                    <span class="font-label-sm text-label-sm font-bold">100% Encrypted &amp; Safe</span>
+                                </div>
+                            </div>
+                            <!-- Accordion Payment Tabs -->
+                            <div class="flex flex-col gap-space-md">
+                                <!-- Option A: UPI (Active & Expanded) -->
+                                <div
+                                    class="bg-surface-container-low rounded-2xl p-space-md shadow-md space-y-space-md transition-all">
+                                    <div class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-space-md">
+                                            <div
+                                                class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
+                                                <span class="material-symbols-outlined text-[16px]">check</span>
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center gap-space-xs">
+                                                    <span
+                                                        class="font-title-md text-title-md font-bold text-on-surface">UPI
+                                                        • Instant Seamless Payment</span>
+                                                    <span
+                                                        class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Fastest</span>
+                                                </div>
+                                                <span class="font-body-sm text-body-sm text-on-surface-variant">Google
+                                                    Pay, PhonePe, Paytm, CRED or UPI ID</span>
+                                            </div>
+                                        </div>
+                                        <span class="material-symbols-outlined text-primary">keyboard_arrow_up</span>
+                                    </div>
+                                    <!-- Inside UPI expanded container -->
+                                    <div class="pt-space-xs flex flex-col gap-space-md">
+                                        <!-- App Badges -->
+                                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+                                            <button
+                                                class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center gap-space-xs shadow-sm hover:bg-surface-container-high transition-colors"
+                                                type="button">
+                                                <span
+                                                    class="w-8 h-8 rounded-full bg-surface flex items-center justify-center font-bold text-primary text-[14px]">G</span>
+                                                <span
+                                                    class="font-label-md text-label-md font-bold text-on-surface">Google
+                                                    Pay</span>
+                                            </button>
+                                            <button
+                                                class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center gap-space-xs shadow-sm hover:bg-surface-container-high transition-colors"
+                                                type="button">
+                                                <span
+                                                    class="w-8 h-8 rounded-full bg-surface flex items-center justify-center font-bold text-primary text-[14px]">Pe</span>
+                                                <span
+                                                    class="font-label-md text-label-md font-bold text-on-surface">PhonePe</span>
+                                            </button>
+                                            <button
+                                                class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center gap-space-xs shadow-sm hover:bg-surface-container-high transition-colors"
+                                                type="button">
+                                                <span
+                                                    class="w-8 h-8 rounded-full bg-surface flex items-center justify-center font-bold text-primary text-[14px]">Pay</span>
+                                                <span
+                                                    class="font-label-md text-label-md font-bold text-on-surface">Paytm
+                                                    UPI</span>
+                                            </button>
+                                            <button
+                                                class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center gap-space-xs shadow-sm hover:bg-surface-container-high transition-colors"
+                                                type="button">
+                                                <span
+                                                    class="w-8 h-8 rounded-full bg-surface flex items-center justify-center font-bold text-primary text-[14px]">C</span>
+                                                <span class="font-label-md text-label-md font-bold text-on-surface">CRED
+                                                    Pay</span>
+                                            </button>
+                                        </div>
+                                        <!-- Custom VPA Input Box -->
+                                        <div
+                                            class="bg-surface-container-lowest p-space-sm rounded-2xl flex items-center gap-space-sm shadow-sm">
+                                            <span
+                                                class="material-symbols-outlined text-on-surface-variant ml-space-xs">alternate_email</span>
+                                            <input
+                                                class="flex-1 bg-transparent border-none outline-none font-title-md text-title-md text-on-surface font-semibold"
+                                                type="text" value="rohan@okhdfcbank" />
+                                            <button
+                                                class="px-space-md py-space-xs bg-tertiary text-on-tertiary rounded-xl font-label-md text-label-md font-bold shadow-sm"
+                                                type="button">
+                                                Verified ✓
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between text-on-surface-variant px-space-xs">
+                                            <label class="flex items-center gap-space-xs cursor-pointer">
+                                                <input checked="" class="accent-primary rounded" type="checkbox" />
+                                                <span class="font-body-sm text-body-sm">Save this UPI ID for faster
+                                                    future orders</span>
+                                            </label>
+                                            <button
+                                                class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 hover:underline"
+                                                type="button">
+                                                <span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+                                                Show Dynamic QR Code
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Option B: Credit / Debit Card -->
+                                <div class="bg-surface p-space-md rounded-2xl shadow-sm space-y-space-md">
+                                    <div class="flex items-center justify-between cursor-pointer">
+                                        <div class="flex items-center gap-space-md">
+                                            <div
+                                                class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+                                            </div>
+                                            <div>
+                                                <span
+                                                    class="font-title-md text-title-md font-bold text-on-surface">Credit
+                                                    / Debit Card</span>
+                                                <div class="flex items-center gap-space-xs mt-0.5">
+                                                    <span
+                                                        class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant font-bold">VISA</span>
+                                                    <span
+                                                        class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant font-bold">Mastercard</span>
+                                                    <span
+                                                        class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant font-bold">RuPay</span>
+                                                    <span
+                                                        class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant font-bold">AMEX</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined text-on-surface-variant">keyboard_arrow_down</span>
+                                    </div>
+                                    <!-- Card Input Preview -->
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+                                        <div
+                                            class="md:col-span-2 bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+                                            <div class="flex items-center gap-space-sm">
+                                                <span
+                                                    class="material-symbols-outlined text-on-surface-variant">credit_card</span>
+                                                <span
+                                                    class="font-title-md text-title-md font-semibold text-on-surface tracking-wider">••••
+                                                    •••• •••• 4291</span>
+                                            </div>
+                                            <span
+                                                class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded font-bold text-primary">HDFC
+                                                Regalia</span>
+                                        </div>
+                                        <div
+                                            class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+                                            <span
+                                                class="font-label-md text-label-md text-on-surface-variant">Expires</span>
+                                            <span class="font-title-md text-title-md font-bold text-on-surface">08 /
+                                                28</span>
+                                        </div>
+                                        <div
+                                            class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+                                            <span class="font-label-md text-label-md text-on-surface-variant">CVV /
+                                                CVC</span>
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface tracking-widest">•••</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Option C: Net Banking -->
+                                <div
+                                    class="bg-surface p-space-md rounded-2xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-colors">
+                                    <div class="flex items-center gap-space-md">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block">Net
+                                                Banking</span>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">All Indian
+                                                Major Banks Supported (HDFC, ICICI, SBI, Axis, Kotak)</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-on-surface-variant">keyboard_arrow_right</span>
+                                </div>
+                                <!-- Option D: Crave Wallet & Coins -->
+                                <div
+                                    class="bg-surface p-space-md rounded-2xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-colors">
+                                    <div class="flex items-center gap-space-md">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-space-xs">
+                                                <span
+                                                    class="font-title-md text-title-md font-bold text-on-surface">Crave
+                                                    Wallet &amp; Coins</span>
+                                                <span
+                                                    class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">240
+                                                    Coins Available</span>
+                                            </div>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">Redeemable
+                                                balance: ₹120 (Max ₹30 applied for this order)</span>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-tertiary font-bold">check_box</span>
+                                </div>
+                                <!-- Option E: Cash on Delivery -->
+                                <div
+                                    class="bg-surface p-space-md rounded-2xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-colors opacity-80">
+                                    <div class="flex items-center gap-space-md">
+                                        <div
+                                            class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block">Pay
+                                                on Delivery (Cash / Dynamic UPI at Door)</span>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">Available
+                                                for contactless handoff under ₹2,000</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-on-surface-variant">keyboard_arrow_right</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- RIGHT COLUMN: Sticky Order Summary & Pay (approx 38% -> 5 cols on 12-grid) -->
+                    <div class="lg:col-span-5 sticky top-36 flex flex-col gap-space-md">
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-xl flex flex-col gap-space-md">
+                            <!-- Restaurant Header -->
+                            <div
+                                class="flex items-start gap-space-md pb-space-sm bg-surface-container-low p-space-md rounded-2xl">
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-surface-container-highest shrink-0 overflow-hidden shadow-sm">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Woodfired gourmet pizza chef hand-tossing dough beside high-heat hearth inside an upscale artisan Italian restaurant kitchen in warm lighting"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_kr-tWOItcInW7-afJVEXsd5V7wEYdwor3S8WxpqIwrwc0nR4fmdzM4OK0jQ9xturSfaPVkIoIV_rEgsQSCnREYutHOVcHgbW-TTs0Y-yxYGi5vcKfMjL9HXbePbTaKn7urXxKuRO26aOx-cxlBkoW8TIqZKRV9u7yhJygdg8Fqm8G8pPj7_dLzU3yupxK-y2sgLcv7JmHx9QSYBYXtu4fgsAQEIgOgg2MgsMFinx" />
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center gap-space-xs">
+                                        <span
+                                            class="font-title-md text-title-md font-extrabold text-on-surface truncate">The
+                                            Woodfire Kitchen</span>
+                                        <span class="material-symbols-outlined text-tertiary text-[18px]"
+                                            style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    </div>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Connaught
+                                        Place, Central Delhi • Michelin Guide Recommended</p>
+                                    <div
+                                        class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold mt-1">
+                                        <span class="material-symbols-outlined text-[16px]">moped</span> Dispatching to
+                                        Sector 62, Noida
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Itemized Compact List -->
+                            <div class="space-y-space-sm">
+                                <div
+                                    class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                                    <span>Selected Dishes (4 Items)</span>
+                                    <a class="text-primary hover:underline lowercase font-semibold" href="#">modify
+                                        cart</a>
+                                </div>
+                                <!-- Item 1 -->
+                                <div
+                                    class="flex items-center justify-between gap-space-sm bg-surface p-space-sm rounded-xl">
+                                    <div class="flex items-center gap-space-sm min-w-0">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-surface-container-high shrink-0 overflow-hidden">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Artisanal black truffle woodfired pizza with bubbly charred sourdough crust on a dark slate board with fresh rosemary"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk9-uWDexu_KXeztul7d8hrp69N-DKiExzdoVTQWy4MV9qMq9Mx8f0phdcWk45Dx3_kVbF75MhUEVy-og04x09R3vA4NdwbG1mWW4h6JaNfy9fVyIr4SnlQEiXQ3_7BiuceXpKGMvOzk2gxaDX8FUr1maq0MhYte0ErEHBOx75H7Q2MF52bw7QU5aS6u4aNLnpcORj7oPnD88mmGI4XaVs3qGpa2I4I8OWXMPFyWBx" />
+                                        </div>
+                                        <div class="truncate">
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block truncate">2x
+                                                Artisan Woodfired Truffle Crust (11")</span>
+                                            <span class="font-label-sm text-label-sm text-on-surface-variant">Black
+                                                Summer Truffle • Fresh Fior di Latte</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹888</span>
+                                </div>
+                                <!-- Item 2 -->
+                                <div
+                                    class="flex items-center justify-between gap-space-sm bg-surface p-space-sm rounded-xl">
+                                    <div class="flex items-center gap-space-sm min-w-0">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-surface-container-high shrink-0 overflow-hidden">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Gourmet smash burger with crisp melted aged cheddar, smoked chipotle glaze and brioche bun in studio lighting"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3DHB2-2HRqpklZ5xigPTeDj9dr_fPv_4e-_InvhdTtsfhC135GaiWiXB5sGtNoeikJwhayINCE-5_5VI0y6t5rD-tEPig8bRU4xvQUGTKl8d5NhA1R0bJKjS6LSc5W2sKGDeQzQeTTCHWIkQPVHcVidJLy_lq_JhUzAEXUElbhLdnGdHj2TH4sjmNYUnVh15wLAcS13QklcEDm1zD6HZEL5njDgu-VEM7mzwQ3xzi" />
+                                        </div>
+                                        <div class="truncate">
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block truncate">1x
+                                                Smoky Chipotle Crispy Burger</span>
+                                            <span class="font-label-sm text-label-sm text-on-surface-variant">Wagyu
+                                                smash patty • Brioche bun</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹279</span>
+                                </div>
+                                <!-- Item 3 -->
+                                <div
+                                    class="flex items-center justify-between gap-space-sm bg-surface p-space-sm rounded-xl">
+                                    <div class="flex items-center gap-space-sm min-w-0">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-surface-container-high shrink-0 overflow-hidden">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Chilled hazelnut cold brew latte served in a minimal ribbed glass with layered foam and coffee gradient"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtHZa9yFYPx7_p7YDCEURJqQDxHX6-m6vwJPKHqxNCw63oQovWUZzeB62MPEXFhqgxyDQQFC3U4QCHkgwZ066TpKke1vgZWxF4OWo3qRJdNkem0JpOKn-KANdi4O2kQOIFw05aSBnBMB0UHIcGYvgCnpdkTkKtnbOXiDOEv8ULBfcQtQgw-b2bpZ01F_Yn11wK0ZSQAusY7W90M8Ha-xkIDtflw7dshtrhNGUskE3q" />
+                                        </div>
+                                        <div class="truncate">
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block truncate">1x
+                                                Hazelnut Cold Brew Latte</span>
+                                            <span class="font-label-sm text-label-sm text-on-surface-variant">Single
+                                                origin • Oat milk</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹179</span>
+                                </div>
+                                <!-- Item 4 -->
+                                <div
+                                    class="flex items-center justify-between gap-space-sm bg-surface p-space-sm rounded-xl">
+                                    <div class="flex items-center gap-space-sm min-w-0">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-surface-container-high shrink-0 overflow-hidden">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Creamy parmesan garlic herb dip in a small ceramic bowl topped with cracked black pepper"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyjc6MN0rI7T7gfdVTEXcjVDNFvgPc5WCUQEJiVRSHcw1JBzNj6XNVP9xP8M_dBXx_oxjLosnSt-ioMx__T45MEtKk19Wg6PotTcqlFRWlgcPfBOnGFDlc_ns1ijFOFhDkBE-6sbEHna1Ab2VCjO8HCqkLwN-zAK-aBoC2fRuq6SBE9ryY1U7Rrg72OFK5cjHaLI10nitUF3A00VTLJUqjQPr9CnM0sBB0zteoi0o5" />
+                                        </div>
+                                        <div class="truncate">
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-on-surface block truncate">1x
+                                                Garlic Parmesan Truffle Dip</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-on-surface-variant">Small-batch
+                                                emulsion</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹49</span>
+                                </div>
+                            </div>
+                            <!-- Applied Voucher confirmation pill -->
+                            <div
+                                class="bg-tertiary-fixed/60 p-space-sm rounded-2xl flex items-center justify-between shadow-sm">
+                                <div class="flex items-center gap-space-xs">
+                                    <span class="material-symbols-outlined text-tertiary text-[20px]">loyalty</span>
+                                    <div>
+                                        <span
+                                            class="font-label-md text-label-md font-extrabold text-on-tertiary-fixed block">Promo
+                                            CRAVEFEAST active</span>
+                                        <span
+                                            class="font-label-sm text-label-sm text-on-tertiary-fixed-variant">Artisanal
+                                            discount (-₹150) applied</span>
+                                    </div>
+                                </div>
+                                <button class="font-label-sm text-label-sm text-primary font-bold hover:underline"
+                                    type="button">Remove</button>
+                            </div>
+                            <!-- Bill Breakdown -->
+                            <div class="bg-surface-container p-space-md rounded-2xl space-y-space-xs">
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Item Subtotal</span>
+                                    <span class="font-semibold text-on-surface">₹1,395</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Delivery Partner Fee</span>
+                                    <span class="font-semibold text-tertiary">FREE (Waived)</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Priority Hearth Dispatch</span>
+                                    <span class="font-semibold text-on-surface">₹25</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Restaurant Packaging &amp; Thermal Vault</span>
+                                    <span class="font-semibold text-on-surface">₹25</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Taxes &amp; Govt GST (5%)</span>
+                                    <span class="font-semibold text-on-surface">₹73</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-tertiary">
+                                    <span>Coupon 'CRAVEFEAST' Discount</span>
+                                    <span class="font-bold">-₹150</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-tertiary">
+                                    <span>Crave Coins Redeemed</span>
+                                    <span class="font-bold">-₹30</span>
+                                </div>
+                                <!-- Total Divider -->
+                                <div class="pt-space-xs mt-space-xs bg-surface-container-highest h-0.5 rounded-full">
+                                </div>
+                                <div class="flex justify-between items-baseline pt-1">
+                                    <div>
+                                        <span
+                                            class="font-headline-sm text-headline-sm font-extrabold text-on-surface block">To
+                                            Pay</span>
+                                        <span class="font-label-sm text-label-sm text-on-surface-variant">Inclusive of
+                                            all taxes &amp; fees</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span
+                                            class="font-headline-lg text-headline-lg font-extrabold text-primary leading-none block">₹1,338</span>
+                                        <span class="font-label-sm text-label-sm text-tertiary font-bold">Total Savings:
+                                            ₹180</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Primary Order CTA -->
+                            <button
+                                class="w-full py-space-md bg-primary-container hover:bg-primary text-on-primary rounded-full font-headline-sm text-headline-sm font-extrabold shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-space-sm cursor-pointer transform hover:-translate-y-0.5"
+                                type="button">
+                                <span>Place Order &amp; Pay ₹1,338</span>
+                                <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+                            </button>
+                            <!-- Security Trust Badges -->
+                            <div class="space-y-space-xs pt-space-xs">
+                                <div
+                                    class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+                                    <span
+                                        class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+                                    <span>256-Bit Bank Grade Encryption • RBI Tokenized Protocol</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+                                    <span
+                                        class="material-symbols-outlined text-[18px] text-primary">local_fire_department</span>
+                                    <span>30-Min Fresh &amp; Hot Guarantee or Meal is on us</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+                                    <span class="material-symbols-outlined text-[18px] text-secondary">fact_check</span>
+                                    <span>FSSAI Central Lic. No. 10020011002345</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION 3: MICRO INTERACTION & STATUS PREVIEWS -->
+                <div class="mt-space-xl pt-space-lg flex flex-col gap-space-md">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-space-sm">
+                            <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+                            <span
+                                class="font-label-md text-label-md text-on-surface uppercase font-bold tracking-wider">Live
+                                System Health &amp; Dispatch Validation</span>
+                        </div>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">Instant Synchronized Cloud
+                            Gateway</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                        <!-- Live Oven Dispatcher state preview -->
+                        <div
+                            class="bg-inverse-surface text-inverse-on-surface p-space-md rounded-2xl flex items-center gap-space-md shadow-md">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[20px] animate-pulse">outdoor_grill</span>
+                            </div>
+                            <div>
+                                <span class="font-title-md text-title-md font-bold text-surface-bright block">Live Oven
+                                    Kitchen Queued</span>
+                                <span class="font-body-sm text-body-sm text-secondary-fixed">Woodfire stone bed
+                                    pre-heating at 450°C</span>
+                            </div>
+                        </div>
+                        <!-- Payment Processing State preview -->
+                        <div
+                            class="bg-surface-container-lowest p-space-md rounded-2xl flex items-center gap-space-md shadow-sm">
+                            <div
+                                class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[20px]">currency_rupee</span>
+                            </div>
+                            <div>
+                                <span class="font-title-md text-title-md font-bold text-on-surface block">Pre-Auth
+                                    Verified</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Instant 1-Click UPI
+                                    Intent handshake ready</span>
+                            </div>
+                        </div>
+                        <!-- Thermal Pack Assurance -->
+                        <div
+                            class="bg-surface-container-lowest p-space-md rounded-2xl flex items-center gap-space-md shadow-sm">
+                            <div
+                                class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[20px]">ac_unit</span>
+                            </div>
+                            <div>
+                                <span class="font-title-md text-title-md font-bold text-on-surface block">Dual Vault
+                                    Thermal Pack</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Cold Brew isolated from
+                                    hot Truffle Crust</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bg-[#201a16] text-[#e5d8cd] pt-space-xl pb-space-lg">
+        <div class="max-w-7xl mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-xl">
+                <div class="space-y-space-md">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary-container font-extrabold leading-none uppercase">NAURIO</span><span
+                            class="font-label-sm text-label-sm tracking-widest text-[#c8c6c5] uppercase font-bold mt-1">Made
+                            to Crave</span></div>
+                    <p class="font-body-sm text-body-sm text-[#c8c6c5] leading-relaxed">An artisanal epicurean delivery
+                        platform bringing Michelin-level gastronomy, cloud kitchens, and hand-crafted delicacies
+                        straight to discerning urban dinner tables.</p>
+                    <div class="flex flex-col gap-space-xs pt-space-sm">
+                        <div class="flex items-center gap-space-sm text-[#e5e2e1]"><span
+                                class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span
+                                class="font-label-sm text-label-sm">FSSAI Central Lic. No. 10022011000842</span></div>
+                        <div class="flex items-center gap-space-sm text-[#c8c6c5]"><span
+                                class="material-symbols-outlined text-[18px]">eco</span><span
+                                class="font-body-sm text-body-sm">100% Recyclable Gourmet Packaging</span></div>
+                    </div>
+                    <div class="flex items-center gap-space-sm pt-space-xs">
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-[#372f28] rounded-xl text-left cursor-pointer hover:bg-[#474746] transition-colors">
+                            <span class="material-symbols-outlined text-[24px]">ad_units</span>
+                            <div class="flex flex-col"><span
+                                    class="font-label-sm text-label-sm leading-none text-[#c8c6c5]">Download
+                                    on</span><span
+                                    class="font-label-md text-label-md font-bold leading-tight text-[#ffffff]">App
+                                    Store</span></div>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-[#372f28] rounded-xl text-left cursor-pointer hover:bg-[#474746] transition-colors">
+                            <span class="material-symbols-outlined text-[24px]">shop</span>
+                            <div class="flex flex-col"><span
+                                    class="font-label-sm text-label-sm leading-none text-[#c8c6c5]">GET IT
+                                    ON</span><span
+                                    class="font-label-md text-label-md font-bold leading-tight text-[#ffffff]">Google
+                                    Play</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Culinary Curation</span>
+                    <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Artisanal Sourdough &amp;
+                                Pizzeria</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Smash Wagyu &amp; Craft
+                                Burgers</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Kyoto Omakase &amp; Bento
+                                Boxes</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Heritage Dumplings &amp; Dim
+                                Sum</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Botanical Smoothie &amp; Salad
+                                Bowls</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Small-Batch Gelato &amp;
+                                Patisserie</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Quick Links</span>
+                    <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Chef Partner Program</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">NAURIO Black Membership</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Corporate Catering &amp;
+                                Events</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Sustainability &amp;
+                                Cold-Chain</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Redeem Crave Coins</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Brand Newsroom &amp; Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Concierge &amp;
+                        Support</span>
+                    <div class="bg-[#372f28] p-space-md rounded-2xl space-y-space-xs"><span
+                            class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider block">Direct
+                            Culinary Hotline</span>
+                        <div class="flex items-center gap-space-xs"><span
+                                class="material-symbols-outlined text-primary-container text-[20px]">support_agent</span><span
+                                class="font-title-lg text-title-lg text-[#ffffff] font-bold">+91 1800-NAURIO</span>
+                        </div>
+                        <p class="font-body-sm text-body-sm text-[#c8c6c5]">Available 24/7 for live order tracking &amp;
+                            tasting bookings</p>
+                    </div>
+                    <div class="space-y-space-xs"><span
+                            class="font-label-md text-label-md text-[#ffffff] font-semibold block">Accepted Payment
+                            Modes</span>
+                        <div class="flex flex-wrap items-center gap-space-xs"><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">UPI</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Visa</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Mastercard</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">NetBanking</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Cred</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-[#372f28] pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-[#c8c6c5] font-body-sm text-body-sm">
+                <div>© 2025 NAURIO Technologies Pvt. Ltd. Crafted with passion for epicures.</div>
+                <div class="flex items-center gap-space-lg font-label-md text-label-md"><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Privacy Policy</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Terms of Service</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">FSSAI Disclosures</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Security</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

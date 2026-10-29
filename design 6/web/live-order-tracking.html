@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>NAURIO | Made to Crave</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-low": "#fff1e6",
+                        "tertiary-fixed": "#d5eba5",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#202f00",
+                        "on-surface-variant": "#5b403d",
+                        "secondary": "#5f5e5e",
+                        "primary": "#b7221c",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#141f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#eee0d5",
+                        "tertiary-fixed-dim": "#b9cf8b",
+                        "tertiary": "#52652d",
+                        "background": "#fff8f4",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#f3e6db",
+                        "on-surface": "#211a14",
+                        "surface-container": "#f9ebe1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#ff5748",
+                        "primary-fixed": "#ffdad5",
+                        "surface-variant": "#eee0d5",
+                        "inverse-surface": "#372f28",
+                        "outline-variant": "#e3beb9",
+                        "surface-bright": "#fff8f4",
+                        "on-secondary-container": "#636262",
+                        "on-background": "#211a14",
+                        "on-primary-fixed": "#410001",
+                        "surface-tint": "#b7221c",
+                        "surface-dim": "#e5d8cd",
+                        "outline": "#8f706b",
+                        "inverse-primary": "#ffb4aa",
+                        "tertiary-container": "#85995b",
+                        "surface": "#fff8f4",
+                        "inverse-on-surface": "#fceee3",
+                        "on-primary-fixed-variant": "#930006",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#5e0002",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary-container": "#e2dfde",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#3b4c17"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "1.5rem",
+                        "gutter-mobile": "1rem",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "space-lg": "1.5rem",
+                        "margin-mobile": "1.25rem",
+                        "space-xs": "0.25rem",
+                        "space-sm": "0.5rem",
+                        "space-xl": "2.5rem",
+                        "gutter-desktop": "2rem",
+                        "space-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-sm": [
+                            "Manrope"
+                        ],
+                        "headline-xl-mobile": [
+                            "Manrope"
+                        ],
+                        "title-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-hero": [
+                            "Manrope"
+                        ],
+                        "label-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-lg-mobile": [
+                            "Manrope"
+                        ],
+                        "label-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-hero-mobile": [
+                            "Manrope"
+                        ],
+                        "headline-lg": [
+                            "Manrope"
+                        ],
+                        "body-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-xl": [
+                            "Manrope"
+                        ],
+                        "title-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-md": [
+                            "Manrope"
+                        ],
+                        "body-md": [
+                            "Plus Jakarta Sans"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-sm": [
+                            "20px",
+                            {
+                                "lineHeight": "26px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-xl-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "38px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "title-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "24px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-hero": [
+                            "64px",
+                            {
+                                "lineHeight": "70px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "label-md": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.03em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "26px",
+                            {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-lg": [
+                            "14px",
+                            {
+                                "lineHeight": "18px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "display-hero-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "46px",
+                                "letterSpacing": "-0.025em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "headline-lg": [
+                            "36px",
+                            {
+                                "lineHeight": "42px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-xl": [
+                            "48px",
+                            {
+                                "lineHeight": "54px",
+                                "letterSpacing": "-0.025em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "title-md": [
+                            "16px",
+                            {
+                                "lineHeight": "22px",
+                                "letterSpacing": "-0.005em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-sm": [
+                            "11px",
+                            {
+                                "lineHeight": "14px",
+                                "letterSpacing": "0.04em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-sm": [
+                            "13px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "30px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-md": [
+                            "15px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                }
+            }
+        }</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-28 max-w-7xl mx-auto px-margin-desktop flex flex-col justify-between py-space-sm">
+            <div class="flex items-center justify-between gap-space-lg">
+                <div class="flex items-center gap-space-lg shrink-0">
+                    <div class="flex flex-col cursor-pointer"><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary leading-none uppercase">NAURIO</span><span
+                            class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase font-bold mt-0.5">Made
+                            to Crave</span></div>
+                    <div
+                        class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-md py-space-xs rounded-full cursor-pointer transition-colors">
+                        <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                        <div class="flex flex-col text-left"><span
+                                class="font-label-sm text-label-sm text-on-surface-variant font-bold leading-none">Deliver
+                                To:</span><span
+                                class="font-label-md text-label-md text-on-surface font-semibold max-w-[210px] truncate leading-tight">Connaught
+                                Place, Central Delhi</span></div><span
+                            class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+                    </div>
+                </div>
+                <div class="flex-1 max-w-xl mx-space-md">
+                    <div
+                        class="flex items-center w-full h-12 bg-surface-container-lowest rounded-full px-space-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] focus-within:shadow-[0_4px_16px_rgba(183,34,28,0.08)] transition-all">
+                        <span
+                            class="material-symbols-outlined text-on-surface-variant mr-space-sm text-[22px]">search</span><input
+                            class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant"
+                            placeholder="Search artisanal pizzas, gourmet burgers, bowls..." type="text" /><button
+                            class="bg-surface-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors ml-space-xs"
+                            type="button">Explore</button></div>
+                </div>
+                <div class="flex items-center gap-space-md shrink-0"><button
+                        class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full font-label-md text-label-md text-on-surface transition-colors"
+                        type="button"><span
+                            class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span>Get
+                            App</span></button>
+                    <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-fixed rounded-full">
+                        <span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">token</span><span
+                            class="font-label-md text-label-md text-on-tertiary-fixed font-bold">240 Coins</span></div>
+                    <button
+                        class="flex items-center gap-space-sm pl-space-xs pr-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-left transition-colors"
+                        type="button">
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span
+                            class="font-label-md text-label-md text-on-surface font-semibold">Account</span>
+                    </button><button
+                        class="flex items-center gap-space-sm px-space-lg py-space-sm bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-[0_4px_16px_rgba(255,87,72,0.3)]"
+                        type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span
+                            class="font-label-lg text-label-lg font-bold">Cart (3) • ₹1,293</span></button>
+                </div>
+            </div>
+            <nav class="flex items-center gap-space-xs pt-1"
+                data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-full"><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="home" href="#">Home</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="categories" href="#">Categories</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="offers-and-deals" href="#">Offers &amp; Deals</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="search" href="#">Search</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="cart" href="#">Cart</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="checkout" href="#">Checkout</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
+                    data-path="live-tracking" href="#">Live Tracking</a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-28 bg-surface">
+        <div class="flex flex-col w-full">
+            <div
+                class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-space-lg md:py-space-xl flex flex-col gap-space-lg">
+                <!-- Top Announcement & Header Lockup -->
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+                    <div class="space-y-space-xs">
+                        <div
+                            class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+                            <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                            <span class="font-label-sm text-label-sm uppercase tracking-wider font-extrabold">Active
+                                Transit Stream</span>
+                        </div>
+                        <h1
+                            class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface tracking-tight">
+                            Your Food Is On Its Way!</h1>
+                        <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant">Sit back, relax,
+                            and let us handle your cravings with thermal precision.</p>
+                    </div>
+                    <!-- Quick Action Controls -->
+                    <div class="flex items-center gap-space-xs self-start lg:self-auto">
+                        <button
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-on-surface transition-colors shadow-sm"
+                            id="audio-toggle-btn" type="button">
+                            <span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span>
+                            <span class="font-label-md text-label-md font-semibold">Sound On</span>
+                        </button>
+                        <button
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-on-surface transition-colors shadow-sm"
+                            type="button">
+                            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">share</span>
+                            <span class="font-label-md text-label-md font-semibold">Share Live Link</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Order Meta Bar Card -->
+                <div
+                    class="w-full bg-surface-container-lowest rounded-2xl p-space-md md:p-space-lg shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+                    <div class="flex flex-wrap items-center gap-x-space-lg gap-y-space-xs">
+                        <div class="flex flex-col">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Order
+                                Identifier</span>
+                            <span class="font-title-lg text-title-lg font-bold text-on-surface">#NAU-98214</span>
+                        </div>
+                        <div class="w-px h-8 bg-surface-container-high hidden md:block"></div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Kitchen
+                                Partner</span>
+                            <span class="font-title-md text-title-md font-bold text-on-surface flex items-center gap-1">
+                                The Woodfire Kitchen
+                                <span class="material-symbols-outlined text-primary text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                            </span>
+                        </div>
+                        <div class="w-px h-8 bg-surface-container-high hidden md:block"></div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Order
+                                Time</span>
+                            <span class="font-body-md text-body-md font-semibold text-on-surface">Placed at 08:42
+                                PM</span>
+                        </div>
+                        <div class="w-px h-8 bg-surface-container-high hidden md:block"></div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Estimated
+                                Arrival</span>
+                            <div class="flex items-center gap-1">
+                                <span class="font-title-lg text-title-lg font-extrabold text-primary">09:08 PM</span>
+                                <span
+                                    class="font-label-sm text-label-sm font-bold text-primary bg-primary-fixed px-space-xs py-0.5 rounded-full">(18
+                                    mins left)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+                        <span class="w-3 h-3 rounded-full bg-primary-container animate-pulse"></span>
+                        <div class="flex flex-col text-left">
+                            <span
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Current
+                                Phase</span>
+                            <span class="font-label-lg text-label-lg font-extrabold text-on-primary-container">Out for
+                                Delivery (On Hearth-Speed Transit)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Delivery Progress Horizontal Tracker -->
+                <div class="w-full bg-surface-container-lowest rounded-2xl p-space-md md:p-space-lg shadow-sm">
+                    <div class="flex items-center justify-between mb-space-md">
+                        <span
+                            class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">Milestone
+                            Trajectory</span>
+                        <span class="font-label-sm text-label-sm font-semibold text-tertiary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[16px]">bolt</span> Ultra-Precise Dispatch
+                            Algorithm
+                        </span>
+                    </div>
+                    <!-- Steps Flow -->
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-y-space-md gap-x-space-sm relative">
+                        <!-- Step 1: Confirmed -->
+                        <div class="flex flex-col items-start gap-space-xs relative pr-2">
+                            <div class="flex items-center gap-space-xs w-full">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <span class="material-symbols-outlined text-[18px]">check</span>
+                                </div>
+                                <div class="h-1 flex-1 bg-primary rounded-full hidden md:block"></div>
+                            </div>
+                            <span class="font-label-md text-label-md font-bold text-on-surface mt-1">Order
+                                Confirmed</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">08:42 PM</span>
+                        </div>
+                        <!-- Step 2: Preparing -->
+                        <div class="flex flex-col items-start gap-space-xs relative pr-2">
+                            <div class="flex items-center gap-space-xs w-full">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <span class="material-symbols-outlined text-[18px]">check</span>
+                                </div>
+                                <div class="h-1 flex-1 bg-primary rounded-full hidden md:block"></div>
+                            </div>
+                            <span class="font-label-md text-label-md font-bold text-on-surface mt-1">Baking &amp;
+                                Crafting</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">08:48 PM</span>
+                        </div>
+                        <!-- Step 3: Ready for Pickup -->
+                        <div class="flex flex-col items-start gap-space-xs relative pr-2">
+                            <div class="flex items-center gap-space-xs w-full">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <span class="material-symbols-outlined text-[18px]">check</span>
+                                </div>
+                                <div class="h-1 flex-1 bg-primary rounded-full hidden md:block"></div>
+                            </div>
+                            <span class="font-label-md text-label-md font-bold text-on-surface mt-1">Thermal Box
+                                Sealed</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">08:58 PM</span>
+                        </div>
+                        <!-- Step 4: Active Courier -->
+                        <div class="flex flex-col items-start gap-space-xs relative pr-2 col-span-1 md:col-span-1">
+                            <div class="flex items-center gap-space-xs w-full">
+                                <div
+                                    class="relative w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(255,87,72,0.6)]">
+                                    <span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+                                    <span
+                                        class="absolute -inset-1 rounded-full bg-primary-container opacity-40 animate-ping"></span>
+                                </div>
+                                <div class="h-1 flex-1 bg-surface-container-high rounded-full hidden md:block"></div>
+                            </div>
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="font-label-md text-label-md font-extrabold text-primary">Out for
+                                    Delivery</span>
+                                <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                            </div>
+                            <span class="font-body-sm text-body-sm font-semibold text-primary">09:02 PM (Active)</span>
+                        </div>
+                        <!-- Step 5: Delivered -->
+                        <div class="flex flex-col items-start gap-space-xs relative col-span-2 md:col-span-1">
+                            <div class="flex items-center gap-space-xs w-full">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[18px]">home</span>
+                                </div>
+                            </div>
+                            <span class="font-label-md text-label-md font-bold text-on-surface-variant mt-1">Gourmet
+                                Delivery</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Est. 09:12 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Master Two-Column Operational Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+                    <!-- LEFT COLUMN: Map & Courier Telemetry (7/12 ~ 60%) -->
+                    <div class="lg:col-span-7 flex flex-col gap-space-lg">
+                        <!-- Live Map Interface Shell -->
+                        <div
+                            class="w-full bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm relative flex flex-col">
+                            <!-- Map Header Info Bar -->
+                            <div
+                                class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+                                <div class="flex items-center gap-space-xs">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+                                    <span class="font-label-md text-label-md font-bold text-on-surface">Connaught Place
+                                        → Sector 62 Noida Expressway</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-sm text-label-sm font-bold text-tertiary bg-tertiary-fixed px-space-xs py-0.5 rounded-full">Low
+                                        Congestion</span>
+                                    <button
+                                        class="p-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors"
+                                        id="recenter-btn" title="Recenter Route" type="button">
+                                        <span class="material-symbols-outlined text-[16px]">my_location</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Realistic Vector Rendered Simulation Map with Static Visual Data -->
+                            <div
+                                class="relative w-full h-[420px] md:h-[480px] bg-[#f2ede7] overflow-hidden select-none">
+                                <!-- Map Texture Canvas Element via Static Data-Location -->
+                                <div class="absolute inset-0 w-full h-full bg-cover bg-center filter saturate-75 opacity-90"
+                                    data-location="Delhi to Noida Expressway, India"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO3xMGKrlliHL5mn6EUISxAK4xjFBiSXdZ6Y6j7clwEBU9oWbrVhSXhWoHo1PGJyXf0O89H6vYKh_1BcYm5-3sOC4JUYRukhkvMCWKFp1yiuEdTwFNoogjEgnqYNPS9fnEUtN8AUr6o4UG9R9efxA6myGi_l_8mFAp6MqQoE_CwArjUP2MB2dIZxhXGJ-nZnktPMLgk0W7sSLa6yi39J-xcPNeBcgrB_vc2CkDexaB');">
+                                </div>
+                                <!-- Stylized Minimal Map Scrim Overlay for Contrast -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none">
+                                </div>
+                                <!-- SVG Route Polyline & Live Beacon Animation Overlay -->
+                                <svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none"
+                                    preserveaspectratio="none" viewbox="0 0 700 480">
+                                    <!-- Route Path Shadow Glow -->
+                                    <path d="M 120 110 C 230 110, 310 200, 380 260 S 520 330, 590 380" opacity="0.8"
+                                        stroke="#ffdad5" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="8"></path>
+                                    <!-- Route Path Core Accent -->
+                                    <path d="M 120 110 C 230 110, 310 200, 380 260 S 520 330, 590 380" stroke="#b7221c"
+                                        stroke-dasharray="8 6" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="4"></path>
+                                    <!-- Traveled Polyline (Solid Active Coral) -->
+                                    <path d="M 120 110 C 230 110, 310 200, 380 260" stroke="#ff5748"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+                                </svg>
+                                <!-- Map Pin 1: Restaurant -->
+                                <div
+                                    class="absolute top-[85px] left-[90px] flex flex-col items-center group cursor-pointer">
+                                    <div
+                                        class="px-space-xs py-0.5 rounded bg-inverse-surface text-inverse-on-surface shadow-md font-label-sm text-label-sm font-bold flex items-center gap-1 mb-1">
+                                        <span
+                                            class="material-symbols-outlined text-[14px] text-primary-container">restaurant</span>
+                                        The Woodfire Kitchen
+                                    </div>
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]">soup_kitchen</span>
+                                    </div>
+                                </div>
+                                <!-- Map Pin 2: Active Courier in Transit -->
+                                <div
+                                    class="absolute top-[230px] left-[350px] flex flex-col items-center group -translate-x-1/2 -translate-y-1/2">
+                                    <div
+                                        class="px-space-sm py-1 rounded-full bg-primary-container text-on-primary shadow-xl font-label-md text-label-md font-extrabold flex items-center gap-1 animate-bounce">
+                                        <span class="material-symbols-outlined text-[16px]">electric_moped</span>
+                                        1.4 km away • 34 km/h
+                                    </div>
+                                    <div
+                                        class="relative w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl mt-1">
+                                        <span class="material-symbols-outlined text-[24px]">navigation</span>
+                                        <span
+                                            class="absolute -inset-2 rounded-full bg-primary opacity-30 animate-ping"></span>
+                                    </div>
+                                </div>
+                                <!-- Map Pin 3: Customer Residence -->
+                                <div
+                                    class="absolute bottom-[65px] right-[85px] flex flex-col items-center group cursor-pointer">
+                                    <div
+                                        class="px-space-xs py-0.5 rounded bg-inverse-surface text-inverse-on-surface shadow-md font-label-sm text-label-sm font-bold flex items-center gap-1 mb-1">
+                                        <span
+                                            class="material-symbols-outlined text-[14px] text-tertiary-fixed">home</span>
+                                        Rohan Kapoor • Volante Res.
+                                    </div>
+                                    <div
+                                        class="w-9 h-9 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
+                                        <span class="material-symbols-outlined text-[20px]">person_pin_circle</span>
+                                    </div>
+                                </div>
+                                <!-- Floating Route HUD Card on Map -->
+                                <div
+                                    class="absolute top-space-md left-space-md bg-surface/95 backdrop-blur-md p-space-md rounded-2xl shadow-xl max-w-xs flex flex-col gap-space-xs">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant">Live
+                                            ETA</span>
+                                        <span
+                                            class="font-label-sm text-label-sm font-bold text-tertiary flex items-center gap-0.5">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 14 mins
+                                        </span>
+                                    </div>
+                                    <div class="flex items-baseline gap-space-xs">
+                                        <span
+                                            class="font-headline-sm text-headline-sm font-extrabold text-on-surface">1.4
+                                            km</span>
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant">to
+                                            destination</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm pt-1">
+                                        <span class="material-symbols-outlined text-tertiary text-[18px]">traffic</span>
+                                        <span>Low Traffic on Flyover Bridge</span>
+                                    </div>
+                                </div>
+                                <!-- Speedometer Badge -->
+                                <div
+                                    class="absolute bottom-space-md left-space-md bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-lg flex items-center gap-space-sm">
+                                    <span
+                                        class="material-symbols-outlined text-primary-container text-[20px]">speed</span>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="font-label-sm text-label-sm font-bold leading-none text-secondary-fixed">Fleet
+                                            Telemetry</span>
+                                        <span class="font-label-md text-label-md font-bold leading-tight">Zero-Emission
+                                            EV Mode</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Quick Interactive Controls Bar below map -->
+                            <div
+                                class="p-space-sm bg-surface-container flex items-center justify-between flex-wrap gap-2 text-on-surface-variant font-label-sm text-label-sm">
+                                <span class="flex items-center gap-1 font-semibold">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] text-primary">satellite_alt</span>
+                                    GPS lock updated 4 seconds ago
+                                </span>
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="cursor-pointer hover:text-on-surface underline">View full
+                                        roadmap</span>
+                                    <span>•</span>
+                                    <span class="cursor-pointer hover:text-on-surface underline">Route issues?</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Delivery Partner Detailed Profile Card -->
+                        <div
+                            class="w-full bg-surface-container-lowest rounded-2xl p-space-md md:p-space-lg shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+                            <div class="flex items-center gap-space-md">
+                                <div class="relative shrink-0">
+                                    <img class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md"
+                                        data-alt="Close-up professional portrait of Vikram Singh, a cheerful Indian courier delivery driver wearing a high-end clean maroon chef-delivery uniform with reflective accents, warm natural daylight, cinematic crisp photography with soft cream background"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOy3QVYBL6tPk6hqxypTRYWZBb4zF4R1WKucHaF8ohTP0fQtgVvMfef_D3tuaNtV2tocdt545Cyrqc0ApERAgmxFefq4xDUK2Bi7BK7uXI9SLCUpFbIvUPhhFX7uX4OkFoGDcnpQw1Og9eVDRq0BaL4DZJYqz5OZq9HeSWNuJcX5dzL3VooLiztBGdrA0uKOh8BELfyyX5CrRlVPYM1-WEb3Sv2QuS8t1EbFyPOTEc" />
+                                    <div class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-sm"
+                                        title="Verified Ambassador">
+                                        <span class="material-symbols-outlined text-[14px]">verified</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col space-y-0.5">
+                                    <div class="flex items-center gap-space-xs flex-wrap">
+                                        <span class="font-title-lg text-title-lg font-bold text-on-surface">Vikram
+                                            Singh</span>
+                                        <span
+                                            class="bg-surface-container px-space-xs py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant font-bold">Certified
+                                            Courier</span>
+                                    </div>
+                                    <div class="flex items-center gap-space-xs text-on-surface-variant">
+                                        <span
+                                            class="font-label-md text-label-md font-extrabold text-on-surface flex items-center gap-0.5">
+                                            <span class="material-symbols-outlined text-[16px] text-primary"
+                                                style="font-variation-settings: 'FILL' 1;">star</span>
+                                            4.95
+                                        </span>
+                                        <span class="font-body-sm text-body-sm text-secondary">(1,420 deliveries)</span>
+                                    </div>
+                                    <p
+                                        class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 pt-0.5">
+                                        <span
+                                            class="material-symbols-outlined text-[16px] text-tertiary">electric_bolt</span>
+                                        <span>TVS iQube Electric • <strong>DL 3S CG 4821</strong></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Rider Actions -->
+                            <div
+                                class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-xs w-full md:w-auto">
+                                <button
+                                    class="flex items-center justify-center gap-space-xs px-space-lg py-space-sm bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-[0_4px_16px_rgba(255,87,72,0.25)]"
+                                    id="call-rider-btn" type="button">
+                                    <span class="material-symbols-outlined text-[18px]">phone</span>
+                                    <span class="font-label-lg text-label-lg font-bold">Call Partner</span>
+                                </button>
+                                <button
+                                    class="flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-full transition-colors"
+                                    id="chat-rider-btn" type="button">
+                                    <span
+                                        class="material-symbols-outlined text-[18px] text-on-surface-variant">chat_bubble</span>
+                                    <span class="font-label-lg text-label-lg font-bold">Chat</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Courier Safety & Cold-Chain Badges -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+                            <div class="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed">
+                                    <span class="material-symbols-outlined text-[20px]">lock</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-label-md text-label-md font-bold text-on-surface">Thermal
+                                        Lock</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">Tamper-Proof Seal
+                                        intact</span>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+                                    <span class="material-symbols-outlined text-[20px]">masks</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-label-md text-label-md font-bold text-on-surface">No-Contact
+                                        Ready</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">Sanitized handing
+                                        handoff</span>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-fixed">
+                                    <span class="material-symbols-outlined text-[20px]">verified_user</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-label-md text-label-md font-bold text-on-surface">Fully
+                                        Vaccinated</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">Daily temp 98.2°F
+                                        logged</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RIGHT COLUMN: Order Breakdown, Thermal Sensor & Concierge (5/12 ~ 40%) -->
+                    <div class="lg:col-span-5 flex flex-col gap-space-lg">
+                        <!-- Live Thermal Vault Temperature Monitor Module -->
+                        <div
+                            class="w-full bg-inverse-surface text-inverse-on-surface rounded-2xl p-space-md md:p-space-lg shadow-md flex flex-col gap-space-md relative overflow-hidden">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-space-xs">
+                                    <span
+                                        class="material-symbols-outlined text-primary-container text-[22px]">thermostat</span>
+                                    <span
+                                        class="font-label-lg text-label-lg font-bold text-inverse-on-surface uppercase tracking-wider">Hearth-Vault
+                                        Chamber</span>
+                                </div>
+                                <span
+                                    class="font-label-sm text-label-sm font-bold text-tertiary-fixed bg-on-tertiary-fixed-variant px-space-xs py-0.5 rounded">Sensors
+                                    Live</span>
+                            </div>
+                            <div class="flex items-baseline justify-between pt-1">
+                                <div class="flex items-baseline gap-space-xs">
+                                    <span
+                                        class="font-display-hero text-headline-xl md:text-display-hero font-extrabold text-primary-fixed leading-none"
+                                        id="temp-display">68.4</span>
+                                    <span
+                                        class="font-headline-sm text-headline-sm font-bold text-primary-fixed">°C</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-label-md text-label-md font-bold text-tertiary-fixed block">Hot
+                                        &amp; Fresh Hold</span>
+                                    <span class="font-body-sm text-body-sm text-secondary-fixed">Target Band: 65°C –
+                                        72°C</span>
+                                </div>
+                            </div>
+                            <!-- Heat Preservation Mini Bar Indicator -->
+                            <div class="w-full bg-secondary-fixed-dim/20 h-2 rounded-full overflow-hidden">
+                                <div
+                                    class="bg-gradient-to-r from-tertiary-fixed via-primary-container to-primary h-full w-[86%] rounded-full">
+                                </div>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-secondary-fixed leading-relaxed">
+                                Your artisanal sourdough crust and wagyu burger are secured in our patented
+                                carbon-shielded induction cavity to preserve crispness without moisture buildup.
+                            </p>
+                        </div>
+                        <!-- Order Summary & Receipts Card -->
+                        <div
+                            class="w-full bg-surface-container-lowest rounded-2xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-md">
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="font-title-lg text-title-lg font-bold text-on-surface">The Woodfire
+                                        Kitchen</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">Central Delhi Hub •
+                                        100% Thermal Lock</span>
+                                </div>
+                                <span class="material-symbols-outlined text-primary text-[24px]">receipt_long</span>
+                            </div>
+                            <!-- Items Ordered List -->
+                            <div class="flex flex-col divide-y divide-surface-container">
+                                <!-- Item 1 -->
+                                <div class="py-space-sm flex items-start justify-between gap-space-md">
+                                    <div class="flex items-start gap-space-sm">
+                                        <span
+                                            class="font-label-md text-label-md font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded mt-0.5">2x</span>
+                                        <div class="flex flex-col">
+                                            <span class="font-label-lg text-label-lg font-bold text-on-surface">Artisan
+                                                Woodfired Truffle Crust (11")</span>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">Fior di
+                                                latte, black truffle emulsion, wild mushrooms</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹888</span>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="py-space-sm flex items-start justify-between gap-space-md">
+                                    <div class="flex items-start gap-space-sm">
+                                        <span
+                                            class="font-label-md text-label-md font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded mt-0.5">1x</span>
+                                        <div class="flex flex-col">
+                                            <span class="font-label-lg text-label-lg font-bold text-on-surface">Smoky
+                                                Chipotle Crispy Burger</span>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">Brioche bun,
+                                                smoked gouda, house pickled jalapeños</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹279</span>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="py-space-sm flex items-start justify-between gap-space-md">
+                                    <div class="flex items-start gap-space-sm">
+                                        <span
+                                            class="font-label-md text-label-md font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded mt-0.5">1x</span>
+                                        <div class="flex flex-col">
+                                            <span class="font-label-lg text-label-lg font-bold text-on-surface">Hazelnut
+                                                Cold Brew Latte</span>
+                                            <span class="font-body-sm text-body-sm text-on-surface-variant">Arabica
+                                                single-origin, roasted hazelnut milk (chilled flask)</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface shrink-0">₹179</span>
+                                </div>
+                            </div>
+                            <!-- Total Calculation -->
+                            <div class="bg-surface-container-low p-space-md rounded-xl space-y-space-xs">
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Item Total</span>
+                                    <span>₹1,346</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+                                    <span>Culinary Packaging &amp; Thermal Seal</span>
+                                    <span>₹45</span>
+                                </div>
+                                <div class="flex justify-between font-body-sm text-body-sm text-tertiary font-semibold">
+                                    <span>Crave VIP Delivery Discount</span>
+                                    <span>-₹53</span>
+                                </div>
+                                <div
+                                    class="flex justify-between font-title-lg text-title-lg font-bold text-on-surface pt-space-xs">
+                                    <span>Total Paid</span>
+                                    <span class="text-primary font-headline-sm text-headline-sm">₹1,338</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm pt-1">
+                                    <span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+                                    <span>Settled via UPI / Google Pay Verified (Txn: #GP-88392)</span>
+                                </div>
+                            </div>
+                            <!-- Delivery Address Block -->
+                            <div class="flex items-start gap-space-sm pt-space-xs">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-primary">
+                                    <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-label-md text-label-md font-bold text-on-surface">Destination
+                                        Address</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                        Flat 402, Tower B, Volante Residences, Sector 62, Noida, Uttar Pradesh 201309
+                                    </p>
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface font-semibold mt-1">Instructions:
+                                        "Leave with front desk concierge if ring unanswered"</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Support, Concierge & Invoice Actions -->
+                        <div
+                            class="w-full bg-surface-container-lowest rounded-2xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-sm">
+                            <span class="font-label-lg text-label-lg font-bold text-on-surface">Assistance &amp;
+                                Documentation</span>
+                            <button
+                                class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors text-left"
+                                id="help-order-btn" type="button">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-primary text-[20px]">help_center</span>
+                                    <div class="flex flex-col">
+                                        <span class="font-label-md text-label-md font-bold">Need Help with this
+                                            Order?</span>
+                                        <span
+                                            class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Missing
+                                            items, modifications or delayed transit</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+                            </button>
+                            <button
+                                class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors text-left"
+                                id="concierge-chat-btn" type="button">
+                                <div class="flex items-center gap-space-sm">
+                                    <span
+                                        class="material-symbols-outlined text-tertiary text-[20px]">support_agent</span>
+                                    <div class="flex flex-col">
+                                        <span class="font-label-md text-label-md font-bold">Contact Concierge / Live
+                                            Chat</span>
+                                        <span
+                                            class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Instant
+                                            24/7 dedicated culinary resolution agent</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+                            </button>
+                            <button
+                                class="w-full flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors text-left"
+                                id="download-invoice-btn" type="button">
+                                <div class="flex items-center gap-space-sm">
+                                    <span
+                                        class="material-symbols-outlined text-secondary text-[20px]">picture_as_pdf</span>
+                                    <div class="flex flex-col">
+                                        <span class="font-label-md text-label-md font-bold">Download Official Tax
+                                            Invoice</span>
+                                        <span
+                                            class="font-body-sm text-body-sm text-on-surface-variant leading-tight">GST
+                                            compliant commercial receipt (PDF, 142 KB)</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant text-[20px]">download</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Reassurance Strip -->
+                <div
+                    class="w-full py-space-md bg-surface-container rounded-2xl px-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left">
+                    <div class="flex items-center gap-space-md">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-[24px]">sentiment_very_satisfied</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-title-md text-title-md font-bold text-on-surface">NAURIO Freshness &amp;
+                                Temperature Guarantee</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">If your meal drops below
+                                60°C or arrives damp, we refund 100% of your bill instantly in Crave Coins.</span>
+                        </div>
+                    </div>
+                    <button
+                        class="px-space-md py-space-xs bg-surface-container-lowest hover:bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface font-bold transition-colors whitespace-nowrap"
+                        type="button">
+                        Read Policy
+                    </button>
+                </div>
+            </div>
+            <!-- Interactive Toast Notification Container -->
+            <div class="fixed bottom-6 right-6 max-w-sm bg-inverse-surface text-inverse-on-surface p-space-md rounded-2xl shadow-2xl flex items-center gap-space-md opacity-0 pointer-events-none transition-all duration-300 z-50"
+                id="toast-notification">
+                <span class="material-symbols-outlined text-primary-container text-[24px]" id="toast-icon">info</span>
+                <div class="flex flex-col">
+                    <span class="font-label-md text-label-md font-bold" id="toast-title">Notification</span>
+                    <span class="font-body-sm text-body-sm text-secondary-fixed" id="toast-msg">Status updated.</span>
+                </div>
+            </div>
+            <script>
+                    (function () {
+                        // Toast notification helper
+                        function showToast(title, msg, icon) {
+                            const toast = document.getElementById('toast-notification');
+                            const toastTitle = document.getElementById('toast-title');
+                            const toastMsg = document.getElementById('toast-msg');
+                            const toastIcon = document.getElementById('toast-icon');
+
+                            if (!toast) return;
+                            toastTitle.textContent = title;
+                            toastMsg.textContent = msg;
+                            if (icon) toastIcon.textContent = icon;
+
+                            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+                            toast.classList.add('opacity-100', 'translate-y-0');
+
+                            setTimeout(function () {
+                                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+                                toast.classList.remove('opacity-100', 'translate-y-0');
+                            }, 3400);
+                        }
+
+                        // Audio Toggle Button
+                        const audioBtn = document.getElementById('audio-toggle-btn');
+                        if (audioBtn) {
+                            let isMuted = false;
+                            audioBtn.addEventListener('click', function () {
+                                isMuted = !isMuted;
+                                const label = audioBtn.querySelector('span:nth-child(2)');
+                                const icon = audioBtn.querySelector('.material-symbols-outlined');
+                                if (isMuted) {
+                                    label.textContent = 'Muted';
+                                    icon.textContent = 'notifications_off';
+                                    showToast('Live Alerts Muted', 'Sound chimes silenced for this delivery cycle.', 'volume_off');
+                                } else {
+                                    label.textContent = 'Sound On';
+                                    icon.textContent = 'notifications_active';
+                                    showToast('Chimes Active', 'You will hear an alert when courier is 200m away.', 'notifications_active');
+                                }
+                            });
+                        }
+
+                        // Rider Actions
+                        const callBtn = document.getElementById('call-rider-btn');
+                        if (callBtn) {
+                            callBtn.addEventListener('click', function () {
+                                showToast('Connecting Call...', 'Dialing Vikram Singh (+91 9810X-XXXXX) securely via proxy.', 'call');
+                            });
+                        }
+
+                        const chatBtn = document.getElementById('chat-rider-btn');
+                        if (chatBtn) {
+                            chatBtn.addEventListener('click', function () {
+                                showToast('Rider Chat Opened', 'Sending quick preset: "Please ring flat 402 doorbell."', 'chat');
+                            });
+                        }
+
+                        // Concierge & Invoice
+                        const helpBtn = document.getElementById('help-order-btn');
+                        if (helpBtn) {
+                            helpBtn.addEventListener('click', function () {
+                                showToast('Order Resolution Desk', 'Support ticket opened for Order #NAU-98214.', 'support');
+                            });
+                        }
+
+                        const conciergeBtn = document.getElementById('concierge-chat-btn');
+                        if (conciergeBtn) {
+                            conciergeBtn.addEventListener('click', function () {
+                                showToast('Live Concierge Connected', 'Chef-support manager Ananya joined the session.', 'headset_mic');
+                            });
+                        }
+
+                        const invoiceBtn = document.getElementById('download-invoice-btn');
+                        if (invoiceBtn) {
+                            invoiceBtn.addEventListener('click', function () {
+                                showToast('Invoice Generating', 'Official GST invoice NAU-98214.pdf downloaded to device.', 'file_download_done');
+                            });
+                        }
+
+                        const recenterBtn = document.getElementById('recenter-btn');
+                        if (recenterBtn) {
+                            recenterBtn.addEventListener('click', function () {
+                                showToast('Map Recentered', 'Focus centered on rider Vikram Singh (1.4 km away).', 'my_location');
+                            });
+                        }
+
+                        // Micro thermal sensor temperature fluctuation simulation
+                        const tempDisplay = document.getElementById('temp-display');
+                        if (tempDisplay) {
+                            setInterval(function () {
+                                const base = 68.4;
+                                const variance = (Math.random() * 0.4 - 0.2).toFixed(1);
+                                tempDisplay.textContent = (base + parseFloat(variance)).toFixed(1);
+                            }, 4500);
+                        }
+                    })();
+            </script>
+        </div>
+    </main>
+    <footer class="w-full bg-[#201a16] text-[#e5d8cd] pt-space-xl pb-space-lg">
+        <div class="max-w-7xl mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-xl">
+                <div class="space-y-space-md">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary-container font-extrabold leading-none uppercase">NAURIO</span><span
+                            class="font-label-sm text-label-sm tracking-widest text-[#c8c6c5] uppercase font-bold mt-1">Made
+                            to Crave</span></div>
+                    <p class="font-body-sm text-body-sm text-[#c8c6c5] leading-relaxed">An artisanal epicurean delivery
+                        platform bringing Michelin-level gastronomy, cloud kitchens, and hand-crafted delicacies
+                        straight to discerning urban dinner tables.</p>
+                    <div class="flex flex-col gap-space-xs pt-space-sm">
+                        <div class="flex items-center gap-space-sm text-[#e5e2e1]"><span
+                                class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span
+                                class="font-label-sm text-label-sm">FSSAI Central Lic. No. 10022011000842</span></div>
+                        <div class="flex items-center gap-space-sm text-[#c8c6c5]"><span
+                                class="material-symbols-outlined text-[18px]">eco</span><span
+                                class="font-body-sm text-body-sm">100% Recyclable Gourmet Packaging</span></div>
+                    </div>
+                    <div class="flex items-center gap-space-sm pt-space-xs">
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-[#372f28] rounded-xl text-left cursor-pointer hover:bg-[#474746] transition-colors">
+                            <span class="material-symbols-outlined text-[24px]">ad_units</span>
+                            <div class="flex flex-col"><span
+                                    class="font-label-sm text-label-sm leading-none text-[#c8c6c5]">Download
+                                    on</span><span
+                                    class="font-label-md text-label-md font-bold leading-tight text-[#ffffff]">App
+                                    Store</span></div>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-[#372f28] rounded-xl text-left cursor-pointer hover:bg-[#474746] transition-colors">
+                            <span class="material-symbols-outlined text-[24px]">shop</span>
+                            <div class="flex flex-col"><span
+                                    class="font-label-sm text-label-sm leading-none text-[#c8c6c5]">GET IT
+                                    ON</span><span
+                                    class="font-label-md text-label-md font-bold leading-tight text-[#ffffff]">Google
+                                    Play</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Culinary Curation</span>
+                    <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Artisanal Sourdough &amp;
+                                Pizzeria</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Smash Wagyu &amp; Craft
+                                Burgers</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Kyoto Omakase &amp; Bento
+                                Boxes</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Heritage Dumplings &amp; Dim
+                                Sum</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Botanical Smoothie &amp; Salad
+                                Bowls</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Small-Batch Gelato &amp;
+                                Patisserie</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Quick Links</span>
+                    <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Chef Partner Program</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">NAURIO Black Membership</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Corporate Catering &amp;
+                                Events</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Sustainability &amp;
+                                Cold-Chain</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Redeem Crave Coins</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Brand Newsroom &amp; Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Concierge &amp;
+                        Support</span>
+                    <div class="bg-[#372f28] p-space-md rounded-2xl space-y-space-xs"><span
+                            class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider block">Direct
+                            Culinary Hotline</span>
+                        <div class="flex items-center gap-space-xs"><span
+                                class="material-symbols-outlined text-primary-container text-[20px]">support_agent</span><span
+                                class="font-title-lg text-title-lg text-[#ffffff] font-bold">+91 1800-NAURIO</span>
+                        </div>
+                        <p class="font-body-sm text-body-sm text-[#c8c6c5]">Available 24/7 for live order tracking &amp;
+                            tasting bookings</p>
+                    </div>
+                    <div class="space-y-space-xs"><span
+                            class="font-label-md text-label-md text-[#ffffff] font-semibold block">Accepted Payment
+                            Modes</span>
+                        <div class="flex flex-wrap items-center gap-space-xs"><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">UPI</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Visa</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Mastercard</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">NetBanking</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Cred</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-[#372f28] pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-[#c8c6c5] font-body-sm text-body-sm">
+                <div>© 2025 NAURIO Technologies Pvt. Ltd. Crafted with passion for epicures.</div>
+                <div class="flex items-center gap-space-lg font-label-md text-label-md"><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Privacy Policy</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Terms of Service</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">FSSAI Disclosures</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Security</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

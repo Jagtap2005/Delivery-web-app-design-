@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#ffb4aa", "secondary-fixed": "#e5e2e1", "tertiary": "#52652d", "on-secondary-fixed-variant": "#474746", "on-tertiary": "#ffffff", "surface-container-low": "#fff1e6", "background": "#fff8f4", "surface-dim": "#e5d8cd", "on-primary-fixed-variant": "#930006", "outline": "#8f706b", "primary": "#b7221c", "primary-fixed-dim": "#ffb4aa", "surface-tint": "#b7221c", "inverse-on-surface": "#fceee3", "on-secondary": "#ffffff", "error": "#ba1a1a", "surface-container-highest": "#eee0d5", "inverse-surface": "#372f28", "tertiary-container": "#85995b", "on-error-container": "#93000a", "surface-bright": "#fff8f4", "on-primary": "#ffffff", "on-tertiary-container": "#202f00", "on-primary-container": "#5e0002", "secondary": "#5f5e5e", "secondary-fixed-dim": "#c8c6c5", "surface-container-high": "#f3e6db", "on-background": "#211a14", "primary-fixed": "#ffdad5", "on-secondary-fixed": "#1c1b1b", "surface": "#fff8f4", "error-container": "#ffdad6", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#141f00", "on-secondary-container": "#636262", "tertiary-fixed-dim": "#b9cf8b", "primary-container": "#ff5748", "tertiary-fixed": "#d5eba5", "on-surface": "#211a14", "surface-variant": "#eee0d5", "secondary-container": "#e2dfde", "outline-variant": "#e3beb9", "surface-container": "#f9ebe1", "on-tertiary-fixed-variant": "#3b4c17", "on-surface-variant": "#5b403d", "on-primary-fixed": "#410001" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem", "gutter-desktop": "2rem", "gutter-mobile": "1rem", "margin-desktop": "4rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": ["Manrope"], "headline-xl-mobile": ["Manrope"], "title-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Manrope"], "headline-sm": ["Manrope"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Manrope"], "headline-lg": ["Manrope"], "display-hero": ["Manrope"], "title-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Manrope"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "title-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-hero-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-hero": ["64px", { "lineHeight": "70px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-32 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-between py-2">
+      <div class="flex items-center justify-between gap-4 h-16">
+        <div class="flex items-center gap-6"><a class="flex items-center gap-2" data-path="home" href="#"><span
+              class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold">NAURIO</span><span
+              class="hidden xl:inline text-label-sm font-label-sm uppercase tracking-widest text-on-surface-variant font-bold">CRAVE</span></a><button
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-left"
+            type="button"><span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+            <div class="flex flex-col"><span
+                class="text-label-sm font-label-sm text-on-surface-variant leading-none">Deliver to</span><span
+                class="text-label-md font-label-md text-on-surface font-semibold truncate max-w-[130px]">Sector 62,
+                Noida</span></div><span
+              class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+          </button></div>
+        <div class="hidden md:flex flex-1 max-w-md mx-4">
+          <div
+            class="w-full flex items-center bg-surface-container-lowest rounded-full px-4 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.04)] focus-within:ring-2 focus-within:ring-primary/20">
+            <span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span><input
+              class="w-full bg-transparent text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none"
+              placeholder="Search artisanal burgers, bowls, bakery..." type="text" /></div>
+        </div>
+        <div class="flex items-center gap-3"><button
+            class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors"
+            type="button"><span
+              class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span
+              class="text-label-md font-label-md">Get App</span></button>
+          <div
+            class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+            <span class="material-symbols-outlined text-[16px]">monetization_on</span><span
+              class="text-label-md font-label-md font-bold">240 Coins</span></div><a
+            class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md shadow-[0_4px_16px_rgba(255,87,72,0.3)] hover:opacity-95 transition-all"
+            data-path="cart-and-checkout" href="#"><span
+              class="material-symbols-outlined text-[18px]">shopping_bag</span><span>Cart (3) • ₹489</span></a><a
+            class="flex items-center" data-path="user-profile" href="#" title="User Account">
+            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="h-12 flex items-center overflow-x-auto no-scrollbar">
+        <nav class="flex items-center gap-1 sm:gap-2"
+          data-active-classes="bg-primary-container text-on-primary font-bold rounded-full"><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="home" href="#">Home</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="explore-menu" href="#">Explore Menu</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="categories" href="#">Categories</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="offers-and-deals" href="#">Offers &amp; Deals</a><a aria-current="page"
+            class="px-3.5 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-bold rounded-full"
+            data-path="restaurants" href="#">Restaurants</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="cart-and-checkout" href="#">Cart &amp; Checkout</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="live-tracking" href="#">Live Tracking</a></nav>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-32 bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- CINEMATIC RESTAURANT HERO SECTION -->
+      <section class="relative w-full -mt-32 pt-32 overflow-hidden bg-inverse-surface text-inverse-on-surface">
+        <!-- Atmospheric Ambient Glows -->
+        <div
+          class="absolute -top-24 left-1/4 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="absolute bottom-0 right-10 w-[500px] h-72 bg-tertiary/20 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-10">
+          <!-- Breadcrumb Bar -->
+          <nav class="flex items-center gap-2 text-label-sm font-label-sm text-surface-container-highest/80 mb-6">
+            <a class="hover:text-inverse-primary transition-colors" href="#">Home</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <a class="hover:text-inverse-primary transition-colors" href="#">Restaurants</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <a class="hover:text-inverse-primary transition-colors" href="#">Central NCR</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-surface-bright font-semibold">The Woodfire Kitchen</span>
+          </nav>
+          <!-- Main Identity Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Visual Cover Showcase (7 cols) -->
+            <div class="lg:col-span-7 relative group">
+              <div
+                class="relative w-full h-[340px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl bg-surface-variant">
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Authentic traditional Italian woodfired pizza oven roaring with glowing golden embers and firewood, surrounded by artisanal sourdough dough balls, fresh sweet basil leaves, San Marzano tomato sauce, and warm dramatic kitchen backlighting."
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4vM6Vwf14Yuc5457ymLdbCEqMJcBNlbS7gSbFLAv3JyCo-rlF1rg3H301qTi8lOfjUhvBh8AXDP2F7rDOKHlJSekHnaUu5EEvMamDC-ey6fIUoBddzQfznHryOfu_o33Hm8pRF-EcdUXwIw5EiDNPwIvpPfeWeu3Svz6vbxPYWvGCUqSiQuNfDK8rR8foITftpbD_Ykb3x8AD2S4RGiT-H3ri-fB_I2N0hsgZhBmP')">
+                </div>
+                <!-- Vignette Scrim -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent">
+                </div>
+                <!-- Floating Top Badges -->
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 rounded-full bg-inverse-surface/85 backdrop-blur-md text-label-sm font-label-sm text-tertiary-fixed font-bold flex items-center gap-1.5 shadow-md">
+                    <span class="material-symbols-outlined text-[16px] text-tertiary-fixed"
+                      style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    Volcanic Stone Hearth 480°C
+                  </span>
+                  <span
+                    class="px-3 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-label-sm font-label-sm font-bold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+                    FSSAI 5-Star Kitchen
+                  </span>
+                </div>
+                <!-- Hearth Status Stamp -->
+                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-surface-bright">
+                  <div class="flex items-center gap-3">
+                    <div class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></div>
+                    <p
+                      class="text-label-md font-label-md tracking-wide uppercase text-surface-container-high font-bold">
+                      Batch #312 Baking Live</p>
+                  </div>
+                  <span class="text-label-sm font-label-sm text-surface-container-highest">Live Camera Feed</span>
+                </div>
+              </div>
+            </div>
+            <!-- Restaurant Details & Stats (5 cols) -->
+            <div class="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between gap-4">
+                  <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/30 text-tertiary-fixed text-label-sm font-label-sm font-bold uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-[14px]">stars</span> #1 Top Rated in Central NCR
+                  </div>
+                  <!-- Action Buttons -->
+                  <div class="flex items-center gap-2">
+                    <button aria-label="Save to Favourites"
+                      class="w-10 h-10 rounded-full bg-surface-container-highest/20 hover:bg-primary hover:text-on-primary text-surface-bright flex items-center justify-center transition-all shadow-sm"
+                      type="button">
+                      <span class="material-symbols-outlined text-[20px]">favorite</span>
+                    </button>
+                    <button aria-label="Share Kitchen"
+                      class="w-10 h-10 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/40 text-surface-bright flex items-center justify-center transition-all shadow-sm"
+                      type="button">
+                      <span class="material-symbols-outlined text-[20px]">share</span>
+                    </button>
+                  </div>
+                </div>
+                <h1
+                  class="font-headline-xl text-headline-xl text-surface-bright tracking-tight leading-none font-extrabold">
+                  The Woodfire Kitchen
+                </h1>
+                <p class="font-body-md text-body-md text-surface-container-high/90">
+                  Artisanal Pizzas • Sourdough Bakes • Italian Gourmet • Handcrafted Dips
+                </p>
+              </div>
+              <!-- Performance Metric Tiles -->
+              <div class="grid grid-cols-3 gap-3">
+                <div class="bg-surface-container-highest/15 rounded-2xl p-3.5 flex flex-col justify-between">
+                  <div class="flex items-center gap-1.5 text-tertiary-fixed font-headline-sm text-headline-sm">
+                    <span>4.9</span>
+                    <span class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="text-label-sm font-label-sm text-surface-container-highest mt-1">3,420+ ratings</span>
+                </div>
+                <div class="bg-surface-container-highest/15 rounded-2xl p-3.5 flex flex-col justify-between">
+                  <div class="flex items-center gap-1 text-primary-fixed-dim font-headline-sm text-headline-sm">
+                    <span>24-28</span>
+                    <span class="text-label-md font-label-md text-surface-container-high">m</span>
+                  </div>
+                  <span class="text-label-sm font-label-sm text-surface-container-highest mt-1">Free over ₹110</span>
+                </div>
+                <div class="bg-surface-container-highest/15 rounded-2xl p-3.5 flex flex-col justify-between">
+                  <div class="flex items-center gap-1 text-surface-bright font-headline-sm text-headline-sm">
+                    <span class="text-title-md font-title-md">Open Now</span>
+                  </div>
+                  <span class="text-label-sm font-label-sm text-tertiary-fixed mt-1">Till 3:00 AM</span>
+                </div>
+              </div>
+              <!-- Micro Location & Sanitation Line -->
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-body-sm font-body-sm text-surface-container-high bg-surface-container-highest/10 px-4 py-3 rounded-2xl">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+                  <span class="truncate">Inner Circle, Connaught Place • 2.4 km away</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-label-sm font-label-sm text-surface-bright font-bold">
+                  <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  FSSAI Lic. 13321008000491
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CHEF OFFERS RAIL -->
+          <div class="mt-8 pt-6">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="text-label-sm font-label-sm uppercase tracking-widest text-surface-container-highest font-bold">Available
+                Culinary Perks</span>
+              <span class="text-label-sm font-label-sm text-tertiary-fixed font-semibold">3 Deals Applied
+                Automatically</span>
+            </div>
+            <div class="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2">
+              <!-- Promo Card 1 -->
+              <div
+                class="flex-shrink-0 w-80 bg-surface-container-highest/15 hover:bg-surface-container-highest/25 rounded-2xl p-4 transition-colors flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 font-bold shadow-md">
+                  <span class="material-symbols-outlined text-[22px]">percent</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-headline-sm text-headline-sm text-surface-bright">20% OFF</span>
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-highest/40 text-label-sm font-label-sm text-surface-bright font-mono">WOODFIRE20</span>
+                  </div>
+                  <p class="text-body-sm font-body-sm text-surface-container-high truncate">Valid on orders above ₹499 •
+                    Up to ₹120</p>
+                </div>
+              </div>
+              <!-- Promo Card 2 -->
+              <div
+                class="flex-shrink-0 w-80 bg-surface-container-highest/15 hover:bg-surface-container-highest/25 rounded-2xl p-4 transition-colors flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0 font-bold shadow-md">
+                  <span class="material-symbols-outlined text-[22px]">moped</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-headline-sm text-headline-sm text-surface-bright">FREE DELIVERY</span>
+                    <span class="text-label-sm font-label-sm text-tertiary-fixed font-bold">AUTO</span>
+                  </div>
+                  <p class="text-body-sm font-body-sm text-surface-container-high truncate">No minimum basket value for
+                    next 40 mins</p>
+                </div>
+              </div>
+              <!-- Promo Card 3 -->
+              <div
+                class="flex-shrink-0 w-80 bg-surface-container-highest/15 hover:bg-surface-container-highest/25 rounded-2xl p-4 transition-colors flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 font-bold shadow-md">
+                  <span class="material-symbols-outlined text-[22px]">local_dining</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-headline-sm text-headline-sm text-surface-bright">₹150 OFF</span>
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-highest/40 text-label-sm font-label-sm text-surface-bright font-mono">COMBOCRAVE</span>
+                  </div>
+                  <p class="text-body-sm font-body-sm text-surface-container-high truncate">On any Artisan Pizza + Dolci
+                    pairing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MAIN MENU INTERFACE: TWO-COLUMN DISCOVERY -->
+      <section class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- LEFT STICKY SIDEBAR (3 cols) -->
+          <aside class="hidden lg:block lg:col-span-3 sticky top-36 z-30">
+            <div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm space-y-4">
+              <div class="flex items-center justify-between pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">restaurant_menu</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Categories</span>
+                </div>
+                <span
+                  class="text-label-sm font-label-sm text-on-surface-variant font-bold bg-surface-container-high px-2 py-0.5 rounded-full">48
+                  Items</span>
+              </div>
+              <!-- Category Navigation List -->
+              <nav class="space-y-1.5" id="menu-category-nav">
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl bg-primary-container text-on-primary font-bold text-label-md font-label-md shadow-sm transition-all"
+                  href="#section-recommended">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                    Chef Recommended
+                  </span>
+                  <span class="text-label-sm font-label-sm opacity-90">8</span>
+                </a>
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all"
+                  href="#section-starters">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">tapas</span>
+                    Small Plates &amp; Starters
+                  </span>
+                  <span class="text-label-sm font-label-sm text-on-surface-variant">6</span>
+                </a>
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all"
+                  href="#section-pizzas">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">local_pizza</span>
+                    Woodfired Pizzas (11")
+                  </span>
+                  <span class="text-label-sm font-label-sm text-on-surface-variant">12</span>
+                </a>
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all"
+                  href="#section-burgers">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">lunch_dining</span>
+                    Brioche Sourdough Buns
+                  </span>
+                  <span class="text-label-sm font-label-sm text-on-surface-variant">5</span>
+                </a>
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all"
+                  href="#section-dolci">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">icecream</span>
+                    House Dolci &amp; Bakes
+                  </span>
+                  <span class="text-label-sm font-label-sm text-on-surface-variant">4</span>
+                </a>
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all"
+                  href="#section-beverages">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">local_cafe</span>
+                    Beverages &amp; Cold Brews
+                  </span>
+                  <span class="text-label-sm font-label-sm text-on-surface-variant">5</span>
+                </a>
+                <a class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all"
+                  href="#section-combos">
+                  <span class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px]">dinner_dining</span>
+                    Chef Degustation Combos
+                  </span>
+                  <span class="text-label-sm font-label-sm text-on-surface-variant">3</span>
+                </a>
+              </nav>
+              <!-- Culinary Trust Note -->
+              <div class="mt-4 p-4 rounded-2xl bg-surface-container-low text-on-surface space-y-2">
+                <div class="flex items-center gap-2 text-tertiary font-bold text-label-sm font-label-sm">
+                  <span class="material-symbols-outlined text-[16px]">eco</span>
+                  Zero Artificial Leavening
+                </div>
+                <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                  Every crust is naturally cold-fermented for 72 hours using an eight-year-old starter.
+                </p>
+              </div>
+            </div>
+          </aside>
+          <!-- RIGHT MAIN CONTENT (9 cols) -->
+          <main class="w-full lg:col-span-9 space-y-10">
+            <!-- INTERACTIVE SEARCH & PREFERENCE FILTERS -->
+            <div class="sticky top-32 z-20 bg-background/95 backdrop-blur-md pt-2 pb-4 space-y-4">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <!-- Search Inside Kitchen -->
+                <div class="relative flex-1">
+                  <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+                  <input
+                    class="w-full h-12 pl-12 pr-4 rounded-full bg-surface-container-lowest text-on-surface text-body-md font-body-md placeholder:text-on-surface-variant focus:outline-none shadow-sm focus:ring-2 focus:ring-primary/20"
+                    placeholder="Search in The Woodfire Kitchen (e.g., Truffle, Burrata, Tiramisu)..." type="text" />
+                </div>
+                <!-- Dietary Pills & Preferences -->
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+                  <!-- Veg Switch -->
+                  <button
+                    class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface text-label-md font-label-md shadow-sm hover:bg-surface-container transition-colors"
+                    type="button">
+                    <span class="w-4 h-4 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                      <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                    </span>
+                    <span>Pure Veg</span>
+                  </button>
+                  <!-- Non-Veg Switch -->
+                  <button
+                    class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface text-label-md font-label-md shadow-sm hover:bg-surface-container transition-colors"
+                    type="button">
+                    <span class="w-4 h-4 rounded-sm flex items-center justify-center p-0.5 bg-primary-fixed">
+                      <span
+                        class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[7px] border-b-primary"></span>
+                    </span>
+                    <span>Non-Veg</span>
+                  </button>
+                  <!-- Bestsellers -->
+                  <button
+                    class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-inverse-surface text-inverse-on-surface text-label-md font-label-md shadow-sm"
+                    type="button">
+                    <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim"
+                      style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    <span>Bestsellers</span>
+                  </button>
+                  <!-- Spicy Filter -->
+                  <button
+                    class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface text-label-md font-label-md shadow-sm hover:bg-surface-container transition-colors"
+                    type="button">
+                    <span class="material-symbols-outlined text-[16px] text-primary">whatshot</span>
+                    <span>Spicy Only</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- SECTION 1: CHEF'S RECOMMENDED SPOTLIGHT -->
+            <section class="space-y-5" id="section-recommended">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[22px]"
+                      style="font-variation-settings: 'FILL' 1;">recommend</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">Recommended by Master
+                      Pizzaiolo</h2>
+                  </div>
+                  <p class="text-body-md font-body-md text-on-surface-variant">Signature dough creations that define our
+                    woodfired heritage</p>
+                </div>
+                <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">4 DISHES</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Dish 1: Artisan Woodfired Truffle Crust -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-bold">CHEF'S
+                          PICK</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Artisan Woodfired Truffle Crust
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹645</span>
+                        <span class="text-body-sm font-body-sm text-on-surface-variant line-through">₹725</span>
+                        <span class="text-label-sm font-label-sm text-primary font-bold">11% OFF</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Piedmont black truffle cream, Fior di Latte mozzarella, charred porcini mushrooms, finished with
+                        fresh thyme and 24-month aged Reggiano.
+                      </p>
+                      <div class="flex items-center gap-3 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="flex items-center gap-1 font-bold text-on-surface">
+                          <span class="material-symbols-outlined text-[15px] text-tertiary"
+                            style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (420+)
+                        </span>
+                        <span>• 11" Cut into 6 Slices</span>
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Artisanal woodfired pizza with black truffle drizzle, melted fresh buffalo mozzarella blisters, wild roasted mushrooms, fresh green thyme sprigs on a warm rustic stone plate."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBheS4UgQEj5w3d7IYN4h3hGB1QhBKBSLtQe05anWh3zjF4lCOiitloGWpeBKHuWP3SIvuoLTSwwsTUZsDN0x1GVz0Dtyi2y4acUSomKWrX0s6uhIxrFv2DqgCbpbxxDv3EyR2v9dRNnqGJHNCjgxlP_AWQjWLxSy0QWsZCJr6YRuC9hUakcaIm8s3PtBWhCu71nRpfacRMk0N2jq3Q6cFKx4vLxxvDm-orQwO47v1g" />
+                      <!-- Quantity Add / Counter Button -->
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dish 2: Pistachio Pesto Burrata Sourdough -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm font-bold">BESTSELLER</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Pistachio Pesto Burrata Pie
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹685</span>
+                        <span class="text-body-sm font-body-sm text-on-surface-variant line-through">₹750</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Bronte pistachio pesto base, confit garlic, sweet yellow Datterini tomatoes, crowned with a
+                        whole creamy Puglia burrata ball.
+                      </p>
+                      <div class="flex items-center gap-3 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="flex items-center gap-1 font-bold text-on-surface">
+                          <span class="material-symbols-outlined text-[15px] text-tertiary"
+                            style="font-variation-settings: 'FILL' 1;">star</span> 4.95 (610+)
+                        </span>
+                        <span>• Highly Indulgent</span>
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Gourmet sourdough pizza topped with vibrant pistachio pesto, cracked crushed pistachios, sweet roasted yellow tomatoes, and a creamy whole burrata sphere resting in the center with golden olive oil drizzle."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm1eGpV-qJDY6hknfQqLpnFmNQzamfMzPo19lRLYBf5tXvoZFcfm8eHyEfC-2rv8hmEkIKurty-kwyaj3PhHtiQsoXK_YQtbwSvwdZPu7B-tUbuRYgX2YjKUjsQ5YpwB_FC-Fd3F1FoEVHvDInNoUq3s2_Di5_2b26MvSU47Gt1U1pMH6BsujJueqTphZpsaczPQNcIXl5X-k8Xs2U7L982SAk9Z8Ud6D2esISxyvR" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dish 3: Fiery Diavola Pepperoni Craft -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-primary-fixed">
+                          <span
+                            class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[7px] border-b-primary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-primary text-on-primary text-label-sm font-label-sm font-bold">HOT
+                          &amp; SPICY</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Fiery Diavola Pepperoni
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹695</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Crisp cup-and-char pork pepperoni, Calabrian chili honey drizzle, San Marzano tomato sauce,
+                        fresh smoked Scamorza cheese.
+                      </p>
+                      <div class="flex items-center gap-3 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="flex items-center gap-1 font-bold text-on-surface">
+                          <span class="material-symbols-outlined text-[15px] text-tertiary"
+                            style="font-variation-settings: 'FILL' 1;">star</span> 4.88 (980+)
+                        </span>
+                        <span class="flex items-center text-primary font-bold">
+                          <span class="material-symbols-outlined text-[14px]">local_fire_department</span> Spicy
+                        </span>
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Artisanal hot pepperoni pizza with crispy curling char pepperoni cups holding hot chili oil, melted mozzarella and glistening hot honey glaze on bubbly blistered woodfired crust."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR7XT6dVB2X6pngt85GHiHZq9aXViWWYY3zHh2D6YFmhWvYHHkKA5T4ZcGEJnff47b0ySpQsiWFzy2mIyxdaLZMT2zSA8bUuBKSLB4PWiW_Z79qFKCbtzx30a8MBGpFWXoEwVe721xeBXbUj-aQG2eEVZGdYXLN5xiDyHORyIXp0Jo1EE8NUF6R0j5fqYKqxsNqxZykV4CGMQ6tlO6acDxQdMc9wVD1LAzW8oYPc5q" />
+                      <!-- Example Active Item with Counter -->
+                      <div
+                        class="absolute bottom-2 right-2 flex items-center bg-inverse-surface text-inverse-on-surface rounded-full p-1 shadow-lg">
+                        <button
+                          class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container-highest/20 transition-colors"
+                          type="button">
+                          <span class="material-symbols-outlined text-[18px]">remove</span>
+                        </button>
+                        <span class="font-bold text-label-md font-label-md px-2 text-primary-fixed-dim">1</span>
+                        <button
+                          class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center hover:scale-105 transition-transform"
+                          type="button">
+                          <span class="material-symbols-outlined text-[18px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dish 4: Sicilian Pistachio Tiramisu Pot -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm font-bold">DESSERT
+                          ICON</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Sicilian Pistachio Tiramisu
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹365</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Espresso-soaked Savoiardi ladyfingers layered with silky Sicilian pistachio mascarpone cream and
+                        dusted with raw cocoa and praline crunch.
+                      </p>
+                      <div class="flex items-center gap-3 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="flex items-center gap-1 font-bold text-on-surface">
+                          <span class="material-symbols-outlined text-[15px] text-tertiary"
+                            style="font-variation-settings: 'FILL' 1;">star</span> 4.97 (1,120+)
+                        </span>
+                        <span>• Glass Jar (200g)</span>
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Elegant glass jar containing artisanal Italian pistachio tiramisu showing distinct layers of coffee soaked savoiardi cookies, pale green pistachio mascarpone whip, topped with shaved dark chocolate and chopped Sicilian pistachios."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdtcnQlIcttqvqlA7g7IsttTz-OoRf9rMl6cvajWNa7lg_5Gi0VDIEW63JEkXMYnGxZNHD9g80_IGGgIisKOKtdLYaacPmBRM1JPgXur9bPm9-D0ToW7jC3NbW0j8ZcmvCliJpoNG8j5nWM4Wp9Qa0ND9UFEalCIQwiMMTI402cLtdnEhfCpiGURWCJTau3afsA51wrWiMnksR7lOedXPfk-Uf0QxKQRPPfrkAoEMy" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 2: STARTERS & SMALL PLATES -->
+            <section class="space-y-5 pt-6" id="section-starters">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[22px]">tapas</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">Starters &amp; Small
+                      Plates</h2>
+                  </div>
+                  <p class="text-body-md font-body-md text-on-surface-variant">Crisp appetizers, sourdough bites, and
+                    wood-roasted treats</p>
+                </div>
+                <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">6 ITEMS</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Starter 1: Crispy Herb Fries & Truffle Aioli -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-tertiary font-bold">CRISPY</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Crispy Herb Fries &amp; Truffle Aioli
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹285</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Triple-cooked Russet potato fries tossed in rosemary salt and garlic dust. Served with whipped
+                        black truffle eggless aioli dip.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.8 (340+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Golden crisp triple-cooked fries dusted with rosemary sea salt, presented in a stoneware cone alongside a ceramic dip bowl overflowing with silky speckled truffle aioli."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeF-_4s_IDNHAbJd1P7t_Cephw_VISpl3dGL9IQPWOhLmkIyWOIYX8RXyr8of_tIoB3TYYqsGqkqo9BOPRyIrNRiUFJIbEUS2G22vTpe1v2s33jjysxNbdnLIi1apmQGwrSCh00gH4oaD5ED69LeZmh3oqc-Z3NdBeF_jqjEJGRKEq6ESCrE0HS87K3uEAoS6ZgT3xAjU0YKOheMG6qteErgEde3S6TFU6psAy1J3b" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Starter 2: Fire-Roasted Garlic Herb Focaccia -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">WOODFIRED
+                          BAKE</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Fire-Roasted Herb Focaccia
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹320</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Pillowy Ligurian sourdough focaccia dimpled with confit garlic cloves, fresh garden rosemary,
+                        and cold-pressed extra virgin olive oil.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.85 (210+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Freshly baked golden Italian focaccia bread with large airy bubbles, dotted with roasted garlic heads, sprigs of green rosemary, flaky sea salt, and glossy extra virgin olive oil."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Bv6HoZqrpew4hdmnmlQKl7nhmqX-3LAJGsce12R7SnKqYEmQ7eR6eGc38UUtEV9HBgNuclC1EyVcVpj_ANmoV6A81qi0Z9C4EsXE2EJKx4mtMrmdNENJg-Y1NaU7PW1gCUhjPZgxYv_FSoaDQEDJasOzJQoAPjfLW0pgybsWo7Co43xzgSvuYqxx7So7dzvOgI3NwXJ8t8O2WyE63qkDtsscxEdlhBFHqoCVtNvq" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Starter 3: Loaded Cheese Corn Samosa Pops -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm font-bold">FUSION
+                          CRUNCH</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Loaded Cheese Corn Pops
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹295</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Crisp phyllo pastry triangles stuffed with melted English cheddar, sweet char-grilled corn, and
+                        smoked paprika cream dip.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.7 (510+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Golden bite-sized cheese corn samosa pockets with gooey cheese pull visible from one broken pastry, garnished with microgreens and accompanied by a creamy red paprika dip."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUKSCyEkQRZdFRfw9PCOI1TGCOLs-Jzte5xrA0YcfHzAJL9z-8zmrdO_c_HmzB6axUd3zYNNb_j4PEKXxArgsIfpHgWAvXHwUFYQ_NK2TLkfMnqcsjqEa9c0X_1V7RSxWr4SuB0UkthUi3YQtsm3ks2vQHXZQ7UQ6pRk4dw9FVrIoHpAU-kkoLBA56zoX5uApOnwqXmCON8z3mm-Q457VQGVcg8d5I-0YnsgJLOwRm" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Starter 4: Charred Calamari & Herb Lemon Pepper -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-primary-fixed">
+                          <span
+                            class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[7px] border-b-primary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">SEAFOOD</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Charred Hearth Calamari
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹480</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Wood-roasted baby squid rings seasoned with charred Meyer lemon zest, cracked Malabar pepper,
+                        and salsa verde.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (180+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Tender wood-roasted squid rings with slight grill char marks, drizzled with bright green herb oil, charred lemon half on the side, served on a matte dark ceramic plate."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfUWuPwO_JH1gM6qgNcDtB3iCqGjfX1tSmnwwzB-0bPum3WgGS5P6eH4H9wxjgusjNfTfAKEgKR1YDyL0K8wsgnUjEms-2_gSHpHTkLWeKCfeR9mfk2rsrR-Q6sDHnNpFpKuRAlrWiAF9O1WDdYCqb81lQGQZDyiFw3_NAr7QrqtGpmeL-RAV3rHxR7gDats8unN5njFcPfEBkJ6Td4D0VOJiNmLFoVvbNbGRAj05X" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 3: SIGNATURE WOODFIRED PIZZAS (11" STONEBAKED) -->
+            <section class="space-y-5 pt-6" id="section-pizzas">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[22px]">local_pizza</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">Signature Woodfired
+                      Pizzas (11")</h2>
+                  </div>
+                  <p class="text-body-md font-body-md text-on-surface-variant">Hand-stretched sourdough, 72h
+                    fermentation, 480°C leopard spotting</p>
+                </div>
+                <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">12 PIZZAS</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Pizza 1: Classic Margherita Con Bufala -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-bold">TRADITIONAL</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Margherita Con Bufala
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹545</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Crushed San Marzano D.O.P. tomatoes, fresh Campania buffalo mozzarella, fragrant Genovese basil
+                        leaves, and cold-pressed extra virgin olive oil.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (1,840+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Classic Neapolitan Margherita pizza with charred leopard-spotted crust, rich red tomato sauce, melted islands of white buffalo mozzarella, and fresh green basil leaves."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuXGh5OtAGyTijLcrk7duQA6VtZxy5SejsRY_usEZFt2QWCwNQCRC6rOzaYpLmlkqN_knlC33aiV4Hs7sB2c1QmzMKFkDoQzn-JDn3s-pOjDrQrE4DqUi7BCDkti35RbG1snmsCUsuWg6SiTvxWn0OnY8II4FU4dAmqvLE6MR1Mq31t92n3xR9aQAn9J9m79lT_loV1JjAQFC8UtFZu-2493IkyjykkdZSNKiPftUY" />
+                      <!-- Active in Tray Counter -->
+                      <div
+                        class="absolute bottom-2 right-2 flex items-center bg-inverse-surface text-inverse-on-surface rounded-full p-1 shadow-lg">
+                        <button
+                          class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container-highest/20 transition-colors"
+                          type="button">
+                          <span class="material-symbols-outlined text-[18px]">remove</span>
+                        </button>
+                        <span class="font-bold text-label-md font-label-md px-2 text-primary-fixed-dim">2</span>
+                        <button
+                          class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center hover:scale-105 transition-transform"
+                          type="button">
+                          <span class="material-symbols-outlined text-[18px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pizza 2: Smoky BBQ Paneer Sourdough -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm font-bold">DELHI
+                          CRAVE</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Smoky BBQ Paneer Sourdough
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹595</span>
+                        <span class="text-body-sm font-body-sm text-on-surface-variant line-through">₹650</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Smoked hickory malai paneer cubes, roasted bell pepper ribbons, sweet pickled red onions, fresh
+                        mozzarella, and micro coriander.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.82 (750+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Artisanal woodfired pizza topped with charred cubes of paneer coated in smoky glaze, vibrant red and yellow roasted bell peppers, purple pickled onion rings, and fresh mozzarella."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO8v0ZcKnuiBqRy0vmW-JrQIOVAbE6MBA2_lCubwtTAAY0Vdnvif5DhmsnMyuG1k63inX_3ZuJoLamKNZypL2tbfbJA5xa74x1FXlHiVSCB8SPNK_btoawt0mPBKZ4WHuPdTe018IAUI_KPrfnihpLrIKnlsja0NoGaJf3oDzHO37N3OGUld4jLXgd0v2T06diYnQke7IZZaSIyBpUed5r-2LyVvgxvHbaOq9xril2" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pizza 3: Truffled Wild Mushroom & Scamorza -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">EARTHY &amp;
+                          RICH</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Truffled Wild Mushroom
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹620</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Shiitake, Shimeji and Button mushrooms sautéed in garlic thyme butter, smoked Scamorza cheese
+                        base, white truffle drizzle.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.88 (490+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Gourmet white sauce pizza featuring a medley of caramelized roasted wild mushrooms, melted smoked scamorza cheese, and fresh thyme leaves over airy wood-fired sourdough crust."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMXf3U8mVj4v1ZcCS2jgCpWNGL6hlpiNn_E2_A0a-vZQMuYe5LtMLeZSdKQXjYKGk0_O1RwN-Uuw3jTqLCa49DMGyG3AdxZ95ysceEsd_GVkO5nzewwsWNP2kbfWz1hQoN8v5deK55ekOkaX3TNVt8CR0b-RQviW5l2B9LIi0T8yLznE1XaCskiuah3Kd-LjsucvYu4T7yeLSWUfRFZNwSSw9ELbNur24Xe24jFY7l" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pizza 4: Roast Garlic & Double Burrata Verde -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-bold">CHEESE
+                          INDULGENCE</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Double Burrata Verde
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹710</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Double serving of fresh burrata curds, wild rocket leaves, toasted pine nuts, slow-roasted
+                        garlic oil, and Sicilian sea salt crystals.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.93 (310+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Woodfired pizza loaded with lush mounds of creamy fresh burrata cheese, topped with green peppery arugula leaves, golden toasted pine nuts, and drizzled olive oil."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHc8kKM05Itq3PDkZEvymiOoaJvNFd6l-bO8BvUjO53WsLqNabrsHqEWnXQejkqZPSJ3NEZmVdRaOZqptGq6RDZTPDatEHW_f-KWfjEq60JHcr0-huYQOs3m2bt3STt2sfcJ03hTaa7_pM_ciJDXy_42e1dnqplSsNpygwIW2xv_z7rUAulK9TaJ2huVmNuxOsss18h9jri-qlE9dh6_CBdBhk-lopd3a8lbYPVjzE" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 4: BRIOCHE BURGERS & SANDWICHES -->
+            <section class="space-y-5 pt-6" id="section-burgers">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[22px]">lunch_dining</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">Brioche Sourdough Buns
+                    </h2>
+                  </div>
+                  <p class="text-body-md font-body-md text-on-surface-variant">Crafted with butter brioche buns baked
+                    fresh at sunrise</p>
+                </div>
+                <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">5 BURGERS</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Burger 1: The Smoked Truffle Portobello Brioche -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-tertiary font-bold">GOURMET VEG</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Smoked Portobello Brioche
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹445</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Whole roasted herb portobello mushroom steak, Swiss Gruyère melt, caramelized balsamic onions,
+                        and truffle honey glaze.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.86 (280+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Gourmet vegetarian burger with a glossy butter toasted brioche bun, featuring a juicy charred portobello mushroom steak with melted gruyere cheese and sweet caramelized onions."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYx2pvUqznxLwtZgSVsAovTNZynlDOgIoQX3RgVQ8C3Un_YmvH2u6asp8b4a8JDjGI4_2maUdcLK18nGHi6Jpx6nsUVbbJKdjg-_44pL5jHLFiYCO5Q-jEAV-Fw9X58xk840VhtovEqXLZoGNjpnjvrzc-VHr2Xc9yiC4yjUShmglpKEP4BsgVxEpQHygnwPniUzZ9PciLKlzMV3EXWuewZRfgrDhlLHn0f-lU1NF4" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Burger 2: Double Smash Tenderloin Craft -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-primary-fixed">
+                          <span
+                            class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[7px] border-b-primary"></span>
+                        </span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm font-bold">MEAT
+                          CRAVE</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Double Smash Tenderloin
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹545</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Dual smash buff tenderloin patties with lacy crispy crusts, American sharp cheddar, dill pickle
+                        rounds, secret hearth burger relish.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.91 (630+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Double smash cheeseburger with crispy lace edges, dripping melted yellow cheddar cheese, sliced pickles, and savory special burger sauce nestled in a golden toasted brioche bun."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJk0J6QH-sHXG2Z1MVd8LXzhVwz-zs9iAnS3wnoqUkTF4ELGP4B0tlYjsXeG2G7leqcLd26Hz_jsTxBEQTET9i8orPVI6k0qwTve3m1M_GnGqfHTB7JdIhvh07rKZUxXZI7kBtGqZfRaUzbN6oaad5vt2QBpvOZCil2etgkqgFcaFezo64hSll4TWgIT40Tk8ylcZqXeYPp4-sWPktRv5lCKa_U9Z5MyvKkvFddFyz" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- SECTION 5: BEVERAGES & HOUSE DOLCI -->
+            <section class="space-y-5 pt-6" id="section-dolci">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[22px]">local_cafe</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">Beverages &amp; Cold
+                      Brews</h2>
+                  </div>
+                  <p class="text-body-md font-body-md text-on-surface-variant">Speciality cold extractions, botanical
+                    spritzes, and artisan tonics</p>
+                </div>
+                <span class="text-label-sm font-label-sm text-on-surface-variant font-bold">5 DRINKS</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Drink 1: Cold Brew Hazelnut Latte -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-tertiary font-bold">18-HR STEEP</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Cold Brew Hazelnut Latte
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹245</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Estate Arabica cold-steeped for 18 hours, paired with roasted Piedmont hazelnut milk and velvety
+                        oat foam crown.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (440+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Iced cold brew latte served in a textured fluted glass with cascading coffee marbling through cold hazelnut cream and crystal clear ice cubes on a rustic warm wooden counter."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBcQDWfohAxDslsj0C3fw0U9JyeABfz57FRS-_vtArKaLW7iQEC9zV_sV-cCDIm0pLf-DKNJ6-3NESvBP1JxmBBWe0ep0cMtqnFpFLPqLYY78hViYemWAzBObPShuCqFr_GUW_j1o-10Ob0m1WVr6LP0WEiQaptNFUEHKBb-YZxuTG_3tPDKvHG6QXy6DZCrW7bgIu_L6hktq18du7t4mMVMrjT6dc0inYLGZRMw3Y" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Drink 2: Blood Orange & Basil Botanical Spritz -->
+                <div
+                  class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                  <div class="flex gap-4">
+                    <div class="flex-1 space-y-1.5">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3.5 h-3.5 rounded-sm flex items-center justify-center p-0.5 bg-tertiary-fixed">
+                          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        </span>
+                        <span class="text-label-sm font-label-sm text-primary font-bold">REFRESHING</span>
+                      </div>
+                      <h3
+                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Blood Orange Basil Spritz
+                      </h3>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹225</span>
+                      </div>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                        Sparkling Sicilian blood orange reduction, bruised garden sweet basil leaves, sparkling
+                        artisanal soda, and rosemary sprig.
+                      </p>
+                      <div class="flex items-center gap-2 pt-1 text-label-sm font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[15px] text-tertiary"
+                          style="font-variation-settings: 'FILL' 1;">star</span> 4.78 (190+)
+                      </div>
+                    </div>
+                    <div class="relative w-36 h-36 flex-shrink-0 rounded-2xl overflow-hidden bg-surface-container">
+                      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Vibrant ruby-red blood orange sparkling drink with ice cubes, garnished with a bruised green basil leaf cluster and a dehydrated citrus wheel in a tall stemmed glass."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBFFa8lqiEruw_2OWqUS5Lv7tNu8yy6t5gjLSaPJt4FtBnQhlr1RYsLM63kVsOU50SL8B0-kGzekYTMnQ1okSOpygm-16Aqi9GCXk8xgVWRh4tDYUW8ZBa4a1jvrbHqFMRWzVVas5YT2ZHHLACGT0_xaT0F7JeuhLR6sFadMU1_MtMPw2f053NlDQ0Tg53HWc8B_BJ5zC0SgswHr6g1MS9jbyLJLXKmGN8ni-IOR5g" />
+                      <div class="absolute bottom-2 right-2">
+                        <button
+                          class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
+                          type="button">
+                          <span class="material-symbols-outlined text-[22px]">add</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+      <!-- FLOATING PERSISTENT CART SUMMARY BAR -->
+      <aside class="fixed bottom-6 right-6 lg:right-12 z-50 animate-bounce-short">
+        <a class="flex items-center gap-4 bg-inverse-surface text-inverse-on-surface px-6 py-4 rounded-full shadow-2xl hover:scale-[1.02] active:scale-95 transition-all duration-200"
+          data-path="cart-and-checkout" href="#">
+          <!-- Item Pill Indicator -->
+          <div class="flex items-center gap-2.5">
+            <span
+              class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-extrabold">
+              3
+            </span>
+            <div class="flex flex-col">
+              <span
+                class="text-label-sm font-label-sm text-surface-container-highest uppercase tracking-wider font-bold">Crave
+                Basket</span>
+              <span
+                class="font-headline-sm text-headline-sm text-surface-bright font-extrabold leading-none">₹888</span>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-surface-container-highest/20 mx-1"></div>
+          <!-- Action Button inside Pill -->
+          <div class="flex items-center gap-1.5 text-primary-fixed-dim font-label-lg font-label-lg font-bold">
+            <span>View Crave Tray</span>
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </div>
+        </a>
+      </aside>
+    </div>
+    <script>
+      // Smooth scroll and active category highlighting
+      document.querySelectorAll('#menu-category-nav a').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 150,
+              behavior: 'smooth'
+            });
+
+            // Update active class
+            document.querySelectorAll('#menu-category-nav a').forEach(el => {
+              el.className = 'flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-semibold text-label-md font-label-md transition-all';
+            });
+            this.className = 'flex items-center justify-between px-3.5 py-2.5 rounded-2xl bg-primary-container text-on-primary font-bold text-label-md font-label-md shadow-sm transition-all';
+          }
+        });
+      });
+    </script>
+  </main>
+  <footer class="w-full bg-inverse-surface text-inverse-on-surface py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
+        <div class="lg:col-span-2 flex flex-col gap-4">
+          <div class="flex items-center gap-2"><span
+              class="font-headline-md text-headline-md text-inverse-primary tracking-tight font-extrabold">NAURIO</span>
+          </div>
+          <p class="text-body-md font-body-md text-surface-container-highest max-w-sm">Made to Crave. Handcrafted
+            culinary experiences curated by city chefs, brought hot and fresh to your door.</p>
+          <div class="flex items-center gap-3 pt-2">
+            <div
+              class="px-3 py-2 rounded-xl bg-inverse-on-surface/10 text-label-sm font-label-sm flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span>FSSAI Lic.
+                10823005000192</span></div>
+          </div>
+          <div class="flex items-center gap-3 pt-2"><button
+              class="px-4 py-2 rounded-full bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-label-md font-label-md flex items-center gap-2 transition-colors"
+              type="button"><span class="material-symbols-outlined text-[18px]">download</span><span>App
+                Store</span></button><button
+              class="px-4 py-2 rounded-full bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-label-md font-label-md flex items-center gap-2 transition-colors"
+              type="button"><span class="material-symbols-outlined text-[18px]">shop</span><span>Google
+                Play</span></button></div>
+        </div>
+        <div>
+          <h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Quick Links</h3>
+          <ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest">
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="home" href="#">About Naurio</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="explore-menu" href="#">Master
+                Menu</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="offers-and-deals" href="#">Gourmet
+                Deals</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="restaurants" href="#">Partner
+                Kitchens</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="live-tracking" href="#">Track
+                Order</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Culinary Curation</h3>
+          <ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest">
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Artisanal
+                Pizzas</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Slow-Cooked
+                Bowls</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Pastisserie
+                &amp; Desserts</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Pan-Asian
+                Wok</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Healthy &amp;
+                Keto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Customer Support</h3>
+          <ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest">
+            <li><span class="block text-label-sm font-label-sm text-surface-container-high">Direct Line</span><span
+                class="font-medium text-surface-bright">+91 120 4889 000</span></li>
+            <li><span class="block text-label-sm font-label-sm text-surface-container-high">Chef Concierge</span><span
+                class="font-medium text-surface-bright">help@naurio.com</span></li>
+            <li><span class="block text-label-sm font-label-sm text-surface-container-high">Live Chat</span><span
+                class="font-medium text-tertiary-fixed">24/7 Priority Support</span></li>
+            <li><a class="hover:text-inverse-primary transition-colors block pt-2" data-path="terms-and-privacy"
+                href="#">Terms &amp; Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="pt-8 flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-surface-container-high gap-4">
+        <p>© 2025 NAURIO Hospitality Technologies Pvt Ltd. All rights reserved.</p>
+        <p>Crafted for gourmands across India.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
