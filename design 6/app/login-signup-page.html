@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport" />
+    <meta content="mobile_stack" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #fff8f4;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-variant": "#eee0d5", "secondary-fixed": "#e5e2e1", "primary": "#b7221c", "on-secondary-fixed": "#1c1b1b", "surface-container-high": "#f3e6db", "tertiary-container": "#85995b", "on-secondary": "#ffffff", "primary-fixed": "#ffdad5", "tertiary": "#52652d", "tertiary-fixed-dim": "#b9cf8b", "secondary-fixed-dim": "#c8c6c5", "on-secondary-fixed-variant": "#474746", "on-tertiary-fixed": "#141f00", "secondary-container": "#e2dfde", "surface-dim": "#e5d8cd", "on-secondary-container": "#636262", "on-surface": "#211a14", "on-primary": "#ffffff", "on-error-container": "#93000a", "surface-container": "#f9ebe1", "on-tertiary": "#ffffff", "on-primary-container": "#5e0002", "on-primary-fixed-variant": "#930006", "surface-container-highest": "#eee0d5", "surface-container-lowest": "#ffffff", "surface-container-low": "#fff1e6", "background": "#fff8f4", "surface": "#fff8f4", "on-background": "#211a14", "inverse-primary": "#ffb4aa", "inverse-surface": "#372f28", "outline": "#8f706b", "error-container": "#ffdad6", "secondary": "#5f5e5e", "surface-bright": "#fff8f4", "on-primary-fixed": "#410001", "on-tertiary-fixed-variant": "#3b4c17", "outline-variant": "#e3beb9", "inverse-on-surface": "#fceee3", "on-surface-variant": "#5b403d", "tertiary-fixed": "d5eba5", "on-error": "#ffffff", "primary-container": "#ff5748", "on-tertiary-container": "#202f00", "error": "#ba1a1a", "surface-tint": "#b7221c", "primary-fixed-dim": "#ffb4aa" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-xs": "0.25rem", "margin": "1.5rem", "gutter": "1.5rem", "space-md": "1rem" }, fontFamily: { "headline-lg": ["Manrope"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Manrope"], "title-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Manrope"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Manrope"], "label-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Manrope"], "headline-sm": ["Manrope"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Manrope"], "headline-xl": ["Manrope"], "body-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["36px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "800" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }], "headline-md": ["24px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "700" }], "title-lg": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "700" }], "display-hero-mobile": ["40px", { lineHeight: "46px", letterSpacing: "-0.025em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-xl-mobile": ["32px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-sm": ["20px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "display-hero": ["64px", { lineHeight: "70px", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-xl": ["48px", { lineHeight: "54px", letterSpacing: "-0.025em", fontWeight: "800" }], "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-16 px-margin-mobile flex items-center justify-between">
+            <div class="flex items-center gap-space-sm"><button aria-label="Go Back"
+                    class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors"
+                    onclick="history.back()"><span
+                        class="material-symbols-outlined text-[22px]">arrow_back</span></button>
+                <h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Login Sign Up
+                </h1>
+            </div>
+            <div class="flex items-center gap-space-xs"><button aria-label="More Options"
+                    class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span
+                        class="material-symbols-outlined text-[22px]">more_vert</span></button>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen">
+        <div class="flex flex-col w-full pb-10">
+            <!-- Hero Showcase Card -->
+            <div class="relative w-full rounded-b-3xl overflow-hidden bg-on-surface shadow-xl">
+                <div class="w-full h-72 bg-cover bg-center"
+                    data-alt="Artisanal rustic black truffle pizza with blistered charred sourdough crust and creamy melted fior di latte on a dark natural slate plate, warm dramatic culinary ambient lighting, rich Italian gastronomy aesthetic with warm gold accents and deep dark tones"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATorB-AJiZKMVLTeUmYFTpoezmITaZ8PY92H_4aoiScgyjLFIKT4KA7w77pLvgrhlpbalp6njzfo-WFWvY1xKnagealhecalscTCjIBaW030vABolKATN1XGo6v9gcybZexIdgtyAAcbU3dIquL7cgiFMY4OBbqk7HAfarzwf9XgPmTPAFvCt-krQgOafvHj4vOsMnPxIqldLi-LWM5iWkO6P8O6laKsqsI9I-wN5E')">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#211a14] via-[#211a14]/65 to-transparent"></div>
+                </div>
+                <!-- Editorial Badges & Intro Lockup -->
+                <div class="absolute inset-x-0 bottom-0 p-margin-mobile flex flex-col gap-space-xs text-white">
+                    <div class="flex items-center justify-between">
+                        <div
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md">
+                            <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                            <span class="font-label-sm text-label-sm text-primary-fixed tracking-wider uppercase">NAURIO
+                                • MADE TO CRAVE</span>
+                        </div>
+                        <div
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#f3e6db]/20 text-[#ffdad5] text-label-sm font-label-sm">
+                            <span class="material-symbols-outlined text-[14px]">stars</span>
+                            <span>Earn 200 Coins</span>
+                        </div>
+                    </div>
+                    <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white tracking-tight mt-1">
+                        Good Food Starts Here.
+                    </h2>
+                    <p class="font-body-sm text-body-sm text-surface-container-high/90">
+                        Sign in to unlock chef reservations, Michelin deliveries, and earn Crave Coins on every order.
+                    </p>
+                </div>
+            </div>
+            <!-- Main Interaction Container -->
+            <div class="px-margin-mobile mt-space-md flex flex-col gap-space-md">
+                <!-- Tab Pill Switcher -->
+                <div class="p-1 rounded-full bg-surface-container flex items-center justify-between shadow-sm">
+                    <button
+                        class="flex-1 py-2.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1 bg-surface-container-lowest text-on-surface shadow-sm"
+                        id="tab-login" onclick="switchAuthTab('login')">
+                        <span class="material-symbols-outlined text-[16px] text-primary">login</span>
+                        Sign In
+                    </button>
+                    <button
+                        class="flex-1 py-2.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1 text-on-surface-variant hover:text-on-surface"
+                        id="tab-signup" onclick="switchAuthTab('signup')">
+                        <span class="material-symbols-outlined text-[16px]">person_add</span>
+                        New Account
+                    </button>
+                </div>
+                <!-- Interactive OTP Reassurance Banner -->
+                <div class="hidden items-center justify-between p-3 rounded-2xl bg-tertiary-container/15 text-tertiary"
+                    id="otp-indicator">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[20px] text-tertiary">mark_email_read</span>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Fast
+                                Pass OTP</span>
+                            <span class="font-body-sm text-body-sm text-on-surface">6-digit PIN ready for +91 98712
+                                ••••</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant"
+                        onclick="dismissOtpToast()">
+                        <span class="material-symbols-outlined text-[16px]">close</span>
+                    </button>
+                </div>
+                <!-- Login View Form -->
+                <div class="flex flex-col gap-space-md transition-opacity duration-300" id="view-login">
+                    <div
+                        class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-md">
+                        <!-- Credential Field -->
+                        <div class="flex flex-col gap-1">
+                            <label
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-1">
+                                Mobile Number or Email
+                            </label>
+                            <div
+                                class="flex items-center px-4 h-14 rounded-full bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all">
+                                <span
+                                    class="material-symbols-outlined text-outline text-[20px] mr-3">alternate_email</span>
+                                <input
+                                    class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline/70"
+                                    id="login-id" placeholder="gourmet@naurio.com or 9876543210" type="text" />
+                            </div>
+                        </div>
+                        <!-- Password Field -->
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center justify-between px-1">
+                                <label
+                                    class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+                                    Password
+                                </label>
+                                <button class="font-label-sm text-label-sm text-primary hover:underline"
+                                    onclick="triggerForgotPassword()" type="button">
+                                    Forgot?
+                                </button>
+                            </div>
+                            <div
+                                class="flex items-center px-4 h-14 rounded-full bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all">
+                                <span class="material-symbols-outlined text-outline text-[20px] mr-3">lock</span>
+                                <input
+                                    class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline/70"
+                                    id="login-password" placeholder="••••••••••••" type="password" />
+                                <button
+                                    class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface"
+                                    onclick="togglePasswordVisibility('login-password', this)" type="button">
+                                    <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Primary CTA -->
+                        <button
+                            class="w-full h-14 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-all"
+                            onclick="simulateSubmit('Signed in to NAURIO!')" type="button">
+                            <span>Login to Crave</span>
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                        </button>
+                        <!-- OTP Quick Action -->
+                        <button
+                            class="w-full py-2 flex items-center justify-center gap-1.5 text-center font-label-md text-label-md text-primary hover:text-on-primary-container"
+                            onclick="toggleOtpView()" type="button">
+                            <span class="material-symbols-outlined text-[16px]">sms</span>
+                            <span>Login with Instant SMS OTP instead</span>
+                        </button>
+                    </div>
+                    <!-- Social Login and Dividers -->
+                    <div class="flex items-center gap-3 px-2">
+                        <div class="flex-1 h-[1px] bg-surface-variant"></div>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">or
+                            continue with</span>
+                        <div class="flex-1 h-[1px] bg-surface-variant"></div>
+                    </div>
+                    <div class="flex flex-col gap-2.5">
+                        <button
+                            class="w-full h-13 py-3.5 px-4 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.98]"
+                            onclick="simulateSubmit('Connecting with Google Authenticator...')" type="button">
+                            <svg class="w-5 h-5" viewbox="0 0 24 24">
+                                <path
+                                    d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.15z"
+                                    fill="#4285F4"></path>
+                                <path
+                                    d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.24v3.15C3.26 21.36 7.34 24 12 24z"
+                                    fill="#34A853"></path>
+                                <path
+                                    d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.24C.45 8.16 0 9.94 0 12s.45 3.84 1.24 5.42l4.04-3.15z"
+                                    fill="#FBBC05"></path>
+                                <path
+                                    d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.24 6.58l4.04 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+                                    fill="#EA4335"></path>
+                            </svg>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button
+                            class="w-full h-13 py-3.5 px-4 rounded-full bg-on-surface text-surface font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-md active:scale-[0.98] transition-all"
+                            onclick="simulateSubmit('Connecting with Apple ID...')" type="button">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 170 170">
+                                <path
+                                    d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-5.35-.12-10.27-2.3-14.75-6.53-3.6-3.48-7.58-8.52-11.95-15.12-6.53-9.87-11.69-21.2-15.48-33.99-3.79-12.79-5.69-24.63-5.69-35.53 0-14.54 3.73-26.68 11.2-36.42 7.46-9.74 16.9-14.73 28.32-14.97 4.93 0 10.33 1.29 16.21 3.86 5.88 2.57 9.87 3.91 11.98 4.02 1.63-.22 5.8-1.57 12.5-4.07 6.7-2.5 12.35-3.64 16.95-3.41 12.79.67 22.95 5.48 30.48 14.42-11.19 6.81-16.66 16.32-16.42 28.53.24 9.54 3.92 17.51 11.04 23.91 7.12 6.4 15.67 10.05 25.66 10.95-2.22 6.64-4.99 13.1-8.31 19.39zM119.22 31.42c0-7.25 2.65-14.07 7.95-20.47 5.3-6.4 11.83-10.45 19.59-12.15.54 3.5.3 7.37-.73 11.61-1.03 4.24-2.88 8.16-5.55 11.76-2.92 3.85-6.52 6.94-10.8 9.27-4.28 2.33-8.1 3.5-11.46 3.52-.36-1.19-1-2.37-1-3.54z">
+                                </path>
+                            </svg>
+                            <span>Continue with Apple</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Sign Up View Form -->
+                <div class="hidden flex-col gap-space-md transition-opacity duration-300" id="view-signup">
+                    <div
+                        class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-md">
+                        <!-- Full Name -->
+                        <div class="flex flex-col gap-1">
+                            <label
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-1">
+                                Full Name
+                            </label>
+                            <div
+                                class="flex items-center px-4 h-14 rounded-full bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all">
+                                <span class="material-symbols-outlined text-outline text-[20px] mr-3">badge</span>
+                                <input
+                                    class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline/70"
+                                    id="signup-name" placeholder="Elena Vance" type="text" />
+                            </div>
+                        </div>
+                        <!-- Email Address -->
+                        <div class="flex flex-col gap-1">
+                            <label
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-1">
+                                Email Address
+                            </label>
+                            <div
+                                class="flex items-center px-4 h-14 rounded-full bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all">
+                                <span class="material-symbols-outlined text-outline text-[20px] mr-3">mail</span>
+                                <input
+                                    class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline/70"
+                                    id="signup-email" placeholder="elena@culinary.art" type="email" />
+                            </div>
+                        </div>
+                        <!-- Phone Number -->
+                        <div class="flex flex-col gap-1">
+                            <label
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-1">
+                                Phone Number
+                            </label>
+                            <div
+                                class="flex items-center px-4 h-14 rounded-full bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all">
+                                <span class="font-label-md text-label-md text-on-surface-variant mr-2">+91</span>
+                                <input
+                                    class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline/70"
+                                    id="signup-phone" placeholder="98712 34567" type="tel" />
+                            </div>
+                        </div>
+                        <!-- Password Create -->
+                        <div class="flex flex-col gap-1">
+                            <label
+                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-1">
+                                Create Password
+                            </label>
+                            <div
+                                class="flex items-center px-4 h-14 rounded-full bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:shadow-md transition-all">
+                                <span class="material-symbols-outlined text-outline text-[20px] mr-3">lock_open</span>
+                                <input
+                                    class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline/70"
+                                    id="signup-pass" placeholder="At least 8 characters" type="password" />
+                                <button
+                                    class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface"
+                                    onclick="togglePasswordVisibility('signup-pass', this)" type="button">
+                                    <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Terms Toggle -->
+                        <label class="flex items-start gap-3 px-1 cursor-pointer select-none">
+                            <input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer"
+                                type="checkbox" />
+                            <span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+                                I agree to NAURIO's <span class="text-primary font-bold">Terms of Service</span>,
+                                Privacy Policy, and enrollment in the Crave Club rewards.
+                            </span>
+                        </label>
+                        <!-- Submit Account -->
+                        <button
+                            class="w-full h-14 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-all"
+                            onclick="simulateSubmit('Account created! Welcome to NAURIO.')" type="button">
+                            <span>Create Account</span>
+                            <span class="material-symbols-outlined text-[20px]">restaurant</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Security & Protection Badge -->
+                <div class="flex items-center justify-center gap-2 py-3 text-center">
+                    <span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+                    <span class="font-label-sm text-label-sm text-secondary tracking-wide">
+                        256-Bit SSL Encrypted • Your credentials are fully protected
+                    </span>
+                </div>
+                <!-- Gastronomic Discovery Footnote -->
+                <div class="bg-surface-container-high/60 rounded-2xl p-4 flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+                        <span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <span class="font-title-md text-title-md text-on-surface truncate">Truffle &amp; Sourdough
+                            Week</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Sign in today to
+                            unlock complimentary dessert pairings.</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Micro Toast Feedback Modal -->
+            <div class="fixed bottom-6 left-4 right-4 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none"
+                id="toast-modal">
+                <div
+                    class="mx-auto max-w-sm rounded-full bg-on-surface text-surface py-3 px-5 shadow-2xl flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                        <span class="material-symbols-outlined text-primary-container text-[20px]">celebration</span>
+                        <span class="font-label-md text-label-md text-surface" id="toast-text">Action completed</span>
+                    </div>
+                    <span class="material-symbols-outlined text-surface-variant text-[18px]">done</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            function switchAuthTab(type) {
+                const loginView = document.getElementById('view-login');
+                const signupView = document.getElementById('view-signup');
+                const tabLogin = document.getElementById('tab-login');
+                const tabSignup = document.getElementById('tab-signup');
+
+                if (type === 'login') {
+                    loginView.classList.remove('hidden');
+                    signupView.classList.add('hidden');
+
+                    tabLogin.className = "flex-1 py-2.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1 bg-surface-container-lowest text-on-surface shadow-sm";
+                    tabSignup.className = "flex-1 py-2.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1 text-on-surface-variant hover:text-on-surface";
+                } else {
+                    loginView.classList.add('hidden');
+                    signupView.classList.remove('hidden');
+
+                    tabSignup.className = "flex-1 py-2.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1 bg-surface-container-lowest text-on-surface shadow-sm";
+                    tabLogin.className = "flex-1 py-2.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1 text-on-surface-variant hover:text-on-surface";
+                }
+            }
+
+            function togglePasswordVisibility(fieldId, triggerBtn) {
+                const field = document.getElementById(fieldId);
+                const icon = triggerBtn.querySelector('.material-symbols-outlined');
+                if (field.type === 'password') {
+                    field.type = 'text';
+                    icon.textContent = 'visibility_off';
+                } else {
+                    field.type = 'password';
+                    icon.textContent = 'visibility';
+                }
+            }
+
+            function toggleOtpView() {
+                const indicator = document.getElementById('otp-indicator');
+                indicator.classList.toggle('hidden');
+                indicator.classList.toggle('flex');
+                showToast("SMS OTP code sent: 482 109");
+            }
+
+            function dismissOtpToast() {
+                const indicator = document.getElementById('otp-indicator');
+                indicator.classList.add('hidden');
+                indicator.classList.remove('flex');
+            }
+
+            function triggerForgotPassword() {
+                showToast("Reset password instructions sent to your email!");
+            }
+
+            function simulateSubmit(message) {
+                showToast(message);
+            }
+
+            function showToast(msg) {
+                const toast = document.getElementById('toast-modal');
+                const toastText = document.getElementById('toast-text');
+                toastText.textContent = msg;
+                toast.classList.remove('translate-y-24', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-24', 'opacity-0');
+                }, 2800);
+            }
+        </script>
+    </main>
+</body>
+
+</html>
