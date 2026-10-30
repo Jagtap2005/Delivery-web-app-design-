@@ -301,77 +301,125 @@
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
     <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div class="h-28 max-w-7xl mx-auto px-margin-desktop flex flex-col justify-between py-space-sm">
-            <div class="flex items-center justify-between gap-space-lg">
-                <div class="flex items-center gap-space-lg shrink-0">
-                    <div class="flex flex-col cursor-pointer"><span
-                            class="font-headline-md text-headline-md tracking-tight text-primary leading-none uppercase">NAURIO</span><span
-                            class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase font-bold mt-0.5">Made
-                            to Crave</span></div>
-                    <div
-                        class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-md py-space-xs rounded-full cursor-pointer transition-colors">
-                        <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
-                        <div class="flex flex-col text-left"><span
-                                class="font-label-sm text-label-sm text-on-surface-variant font-bold leading-none">Deliver
-                                To:</span><span
-                                class="font-label-md text-label-md text-on-surface font-semibold max-w-[210px] truncate leading-tight">Connaught
-                                Place, Central Delhi</span></div><span
-                            class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
-                    </div>
-                </div>
-                <div class="flex-1 max-w-xl mx-space-md">
-                    <div
-                        class="flex items-center w-full h-12 bg-surface-container-lowest rounded-full px-space-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] focus-within:shadow-[0_4px_16px_rgba(183,34,28,0.08)] transition-all">
-                        <span
-                            class="material-symbols-outlined text-on-surface-variant mr-space-sm text-[22px]">search</span><input
-                            class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant"
-                            placeholder="Search artisanal pizzas, gourmet burgers, bowls..." type="text" /><button
-                            class="bg-surface-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors ml-space-xs"
-                            type="button">Explore</button></div>
-                </div>
-                <div class="flex items-center gap-space-md shrink-0"><button
-                        class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full font-label-md text-label-md text-on-surface transition-colors"
-                        type="button"><span
-                            class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span>Get
-                            App</span></button>
-                    <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-fixed rounded-full">
-                        <span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">token</span><span
-                            class="font-label-md text-label-md text-on-tertiary-fixed font-bold">240 Coins</span></div>
-                    <a class="flex items-center gap-space-sm pl-space-xs pr-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-left transition-colors relative group"
-                        href="#">
-                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
-                                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span
-                            class="font-label-md text-label-md text-on-surface font-semibold">Account</span><span
-                            class="w-2 h-2 rounded-full bg-primary absolute top-1 right-1 ring-2 ring-surface"></span>
-                    </a><button
-                        class="flex items-center gap-space-sm px-space-lg py-space-sm bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-[0_4px_16px_rgba(255,87,72,0.3)]"
-                        type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span
-                            class="font-label-lg text-label-lg font-bold">Cart (3) • ₹1,293</span></button>
-                </div>
-            </div>
-            <nav class="flex items-center gap-space-xs pt-1 overflow-x-auto no-scrollbar"
-                data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-full"><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="home" href="#">Home</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="categories" href="#">Categories</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="offers-and-deals" href="#">Offers &amp; Deals</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="my-orders-and-order-history" href="#">My Orders</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="my-profile-and-account-settings" href="#">Profile Settings</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="my-favourites" href="#">Favourites</a><a aria-current="page"
-                    class="px-space-md py-1 transition-colors whitespace-nowrap bg-surface-container-high text-on-surface font-bold rounded-full"
-                    data-path="saved-addresses" href="#">Saved Addresses</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
-                    data-path="live-tracking" href="#">Live Tracking</a></nav>
+    <div class="h-32 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-between py-2">
+      <div class="flex items-center justify-between gap-4 h-16">
+        <div class="flex items-center gap-6"><a class="flex items-center gap-2" data-path="home" href="design6web.html"><span
+              class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold">NAURIO</span><span
+              class="hidden xl:inline text-label-sm font-label-sm uppercase tracking-widest text-on-surface-variant font-bold">CRAVE</span></a><button
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-left"
+            type="button"><span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+            <div class="flex flex-col"><span
+                class="text-label-sm font-label-sm text-on-surface-variant leading-none">Deliver to</span><span
+                class="text-label-md font-label-md text-on-surface font-semibold truncate max-w-[130px]">Sector 62,
+                Noida</span></div><span
+              class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+          </button></div>
+        <div class="hidden md:flex flex-1 max-w-md mx-4">
+          <div
+            class="w-full flex items-center bg-surface-container-lowest rounded-full px-4 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.04)] focus-within:ring-2 focus-within:ring-primary/20">
+            <span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span><input
+              class="w-full bg-transparent text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none"
+              placeholder="Search artisanal burgers, bowls, bakery..." type="text" /></div>
         </div>
-    </header>
-    <main class="w-full pt-28 bg-surface">
+        <div class="flex items-center gap-3"><button
+            class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors"
+            type="button"><span
+              class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span
+              class="text-label-md font-label-md">Get App</span></button>
+          <div
+            class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+            <span class="material-symbols-outlined text-[16px]">monetization_on</span><span
+              class="text-label-md font-label-md font-bold">240 Coins</span></div><a
+            class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md shadow-[0_4px_16px_rgba(255,87,72,0.3)] hover:opacity-95 transition-all"
+            data-path="cart-and-checkout" href="shopping-cart-page.html"><span
+              class="material-symbols-outlined text-[18px]">shopping_bag</span><span>Cart (3) • ₹489</span></a><a
+            class="flex items-center" data-path="user-profile" href="my-profile-account-setting-page.html" title="User Account">
+            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="h-12 flex items-center overflow-x-auto no-scrollbar">
+        <nav class="flex items-center gap-1 sm:gap-2"
+          data-active-classes="bg-primary-container text-on-primary font-bold rounded-full"><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="home" href="design6web.html">Home</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="explore-menu" href="restaurant-details-menu.html">Explore Menu</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="categories" href="search-filter-page.html">Categories</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="offers-and-deals" href="offeres-coupan-page.html">Offers &amp; Deals</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="restaurants" href="exploreRestaurants.html">Restaurants</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="cart-and-checkout" href="shopping-cart-page.html">Cart &amp; Checkout</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="live-tracking" href="live-order-tracking.html">Live Tracking</a></nav>
+      </div>
+    </div>
+  </header>
+  <script>
+    (() => {
+      const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
+      const activePathByPage = {
+        "design6web.html": "home",
+        "exploreRestaurants.html": "restaurants",
+        "restaurant-details-menu.html": "restaurants",
+        "food-details-customization.html": "explore-menu",
+        "foodDetails&Customization.html": "explore-menu",
+        "search-filter-page.html": "categories",
+        "offeres-coupan-page.html": "offers-and-deals",
+        "shopping-cart-page.html": "cart-and-checkout",
+        "checkout-payemt-page.html": "cart-and-checkout",
+        "order-successful-confirmation.html": "cart-and-checkout",
+        "live-order-tracking.html": "live-tracking",
+        "login-signup-page.html": "user-profile",
+        "my-favourites-page.html": "user-profile",
+        "my-order-order-history-page.html": "user-profile",
+        "my-profile-account-setting-page.html": "user-profile",
+        "saved-address-address-management-page.html": "user-profile",
+        "help-support-page.html": "user-profile"
+      };
+      const activePath = activePathByPage[pageName];
+      const activeClass = "px-3.5 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-bold rounded-full";
+      const normalClass = "px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap";
+
+      document.querySelectorAll("header nav a[data-path]").forEach(link => {
+        const isCurrent = link.dataset.path === activePath;
+        link.className = isCurrent ? activeClass : normalClass;
+        if (isCurrent) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      const searchInput = document.querySelector("header input[type='text']");
+      if (searchInput) {
+        searchInput.addEventListener("keydown", event => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            window.location.href = `search-filter-page.html?q=${encodeURIComponent(searchInput.value.trim())}`;
+          }
+        });
+      }
+
+      document.querySelectorAll("header button").forEach(button => {
+        const icon = button.querySelector(".material-symbols-outlined");
+        const iconName = icon ? icon.textContent.trim() : "";
+        const destination = iconName === "location_on"
+          ? "saved-address-address-management-page.html"
+          : iconName === "phone_iphone" ? "login-signup-page.html" : "";
+        if (destination) {
+          button.addEventListener("click", () => {
+            window.location.href = destination;
+          });
+        }
+      });
+    })();
+  </script>
+    <main class="w-full pt-32 bg-surface">
         <div class="flex flex-col w-full">
             <!-- Dynamic Notification Bar (Address Ledger Feedback) -->
             <div class="w-full bg-tertiary-fixed text-on-tertiary-fixed transition-all duration-300" id="statusAlert">

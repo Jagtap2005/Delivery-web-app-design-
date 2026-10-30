@@ -47,83 +47,126 @@
 </head>
 
 <body class="bg-surface font-body-md text-body-md text-on-surface">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-    <div class="h-20 max-w-[1360px] mx-auto px-margin flex items-center justify-between gap-space-md">
-      <div class="flex items-center gap-space-md flex-shrink-0">
-        <div class="flex items-center gap-space-sm"><img alt="NAURIO Brand Logo" class="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuABp57ynxY_XM_3DWAS46j52DSgY6XWUCj3CeWGwpsEZaWqoHv8FV5Wjpdg0GkDu_8eV25hw63NlvUb-j2lve0-B4vY3oL3krSyTc6PXVUUdodti4KriLb_xL7rfkcSAIWQLr4J5-pLVDhexKlqsOy9XCmezwyqzZWJaKNlnKK8L3aoV8xi_t8nUCWD5xteFTbaRit7wxO6ucX1b5ygp3UWjaoBrkzYGmDlKpNq1bN_MTnbNxwkyYjDWw" />
-          <div class="flex flex-col"><span
-              class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface leading-none">NAURIO</span><span
-              class="font-label-sm text-label-sm text-primary tracking-widest leading-none mt-space-xs">MADE TO
-              CRAVE</span></div>
-        </div>
-        <div class="hidden xl:flex items-center gap-space-xs"><button
-            class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.03)] text-left hover:bg-surface-container-high transition-colors"
-            type="button"><span class="material-symbols-outlined text-primary text-base">storefront</span>
-            <div class="flex flex-col pr-space-xs"><span
-                class="font-label-sm text-label-sm text-on-surface-variant leading-none">Ordering From</span><span
-                class="font-label-md text-label-md text-on-surface leading-none">Connaught Place, Central Delhi</span>
-            </div><span class="material-symbols-outlined text-on-surface-variant text-sm">expand_more</span>
-          </button><button
-            class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.03)] text-left hover:bg-surface-container-high transition-colors"
-            type="button"><span class="material-symbols-outlined text-primary text-base">near_me</span>
-            <div class="flex flex-col pr-space-xs"><span
-                class="font-label-sm text-label-sm text-on-surface-variant leading-none">Deliver To</span><span
-                class="font-label-md text-label-md text-on-surface leading-none">Sector 62, Noida</span></div><span
-              class="material-symbols-outlined text-on-surface-variant text-sm">expand_more</span>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-32 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-between py-2">
+      <div class="flex items-center justify-between gap-4 h-16">
+        <div class="flex items-center gap-6"><a class="flex items-center gap-2" data-path="home" href="design6web.html"><span
+              class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold">NAURIO</span><span
+              class="hidden xl:inline text-label-sm font-label-sm uppercase tracking-widest text-on-surface-variant font-bold">CRAVE</span></a><button
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-left"
+            type="button"><span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+            <div class="flex flex-col"><span
+                class="text-label-sm font-label-sm text-on-surface-variant leading-none">Deliver to</span><span
+                class="text-label-md font-label-md text-on-surface font-semibold truncate max-w-[130px]">Sector 62,
+                Noida</span></div><span
+              class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
           </button></div>
+        <div class="hidden md:flex flex-1 max-w-md mx-4">
+          <div
+            class="w-full flex items-center bg-surface-container-lowest rounded-full px-4 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.04)] focus-within:ring-2 focus-within:ring-primary/20">
+            <span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span><input
+              class="w-full bg-transparent text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none"
+              placeholder="Search artisanal burgers, bowls, bakery..." type="text" /></div>
+        </div>
+        <div class="flex items-center gap-3"><button
+            class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors"
+            type="button"><span
+              class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span
+              class="text-label-md font-label-md">Get App</span></button>
+          <div
+            class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+            <span class="material-symbols-outlined text-[16px]">monetization_on</span><span
+              class="text-label-md font-label-md font-bold">240 Coins</span></div><a
+            class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md shadow-[0_4px_16px_rgba(255,87,72,0.3)] hover:opacity-95 transition-all"
+            data-path="cart-and-checkout" href="shopping-cart-page.html"><span
+              class="material-symbols-outlined text-[18px]">shopping_bag</span><span>Cart (3) • ₹489</span></a><a
+            class="flex items-center" data-path="user-profile" href="my-profile-account-setting-page.html" title="User Account">
+            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+          </a>
+        </div>
       </div>
-      <div class="flex-1 max-w-xl mx-space-sm">
-        <div class="relative flex items-center w-full"><span
-            class="material-symbols-outlined absolute left-space-md text-on-surface-variant pointer-events-none text-xl">search</span><input
-            class="w-full h-11 pl-11 pr-space-md bg-surface-container-lowest rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none shadow-[0_2px_8px_rgba(0,0,0,0.04)] focus:ring-2 focus:ring-primary-container transition-all"
-            placeholder="Search artisan pizzas, juicy burgers, street food..." type="text" /></div>
-      </div>
-      <div class="flex items-center gap-space-sm flex-shrink-0"><button
-          class="hidden lg:flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full hover:bg-surface-container-high transition-colors shadow-[0_1px_4px_rgba(0,0,0,0.03)]"
-          type="button"><span class="material-symbols-outlined text-on-surface text-lg">smartphone</span><span
-            class="font-label-md text-label-md text-on-surface">Get App</span></button>
-        <div
-          class="hidden sm:flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.03)]">
-          <span class="font-label-md text-label-md text-on-surface flex items-center gap-space-xs"><span
-              class="text-sm">🪙</span> 240 Coins</span></div><a
-          class="flex items-center gap-space-xs bg-surface-container-lowest pl-space-xs pr-space-md py-space-xs rounded-full hover:bg-surface-container-high transition-colors shadow-[0_1px_4px_rgba(0,0,0,0.03)]"
-          data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyGEMTxmKZoh0UK7GGOdQnRuqHa6k3dZbqYi01o6M6M1US7uaP4CIIuaxSDbVmLDGH55cCB0YB2B2iOMQSLf4n7j3TUPhTMwWuRJZxS1VbQflkdjsU7SSXyMV3Dd_mN9I65rMKhDSHTDbvWKelfwziUrk7A-A0LJJ_T7Ewr3rekf-wWpGQ_QWfEwzSgBwt2jUIb-RqtjzcadUB_0qx2r1-7UYn6B2u6KzsV_4C8G-VIHQLQ2K-10IGeA" /><span
-            class="font-label-md text-label-md text-on-surface">Account</span></a><a
-          class="flex items-center gap-space-xs bg-primary-container text-on-primary px-space-md py-space-xs rounded-full shadow-[0_4px_16px_-2px_rgba(255,87,72,0.4)] hover:brightness-105 active:scale-95 transition-all"
-          data-path="cart" href="#"><span class="material-symbols-outlined text-lg">shopping_bag</span><span
-            class="font-label-md text-label-md text-on-primary whitespace-nowrap">Cart (3) • ₹489</span></a>
-      </div>
-    </div>
-    <div class="bg-surface-container px-margin py-space-xs">
-      <div class="max-w-[1360px] mx-auto flex items-center justify-between">
-        <nav class="flex items-center gap-space-xs overflow-x-auto py-1"
-          data-active-classes="bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-full shadow-sm">
-          <a aria-current="page"
-            class="px-space-md py-space-xs transition-colors whitespace-nowrap bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-full shadow-sm"
-            data-path="home" href="#">Explore Menu</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="artisan-pizzas" href="#">Artisan Pizzas</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="gourmet-burgers" href="#">Gourmet Burgers</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="street-chaat" href="#">Street Chaat</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="golden-samosas" href="#">Golden Samosas</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="house-beverages" href="#">House Beverages</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="desserts" href="#">Desserts</a><a
-            class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
-            data-path="coin-rewards" href="#">Coin Rewards</a></nav>
-        <div class="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span
-            class="material-symbols-outlined text-tertiary text-base">bolt</span><span
-            class="font-label-md text-label-md text-on-surface">Avg. Delivery: 26 Mins</span></div>
+      <div class="h-12 flex items-center overflow-x-auto no-scrollbar">
+        <nav class="flex items-center gap-1 sm:gap-2"
+          data-active-classes="bg-primary-container text-on-primary font-bold rounded-full"><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="home" href="design6web.html">Home</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="explore-menu" href="restaurant-details-menu.html">Explore Menu</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="categories" href="search-filter-page.html">Categories</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="offers-and-deals" href="offeres-coupan-page.html">Offers &amp; Deals</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="restaurants" href="exploreRestaurants.html">Restaurants</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="cart-and-checkout" href="shopping-cart-page.html">Cart &amp; Checkout</a><a
+            class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+            data-path="live-tracking" href="live-order-tracking.html">Live Tracking</a></nav>
       </div>
     </div>
   </header>
-  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+  <script>
+    (() => {
+      const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
+      const activePathByPage = {
+        "design6web.html": "home",
+        "exploreRestaurants.html": "restaurants",
+        "restaurant-details-menu.html": "restaurants",
+        "food-details-customization.html": "explore-menu",
+        "foodDetails&Customization.html": "explore-menu",
+        "search-filter-page.html": "categories",
+        "offeres-coupan-page.html": "offers-and-deals",
+        "shopping-cart-page.html": "cart-and-checkout",
+        "checkout-payemt-page.html": "cart-and-checkout",
+        "order-successful-confirmation.html": "cart-and-checkout",
+        "live-order-tracking.html": "live-tracking",
+        "login-signup-page.html": "user-profile",
+        "my-favourites-page.html": "user-profile",
+        "my-order-order-history-page.html": "user-profile",
+        "my-profile-account-setting-page.html": "user-profile",
+        "saved-address-address-management-page.html": "user-profile",
+        "help-support-page.html": "user-profile"
+      };
+      const activePath = activePathByPage[pageName];
+      const activeClass = "px-3.5 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-bold rounded-full";
+      const normalClass = "px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap";
+
+      document.querySelectorAll("header nav a[data-path]").forEach(link => {
+        const isCurrent = link.dataset.path === activePath;
+        link.className = isCurrent ? activeClass : normalClass;
+        if (isCurrent) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      const searchInput = document.querySelector("header input[type='text']");
+      if (searchInput) {
+        searchInput.addEventListener("keydown", event => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            window.location.href = `search-filter-page.html?q=${encodeURIComponent(searchInput.value.trim())}`;
+          }
+        });
+      }
+
+      document.querySelectorAll("header button").forEach(button => {
+        const icon = button.querySelector(".material-symbols-outlined");
+        const iconName = icon ? icon.textContent.trim() : "";
+        const destination = iconName === "location_on"
+          ? "saved-address-address-management-page.html"
+          : iconName === "phone_iphone" ? "login-signup-page.html" : "";
+        if (destination) {
+          button.addEventListener("click", () => {
+            window.location.href = destination;
+          });
+        }
+      });
+    })();
+  </script>
+  <main class="w-full pt-32 bg-surface min-h-[calc(100vh-80px)]">
     <div class="flex flex-col w-full">
       <!-- SECTION 02: HERO BANNER (Obsidian Black with Cinematic Warm Glow) -->
       <section
@@ -165,7 +208,7 @@
                   <span class="material-symbols-outlined text-lg">arrow_forward</span>
                 </a>
                 <a class="inline-flex items-center justify-center gap-space-xs bg-tertiary-fixed text-on-tertiary-fixed font-title-md text-title-md px-space-lg py-space-sm rounded-full hover:brightness-105 active:scale-95 transition-all"
-                  data-path="home" href="#">
+                  data-path="artisan-pizzas" href="#">
                   <span>Explore Seasonal Menu</span>
                 </a>
                 <!-- Carousel Controls -->
@@ -840,7 +883,7 @@
               <p class="font-body-lg text-body-lg text-surface-variant">From heritage street savouries to modern
                 European woodfired pizzas, discover over 120+ delicacies crafted with passion.</p>
               <a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary font-headline-sm text-title-md px-space-xl py-space-sm rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all"
-                data-path="home" href="#">
+                data-path="artisan-pizzas" href="#">
                 <span>Browse Full Menu (120+ Items)</span>
                 <span class="material-symbols-outlined text-lg">arrow_forward</span>
               </a>
@@ -1183,6 +1226,65 @@
         Technologies Private Limited. All rights reserved.</div>
     </div>
   </footer>
+  <script>
+    const pageRoutes = {
+      home: "design6web.html",
+      account: "my-profile-account-setting-page.html",
+      cart: "shopping-cart-page.html",
+      "artisan-pizzas": "restaurant-details-menu.html",
+      "gourmet-burgers": "restaurant-details-menu.html",
+      "street-chaat": "restaurant-details-menu.html",
+      "golden-samosas": "restaurant-details-menu.html",
+      "house-beverages": "restaurant-details-menu.html",
+      desserts: "restaurant-details-menu.html",
+      "coin-rewards": "offeres-coupan-page.html",
+      "order-tracking": "live-order-tracking.html",
+      "about-us": "help-support-page.html",
+      "our-kitchens": "exploreRestaurants.html",
+      "culinary-philosophy": "help-support-page.html",
+      "naurio-coins-club": "offeres-coupan-page.html",
+      careers: "help-support-page.html",
+      media: "help-support-page.html",
+      "privacy-policy": "help-support-page.html",
+      "terms-of-service": "help-support-page.html",
+      "refund-cancellation": "help-support-page.html"
+    };
+
+    document.querySelectorAll("a[data-path]").forEach(link => {
+      const route = pageRoutes[link.dataset.path];
+      if (route) {
+        link.href = route;
+      }
+    });
+
+    document.querySelectorAll("button").forEach(button => {
+      const label = button.getAttribute("aria-label") || "";
+      const icon = button.querySelector(".material-symbols-outlined");
+      const iconName = icon ? icon.textContent.trim() : "";
+      const text = button.textContent.trim();
+      let route = "";
+
+      if (label === "Add to wishlist" || iconName === "favorite") {
+        route = "my-favourites-page.html";
+      } else if (iconName === "storefront") {
+        route = "exploreRestaurants.html";
+      } else if (iconName === "near_me") {
+        route = "saved-address-address-management-page.html";
+      } else if (iconName === "smartphone") {
+        route = "login-signup-page.html";
+      } else if (text.includes("Grab Deal")) {
+        route = "offeres-coupan-page.html";
+      } else if (text === "ADD +" || iconName === "add") {
+        route = "food-details-customization.html";
+      }
+
+      if (route) {
+        button.addEventListener("click", () => {
+          window.location.href = route;
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
