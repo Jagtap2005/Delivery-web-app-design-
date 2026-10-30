@@ -106,66 +106,7 @@
       </div>
     </div>
   </header>
-  <script>
-    (() => {
-      const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
-      const activePathByPage = {
-        "design6web.html": "home",
-        "exploreRestaurants.html": "restaurants",
-        "restaurant-details-menu.html": "restaurants",
-        "food-details-customization.html": "explore-menu",
-        "foodDetails&Customization.html": "explore-menu",
-        "search-filter-page.html": "categories",
-        "offeres-coupan-page.html": "offers-and-deals",
-        "shopping-cart-page.html": "cart-and-checkout",
-        "checkout-payemt-page.html": "cart-and-checkout",
-        "order-successful-confirmation.html": "cart-and-checkout",
-        "live-order-tracking.html": "live-tracking",
-        "login-signup-page.html": "user-profile",
-        "my-favourites-page.html": "user-profile",
-        "my-order-order-history-page.html": "user-profile",
-        "my-profile-account-setting-page.html": "user-profile",
-        "saved-address-address-management-page.html": "user-profile",
-        "help-support-page.html": "user-profile"
-      };
-      const activePath = activePathByPage[pageName];
-      const activeClass = "px-3.5 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-bold rounded-full";
-      const normalClass = "px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap";
 
-      document.querySelectorAll("header nav a[data-path]").forEach(link => {
-        const isCurrent = link.dataset.path === activePath;
-        link.className = isCurrent ? activeClass : normalClass;
-        if (isCurrent) {
-          link.setAttribute("aria-current", "page");
-        } else {
-          link.removeAttribute("aria-current");
-        }
-      });
-
-      const searchInput = document.querySelector("header input[type='text']");
-      if (searchInput) {
-        searchInput.addEventListener("keydown", event => {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            window.location.href = `search-filter-page.html?q=${encodeURIComponent(searchInput.value.trim())}`;
-          }
-        });
-      }
-
-      document.querySelectorAll("header button").forEach(button => {
-        const icon = button.querySelector(".material-symbols-outlined");
-        const iconName = icon ? icon.textContent.trim() : "";
-        const destination = iconName === "location_on"
-          ? "saved-address-address-management-page.html"
-          : iconName === "phone_iphone" ? "login-signup-page.html" : "";
-        if (destination) {
-          button.addEventListener("click", () => {
-            window.location.href = destination;
-          });
-        }
-      });
-    })();
-  </script>
   <main class="w-full pt-32 bg-surface min-h-[calc(100vh-80px)]">
     <div class="flex flex-col w-full">
       <!-- SECTION 02: HERO BANNER (Obsidian Black with Cinematic Warm Glow) -->
@@ -1226,65 +1167,8 @@
         Technologies Private Limited. All rights reserved.</div>
     </div>
   </footer>
-  <script>
-    const pageRoutes = {
-      home: "design6web.html",
-      account: "my-profile-account-setting-page.html",
-      cart: "shopping-cart-page.html",
-      "artisan-pizzas": "restaurant-details-menu.html",
-      "gourmet-burgers": "restaurant-details-menu.html",
-      "street-chaat": "restaurant-details-menu.html",
-      "golden-samosas": "restaurant-details-menu.html",
-      "house-beverages": "restaurant-details-menu.html",
-      desserts: "restaurant-details-menu.html",
-      "coin-rewards": "offeres-coupan-page.html",
-      "order-tracking": "live-order-tracking.html",
-      "about-us": "help-support-page.html",
-      "our-kitchens": "exploreRestaurants.html",
-      "culinary-philosophy": "help-support-page.html",
-      "naurio-coins-club": "offeres-coupan-page.html",
-      careers: "help-support-page.html",
-      media: "help-support-page.html",
-      "privacy-policy": "help-support-page.html",
-      "terms-of-service": "help-support-page.html",
-      "refund-cancellation": "help-support-page.html"
-    };
 
-    document.querySelectorAll("a[data-path]").forEach(link => {
-      const route = pageRoutes[link.dataset.path];
-      if (route) {
-        link.href = route;
-      }
-    });
-
-    document.querySelectorAll("button").forEach(button => {
-      const label = button.getAttribute("aria-label") || "";
-      const icon = button.querySelector(".material-symbols-outlined");
-      const iconName = icon ? icon.textContent.trim() : "";
-      const text = button.textContent.trim();
-      let route = "";
-
-      if (label === "Add to wishlist" || iconName === "favorite") {
-        route = "my-favourites-page.html";
-      } else if (iconName === "storefront") {
-        route = "exploreRestaurants.html";
-      } else if (iconName === "near_me") {
-        route = "saved-address-address-management-page.html";
-      } else if (iconName === "smartphone") {
-        route = "login-signup-page.html";
-      } else if (text.includes("Grab Deal")) {
-        route = "offeres-coupan-page.html";
-      } else if (text === "ADD +" || iconName === "add") {
-        route = "food-details-customization.html";
-      }
-
-      if (route) {
-        button.addEventListener("click", () => {
-          window.location.href = route;
-        });
-      }
-    });
-  </script>
+    <script src="site.js" defer></script>
 </body>
 
 </html>

@@ -60,66 +60,7 @@
       </div>
     </div>
   </header>
-  <script>
-    (() => {
-      const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "");
-      const activePathByPage = {
-        "design6web.html": "home",
-        "exploreRestaurants.html": "restaurants",
-        "restaurant-details-menu.html": "restaurants",
-        "food-details-customization.html": "explore-menu",
-        "foodDetails&Customization.html": "explore-menu",
-        "search-filter-page.html": "categories",
-        "offeres-coupan-page.html": "offers-and-deals",
-        "shopping-cart-page.html": "cart-and-checkout",
-        "checkout-payemt-page.html": "cart-and-checkout",
-        "order-successful-confirmation.html": "cart-and-checkout",
-        "live-order-tracking.html": "live-tracking",
-        "login-signup-page.html": "user-profile",
-        "my-favourites-page.html": "user-profile",
-        "my-order-order-history-page.html": "user-profile",
-        "my-profile-account-setting-page.html": "user-profile",
-        "saved-address-address-management-page.html": "user-profile",
-        "help-support-page.html": "user-profile"
-      };
-      const activePath = activePathByPage[pageName];
-      const activeClass = "px-3.5 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-bold rounded-full";
-      const normalClass = "px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap";
-
-      document.querySelectorAll("header nav a[data-path]").forEach(link => {
-        const isCurrent = link.dataset.path === activePath;
-        link.className = isCurrent ? activeClass : normalClass;
-        if (isCurrent) {
-          link.setAttribute("aria-current", "page");
-        } else {
-          link.removeAttribute("aria-current");
-        }
-      });
-
-      const searchInput = document.querySelector("header input[type='text']");
-      if (searchInput) {
-        searchInput.addEventListener("keydown", event => {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            window.location.href = `search-filter-page.html?q=${encodeURIComponent(searchInput.value.trim())}`;
-          }
-        });
-      }
-
-      document.querySelectorAll("header button").forEach(button => {
-        const icon = button.querySelector(".material-symbols-outlined");
-        const iconName = icon ? icon.textContent.trim() : "";
-        const destination = iconName === "location_on"
-          ? "saved-address-address-management-page.html"
-          : iconName === "phone_iphone" ? "login-signup-page.html" : "";
-        if (destination) {
-          button.addEventListener("click", () => {
-            window.location.href = destination;
-          });
-        }
-      });
-    })();
-  </script><main class="w-full pt-32 bg-background min-h-screen"><div class="flex flex-col w-full">
+  <main class="w-full pt-32 bg-background min-h-screen"><div class="flex flex-col w-full">
 <!-- Discovery Hero Header Section -->
 <section class="relative w-full overflow-hidden px-6 lg:px-12 py-10 lg:py-16">
 <div class="max-w-7xl mx-auto flex flex-col gap-8">
@@ -1128,4 +1069,5 @@
       }
     });
   </script>
-</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface py-16"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-inverse-primary tracking-tight font-extrabold">NAURIO</span></div><p class="text-body-md font-body-md text-surface-container-highest max-w-sm">Made to Crave. Handcrafted culinary experiences curated by city chefs, brought hot and fresh to your door.</p><div class="flex items-center gap-3 pt-2"><div class="px-3 py-2 rounded-xl bg-inverse-on-surface/10 text-label-sm font-label-sm flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span>FSSAI Lic. 10823005000192</span></div></div><div class="flex items-center gap-3 pt-2"><button class="px-4 py-2 rounded-full bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-label-md font-label-md flex items-center gap-2 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span>App Store</span></button><button class="px-4 py-2 rounded-full bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-label-md font-label-md flex items-center gap-2 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">shop</span><span>Google Play</span></button></div></div><div><h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Quick Links</h3><ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest"><li><a class="hover:text-inverse-primary transition-colors" data-path="home" href="#">About Naurio</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="explore-menu" href="#">Master Menu</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="offers-and-deals" href="#">Gourmet Deals</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="restaurants" href="#">Partner Kitchens</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="live-tracking" href="#">Track Order</a></li></ul></div><div><h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Culinary Curation</h3><ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest"><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Artisanal Pizzas</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Slow-Cooked Bowls</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Pastisserie &amp; Desserts</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Pan-Asian Wok</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Healthy &amp; Keto</a></li></ul></div><div><h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Customer Support</h3><ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest"><li><span class="block text-label-sm font-label-sm text-surface-container-high">Direct Line</span><span class="font-medium text-surface-bright">+91 120 4889 000</span></li><li><span class="block text-label-sm font-label-sm text-surface-container-high">Chef Concierge</span><span class="font-medium text-surface-bright">help@naurio.com</span></li><li><span class="block text-label-sm font-label-sm text-surface-container-high">Live Chat</span><span class="font-medium text-tertiary-fixed">24/7 Priority Support</span></li><li><a class="hover:text-inverse-primary transition-colors block pt-2" data-path="terms-and-privacy" href="#">Terms &amp; Privacy</a></li></ul></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-surface-container-high gap-4"><p>© 2025 NAURIO Hospitality Technologies Pvt Ltd. All rights reserved.</p><p>Crafted for gourmands across India.</p></div></div></footer></body></html>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface py-16"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-inverse-primary tracking-tight font-extrabold">NAURIO</span></div><p class="text-body-md font-body-md text-surface-container-highest max-w-sm">Made to Crave. Handcrafted culinary experiences curated by city chefs, brought hot and fresh to your door.</p><div class="flex items-center gap-3 pt-2"><div class="px-3 py-2 rounded-xl bg-inverse-on-surface/10 text-label-sm font-label-sm flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span>FSSAI Lic. 10823005000192</span></div></div><div class="flex items-center gap-3 pt-2"><button class="px-4 py-2 rounded-full bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-label-md font-label-md flex items-center gap-2 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span>App Store</span></button><button class="px-4 py-2 rounded-full bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-label-md font-label-md flex items-center gap-2 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">shop</span><span>Google Play</span></button></div></div><div><h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Quick Links</h3><ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest"><li><a class="hover:text-inverse-primary transition-colors" data-path="home" href="#">About Naurio</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="explore-menu" href="#">Master Menu</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="offers-and-deals" href="#">Gourmet Deals</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="restaurants" href="#">Partner Kitchens</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="live-tracking" href="#">Track Order</a></li></ul></div><div><h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Culinary Curation</h3><ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest"><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Artisanal Pizzas</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Slow-Cooked Bowls</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Pastisserie &amp; Desserts</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Pan-Asian Wok</a></li><li><a class="hover:text-inverse-primary transition-colors" data-path="categories" href="#">Healthy &amp; Keto</a></li></ul></div><div><h3 class="text-title-md font-title-md font-bold mb-4 text-surface-bright">Customer Support</h3><ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-highest"><li><span class="block text-label-sm font-label-sm text-surface-container-high">Direct Line</span><span class="font-medium text-surface-bright">+91 120 4889 000</span></li><li><span class="block text-label-sm font-label-sm text-surface-container-high">Chef Concierge</span><span class="font-medium text-surface-bright">help@naurio.com</span></li><li><span class="block text-label-sm font-label-sm text-surface-container-high">Live Chat</span><span class="font-medium text-tertiary-fixed">24/7 Priority Support</span></li><li><a class="hover:text-inverse-primary transition-colors block pt-2" data-path="terms-and-privacy" href="#">Terms &amp; Privacy</a></li></ul></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-surface-container-high gap-4"><p>© 2025 NAURIO Hospitality Technologies Pvt Ltd. All rights reserved.</p><p>Crafted for gourmands across India.</p></div></div></footer>    <script src="site.js" defer></script>
+</body></html>
