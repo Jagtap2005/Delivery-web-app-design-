@@ -538,36 +538,34 @@
     }
 
     function installNavigation() {
-        let nav = document.querySelector('nav[data-active-classes], nav [data-path]');
-        if (nav && nav.tagName !== 'NAV') nav = nav.closest('nav');
+        const existingBars = Array.from(document.querySelectorAll('nav')).filter(function (candidate) {
+            return candidate.querySelector('[data-path]');
+        });
+        let nav = existingBars.shift();
         if (!nav) {
             nav = document.createElement('nav');
-            nav.setAttribute('aria-label', 'Primary navigation');
-            nav.className = 'fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(33,26,20,0.06)]';
-            nav.setAttribute('data-active-classes', 'text-primary font-bold');
-            nav.innerHTML = '<div class="flex justify-around items-center h-16 px-space-xs">' +
-                navLink('explore', 'explore', 'Explore') +
-                navLink('search', 'search', 'Search') +
-                navLink('dining', 'restaurant', 'Dining') +
-                navLink('orders', 'receipt_long', 'Orders') +
-                navLink('cart', 'shopping_bag', 'Cart') + '</div>';
             document.body.appendChild(nav);
         }
+        existingBars.forEach(function (duplicate) { duplicate.remove(); });
+
+        nav.setAttribute('aria-label', 'Primary navigation');
+        nav.setAttribute('data-active-classes', 'text-primary font-bold');
+        nav.className = 'fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(33,26,20,0.06)]';
+        nav.innerHTML = '<div class="flex justify-around items-center h-16 px-space-xs">' +
+            navLink('explore', 'explore', 'Explore') +
+            navLink('search', 'search', 'Search') +
+            navLink('dining', 'restaurant', 'Dining') +
+            navLink('orders', 'receipt_long', 'Orders') +
+            navLink('cart', 'shopping_bag', 'Cart') + '</div>';
 
         const activeTab = mainTabForPage();
-        const activeClasses = (nav.getAttribute('data-active-classes') || 'text-primary font-bold')
-            .split(/\s+/).filter(Boolean);
         nav.querySelectorAll('[data-path]').forEach(function (link) {
-            const rawTab = link.getAttribute('data-path');
-            const tab = rawTab === 'my-orders' ? 'orders' : rawTab;
+            const tab = link.getAttribute('data-path');
             link.href = tab === 'explore' ? screens.home : screens[tab] || '#';
             if (tab === activeTab) {
                 link.setAttribute('aria-current', 'page');
-                link.classList.remove('text-on-surface-variant', 'text-secondary');
-                activeClasses.forEach(function (className) { link.classList.add(className); });
-            } else {
-                link.removeAttribute('aria-current');
-                activeClasses.forEach(function (className) { link.classList.remove(className); });
+                link.classList.remove('text-on-surface-variant');
+                link.classList.add('text-primary', 'font-bold');
             }
         });
         document.querySelectorAll('a[data-path="profile-settings"]').forEach(function (link) {
@@ -597,8 +595,14 @@
     }
 
     function navLink(tab, icon, label) {
-        return '<a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="' + tab +
-            '" href="#"><span class="material-symbols-outlined text-[24px]">' + icon +
+        const linkStart = '<a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant transition-colors' +
+            (tab === 'cart' ? ' relative' : '') + '" data-path="' + tab + '" href="#">';
+        if (tab === 'cart') {
+            return linkStart + '<div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">' +
+                icon + '</span><span class="absolute -top-1 -right-2 bg-primary text-on-primary font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center leading-none shadow-sm" hidden>0</span></div>' +
+                '<span class="font-label-sm text-label-sm mt-0.5">' + label + '</span></a>';
+        }
+        return linkStart + '<span class="material-symbols-outlined text-[24px]">' + icon +
             '</span><span class="font-label-sm text-label-sm mt-0.5">' + label + '</span></a>';
     }
 

@@ -4,6 +4,7 @@
   const pages = {
     home: "design6web.html",
     restaurants: "exploreRestaurants.html",
+    menu: "Menu-page.html",
     restaurant: "restaurant-details-menu.html",
     food: "food-details-customization.html",
     search: "search-filter-page.html",
@@ -75,7 +76,7 @@
       "user-profile": pages.login,
       cart: pages.cart,
       "cart-and-checkout": pages.cart,
-      "explore-menu": pages.restaurant,
+      "explore-menu": pages.menu,
       categories: pages.search,
       restaurants: pages.restaurants,
       "offers-and-deals": pages.offers,
@@ -118,7 +119,8 @@
     if (/central ncr|\d+\s+kitchens|explore all/.test(text)) return pages.restaurants;
     if (/artisanal sourdough|smash wagyu|kyoto omakase|heritage dumplings|botanical smoothie|small-batch gelato|gourmet burgers|street chaat|golden samosas|house beverages|desserts/.test(text)) return pages.restaurant;
     if (/explore restaurants|continue shopping|partner kitchens|our kitchens|restaurants|restaurant/.test(text)) return pages.restaurants;
-    if (/view menu|view kitchen|master menu|browse full menu|explore menu|full menu/.test(text)) return pages.restaurant;
+    if (/explore menu/.test(text)) return pages.menu;
+    if (/view menu|view kitchen|master menu|browse full menu|full menu/.test(text)) return pages.restaurant;
     if (/food details|view dish|reserve dish|explore dishes|add to crave cart/.test(text)) return pages.food;
     if (/customization|^modify$/.test(text)) return /modify/.test(text) ? pages.cart : pages.food;
     if (/search|find bites|browse catalog/.test(text)) return pages.search;
