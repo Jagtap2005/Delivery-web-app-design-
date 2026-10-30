@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>NAURIO | Made to Crave</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-low": "#fff1e6",
+                        "tertiary-fixed": "#d5eba5",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#202f00",
+                        "on-surface-variant": "#5b403d",
+                        "secondary": "#5f5e5e",
+                        "primary": "#b7221c",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#141f00",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#eee0d5",
+                        "tertiary-fixed-dim": "#b9cf8b",
+                        "tertiary": "#52652d",
+                        "background": "#fff8f4",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#f3e6db",
+                        "on-surface": "#211a14",
+                        "surface-container": "#f9ebe1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#ff5748",
+                        "primary-fixed": "#ffdad5",
+                        "surface-variant": "#eee0d5",
+                        "inverse-surface": "#372f28",
+                        "outline-variant": "#e3beb9",
+                        "surface-bright": "#fff8f4",
+                        "on-secondary-container": "#636262",
+                        "on-background": "#211a14",
+                        "on-primary-fixed": "#410001",
+                        "surface-tint": "#b7221c",
+                        "surface-dim": "#e5d8cd",
+                        "outline": "#8f706b",
+                        "inverse-primary": "#ffb4aa",
+                        "tertiary-container": "#85995b",
+                        "surface": "#fff8f4",
+                        "inverse-on-surface": "#fceee3",
+                        "on-primary-fixed-variant": "#930006",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#5e0002",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary-container": "#e2dfde",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#3b4c17"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "1.5rem",
+                        "gutter-mobile": "1rem",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "space-lg": "1.5rem",
+                        "margin-mobile": "1.25rem",
+                        "space-xs": "0.25rem",
+                        "space-sm": "0.5rem",
+                        "space-xl": "2.5rem",
+                        "gutter-desktop": "2rem",
+                        "space-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-sm": [
+                            "Manrope"
+                        ],
+                        "headline-xl-mobile": [
+                            "Manrope"
+                        ],
+                        "title-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-hero": [
+                            "Manrope"
+                        ],
+                        "label-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-lg-mobile": [
+                            "Manrope"
+                        ],
+                        "label-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-hero-mobile": [
+                            "Manrope"
+                        ],
+                        "headline-lg": [
+                            "Manrope"
+                        ],
+                        "body-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-xl": [
+                            "Manrope"
+                        ],
+                        "title-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-md": [
+                            "Manrope"
+                        ],
+                        "body-md": [
+                            "Plus Jakarta Sans"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-sm": [
+                            "20px",
+                            {
+                                "lineHeight": "26px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-xl-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "38px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "title-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "24px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-hero": [
+                            "64px",
+                            {
+                                "lineHeight": "70px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "label-md": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.03em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "26px",
+                            {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-lg": [
+                            "14px",
+                            {
+                                "lineHeight": "18px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "display-hero-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "46px",
+                                "letterSpacing": "-0.025em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "headline-lg": [
+                            "36px",
+                            {
+                                "lineHeight": "42px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-xl": [
+                            "48px",
+                            {
+                                "lineHeight": "54px",
+                                "letterSpacing": "-0.025em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "title-md": [
+                            "16px",
+                            {
+                                "lineHeight": "22px",
+                                "letterSpacing": "-0.005em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-sm": [
+                            "11px",
+                            {
+                                "lineHeight": "14px",
+                                "letterSpacing": "0.04em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-sm": [
+                            "13px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "30px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-md": [
+                            "15px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                }
+            }
+        }</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-28 max-w-7xl mx-auto px-margin-desktop flex flex-col justify-between py-space-sm">
+            <div class="flex items-center justify-between gap-space-lg">
+                <div class="flex items-center gap-space-lg shrink-0">
+                    <div class="flex flex-col cursor-pointer"><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary leading-none uppercase">NAURIO</span><span
+                            class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase font-bold mt-0.5">Made
+                            to Crave</span></div>
+                    <div
+                        class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-md py-space-xs rounded-full cursor-pointer transition-colors">
+                        <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                        <div class="flex flex-col text-left"><span
+                                class="font-label-sm text-label-sm text-on-surface-variant font-bold leading-none">Deliver
+                                To:</span><span
+                                class="font-label-md text-label-md text-on-surface font-semibold max-w-[210px] truncate leading-tight">Connaught
+                                Place, Central Delhi</span></div><span
+                            class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+                    </div>
+                </div>
+                <div class="flex-1 max-w-xl mx-space-md">
+                    <div
+                        class="flex items-center w-full h-12 bg-surface-container-lowest rounded-full px-space-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] focus-within:shadow-[0_4px_16px_rgba(183,34,28,0.08)] transition-all">
+                        <span
+                            class="material-symbols-outlined text-on-surface-variant mr-space-sm text-[22px]">search</span><input
+                            class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant"
+                            placeholder="Search artisanal pizzas, gourmet burgers, bowls..." type="text" /><button
+                            class="bg-surface-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors ml-space-xs"
+                            type="button">Explore</button></div>
+                </div>
+                <div class="flex items-center gap-space-md shrink-0"><button
+                        class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full font-label-md text-label-md text-on-surface transition-colors"
+                        type="button"><span
+                            class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span>Get
+                            App</span></button>
+                    <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-fixed rounded-full">
+                        <span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">token</span><span
+                            class="font-label-md text-label-md text-on-tertiary-fixed font-bold">240 Coins</span></div>
+                    <a class="flex items-center gap-space-sm pl-space-xs pr-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-left transition-colors relative group"
+                        href="#">
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span
+                            class="font-label-md text-label-md text-on-surface font-semibold">Account</span><span
+                            class="w-2 h-2 rounded-full bg-primary absolute top-1 right-1 ring-2 ring-surface"></span>
+                    </a><button
+                        class="flex items-center gap-space-sm px-space-lg py-space-sm bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-[0_4px_16px_rgba(255,87,72,0.3)]"
+                        type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span
+                            class="font-label-lg text-label-lg font-bold">Cart (3) • ₹1,293</span></button>
+                </div>
+            </div>
+            <nav class="flex items-center gap-space-xs pt-1 overflow-x-auto no-scrollbar"
+                data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-full"><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="home" href="#">Home</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="categories" href="#">Categories</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="offers-and-deals" href="#">Offers &amp; Deals</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="my-orders-and-order-history" href="#">My Orders</a><a aria-current="page"
+                    class="px-space-md py-1 transition-colors whitespace-nowrap bg-surface-container-high text-on-surface font-bold rounded-full"
+                    data-path="my-profile-and-account-settings" href="#">Profile Settings</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="my-favourites" href="#">Favourites</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="saved-addresses" href="#">Saved Addresses</a><a
+                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors whitespace-nowrap"
+                    data-path="live-tracking" href="#">Live Tracking</a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-28 bg-surface">
+        <div class="flex flex-col w-full pb-space-xl">
+            <!-- Top Breadcrumb & Page Banner Header -->
+            <div class="max-w-7xl w-full mx-auto px-margin-mobile md:px-margin-desktop pt-space-lg mb-space-lg">
+                <nav
+                    class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
+                    <a class="hover:text-primary transition-colors" href="#">Home</a>
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                    <a class="hover:text-primary transition-colors" href="#">My Account</a>
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                    <span class="text-on-surface font-semibold">Profile &amp; Settings</span>
+                </nav>
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-md">
+                    <div class="space-y-space-xs">
+                        <div
+                            class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-widest uppercase font-bold">
+                            <span class="material-symbols-outlined text-[14px]">workspace_premium</span>
+                            <span>Culinary Patron Profile</span>
+                        </div>
+                        <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">My
+                            Account</h1>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                            Manage your gastronomy profile, hearth preferences, and everything NAURIO.
+                        </p>
+                    </div>
+                    <!-- Connoisseur Header Stats Capsule -->
+                    <div
+                        class="flex flex-wrap items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm self-start lg:self-auto">
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-low">
+                            <span class="material-symbols-outlined text-primary text-[20px]">stars</span>
+                            <div class="flex flex-col">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Patron
+                                    Status</span>
+                                <span class="font-label-md text-label-md font-bold text-on-surface">Black
+                                    Connoisseur</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-tertiary-fixed">
+                            <span class="material-symbols-outlined text-on-tertiary-fixed text-[20px]">savings</span>
+                            <div class="flex flex-col">
+                                <span
+                                    class="font-label-sm text-label-sm text-on-tertiary-fixed-variant leading-none">Balance</span>
+                                <span class="font-label-md text-label-md font-bold text-on-tertiary-fixed">240 Crave
+                                    Coins</span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-low">
+                            <span class="material-symbols-outlined text-tertiary text-[20px]">restaurant</span>
+                            <div class="flex flex-col">
+                                <span
+                                    class="font-label-sm text-label-sm text-on-surface-variant leading-none">Milestones</span>
+                                <span class="font-label-md text-label-md font-bold text-on-surface">10 Feasts
+                                    Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Primary Account Layout: Sidebar + Main Stream -->
+            <div
+                class="max-w-7xl w-full mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+                <!-- LEFT SIDEBAR COMPONENT (~280px equivalent: 3 of 12 cols) -->
+                <aside class="lg:col-span-4 xl:col-span-3 space-y-space-md">
+                    <!-- Mini User Profile Card -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm space-y-space-md">
+                        <div class="flex items-center gap-space-md">
+                            <div class="relative w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Editorial close-up portrait of a sophisticated modern food connoisseur and culinary diner with warm directional golden hour cafe lighting, clean aesthetic styling, deep natural espresso background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgbsfU0l4huWoEnSgrGqSI__nkEi8dGat1nU1eBq5t7WExIYHvV0mdKGf8MpezVmiclYuFZTfzQsJx_lgs9jz8rWJqCOBGcc5_aSDmJ-91ckWLnb2M6TgeZLTB8fgD56Fe8J-8H9a1FBAN7h3hUeMSOE_kiBxmWLSbwUIRWDFwEYWrxBLenED3VZ5DztzeUOU-vrv_ce-yMZcuB_zf6F4uAWc2uj0nbFYfEV5EkmK2" />
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex items-center gap-1">
+                                    <h2 class="font-title-md text-title-md font-bold text-on-surface truncate">Rohan
+                                        Kapoor</h2>
+                                    <span class="material-symbols-outlined text-primary text-[16px] shrink-0"
+                                        style="font-variation-settings: 'FILL' 1;">verified</span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                                    rohan.kapoor@naurio.com</p>
+                                <span class="font-label-sm text-label-sm text-secondary block mt-0.5">Member since Oct
+                                    2023</span>
+                            </div>
+                        </div>
+                        <!-- Sidebar Navigation Pill Menu -->
+                        <nav class="space-y-1">
+                            <!-- Active: My Profile -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl bg-primary text-on-primary shadow-sm font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]"
+                                        style="font-variation-settings: 'FILL' 1;">person</span>
+                                    <span>My Profile</span>
+                                </div>
+                                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                            </a>
+                            <!-- My Orders -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                                    <span>My Orders</span>
+                                </div>
+                                <span
+                                    class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">1
+                                    Active</span>
+                            </a>
+                            <!-- Saved Addresses -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]">pin_drop</span>
+                                    <span>Saved Addresses</span>
+                                </div>
+                                <span class="font-label-sm text-label-sm text-secondary">3 saved</span>
+                            </a>
+                            <!-- My Favourites -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                    <span>My Favourites</span>
+                                </div>
+                                <span class="font-label-sm text-label-sm text-secondary">14 items</span>
+                            </a>
+                            <!-- Offers & Coupons -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]">local_offer</span>
+                                    <span>Offers &amp; Coupons</span>
+                                </div>
+                                <span
+                                    class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">4
+                                    new</span>
+                            </a>
+                            <!-- Help & Support -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]">headset_mic</span>
+                                    <span>Help &amp; Support</span>
+                                </div>
+                                <span
+                                    class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                                    24/7 Live
+                                </span>
+                            </a>
+                            <!-- Account Settings -->
+                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                                href="#">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px]">tune</span>
+                                    <span>Account Settings</span>
+                                </div>
+                                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                            </a>
+                        </nav>
+                        <!-- Divider -->
+                        <div class="h-px bg-surface-container-high w-full"></div>
+                        <!-- Logout Action -->
+                        <button
+                            class="w-full flex items-center gap-space-sm px-space-md py-space-xs rounded-xl hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-colors font-label-md text-label-md"
+                            type="button">
+                            <span class="material-symbols-outlined text-[20px]">logout</span>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <!-- Chef Concierge Teaser Card -->
+                    <div
+                        class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-space-md space-y-space-sm shadow-sm relative overflow-hidden">
+                        <div
+                            class="absolute -right-4 -bottom-4 w-28 h-28 bg-primary/20 rounded-full blur-2xl pointer-events-none">
+                        </div>
+                        <div
+                            class="flex items-center gap-space-xs text-primary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                            <span class="material-symbols-outlined text-[16px]">room_service</span>
+                            <span>Sommelier Desk</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm font-bold text-surface-bright leading-snug">Private
+                            Tasting Reservation?</h3>
+                        <p class="font-body-sm text-body-sm text-secondary-fixed-dim leading-relaxed">
+                            As a Black Connoisseur, access bespoke multi-course kitchen previews 48 hours early.
+                        </p>
+                        <button
+                            class="mt-2 w-full py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md font-bold hover:bg-surface-bright transition-colors shadow-sm"
+                            type="button">
+                            Connect Concierge
+                        </button>
+                    </div>
+                </aside>
+                <!-- MAIN CONTENT AREA (9 of 12 cols) -->
+                <main class="lg:col-span-8 xl:col-span-9 space-y-space-lg">
+                    <!-- 1. Customer Profile Banner Card -->
+                    <section
+                        class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md relative overflow-hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+                            <div class="flex items-center gap-space-md">
+                                <!-- Large Avatar with Camera Icon Overlay -->
+                                <div class="relative group cursor-pointer shrink-0">
+                                    <div
+                                        class="w-24 h-24 rounded-full overflow-hidden bg-surface-container ring-4 ring-surface-container-low shadow-sm">
+                                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                            data-alt="Detailed warm cinematic portrait of patron dining in an artisanal Michelin starred dining salon, sharp focus, delicate natural rim lighting, contemporary smart casual attire"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt3wqq0m-GpxNoDsgSDvFUl8nY8CKsejNOCW45XjkghhNXaHOgFBxA-inVRtm973Ek2Ics1DIkPAhQQrjOQaEI9MLOmgm4jwmxfGGDj5wodANqD0rxpdsBwgpiRGKU3WfYaANriA9MAFjHCxDTS5SHGg84cXq9z5b-qNMyGcY19DYSXIaKQs0DlAUBiJP_iCFVej6iFRvVIwXGWVNsZB2zMAUglqMFfEmE6-kXdbss" />
+                                    </div>
+                                    <button aria-label="Edit Profile Photo"
+                                        class="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md hover:bg-primary transition-all"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                                    </button>
+                                </div>
+                                <!-- Identity and Badges -->
+                                <div class="space-y-1">
+                                    <div class="flex flex-wrap items-center gap-space-xs">
+                                        <h2
+                                            class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+                                            Rohan Kapoor</h2>
+                                        <span
+                                            class="inline-flex items-center gap-0.5 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                                            <span class="material-symbols-outlined text-[14px]"
+                                                style="font-variation-settings: 'FILL' 1;">star</span>
+                                            Verified Connoisseur
+                                        </span>
+                                    </div>
+                                    <!-- Quick Contact Verification Badges -->
+                                    <div class="flex flex-wrap items-center gap-space-xs pt-1">
+                                        <span
+                                            class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+                                            <span class="material-symbols-outlined text-primary text-[14px]">mail</span>
+                                            rohan.kapoor@naurio.com
+                                            <span class="material-symbols-outlined text-tertiary text-[14px]"
+                                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        </span>
+                                        <span
+                                            class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[14px]">smartphone</span>
+                                            +91 98712 34567
+                                            <span class="material-symbols-outlined text-tertiary text-[14px]"
+                                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Quick Action and Tier Badge -->
+                            <div class="flex flex-col sm:items-end gap-space-xs shrink-0">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                                    NAURIO Black Active
+                                </span>
+                                <button
+                                    class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors"
+                                    type="button">
+                                    <span class="material-symbols-outlined text-[18px]">edit</span>
+                                    <span>Edit Profile</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- 2. Personal Information Form -->
+                    <section class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-xs">
+                            <div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Personal
+                                    Information</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Update your personal
+                                    details used for ordering and culinary communication.</p>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-secondary mt-1 sm:mt-0">Last updated 12 days
+                                ago</span>
+                        </div>
+                        <form class="space-y-space-md" onsubmit="event.preventDefault();">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                                <!-- Full Name -->
+                                <div class="space-y-space-xs">
+                                    <label class="block font-label-md text-label-md text-on-surface font-semibold">Full
+                                        Name</label>
+                                    <div class="relative">
+                                        <input
+                                            class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                            type="text" value="Rohan Kapoor" />
+                                    </div>
+                                </div>
+                                <!-- Email Address with Verified Badge inside -->
+                                <div class="space-y-space-xs">
+                                    <label class="block font-label-md text-label-md text-on-surface font-semibold">Email
+                                        Address</label>
+                                    <div class="relative flex items-center">
+                                        <input
+                                            class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-space-md pr-24 py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                            type="email" value="rohan.kapoor@naurio.com" />
+                                        <span
+                                            class="absolute right-3 inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                                            <span class="material-symbols-outlined text-[13px]"
+                                                style="font-variation-settings: 'FILL' 1;">check</span>
+                                            Verified
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Mobile Number with Verified Badge -->
+                                <div class="space-y-space-xs">
+                                    <label
+                                        class="block font-label-md text-label-md text-on-surface font-semibold">Mobile
+                                        Number</label>
+                                    <div class="relative flex items-center">
+                                        <input
+                                            class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-space-md pr-24 py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                            type="tel" value="+91 98712 34567" />
+                                        <span
+                                            class="absolute right-3 inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                                            <span class="material-symbols-outlined text-[13px]"
+                                                style="font-variation-settings: 'FILL' 1;">check</span>
+                                            Verified
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Date of Birth with celebration micro-tag -->
+                                <div class="space-y-space-xs">
+                                    <div class="flex items-center justify-between">
+                                        <label class="font-label-md text-label-md text-on-surface font-semibold">Date of
+                                            Birth</label>
+                                        <span
+                                            class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-0.5">
+                                            <span class="material-symbols-outlined text-[14px]">cake</span>
+                                            Birthday Dessert Perk!
+                                        </span>
+                                    </div>
+                                    <div class="relative">
+                                        <input
+                                            class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                            type="text" value="14 August 1994" />
+                                    </div>
+                                    <p class="font-body-sm text-body-sm text-secondary">Enjoy a complimentary curated
+                                        dessert box on your birth week.</p>
+                                </div>
+                                <!-- Preferred Culinary Diet -->
+                                <div class="md:col-span-2 space-y-space-xs">
+                                    <label
+                                        class="block font-label-md text-label-md text-on-surface font-semibold">Preferred
+                                        Culinary Diet</label>
+                                    <div class="relative">
+                                        <select
+                                            class="w-full appearance-none bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all cursor-pointer">
+                                            <option selected="" value="flexitarian">No Restrictions / Flexitarian
+                                                (Omnivore)</option>
+                                            <option value="vegetarian">Pure Vegetarian / Plant Forward</option>
+                                            <option value="vegan">Strict Vegan &amp; Botanical</option>
+                                            <option value="pescatarian">Pescatarian (Seafood &amp; Produce)</option>
+                                            <option value="keto">Keto / Low-Carb Artisan</option>
+                                            <option value="gluten-free">Celiac &amp; Gluten Sensitive</option>
+                                        </select>
+                                        <span
+                                            class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3.5 pointer-events-none">expand_more</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Action Buttons -->
+                            <div class="flex flex-wrap items-center justify-end gap-space-sm pt-space-xs">
+                                <button
+                                    class="px-space-lg py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors"
+                                    type="button">
+                                    Discard Changes
+                                </button>
+                                <button
+                                    class="px-space-xl py-3 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg font-bold shadow-[0_4px_16px_rgba(255,87,72,0.3)] transition-all"
+                                    type="submit">
+                                    Save Changes
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- 3. Account Security Section -->
+                    <section class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Account Security
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Ensure your account is
+                                protected with a robust master password and multi-factor checkpoints.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                            <!-- Current Password -->
+                            <div class="space-y-space-xs">
+                                <label class="block font-label-md text-label-md text-on-surface font-semibold">Current
+                                    Password</label>
+                                <div class="relative flex items-center">
+                                    <input
+                                        class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-space-md pr-10 py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                        id="curr-pass" type="password" value="secretartisanpass" />
+                                    <button class="absolute right-3 text-on-surface-variant hover:text-on-surface"
+                                        onclick="const p = document.getElementById('curr-pass'); p.type = p.type === 'password' ? 'text' : 'password';"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- New Password -->
+                            <div class="space-y-space-xs">
+                                <label class="block font-label-md text-label-md text-on-surface font-semibold">New
+                                    Password</label>
+                                <div class="relative flex items-center">
+                                    <input
+                                        class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-space-md pr-10 py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                        id="new-pass" type="password" value="NaurioEpicure#2025" />
+                                    <button class="absolute right-3 text-on-surface-variant hover:text-on-surface"
+                                        onclick="const p = document.getElementById('new-pass'); p.type = p.type === 'password' ? 'text' : 'password';"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Confirm New Password -->
+                            <div class="space-y-space-xs">
+                                <label class="block font-label-md text-label-md text-on-surface font-semibold">Confirm
+                                    Password</label>
+                                <div class="relative flex items-center">
+                                    <input
+                                        class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-space-md pr-10 py-3 rounded-xl outline-none focus:shadow-[0_0_0_2px_#b7221c] transition-all"
+                                        id="conf-pass" type="password" value="NaurioEpicure#2025" />
+                                    <button class="absolute right-3 text-on-surface-variant hover:text-on-surface"
+                                        onclick="const p = document.getElementById('conf-pass'); p.type = p.type === 'password' ? 'text' : 'password';"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Password Strength Meter Visual -->
+                        <div
+                            class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+                            <div class="space-y-1">
+                                <div class="flex items-center gap-space-xs">
+                                    <span class="font-label-md text-label-md font-bold text-on-surface">Password
+                                        Strength:</span>
+                                    <span class="font-label-md text-label-md font-extrabold text-tertiary">Strong &amp;
+                                        Resilient</span>
+                                </div>
+                                <div
+                                    class="w-48 h-1.5 rounded-full bg-surface-container-high overflow-hidden flex gap-1">
+                                    <span class="h-full w-1/4 rounded-full bg-tertiary"></span>
+                                    <span class="h-full w-1/4 rounded-full bg-tertiary"></span>
+                                    <span class="h-full w-1/4 rounded-full bg-tertiary"></span>
+                                    <span class="h-full w-1/4 rounded-full bg-tertiary"></span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-space-md">
+                                <a class="font-label-md text-label-md text-primary font-bold hover:underline"
+                                    href="#">Forgot password?</a>
+                                <button
+                                    class="px-space-md py-2.5 rounded-full bg-on-surface text-surface-lowest hover:bg-inverse-surface font-label-md text-label-md font-bold text-white transition-colors"
+                                    type="button">
+                                    Update Password
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 2FA Checkpoint Row -->
+                        <div
+                            class="pt-space-xs flex items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-lowest">
+                            <div class="flex items-center gap-space-md">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">phonelink_lock</span>
+                                </div>
+                                <div>
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">Two-Factor
+                                        Authentication (2FA)</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">Instant SMS /
+                                        WhatsApp OTP verification required for unfamiliar browser logins.</span>
+                                </div>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                                <input checked="" class="sr-only peer" type="checkbox" />
+                                <div
+                                    class="w-11 h-6 bg-secondary-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                                </div>
+                            </label>
+                        </div>
+                    </section>
+                    <!-- 4. Notification & Food Preferences Section -->
+                    <section class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Preferences &amp;
+                                Alerts</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Fine-tune your sensory radar
+                                and real-time transit telemetry pings.</p>
+                        </div>
+                        <div class="space-y-space-sm">
+                            <!-- Toggle 1: Email Notifications -->
+                            <div
+                                class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+                                <div class="space-y-0.5">
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">Email
+                                        Notifications</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Receive culinary
+                                        invoices, weekly chef curation newsletters, and exclusive tasting invitations.
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                                    <input checked="" class="sr-only peer" type="checkbox" />
+                                    <div
+                                        class="w-11 h-6 bg-secondary-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container">
+                                    </div>
+                                </label>
+                            </div>
+                            <!-- Toggle 2: SMS & WhatsApp Alerts -->
+                            <div
+                                class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+                                <div class="space-y-0.5">
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">SMS &amp;
+                                        WhatsApp Alerts</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Real-time hearth baking
+                                        and live courier transit telemetry pings with direct courier contact.</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                                    <input checked="" class="sr-only peer" type="checkbox" />
+                                    <div
+                                        class="w-11 h-6 bg-secondary-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container">
+                                    </div>
+                                </label>
+                            </div>
+                            <!-- Toggle 3: Promotional Offers & Drops -->
+                            <div
+                                class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+                                <div class="space-y-0.5">
+                                    <span
+                                        class="font-title-md text-title-md font-bold text-on-surface block">Promotional
+                                        Offers &amp; Drops</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Early access to
+                                        limited-edition Michelin pop-ups, chef collabs, and midweek flash discounts.</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                                    <input checked="" class="sr-only peer" type="checkbox" />
+                                    <div
+                                        class="w-11 h-6 bg-secondary-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container">
+                                    </div>
+                                </label>
+                            </div>
+                            <!-- Toggle 4: Order Updates -->
+                            <div
+                                class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md">
+                                <div class="space-y-0.5">
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">Hearthside
+                                        Order Updates</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Instant push
+                                        notifications when your food is fired in the stone hearth or plated for
+                                        delivery.</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                                    <input checked="" class="sr-only peer" type="checkbox" />
+                                    <div
+                                        class="w-11 h-6 bg-secondary-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- 5. Destructive / Danger Zone Section -->
+                    <section class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md">
+                        <div
+                            class="flex items-center gap-space-xs text-error font-label-md text-label-md font-bold uppercase tracking-wider">
+                            <span class="material-symbols-outlined text-[18px]">warning</span>
+                            <span>Account Actions</span>
+                        </div>
+                        <div class="space-y-space-sm">
+                            <!-- Row 1: Terminate All Device Sessions -->
+                            <div
+                                class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+                                <div>
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">Log Out
+                                        from All Devices</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Terminates active login
+                                        sessions across iPad, mobile app, and other desktop browsers.</p>
+                                </div>
+                                <button
+                                    class="px-space-md py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-bold shrink-0 transition-colors"
+                                    type="button">
+                                    Log Out All Devices
+                                </button>
+                            </div>
+                            <!-- Row 2: Delete Account Permanently -->
+                            <div
+                                class="p-space-md rounded-xl bg-error-container/40 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+                                <div>
+                                    <span class="font-title-md text-title-md font-bold text-on-surface block">Delete
+                                        Account Permanently</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                        Permanently erase your NAURIO profile, Crave Coins balance (240 Coins), and
+                                        order history. This action cannot be reversed.
+                                    </p>
+                                </div>
+                                <button
+                                    class="px-space-md py-2.5 rounded-full bg-error text-on-error hover:bg-on-error-container font-label-md text-label-md font-bold shrink-0 shadow-sm transition-all"
+                                    onclick="document.getElementById('delete-modal').classList.remove('hidden');"
+                                    type="button">
+                                    Delete Account
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+            <!-- Accessible Modal Preview: Delete Account Confirmation -->
+            <div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/60 backdrop-blur-sm"
+                id="delete-modal">
+                <div
+                    class="bg-surface-container-lowest max-w-md w-full rounded-2xl p-space-lg shadow-2xl space-y-space-md">
+                    <div
+                        class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[24px]">delete_forever</span>
+                    </div>
+                    <div class="space-y-space-xs">
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Are you entirely sure?
+                        </h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            You are about to delete your NAURIO profile. You will forfeit <strong
+                                class="text-on-surface">240 Crave Coins</strong> and VIP patron access to NAURIO Black
+                            kitchens.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-end gap-space-sm pt-space-xs">
+                        <button
+                            class="px-space-md py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors"
+                            onclick="document.getElementById('delete-modal').classList.add('hidden');" type="button">
+                            Cancel
+                        </button>
+                        <button
+                            class="px-space-lg py-2.5 rounded-full bg-error text-on-error hover:bg-on-error-container font-label-md text-label-md font-bold transition-colors"
+                            onclick="alert('Account deletion request acknowledged.'); document.getElementById('delete-modal').classList.add('hidden');"
+                            type="button">
+                            Confirm Deletion
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bg-[#201a16] text-[#e5d8cd] pt-space-xl pb-space-lg">
+        <div class="max-w-7xl mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-xl">
+                <div class="space-y-space-md">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary-container font-extrabold leading-none uppercase">NAURIO</span><span
+                            class="font-label-sm text-label-sm tracking-widest text-[#c8c6c5] uppercase font-bold mt-1">Made
+                            to Crave</span></div>
+                    <p class="font-body-sm text-body-sm text-[#c8c6c5] leading-relaxed">An artisanal epicurean delivery
+                        platform bringing Michelin-level gastronomy, cloud kitchens, and hand-crafted delicacies
+                        straight to discerning urban dinner tables.</p>
+                    <div class="flex flex-col gap-space-xs pt-space-sm">
+                        <div class="flex items-center gap-space-sm text-[#e5e2e1]"><span
+                                class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span><span
+                                class="font-label-sm text-label-sm">FSSAI Central Lic. No. 10022011000842</span></div>
+                        <div class="flex items-center gap-space-sm text-[#c8c6c5]"><span
+                                class="material-symbols-outlined text-[18px]">eco</span><span
+                                class="font-body-sm text-body-sm">100% Recyclable Gourmet Packaging</span></div>
+                    </div>
+                    <div class="flex items-center gap-space-sm pt-space-xs">
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-[#372f28] rounded-xl text-left cursor-pointer hover:bg-[#474746] transition-colors">
+                            <span class="material-symbols-outlined text-[24px]">ad_units</span>
+                            <div class="flex flex-col"><span
+                                    class="font-label-sm text-label-sm leading-none text-[#c8c6c5]">Download
+                                    on</span><span
+                                    class="font-label-md text-label-md font-bold leading-tight text-[#ffffff]">App
+                                    Store</span></div>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-xs px-space-md py-space-xs bg-[#372f28] rounded-xl text-left cursor-pointer hover:bg-[#474746] transition-colors">
+                            <span class="material-symbols-outlined text-[24px]">shop</span>
+                            <div class="flex flex-col"><span
+                                    class="font-label-sm text-label-sm leading-none text-[#c8c6c5]">GET IT
+                                    ON</span><span
+                                    class="font-label-md text-label-md font-bold leading-tight text-[#ffffff]">Google
+                                    Play</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Culinary Curation</span>
+                    <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Artisanal Sourdough &amp;
+                                Pizzeria</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Smash Wagyu &amp; Craft
+                                Burgers</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Kyoto Omakase &amp; Bento
+                                Boxes</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Heritage Dumplings &amp; Dim
+                                Sum</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Botanical Smoothie &amp; Salad
+                                Bowls</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Small-Batch Gelato &amp;
+                                Patisserie</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Quick Links</span>
+                    <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Chef Partner Program</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">NAURIO Black Membership</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Corporate Catering &amp;
+                                Events</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Sustainability &amp;
+                                Cold-Chain</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Redeem Crave Coins</a></li>
+                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Brand Newsroom &amp; Press</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md"><span
+                        class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Concierge &amp;
+                        Support</span>
+                    <div class="bg-[#372f28] p-space-md rounded-2xl space-y-space-xs"><span
+                            class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider block">Direct
+                            Culinary Hotline</span>
+                        <div class="flex items-center gap-space-xs"><span
+                                class="material-symbols-outlined text-primary-container text-[20px]">support_agent</span><span
+                                class="font-title-lg text-title-lg text-[#ffffff] font-bold">+91 1800-NAURIO</span>
+                        </div>
+                        <p class="font-body-sm text-body-sm text-[#c8c6c5]">Available 24/7 for live order tracking &amp;
+                            tasting bookings</p>
+                    </div>
+                    <div class="space-y-space-xs"><span
+                            class="font-label-md text-label-md text-[#ffffff] font-semibold block">Accepted Payment
+                            Modes</span>
+                        <div class="flex flex-wrap items-center gap-space-xs"><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">UPI</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Visa</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Mastercard</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">NetBanking</span><span
+                                class="px-space-sm py-0.5 bg-[#372f28] text-[#ffffff] font-label-sm text-label-sm rounded-md">Cred</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-[#372f28] pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-[#c8c6c5] font-body-sm text-body-sm">
+                <div>© 2025 NAURIO Technologies Pvt. Ltd. Crafted with passion for epicures.</div>
+                <div class="flex items-center gap-space-lg font-label-md text-label-md"><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Privacy Policy</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Terms of Service</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">FSSAI Disclosures</a><a
+                        class="hover:text-[#ffffff] transition-colors" href="#">Security</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

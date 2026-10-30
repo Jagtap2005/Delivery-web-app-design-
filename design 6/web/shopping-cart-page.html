@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="web_standard" name="shell-type" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
     <title>NAURIO | Made to Crave</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <style>
         @layer base {
 
@@ -301,945 +300,516 @@
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
     <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div class="h-28 max-w-7xl mx-auto px-margin-desktop flex flex-col justify-between py-space-sm">
-            <div class="flex items-center justify-between gap-space-lg">
-                <div class="flex items-center gap-space-lg shrink-0">
-                    <div class="flex flex-col cursor-pointer"><span
-                            class="font-headline-md text-headline-md tracking-tight text-primary leading-none uppercase">NAURIO</span><span
-                            class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase font-bold mt-0.5">Made
-                            to Crave</span></div>
+        <div class="h-32 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-between py-2">
+            <div class="flex items-center justify-between gap-4 h-16">
+                <div class="flex items-center gap-6">
+                    <a class="flex items-center gap-2" data-path="home" href="#">
+                        <span
+                            class="font-headline-md text-headline-md text-primary tracking-tight font-extrabold">NAURIO</span>
+                        <span
+                            class="hidden xl:inline text-label-sm font-label-sm uppercase tracking-widest text-on-surface-variant font-bold">CRAVE</span>
+                    </a>
+                    <button
+                        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-left"
+                        type="button">
+                        <span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+                        <div class="flex flex-col">
+                            <span class="text-label-sm font-label-sm text-on-surface-variant leading-none">Deliver
+                                to</span>
+                            <span
+                                class="text-label-md font-label-md text-on-surface font-semibold truncate max-w-[130px]">Sector
+                                62, Noida</span>
+                        </div>
+                        <span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+                    </button>
+                </div>
+                <div class="hidden md:flex flex-1 max-w-md mx-4">
                     <div
-                        class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-md py-space-xs rounded-full cursor-pointer transition-colors">
-                        <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
-                        <div class="flex flex-col text-left"><span
-                                class="font-label-sm text-label-sm text-on-surface-variant font-bold leading-none">Deliver
-                                To:</span><span
-                                class="font-label-md text-label-md text-on-surface font-semibold max-w-[210px] truncate leading-tight">Connaught
-                                Place, Central Delhi</span></div><span
-                            class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+                        class="w-full flex items-center bg-surface-container-lowest rounded-full px-4 py-2 shadow-[0_2px_8px_rgba(0,0,0,0.04)] focus-within:ring-2 focus-within:ring-primary/20">
+                        <span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span>
+                        <input
+                            class="w-full bg-transparent text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none"
+                            placeholder="Search artisanal burgers, bowls, bakery..." type="text" />
                     </div>
                 </div>
-                <div class="flex-1 max-w-xl mx-space-md">
-                    <div
-                        class="flex items-center w-full h-12 bg-surface-container-lowest rounded-full px-space-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] focus-within:shadow-[0_4px_16px_rgba(183,34,28,0.08)] transition-all">
-                        <span
-                            class="material-symbols-outlined text-on-surface-variant mr-space-sm text-[22px]">search</span><input
-                            class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant"
-                            placeholder="Search artisanal pizzas, gourmet burgers, bowls..." type="text" /><button
-                            class="bg-surface-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors ml-space-xs"
-                            type="button">Explore</button></div>
-                </div>
-                <div class="flex items-center gap-space-md shrink-0"><button
-                        class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full font-label-md text-label-md text-on-surface transition-colors"
-                        type="button"><span
-                            class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span><span>Get
-                            App</span></button>
-                    <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-fixed rounded-full">
-                        <span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">token</span><span
-                            class="font-label-md text-label-md text-on-tertiary-fixed font-bold">240 Coins</span></div>
+                <div class="flex items-center gap-3">
                     <button
-                        class="flex items-center gap-space-sm pl-space-xs pr-space-md py-space-xs bg-surface-container-low hover:bg-surface-container rounded-full text-left transition-colors"
+                        class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors"
                         type="button">
-                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
-                                class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span
-                            class="font-label-md text-label-md text-on-surface font-semibold">Account</span>
-                    </button><button
-                        class="flex items-center gap-space-sm px-space-lg py-space-sm bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-[0_4px_16px_rgba(255,87,72,0.3)]"
-                        type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span
-                            class="font-label-lg text-label-lg font-bold">Cart (3) • ₹1,293</span></button>
+                        <span class="material-symbols-outlined text-[18px] text-on-surface-variant">phone_iphone</span>
+                        <span class="text-label-md font-label-md">Get App</span>
+                    </button>
+                    <div
+                        class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+                        <span class="material-symbols-outlined text-[16px]">monetization_on</span>
+                        <span class="text-label-md font-label-md font-bold">240 Coins</span>
+                    </div>
+                    <a class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md shadow-[0_4px_16px_rgba(255,87,72,0.3)] hover:opacity-95 transition-all"
+                        data-path="cart-and-checkout" href="#">
+                        <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                        <span>Cart (3) • ₹1,293</span>
+                    </a>
+                    <a class="flex items-center" data-path="user-profile" href="#" title="User Account">
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <nav class="flex items-center gap-space-xs pt-1"
-                data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-full"><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="home" href="#">Home</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="categories" href="#">Categories</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="offers-and-deals" href="#">Offers &amp; Deals</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="search" href="#">Search</a><a aria-current="page"
-                    class="px-space-md py-1 transition-colors bg-surface-container-high text-on-surface font-bold rounded-full"
-                    data-path="cart" href="#">Cart</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="checkout" href="#">Checkout</a><a
-                    class="px-space-md py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-full transition-colors"
-                    data-path="live-tracking" href="#">Live Tracking</a></nav>
+            <div class="h-12 flex items-center overflow-x-auto no-scrollbar">
+                <nav class="flex items-center gap-1 sm:gap-2">
+                    <a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="home" href="#">Home</a>
+                    <a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="explore-menu" href="#">Explore Menu</a>
+                    <a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="categories" href="#">Categories</a>
+                    <a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="offers-and-deals" href="#">Offers &amp; Deals</a>
+                    <a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="restaurants" href="#">Restaurants</a>
+                    <a aria-current="page"
+                        class="px-3.5 py-1.5 transition-colors whitespace-nowrap bg-primary-container text-on-primary font-bold rounded-full"
+                        data-path="cart-and-checkout" href="#">Cart &amp; Checkout</a>
+                    <a class="px-3.5 py-1.5 rounded-full text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="live-tracking" href="#">Live Tracking</a>
+                </nav>
+            </div>
         </div>
     </header>
-    <main class="w-full pt-28 bg-surface">
-        <div class="flex flex-col w-full">
-            <div class="max-w-7xl mx-auto w-full px-margin-desktop py-space-xl">
-                <!-- SECTION 1: PAGE HEADER & PROGRESSION PIPELINE -->
-                <section class="flex flex-col gap-space-lg mb-space-xl">
-                    <!-- Steps Progress Bar -->
+    <main class="w-full pt-32 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6">
+            <div
+                class="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-surface-container-highest gap-4">
+                <div class="flex items-center gap-2 sm:gap-4 overflow-x-auto no-scrollbar">
+                    <div class="flex items-center gap-2"><span
+                            class="w-7 h-7 rounded-full bg-primary text-white text-label-sm font-bold flex items-center justify-center shadow-sm">1</span><span
+                            class="font-title-md font-bold text-primary whitespace-nowrap">Cart Review</span></div><span
+                        class="text-outline-variant">—</span>
+                    <div class="flex items-center gap-2 text-on-surface-variant"><span
+                            class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant text-label-sm font-bold flex items-center justify-center">2</span><span
+                            class="font-title-md font-semibold whitespace-nowrap">Delivery Address</span></div><span
+                        class="text-outline-variant">—</span>
+                    <div class="flex items-center gap-2 text-on-surface-variant"><span
+                            class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant text-label-sm font-bold flex items-center justify-center">3</span><span
+                            class="font-title-md font-semibold whitespace-nowrap">Payment</span></div><span
+                        class="text-outline-variant">—</span>
+                    <div class="flex items-center gap-2 text-on-surface-variant"><span
+                            class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant text-label-sm font-bold flex items-center justify-center">4</span><span
+                            class="font-title-md font-semibold whitespace-nowrap">Confirmation</span></div>
+                </div>
+                <div
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-bold border border-tertiary-fixed-dim">
+                    <span class="material-symbols-outlined text-[16px]">lock_clock</span><span class="">Fresh
+                        Preparation Reserved</span>
+                </div>
+            </div>
+            <div class="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div><span class="text-primary text-label-sm font-bold tracking-widest uppercase block mb-1">EPICUREAN
+                        TRAY</span>
+                    <h1 class="font-headline-lg text-headline-lg font-extrabold text-on-surface tracking-tight">Your
+                        Cart</h1>
+                    <p class="text-body-md text-on-surface-variant mt-1">Great food is just a few clicks away. Prepared
+                        fresh upon order.</p>
+                </div>
+                <div
+                    class="flex items-center gap-2 bg-[#201a16] text-[#ffffff] px-4 py-2 rounded-full text-label-sm shadow-md">
+                    <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="">Truffle
+                        Crust quantity: 2 (cart updated)</span>
+                </div>
+            </div>
+            <div
+                class="mb-8 p-4 rounded-2xl bg-primary/5 border border-primary/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-start gap-3">
                     <div
-                        class="flex items-center justify-between flex-wrap gap-y-space-sm w-full bg-surface-container-lowest px-space-xl py-space-md rounded-2xl shadow-sm">
-                        <div class="flex items-center gap-space-md">
-                            <div class="flex items-center gap-space-xs text-primary font-bold">
-                                <span
-                                    class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md">1</span>
-                                <span class="font-headline-sm text-headline-sm tracking-tight text-primary">Cart
-                                    Review</span>
-                            </div>
-                            <span
-                                class="material-symbols-outlined text-outline-variant text-[20px]">trending_flat</span>
-                            <div class="flex items-center gap-space-xs text-on-surface-variant font-medium opacity-60">
-                                <span
-                                    class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-md text-label-md">2</span>
-                                <span class="font-title-md text-title-md">Delivery Address</span>
-                            </div>
-                            <span
-                                class="material-symbols-outlined text-outline-variant text-[20px]">trending_flat</span>
-                            <div class="flex items-center gap-space-xs text-on-surface-variant font-medium opacity-60">
-                                <span
-                                    class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-md text-label-md">3</span>
-                                <span class="font-title-md text-title-md">Payment</span>
-                            </div>
-                            <span
-                                class="material-symbols-outlined text-outline-variant text-[20px]">trending_flat</span>
-                            <div class="flex items-center gap-space-xs text-on-surface-variant font-medium opacity-60">
-                                <span
-                                    class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-md text-label-md">4</span>
-                                <span class="font-title-md text-title-md">Confirmation</span>
-                            </div>
-                        </div>
-                        <div
-                            class="flex items-center gap-space-xs text-tertiary font-semibold font-label-md text-label-md bg-tertiary-fixed/60 px-space-md py-1 rounded-full">
-                            <span class="material-symbols-outlined text-[18px]">verified</span>
-                            <span>Fresh Preparation Reserved</span>
-                        </div>
+                        class="w-9 h-9 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[20px]">local_shipping</span>
                     </div>
-                    <!-- Main Headline + Editorial Subtitle -->
-                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pt-space-xs">
+                    <div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <h4 class="font-title-md font-bold text-on-surface">Free Express Delivery Unlocked!</h4>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-bold">SAVED
+                                ₹40</span>
+                        </div>
+                        <p class="text-body-sm text-on-surface-variant mt-0.5">Qualified tier for orders above ₹700.
+                            Your feast flies first class.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:items-end"><span class="text-label-sm font-bold text-on-surface">Progress:
+                        ₹1,308 spent | 100% Complete</span>
+                    <div class="w-48 bg-surface-container h-2 rounded-full overflow-hidden mt-1.5">
+                        <div class="bg-tertiary h-full rounded-full w-full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-8 space-y-6">
+                    <div
+                        class="bg-surface-container-low rounded-2xl p-4 border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                         <div>
-                            <span
-                                class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-extrabold mb-1 block">Epicurean
-                                Tray</span>
-                            <h1 class="font-display-hero text-headline-xl text-on-surface leading-tight tracking-tight">
-                                Your Cart</h1>
-                            <p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Great food is just a few
-                                clicks away. Prepared fresh upon order.</p>
-                        </div>
-                        <!-- Live Cart Toast / Interactive State Trigger -->
-                        <div class="flex items-center gap-space-sm bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-full shadow-md transition-all duration-300"
-                            id="cart-toast">
-                            <span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
-                            <span class="font-label-md text-label-md">Truffle Crust quantity: 2</span>
-                            <span class="text-on-secondary-fixed-variant text-label-sm">| Live Updated</span>
-                        </div>
+                            <div class="flex items-center gap-2"><span
+                                    class="px-2 py-0.5 rounded bg-surface-container-highest text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">CLOUD
+                                    KITCHEN Ref: AW11-3C21</span></div>
+                            <h3 class="font-title-lg font-bold text-on-surface mt-1">The Woodfire Kitchen (Central
+                                Delhi)</h3>
+                            <div class="flex items-center gap-3 text-label-sm text-on-surface-variant mt-1"><span
+                                    class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-primary text-[15px]">timer</span>24–28
+                                    Mins Hearth Dispatch</span><span class="">•</span><span
+                                    class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-tertiary text-[15px]">verified</span>100%
+                                    Thermal Box Guarantee</span></div>
+                        </div><button
+                            class="text-primary hover:text-primary-container font-title-sm text-label-md font-bold transition-colors self-start sm:self-center">Change
+                            Restaurant ↗</button>
                     </div>
-                    <!-- Free Delivery Progress Milestone -->
                     <div
-                        class="bg-gradient-to-r from-surface-container to-surface-container-high p-space-md rounded-2xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
-                        <div class="flex items-center gap-space-md w-full md:w-auto">
-                            <div
-                                class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
-                                <span class="material-symbols-outlined text-[22px]">moped</span>
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-space-xs">
-                                    <span class="font-title-md text-title-md text-on-surface font-bold">🎉 Free Express
-                                        Delivery Unlocked!</span>
-                                    <span
-                                        class="bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-0.5 rounded text-label-sm font-extrabold uppercase">Saved
-                                        ₹40</span>
-                                </div>
-                                <p class="font-body-sm text-body-sm text-on-surface-variant">Qualified tier for orders
-                                    above ₹110. Your feast flies first class.</p>
-                            </div>
+                        class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-surface-container-highest">
+                        <div class="flex items-center justify-between pb-4 border-b border-surface-container-highest">
+                            <div class="flex items-center gap-2">
+                                <h2 class="font-title-lg font-bold text-on-surface">Curated Items (4)</h2>
+                            </div><button
+                                class="text-label-sm text-on-surface-variant hover:text-primary flex items-center gap-1 font-semibold transition-colors"><span
+                                    class="material-symbols-outlined text-[16px]">delete_outline</span>Clear
+                                Cart</button>
                         </div>
-                        <div class="w-full md:w-72 flex flex-col gap-1 shrink-0">
-                            <div
-                                class="flex justify-between font-label-sm text-label-sm font-bold text-on-surface-variant">
-                                <span>Progress: ₹1,395 spent</span>
-                                <span class="text-tertiary">100% Complete</span>
-                            </div>
-                            <div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden">
-                                <div class="h-full bg-tertiary-container rounded-full w-full"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- SECTION 2: TWO-COLUMN CART WORKSPACE (65% / 35%) -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
-                    <!-- LEFT COLUMN: CART ITEMS & KITCHEN SPECS (Col 1-8, approx 65%) -->
-                    <div class="lg:col-span-8 flex flex-col gap-space-lg">
-                        <!-- Kitchen Anchor Information -->
-                        <div
-                            class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
-                            <div class="flex items-center gap-space-md">
-                                <div
-                                    class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary shrink-0">
-                                    <span class="material-symbols-outlined text-[32px]">local_fire_department</span>
-                                </div>
-                                <div>
-                                    <div class="flex items-center gap-space-xs">
-                                        <span
-                                            class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-bold uppercase">Cloud
-                                            Kitchen</span>
-                                        <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Ref
-                                            #WH-8021</span>
+                        <div class="divide-y divide-surface-container-highest">
+                            <div class="py-5 flex flex-col sm:flex-row items-start justify-between gap-4">
+                                <div class="flex gap-4"><img
+                                        src="https://lh3.googleusercontent.com/aida/AEtjO1Ust5CZmEJS_p2YvX3VbTupdwEj-HMSmQykyu7g6gaUXwf9DmwsXwu-vR4YAvcq1LQb9wWQjmwON63eTjRaFnSrjbdVwEEX3Ol1HfBd5M3XFdAZ00gL-NZpxf1ZyFd2o8jNa7MKmov9bWptp39AUUHyw7TekvMu83uVEdnifeleCeQCB7YXfi25ptlei6I9CXNNMsk4H3ZIvzRdQ8Veed53thIQIGLy44m6OjmSCoDKtQ"
+                                        alt="Artisan Woodfired Truffle Crust"
+                                        class="w-20 h-20 rounded-2xl object-cover flex-shrink-0 shadow-sm">
+                                    <div>
+                                        <div class="flex items-center gap-2"><span
+                                                class="w-3.5 h-3.5 rounded border border-emerald-600 flex items-center justify-center p-0.5"><span
+                                                    class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span></span>
+                                            <h4 class="font-title-md font-bold text-on-surface">Artisan Woodfired
+                                                Truffle Crust (11")</h4>
+                                        </div>
+                                        <p class="text-label-sm text-on-surface-variant mt-0.5">The Woodfire Kitchen</p>
+                                        <div class="flex flex-wrap gap-1.5 mt-2"><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Medium
+                                                11"</span><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Stuffed
+                                                Porcini Cheeseburst</span><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Extra
+                                                Burrata Heart</span><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Wild
+                                                Calabrian Chili</span></div>
+                                        <div class="flex items-center gap-3 mt-3 text-label-sm"><button
+                                                class="text-primary font-bold hover:underline">Edit
+                                                Customization</button><span class="text-outline-variant">•</span><button
+                                                class="text-on-surface-variant hover:text-error transition-colors">Remove</button>
+                                        </div>
                                     </div>
-                                    <h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">The Woodfire
-                                        Kitchen (Central Delhi)</h2>
+                                </div>
+                                <div
+                                    class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto mt-2 sm:mt-0 gap-3">
+                                    <div class="text-right"><span
+                                            class="font-title-lg font-extrabold text-on-surface block">₹888</span><span
+                                            class="text-[11px] text-on-surface-variant">₹444 each</span></div>
                                     <div
-                                        class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-1">
-                                        <span class="flex items-center gap-1 text-tertiary font-bold"><span
-                                                class="material-symbols-outlined text-[16px]">schedule</span> 24–28 Mins
-                                            Hearth Dispatch</span>
-                                        <span>•</span>
-                                        <span class="flex items-center gap-1 text-on-surface"><span
-                                                class="material-symbols-outlined text-[16px]">ac_unit</span> 100%
-                                            Thermal Box Guarantee</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <button
-                                class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1 self-start sm:self-center font-bold"
-                                type="button">
-                                <span>Change Restaurant</span>
-                                <span class="material-symbols-outlined text-[16px]">swap_horiz</span>
-                            </button>
-                        </div>
-                        <!-- CART ITEMS CONTAINER -->
-                        <div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm space-y-space-lg">
-                            <div class="flex items-center justify-between pb-space-sm">
-                                <span class="font-headline-sm text-headline-sm text-on-surface">Curated Items (4)</span>
-                                <button
-                                    class="font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors flex items-center gap-1"
-                                    onclick="clearCartConfirm()" type="button">
-                                    <span class="material-symbols-outlined text-[16px]">delete_sweep</span>
-                                    <span>Clear Cart</span>
-                                </button>
-                            </div>
-                            <!-- ITEM 1: ARTISAN TRUFFLE PIZZA -->
-                            <div
-                                class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low/40 rounded-2xl hover:bg-surface-container-low transition-all">
-                                <div
-                                    class="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0 bg-surface-container">
-                                    <img class="w-full h-full object-cover"
-                                        data-alt="High angle close-up of a blistered Neapolitan artisan woodfired pizza with black truffle shavings, creamy melted burrata heart, and fresh herbs resting on parchment paper with warm moody culinary lighting"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm2wG-IwOddWi4Op4t-qXdURESgitfRZgCPyjp0ANI9CvBxeuISBv-x93SfRKutVmnPNbWkQ6P9Qv786h-CP2U9UW_IMRBYuSd4-FHqQf7Ep0hg9a6SJjDrQBt4feeNxBpUKG2VYcxTROQaz9l4KzJMyFJE75NrisrlkhTtpzKFIfYdJG-wZNc2L0qXD3WcnMuReSHW1HpobDcRmnnYuamLW4RZxBK2-KBFEw6IydW" />
-                                    <span
-                                        class="absolute bottom-1 right-1 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-extrabold">11"</span>
-                                </div>
-                                <div class="flex-1 flex flex-col justify-between">
-                                    <div>
-                                        <div class="flex items-start justify-between gap-space-sm">
-                                            <div>
-                                                <h3
-                                                    class="font-title-lg text-title-lg text-on-surface font-extrabold leading-snug">
-                                                    Artisan Woodfired Truffle Crust (11")</h3>
-                                                <span
-                                                    class="font-body-sm text-body-sm text-on-surface-variant block">The
-                                                    Woodfire Kitchen</span>
-                                            </div>
-                                            <div class="text-right">
-                                                <span
-                                                    class="font-headline-sm text-headline-sm text-on-surface font-black"
-                                                    id="price-item-1">₹888</span>
-                                                <span
-                                                    class="font-label-sm text-label-sm text-on-surface-variant block font-medium">₹444
-                                                    each</span>
-                                            </div>
-                                        </div>
-                                        <!-- Customization Spec Badge -->
-                                        <div class="mt-space-xs flex flex-wrap gap-1">
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Medium
-                                                11"</span>
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Stuffed
-                                                Molten Cheese Burst</span>
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Extra
-                                                Burrata Heart</span>
-                                            <span
-                                                class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full font-extrabold">Mild
-                                                Calabrian Chili</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between pt-space-sm mt-space-xs">
-                                        <div class="flex items-center gap-space-md">
-                                            <button
-                                                class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1 font-bold"
-                                                type="button">
-                                                <span class="material-symbols-outlined text-[16px]">edit</span>
-                                                <span>Edit Customization</span>
-                                            </button>
-                                            <button
-                                                class="text-on-surface-variant hover:text-error font-label-md text-label-md flex items-center gap-1"
-                                                type="button">
-                                                <span class="material-symbols-outlined text-[16px]">close</span>
-                                                <span>Remove</span>
-                                            </button>
-                                        </div>
-                                        <!-- Stepper -->
-                                        <div
-                                            class="flex items-center bg-surface-container-lowest rounded-full shadow-sm px-1 py-0.5">
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-1', -1, 444, 'price-item-1')"
-                                                type="button">-</button>
-                                            <span class="font-title-md text-title-md font-bold px-3 text-on-surface"
-                                                id="qty-1">2</span>
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-primary transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-1', 1, 444, 'price-item-1')"
-                                                type="button">+</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ITEM 2: SMOKY CHIPOTLE CRISPY BURGER -->
-                            <div
-                                class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low/40 rounded-2xl hover:bg-surface-container-low transition-all">
-                                <div
-                                    class="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0 bg-surface-container">
-                                    <img class="w-full h-full object-cover"
-                                        data-alt="Succulent gourmet smash burger with glowing double melted gouda cheese dripping onto a glossy glazed brioche bun with chipotle sauce and pickled jalapeños on warm slate"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqNtUoVbQ6pMyATRt-3F7LkZKvpyl11HlOaIqMIhk9APSm9RLu9PSClm-OIJf1jUKewOGKrQzQbr1JAZckE4IijkqOSpC9_zJwQgMB-hmM0pXDYmLe5XdWPNheOqfl2Vl5mr6Vo1NDpyW4ZSTY3rVte-o8H1shxXahTaZu8RXB8Dy2yaffEaSDHWs7TOrvp6y4a7CFUp3zBDLiXr1eEzJMM80cKr1oWV4pCz3fy68D" />
-                                    <span
-                                        class="absolute bottom-1 right-1 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-extrabold">Single</span>
-                                </div>
-                                <div class="flex-1 flex flex-col justify-between">
-                                    <div>
-                                        <div class="flex items-start justify-between gap-space-sm">
-                                            <div>
-                                                <h3
-                                                    class="font-title-lg text-title-lg text-on-surface font-extrabold leading-snug">
-                                                    Smoky Chipotle Crispy Burger</h3>
-                                                <span
-                                                    class="font-body-sm text-body-sm text-on-surface-variant block">The
-                                                    Woodfire Kitchen</span>
-                                            </div>
-                                            <div class="text-right">
-                                                <span
-                                                    class="font-headline-sm text-headline-sm text-on-surface font-black"
-                                                    id="price-item-2">₹279</span>
-                                                <span
-                                                    class="font-label-sm text-label-sm text-on-surface-variant block font-medium">Standard</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-space-xs flex flex-wrap gap-1">
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Toasted
-                                                Brioche</span>
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Pickled
-                                                Jalapeños</span>
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Double
-                                                Gouda Melt</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between pt-space-sm mt-space-xs">
-                                        <div class="flex items-center gap-space-md">
-                                            <button
-                                                class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1 font-bold"
-                                                type="button">
-                                                <span class="material-symbols-outlined text-[16px]">edit</span>
-                                                <span>Edit Customization</span>
-                                            </button>
-                                            <button
-                                                class="text-on-surface-variant hover:text-error font-label-md text-label-md flex items-center gap-1"
-                                                type="button">
-                                                <span class="material-symbols-outlined text-[16px]">close</span>
-                                                <span>Remove</span>
-                                            </button>
-                                        </div>
-                                        <div
-                                            class="flex items-center bg-surface-container-lowest rounded-full shadow-sm px-1 py-0.5">
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-2', -1, 279, 'price-item-2')"
-                                                type="button">-</button>
-                                            <span class="font-title-md text-title-md font-bold px-3 text-on-surface"
-                                                id="qty-2">1</span>
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-primary transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-2', 1, 279, 'price-item-2')"
-                                                type="button">+</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ITEM 3: HAZELNUT COLD BREW LATTE -->
-                            <div
-                                class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low/40 rounded-2xl hover:bg-surface-container-low transition-all">
-                                <div
-                                    class="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0 bg-surface-container">
-                                    <img class="w-full h-full object-cover"
-                                        data-alt="Artisanal glass bottle of creamy layered hazelnut cold brew latte with plant-based oat milk swirls and condensation droplets against warm peach studio light"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWSlZQJ6OUy486_yaE3WwS_IVYxT7YavuZkhEeiiw3I7scGuVSqex_1PJ6wWG_h9VWe0C8DZyTYnw0NtFXa6Dr3siS62TLAVEndsZhsaJEdt7RwBiMQXEKhCFHOOoAQrVTZKsHRruGn-1JPOGUT5WFOSmVdFi9oculu3A1y-k1TUajKPh8wS7T7rSFbdna_4VzmD7tVVKRnZn7fvs85KmtSezamZB7Knf-axmH-pjj" />
-                                    <span
-                                        class="absolute bottom-1 right-1 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-extrabold">300ml</span>
-                                </div>
-                                <div class="flex-1 flex flex-col justify-between">
-                                    <div>
-                                        <div class="flex items-start justify-between gap-space-sm">
-                                            <div>
-                                                <h3
-                                                    class="font-title-lg text-title-lg text-on-surface font-extrabold leading-snug">
-                                                    Hazelnut Cold Brew Latte (300ml)</h3>
-                                                <span
-                                                    class="font-body-sm text-body-sm text-on-surface-variant block">Single-Origin
-                                                    Roast Blend</span>
-                                            </div>
-                                            <div class="text-right">
-                                                <span
-                                                    class="font-headline-sm text-headline-sm text-on-surface font-black"
-                                                    id="price-item-3">₹179</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-space-xs flex flex-wrap gap-1">
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Plant-based
-                                                Oat Milk</span>
-                                            <span
-                                                class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full font-extrabold">Zero
-                                                Cane Sugar</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between pt-space-sm mt-space-xs">
+                                        class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-surface-container">
                                         <button
-                                            class="text-on-surface-variant hover:text-error font-label-md text-label-md flex items-center gap-1"
-                                            type="button">
-                                            <span class="material-symbols-outlined text-[16px]">close</span>
-                                            <span>Remove</span>
-                                        </button>
-                                        <div
-                                            class="flex items-center bg-surface-container-lowest rounded-full shadow-sm px-1 py-0.5">
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-3', -1, 179, 'price-item-3')"
-                                                type="button">-</button>
-                                            <span class="font-title-md text-title-md font-bold px-3 text-on-surface"
-                                                id="qty-3">1</span>
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-primary transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-3', 1, 179, 'price-item-3')"
-                                                type="button">+</button>
-                                        </div>
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">remove</span></button><span
+                                            class="font-title-md font-bold text-on-surface px-1">2</span><button
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">add</span></button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- ITEM 4: GARLIC PARMESAN TRUFFLE DIP -->
-                            <div
-                                class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low/40 rounded-2xl hover:bg-surface-container-low transition-all">
-                                <div
-                                    class="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0 bg-surface-container">
-                                    <img class="w-full h-full object-cover"
-                                        data-alt="Small rustic ceramic ramekin filled with whipped garlic parmesan truffle cream dip topped with chopped chives and black pepper on a wooden board"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9A2GVGqcjpS9lUUbpFXiGMCXw7-U9_1G1FcEQqRAhBqZUh3kCSFlfq5niok8-PhEHYA5by1UdlsQyTSSH5gax35canVc9sK4iiZz03dml6pxkDK3S3wW_q09h1212E6Fed6PERA9hbfCQ1rZ8Fy_jGtyMkjXao6YJGES8uGNq8RSTgEAvV5_vQbNYaSF35EvNPliiJXz5qKaEWbWJdFNibLp7Pb2KFsJ5BT9Rl4rZ" />
-                                    <span
-                                        class="absolute bottom-1 right-1 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-extrabold">50g</span>
-                                </div>
-                                <div class="flex-1 flex flex-col justify-between">
+                            <div class="py-5 flex flex-col sm:flex-row items-start justify-between gap-4">
+                                <div class="flex gap-4"><img
+                                        src="https://lh3.googleusercontent.com/aida/AEtjO1UcfGvW87f8xvU7qMZVCtjZY-G6PszM3KgUo5ZT-8gaCQ06r36EJTiH_UnW8JjNYK4V18UlkM8bGzTfbUvknzc3xddxCnTFnreLkAH45MbyiRFB6Rs0Gk8XQDDu5n0PNqfJZMFwET6leXj9tzeeTgLD9eo-rCYuw1AThycaSlVBs4vf_g6ROFRhxy_JnyUwR-yi7dg1p6e_g7-Q-8B5GJGQl_Ngfdxc1RzGUOP2o2RRgA"
+                                        alt="Smoky Chipotle Crispy Burger"
+                                        class="w-20 h-20 rounded-2xl object-cover flex-shrink-0 shadow-sm">
                                     <div>
-                                        <div class="flex items-start justify-between gap-space-sm">
-                                            <div>
-                                                <h3
-                                                    class="font-title-lg text-title-lg text-on-surface font-extrabold leading-snug">
-                                                    Garlic Parmesan Truffle Dip</h3>
-                                                <span
-                                                    class="font-body-sm text-body-sm text-on-surface-variant block">House
-                                                    Specialty Dip</span>
-                                            </div>
-                                            <div class="text-right">
-                                                <span
-                                                    class="font-headline-sm text-headline-sm text-on-surface font-black"
-                                                    id="price-item-4">₹49</span>
-                                            </div>
+                                        <div class="flex items-center gap-2"><span
+                                                class="w-3.5 h-3.5 rounded border border-amber-600 flex items-center justify-center p-0.5"><span
+                                                    class="w-1.5 h-1.5 rounded-full bg-amber-600"></span></span>
+                                            <h4 class="font-title-md font-bold text-on-surface">Smoky Chipotle Crispy
+                                                Burger</h4>
                                         </div>
-                                        <div class="mt-space-xs flex flex-wrap gap-1">
-                                            <span
-                                                class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Crust
-                                                Companion Special (50g)</span>
+                                        <p class="text-label-sm text-on-surface-variant mt-0.5">The Woodfire Kitchen</p>
+                                        <div class="flex flex-wrap gap-1.5 mt-2"><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Toasted
+                                                Brioche</span><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Pickled
+                                                Jalapeños</span><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Double
+                                                Gouda Melt</span></div>
+                                        <div class="flex items-center gap-3 mt-3 text-label-sm"><button
+                                                class="text-primary font-bold hover:underline">Edit
+                                                Customization</button><span class="text-outline-variant">•</span><button
+                                                class="text-on-surface-variant hover:text-error transition-colors">Remove</button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center justify-between pt-space-sm mt-space-xs">
+                                </div>
+                                <div
+                                    class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto mt-2 sm:mt-0 gap-3">
+                                    <div class="text-right"><span
+                                            class="font-title-lg font-extrabold text-on-surface block">₹279</span><span
+                                            class="text-[11px] text-on-surface-variant">Standard</span></div>
+                                    <div
+                                        class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-surface-container">
                                         <button
-                                            class="text-on-surface-variant hover:text-error font-label-md text-label-md flex items-center gap-1"
-                                            type="button">
-                                            <span class="material-symbols-outlined text-[16px]">close</span>
-                                            <span>Remove</span>
-                                        </button>
-                                        <div
-                                            class="flex items-center bg-surface-container-lowest rounded-full shadow-sm px-1 py-0.5">
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-4', -1, 49, 'price-item-4')"
-                                                type="button">-</button>
-                                            <span class="font-title-md text-title-md font-bold px-3 text-on-surface"
-                                                id="qty-4">1</span>
-                                            <button
-                                                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-primary transition-colors font-bold text-headline-sm leading-none"
-                                                onclick="updateQty('qty-4', 1, 49, 'price-item-4')"
-                                                type="button">+</button>
-                                        </div>
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">remove</span></button><span
+                                            class="font-title-md font-bold text-on-surface px-1">1</span><button
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">add</span></button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Bottom Action: Add More Items -->
-                            <div class="pt-space-sm">
-                                <button
-                                    class="w-full py-space-sm px-space-md rounded-2xl bg-surface-container hover:bg-surface-container-high text-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-colors shadow-sm"
-                                    type="button">
-                                    <span class="material-symbols-outlined">add_circle</span>
-                                    <span>+ Add More Items from The Woodfire Kitchen</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- SPECIAL COOKING & DELIVERY INSTRUCTIONS -->
-                        <div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm space-y-space-md">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-space-xs">
-                                    <span class="material-symbols-outlined text-primary text-[24px]">soup_kitchen</span>
-                                    <span class="font-title-lg text-title-lg text-on-surface font-bold">Kitchen &amp;
-                                        Courier Notes</span>
+                            <div class="py-5 flex flex-col sm:flex-row items-start justify-between gap-4">
+                                <div class="flex gap-4"><img
+                                        src="https://lh3.googleusercontent.com/aida/AEtjO1VI7IEppukjE01G9TqqXHu5AvhrGXNHPiBnwV3xOrTDzuHuXoEw0Pl5VmS8TdcXW106HChXxQ4Kzt1xRvZ6Qb9AeiWHTGz_na8H4Nr2bO47oPVwH4PmRBzGKzmbXhLLeJtjVYtilmCjqAI_wLGZwEXsDf1bN54g4Np8F3JN0rCho5jqkDokAAO8jqhb-cshAAKziJQylfPOEX_lhrlDY2DwyKxw_PJ6De_jhLlIMnPk"
+                                        alt="Hazelnut Cold Brew Latte"
+                                        class="w-20 h-20 rounded-2xl object-cover flex-shrink-0 shadow-sm">
+                                    <div>
+                                        <div class="flex items-center gap-2"><span
+                                                class="w-3.5 h-3.5 rounded border border-emerald-600 flex items-center justify-center p-0.5"><span
+                                                    class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span></span>
+                                            <h4 class="font-title-md font-bold text-on-surface">Hazelnut Cold Brew Latte
+                                                (300ml)</h4>
+                                        </div>
+                                        <p class="text-label-sm text-on-surface-variant mt-0.5">Single-Origin Roast
+                                            Blend</p>
+                                        <div class="flex flex-wrap gap-1.5 mt-2"><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Plant-based
+                                                Oat Milk</span><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Zero
+                                                Cane Sugar</span></div>
+                                        <div class="flex items-center gap-3 mt-3 text-label-sm"><button
+                                                class="text-on-surface-variant hover:text-error transition-colors">Remove</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="font-label-sm text-label-sm text-on-surface-variant">Handcrafted with
-                                    care</span>
-                            </div>
-                            <div class="relative">
-                                <textarea
-                                    class="w-full bg-surface-container-low rounded-2xl p-space-md font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant outline-none focus:bg-surface-container transition-all"
-                                    id="kitchen-notes"
-                                    placeholder="e.g., Please make pizza crust extra crispy, cut into 6 slices, deliver without plastic cutlery, ring bell once."
-                                    rows="3"></textarea>
-                            </div>
-                            <!-- One-Tap Chip Buttons -->
-                            <div class="space-y-space-xs">
-                                <span
-                                    class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase block">Quick
-                                    Preferences</span>
-                                <div class="flex flex-wrap gap-space-xs">
-                                    <button
-                                        class="bg-surface-container hover:bg-surface-container-high px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors flex items-center gap-1"
-                                        onclick="appendInstruction('🌿 No Cutlery Required (Go Green)')" type="button">
-                                        <span>🌿 No Cutlery Required</span>
-                                    </button>
-                                    <button
-                                        class="bg-surface-container hover:bg-surface-container-high px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors flex items-center gap-1"
-                                        onclick="appendInstruction('🌶️ Extra Chili Flakes &amp; Oregano')"
-                                        type="button">
-                                        <span>🌶️ Extra Chili Flakes</span>
-                                    </button>
-                                    <button
-                                        class="bg-surface-container hover:bg-surface-container-high px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors flex items-center gap-1"
-                                        onclick="appendInstruction('🔔 Do Not Ring Bell (Silent drop)')" type="button">
-                                        <span>🔔 Don't Ring Bell</span>
-                                    </button>
-                                    <button
-                                        class="bg-surface-container hover:bg-surface-container-high px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface font-semibold transition-colors flex items-center gap-1"
-                                        onclick="appendInstruction('📦 Leave Package at Front Door')" type="button">
-                                        <span>📦 Leave at Door</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- RECOMMENDED ADD-ONS (Frequently Paired Carousel/Mini-Cards) -->
-                        <div class="space-y-space-md">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Craving More?
-                                        Frequently Paired</h3>
-                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Selected by Chef Marco
-                                        to compliment your hearth-fired pizza.</p>
-                                </div>
-                                <span
-                                    class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px- space-xs py-0.5 rounded font-extrabold uppercase">Chef’s
-                                    Picks</span>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
-                                <!-- Addon 1 -->
                                 <div
-                                    class="bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                                    <div class="h-28 rounded-xl overflow-hidden bg-surface-container mb-space-xs">
-                                        <img class="w-full h-full object-cover"
-                                            data-alt="Golden crisp Spanish churros coated in fine cinnamon sugar dusting served with warm melted dark chocolate dipping sauce in a small bowl"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-wY-Y1co5rQvJ52eqyyv8mG6_WF8jhuSgdhF0mNuJLE1WjifVY5U5pyZlg43igc6DDA33Z2A0hWSVNoOAc-P-6p2BkS0KwOUvo6qpmPtzfWtKWi21WYIai-VBR4aYtVRuITL34cYqVnyHQq-mlNxsVerdLR9MNMdTXA13M4SZLkX1Kz53CXrCynCqDLg8Bu_i27RFZiHyaqM8IgeVzNjj4G71dIVqGXOu0PJI6YGC" />
+                                    class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto mt-2 sm:mt-0 gap-3">
+                                    <div class="text-right"><span
+                                            class="font-title-lg font-extrabold text-on-surface block">₹179</span></div>
+                                    <div
+                                        class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-surface-container">
+                                        <button
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">remove</span></button><span
+                                            class="font-title-md font-bold text-on-surface px-1">1</span><button
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">add</span></button>
                                     </div>
-                                    <div class="px-1">
-                                        <span
-                                            class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Cinnamon
-                                            Sugar Churros</span>
-                                        <span class="font-body-sm text-body-sm text-on-surface-variant">Dulce Dip • 4
-                                            pcs</span>
-                                        <div class="flex items-center justify-between mt-space-sm pt-space-xs">
-                                            <span
-                                                class="font-headline-sm text-headline-sm text-on-surface font-black">₹179</span>
-                                            <button
-                                                class="bg-surface-container hover:bg-primary hover:text-on-primary text-primary px-space-md py-1 rounded-full font-label-md text-label-md font-extrabold transition-all"
-                                                type="button">
-                                                + ADD
-                                            </button>
+                                </div>
+                            </div>
+                            <div class="py-5 flex flex-col sm:flex-row items-start justify-between gap-4">
+                                <div class="flex gap-4"><img
+                                        src="https://lh3.googleusercontent.com/aida/AEtjO1WowveOc9WRwIOWaUjlszvnzsmeQNwohfHJp38Opjcae6xyNU7a0yN8Q_p_7aRRtvA5XAPuGg-_jDNRZQYvORJ1ytF5dsxQ1Jn5Ls9on2XJrNwpPMtUVmSMqM4x-IS_aIvS5Q-_th6J-OcZ_pXAAG0Q-OMbgnO6bdBrKqKUkUeFMpxGHy_ybytgXCD7OigVQ6WLKZzTl-s5k17caVWi6V-C0LCL92i9GAL2l6ZSD06MjQ"
+                                        alt="Garlic Parmesan Truffle Dip"
+                                        class="w-20 h-20 rounded-2xl object-cover flex-shrink-0 shadow-sm">
+                                    <div>
+                                        <div class="flex items-center gap-2"><span
+                                                class="w-3.5 h-3.5 rounded border border-emerald-600 flex items-center justify-center p-0.5"><span
+                                                    class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span></span>
+                                            <h4 class="font-title-md font-bold text-on-surface">Garlic Parmesan Truffle
+                                                Dip</h4>
+                                        </div>
+                                        <p class="text-label-sm text-on-surface-variant mt-0.5">House Specialty Dip</p>
+                                        <div class="flex flex-wrap gap-1.5 mt-2"><span
+                                                class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded-md text-[11px] font-semibold">Crust
+                                                Companion Special (50g)</span></div>
+                                        <div class="flex items-center gap-3 mt-3 text-label-sm"><button
+                                                class="text-on-surface-variant hover:text-error transition-colors">Remove</button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Addon 2 -->
                                 <div
-                                    class="bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                                    <div class="h-28 rounded-xl overflow-hidden bg-surface-container mb-space-xs">
-                                        <img class="w-full h-full object-cover"
-                                            data-alt="Gourmet glass jar with layered Sicilian pistachio mascarpone tiramisu dusted with crushed emerald pistachios and espresso soaked sponge"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbYCpKhDriZmVqX6iRL4NHNrbXBXaeOLI512TzwTAPM1-95ijGaprl39ixKmQbwSt_8wHi_1l02d9NLlx79lXUSS5pHidyVfxGqdpjm5Ed0WTiY7Wz46E5jigx5GpLgfErmOHWDCJuH6Xj62_h4jHRH_suBm4lSuIBsHFDXrPv-Z2mmRpiNp9MO7UxOeY3p9ozftUb4mwcI8e4UOobTK-0TA9_72za56jx-4gGaAKM" />
-                                    </div>
-                                    <div class="px-1">
-                                        <span
-                                            class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Sicilian
-                                            Pistachio Pot</span>
-                                        <span class="font-body-sm text-body-sm text-on-surface-variant">Tiramisu •
-                                            120g</span>
-                                        <div class="flex items-center justify-between mt-space-sm pt-space-xs">
-                                            <span
-                                                class="font-headline-sm text-headline-sm text-on-surface font-black">₹229</span>
-                                            <button
-                                                class="bg-surface-container hover:bg-primary hover:text-on-primary text-primary px-space-md py-1 rounded-full font-label-md text-label-md font-extrabold transition-all"
-                                                type="button">
-                                                + ADD
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Addon 3 -->
-                                <div
-                                    class="bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                                    <div class="h-28 rounded-xl overflow-hidden bg-surface-container mb-space-xs">
-                                        <img class="w-full h-full object-cover"
-                                            data-alt="Crunchy golden french fries tossed with rosemary sea salt black truffle oil and grated aged parmesan cheese in gourmet wire basket"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2-6NNbx7fJDaFJWtsktHldlC61ehinOM4hD35OLv3eAvs8-Ns32cUJwh8xmDB6uKxnwDhmN5m2h22qVN-f0rn9lNk54BBqxzaUPOS5CUQNW-Ps5yu-weNycfz6ZCE63mgUfNdC1V6mOdmxB7kGTsM51BOsWOQclD0opUhRh_vqEzvmqa9ywOfVP-yxzHL5DOBabVFYTpL_tWhTRkA320vJIh2ohu7SfUR72F6V82X" />
-                                    </div>
-                                    <div class="px-1">
-                                        <span
-                                            class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Crispy
-                                            Truffle Fries</span>
-                                        <span class="font-body-sm text-body-sm text-on-surface-variant">Herb &amp; Sea
-                                            Salt</span>
-                                        <div class="flex items-center justify-between mt-space-sm pt-space-xs">
-                                            <span
-                                                class="font-headline-sm text-headline-sm text-on-surface font-black">₹169</span>
-                                            <button
-                                                class="bg-surface-container hover:bg-primary hover:text-on-primary text-primary px-space-md py-1 rounded-full font-label-md text-label-md font-extrabold transition-all"
-                                                type="button">
-                                                + ADD
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Addon 4 -->
-                                <div
-                                    class="bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                                    <div class="h-28 rounded-xl overflow-hidden bg-surface-container mb-space-xs">
-                                        <img class="w-full h-full object-cover"
-                                            data-alt="Tall chilled glass containing ruby blood orange spritz cocktail with fresh floating basil leaves citrus wheel and fizzy bubbles against warm background"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7593lg6K3qO0_w0vJfFnpybpiO5mngfu3SAI-N_qebWuMdvwEHX5IwJbBZAikz6EmNX573f-Nv0DoUM3FLz7-rxMFe9SLBEq84i-9uAOZouGusG_6EoHFAhoCW5s9fT4FVp5TQGyIPrb8oPLXqjIQZq2Mes3FhHuV8IMWt_eqMwFCmcR6190AgkOzvVIkx6iH4CQAPYJbUAPpMFJ-vi50lnHuqs_kNTS8un9KICsu" />
-                                    </div>
-                                    <div class="px-1">
-                                        <span
-                                            class="font-title-md text-title-md font-bold text-on-surface line-clamp-1">Blood
-                                            Orange Spritz</span>
-                                        <span class="font-body-sm text-body-sm text-on-surface-variant">Sparkling Basil
-                                            • 330ml</span>
-                                        <div class="flex items-center justify-between mt-space-sm pt-space-xs">
-                                            <span
-                                                class="font-headline-sm text-headline-sm text-on-surface font-black">₹225</span>
-                                            <button
-                                                class="bg-surface-container hover:bg-primary hover:text-on-primary text-primary px-space-md py-1 rounded-full font-label-md text-label-md font-extrabold transition-all"
-                                                type="button">
-                                                + ADD
-                                            </button>
-                                        </div>
+                                    class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto mt-2 sm:mt-0 gap-3">
+                                    <div class="text-right"><span
+                                            class="font-title-lg font-extrabold text-on-surface block">₹49</span></div>
+                                    <div
+                                        class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-surface-container">
+                                        <button
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">remove</span></button><span
+                                            class="font-title-md font-bold text-on-surface px-1">1</span><button
+                                            class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-[16px]">add</span></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- RIGHT COLUMN: STICKY ORDER SUMMARY (Col 9-12, approx 35%) -->
-                    <div class="lg:col-span-4 sticky top-32 space-y-space-md">
-                        <!-- MAIN ORDER SUMMARY CARD -->
-                        <div class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-md space-y-space-md">
-                            <div class="flex items-center justify-between">
-                                <span class="font-headline-sm text-headline-sm text-on-surface">Order Summary</span>
-                                <span
-                                    class="bg-surface-container px-space-md py-0.5 rounded-full font-label-md text-label-md text-on-surface font-bold">4
-                                    Items</span>
-                            </div>
-                            <!-- Price Calculations -->
-                            <div class="space-y-space-sm pt-space-xs">
-                                <div
-                                    class="flex items-center justify-between font-body-md text-body-md text-on-surface">
-                                    <span class="text-on-surface-variant">Item Total</span>
-                                    <span class="font-semibold text-on-surface">₹1,395</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between font-body-md text-body-md text-on-surface">
-                                    <div class="flex items-center gap-1">
-                                        <span class="text-on-surface-variant">Delivery Fee</span>
-                                        <span
-                                            class="material-symbols-outlined text-outline-variant text-[16px]">info</span>
-                                    </div>
-                                    <div class="flex items-center gap-space-xs">
-                                        <span class="line-through text-on-surface-variant text-label-md">₹40</span>
-                                        <span
-                                            class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-extrabold uppercase">FREE</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between font-body-md text-body-md text-on-surface">
-                                    <div class="flex items-center gap-1">
-                                        <span class="text-on-surface-variant">Packaging &amp; Thermal Vault</span>
-                                        <span
-                                            class="material-symbols-outlined text-outline-variant text-[16px]">info</span>
-                                    </div>
-                                    <span class="font-semibold text-on-surface">₹25</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between font-body-md text-body-md text-on-surface">
-                                    <div class="flex items-center gap-1">
-                                        <span class="text-on-surface-variant">Taxes &amp; FSSAI (GST 5%)</span>
-                                        <span
-                                            class="material-symbols-outlined text-outline-variant text-[16px]">info</span>
-                                    </div>
-                                    <span class="font-semibold text-on-surface">₹68</span>
-                                </div>
-                                <!-- Discount Line -->
-                                <div
-                                    class="flex items-center justify-between font-body-md text-body-md bg-tertiary-fixed/30 p-space-xs rounded-xl text-on-surface">
-                                    <div class="flex items-center gap-1 text-tertiary font-bold">
-                                        <span class="material-symbols-outlined text-[18px]">local_offer</span>
-                                        <span>Promo CRAVEFEAST</span>
-                                    </div>
-                                    <span class="font-bold text-primary">-₹150</span>
-                                </div>
-                                <!-- Loyalty Coins Redemption -->
-                                <div
-                                    class="bg-surface-container-low p-space-sm rounded-2xl flex items-center justify-between gap-space-sm">
-                                    <div class="flex items-center gap-space-xs">
-                                        <input checked="" class="w-5 h-5 rounded accent-primary cursor-pointer"
-                                            id="coins-toggle" onchange="toggleCoins(this)" type="checkbox" />
-                                        <label class="cursor-pointer" for="coins-toggle">
-                                            <span
-                                                class="font-label-md text-label-md font-bold text-on-surface block">Redeem
-                                                60 Naurio Coins</span>
-                                            <span
-                                                class="font-body-sm text-body-sm text-on-surface-variant block">Balance:
-                                                240 Coins • Save ₹30</span>
-                                        </label>
-                                    </div>
-                                    <span class="font-title-md text-title-md font-bold text-tertiary">-₹30</span>
-                                </div>
-                            </div>
-                            <!-- Total Due Row -->
-                            <div
-                                class="bg-surface-container p-space-md rounded-2xl flex items-center justify-between mt-space-sm">
-                                <div>
-                                    <span
-                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-extrabold block">Grand
-                                        Total</span>
-                                    <span class="font-body-sm text-body-sm text-on-surface-variant">All taxes
-                                        included</span>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="font-display-hero text-headline-xl text-primary font-black leading-none"
-                                        id="grand-total">₹1,308</span>
-                                </div>
-                            </div>
-                            <!-- Primary Checkout Button -->
-                            <a class="w-full py-space-md px-space-lg bg-primary-container text-on-primary rounded-full font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm shadow-xl hover:bg-primary transition-all text-center"
-                                data-path="checkout" href="#">
-                                <span>Proceed to Checkout (₹1,308)</span>
-                                <span class="material-symbols-outlined">arrow_forward</span>
-                            </a>
-                            <!-- Guarantees & Security Icons -->
-                            <div
-                                class="flex items-center justify-center gap-space-md text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
-                                <span class="flex items-center gap-1"><span
-                                        class="material-symbols-outlined text-[16px]">lock</span> 256-Bit SSL</span>
-                                <span>•</span>
-                                <span class="flex items-center gap-1"><span
-                                        class="material-symbols-outlined text-[16px]">verified_user</span> Crave
-                                    Safe</span>
-                                <span>•</span>
-                                <span class="flex items-center gap-1"><span
-                                        class="material-symbols-outlined text-[16px]">sanitizer</span> Zero Touch</span>
-                            </div>
-                        </div>
-                        <!-- COUPON CODE MODULE -->
-                        <div class="bg-surface-container-lowest rounded-3xl p-space-md shadow-sm space-y-space-sm">
-                            <span class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-1">
-                                <span
-                                    class="material-symbols-outlined text-primary text-[20px]">confirmation_number</span>
-                                <span>Crave Promo Code</span>
-                            </span>
-                            <div class="flex items-center gap-space-xs">
-                                <input
-                                    class="flex-1 bg-surface-container-low px-space-md py-2.5 rounded-full font-body-md text-body-md text-on-surface outline-none uppercase font-bold tracking-wider"
-                                    placeholder="Enter promo code" type="text" value="CRAVEFEAST" />
-                                <button
-                                    class="bg-surface-container px-space-md py-2.5 rounded-full font-label-md text-label-md text-on-surface font-extrabold hover:bg-surface-container-high transition-colors"
-                                    type="button">
-                                    Apply
-                                </button>
-                            </div>
-                            <!-- Pre-applied Chip Tag -->
-                            <div class="flex items-center justify-between bg-primary-fixed/40 p-space-xs rounded-xl">
-                                <div class="flex items-center gap-1">
-                                    <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
-                                    <span class="font-label-md text-label-md text-primary font-bold">CRAVEFEAST applied!
-                                        ₹150 saved</span>
-                                </div>
-                                <button class="material-symbols-outlined text-primary text-[18px] hover:text-on-surface"
-                                    type="button">close</button>
-                            </div>
-                            <div
-                                class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1 px-1">
-                                <span>Also valid: <b>NAURIO20</b>, <b>FIRSTBITE</b></span>
-                                <a class="text-primary font-bold hover:underline" data-path="offers-and-deals"
-                                    href="#">View All (6)</a>
-                            </div>
-                        </div>
-                        <!-- GAMIFICATION & SAVINGS HIGHLIGHT CARD -->
-                        <div
-                            class="bg-inverse-surface text-inverse-on-surface p-space-md rounded-3xl shadow-sm flex items-center gap-space-md">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
-                                <span class="material-symbols-outlined text-[28px]">stars</span>
-                            </div>
+                    </div><button
+                        class="w-full py-3.5 px-4 rounded-2xl bg-surface-container-low hover:bg-surface-container-high border border-surface-container text-primary font-title-md font-bold transition-colors flex items-center justify-center gap-2">+
+                        Add More Items from The Woodfire Kitchen</button>
+                    <div
+                        class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-surface-container-highest space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-surface-container-highest">
                             <div>
-                                <div class="font-title-md text-title-md font-bold text-inverse-on-surface">✨ Total
-                                    Saved: ₹190 Today</div>
-                                <p class="font-body-sm text-body-sm text-secondary-fixed leading-tight mt-0.5">Plus,
-                                    you'll earn <b>65 Naurio Crave Coins</b> upon delivery of this order!</p>
+                                <h4 class="font-title-md font-bold text-on-surface">Kitchen &amp; Courier Notes</h4>
+                                <p class="text-body-sm text-on-surface-variant">Handcrafted with care</p>
+                            </div><span class="material-symbols-outlined text-primary text-[22px]">edit_note</span>
+                        </div><textarea rows="2"
+                            class="w-full bg-surface-container-low border border-surface-container rounded-2xl p-3.5 text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary/20"
+                            placeholder="e.g., Please make pizza crust extra crispy, cut into 6 slices, deliver without plastic cutlery, ring bell once."></textarea>
+                        <div class="flex flex-wrap gap-2 pt-1"><button type="button"
+                                class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-semibold transition-colors">+
+                                No Cutlery Required</button><button type="button"
+                                class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-semibold transition-colors">+
+                                Extra Chili Flakes</button><button type="button"
+                                class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-semibold transition-colors">+
+                                Don't Ring Bell</button><button type="button"
+                                class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-semibold transition-colors">+
+                                Leave at Door</button></div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-surface-container-highest">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-title-lg font-bold text-on-surface">Craving More? Frequently Paired</h3>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-primary/10 text-primary font-bold text-[11px]">CHEF'S
+                                    PICKS</span>
+                            </div>
+                        </div>
+                        <p class="text-body-sm text-on-surface-variant mb-4">Selected by Chef Marco to compliment your
+                            hearth-fired pizza.</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div
+                                class="p-3 rounded-2xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+                                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&amp;fit=crop&amp;w=400&amp;q=80"
+                                    alt="Cinnamon Sugar Cruffins" class="w-full h-24 rounded-xl object-cover mb-2">
+                                <div>
+                                    <h5 class="font-title-md font-bold text-on-surface text-[14px] leading-tight">
+                                        Cinnamon Sugar Cruffins</h5><span
+                                        class="font-title-md font-extrabold text-on-surface block mt-1">₹179</span>
+                                </div><button
+                                    class="w-full mt-2 py-1 rounded-full bg-surface-container-lowest border border-primary text-primary font-bold text-label-sm hover:bg-primary hover:text-white transition-colors">+
+                                    ADD</button>
+                            </div>
+                            <div
+                                class="p-3 rounded-2xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+                                <img src="https://lh3.googleusercontent.com/aida/AEtjO1XoIZhAJG22ENl-f9reAfRzSYkDN3CfOJV-cwRm15rej8UJmn2M5wHyxZoHc2gCLlGeAdrBENOp3q_OUx2DqblhbzzNsJsnKb5O_AjcBKY4ejbjXLhBYc1gqwWEEJHoNs5h7MuwYV-4u7hnlbNWE-15LDr5tH5oCBanIfc6tRBsp1p0uPZdnWFr2pl2wa3LUoN2do0p1lhmoH0aU-7UxflG2qM2r3XXXwbnEz87uz48nw"
+                                    alt="Sicilian Pistachio Cannoli" class="w-full h-24 rounded-xl object-cover mb-2">
+                                <div>
+                                    <h5 class="font-title-md font-bold text-on-surface text-[14px] leading-tight">
+                                        Sicilian Pistachio Cannoli</h5><span
+                                        class="font-title-md font-extrabold text-on-surface block mt-1">₹229</span>
+                                </div><button
+                                    class="w-full mt-2 py-1 rounded-full bg-surface-container-lowest border border-primary text-primary font-bold text-label-sm hover:bg-primary hover:text-white transition-colors">+
+                                    ADD</button>
+                            </div>
+                            <div
+                                class="p-3 rounded-2xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+                                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=400&amp;q=80"
+                                    alt="Crispy Truffle Fries" class="w-full h-24 rounded-xl object-cover mb-2">
+                                <div>
+                                    <h5 class="font-title-md font-bold text-on-surface text-[14px] leading-tight">Crispy
+                                        Truffle Fries</h5><span
+                                        class="font-title-md font-extrabold text-on-surface block mt-1">₹169</span>
+                                </div><button
+                                    class="w-full mt-2 py-1 rounded-full bg-surface-container-lowest border border-primary text-primary font-bold text-label-sm hover:bg-primary hover:text-white transition-colors">+
+                                    ADD</button>
+                            </div>
+                            <div
+                                class="p-3 rounded-2xl bg-surface-container-low border border-surface-container flex flex-col justify-between">
+                                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&amp;fit=crop&amp;w=400&amp;q=80"
+                                    alt="Blood Orange Sparkling" class="w-full h-24 rounded-xl object-cover mb-2">
+                                <div>
+                                    <h5 class="font-title-md font-bold text-on-surface text-[14px] leading-tight">Blood
+                                        Orange Sparkling</h5><span
+                                        class="font-title-md font-extrabold text-on-surface block mt-1">₹225</span>
+                                </div><button
+                                    class="w-full mt-2 py-1 rounded-full bg-surface-container-lowest border border-primary text-primary font-bold text-label-sm hover:bg-primary hover:text-white transition-colors">+
+                                    ADD</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- SECTION 3: ADDITIONAL UI STATES DISPLAY / MODAL REASSURANCE -->
-                <section class="mt-space-xl pt-space-lg">
-                    <div class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-sm">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
-                            <div>
-                                <span
-                                    class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-extrabold block">Kitchen
-                                    Readiness</span>
-                                <h3 class="font-headline-sm text-headline-sm text-on-surface">Real-Time Kitchen Tray
-                                    States</h3>
-                                <p class="font-body-sm text-body-sm text-on-surface-variant">Switch views to preview how
-                                    the cart handles edge states, empty carts, and live recalculations.</p>
+                <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-36">
+                    <div
+                        class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-surface-container-highest space-y-4">
+                        <div class="flex items-center justify-between border-b border-surface-container-highest pb-3">
+                            <h3 class="font-title-lg font-bold text-on-surface">Order Summary</h3><span
+                                class="text-label-sm font-semibold text-on-surface-variant">4 Items</span>
+                        </div>
+                        <div class="space-y-2.5 text-body-sm">
+                            <div class="flex justify-between text-on-surface-variant"><span class="">Item
+                                    Total</span><span class="text-on-surface font-semibold">₹1,396</span></div>
+                            <div class="flex justify-between text-on-surface-variant"><span class="">Delivery Fee</span>
+                                <div class="flex items-center gap-1.5"><span
+                                        class="line-through text-on-surface-variant/60">₹40</span><span
+                                        class="text-tertiary font-bold">FREE</span></div>
                             </div>
-                            <!-- State preview buttons -->
-                            <div class="flex flex-wrap items-center gap-space-sm">
-                                <button
-                                    class="px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-bold flex items-center gap-1 transition-colors"
-                                    onclick="showEmptyCartPreview()" type="button">
-                                    <span class="material-symbols-outlined text-[18px]">shopping_cart_off</span>
-                                    <span>Preview Empty Cart State</span>
-                                </button>
-                                <button
-                                    class="px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-bold flex items-center gap-1 transition-colors"
-                                    onclick="triggerToast('Updated live to 3 items')" type="button">
-                                    <span class="material-symbols-outlined text-[18px]">notification_important</span>
-                                    <span>Trigger Toast Alert</span>
-                                </button>
+                            <div class="flex justify-between text-on-surface-variant"><span class="">Packaging &amp;
+                                    Thermal Vault</span><span class="text-on-surface font-semibold">₹25</span></div>
+                            <div class="flex justify-between text-on-surface-variant"><span class="">Taxes &amp; FSSAI
+                                    (GST 5%)</span><span class="text-on-surface font-semibold">₹68</span></div>
+                            <div class="flex justify-between text-tertiary font-medium"><span class="">Promo
+                                    CRAVEFEAST</span><span class="font-bold">-₹150</span></div>
+                            <div
+                                class="p-3 rounded-2xl bg-tertiary-fixed/30 border border-tertiary-fixed flex items-center justify-between mt-2">
+                                <div class="flex items-center gap-2"><input type="checkbox" checked=""
+                                        class="w-4 h-4 accent-tertiary rounded cursor-pointer">
+                                    <div><span class="text-label-sm font-bold text-on-surface block">Redeem 60 Naurio
+                                            Coins</span><span class="text-[11px] text-on-surface-variant">Balance: 240
+                                            Coins • Save ₹30</span></div>
+                                </div><span class="font-bold text-tertiary text-label-md">-₹30</span>
                             </div>
                         </div>
-                        <!-- Hidden Empty Cart Preview Container (Can be toggled via JS) -->
-                        <div class="hidden mt-space-lg p-space-xl bg-surface-container-low rounded-2xl text-center space-y-space-md"
-                            id="empty-cart-preview">
-                            <div
-                                class="w-20 h-20 mx-auto rounded-full bg-surface-container flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined text-[48px]">restaurant_menu</span>
-                            </div>
-                            <div>
-                                <h4 class="font-headline-sm text-headline-sm text-on-surface">Your Crave Tray is Hungry!
-                                </h4>
-                                <p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mt-1">
-                                    Discover handcrafted pizzas, woodfired delicacies, and bespoke craft sodas curated
-                                    by our master chefs.</p>
-                            </div>
-                            <a class="inline-flex items-center gap-space-xs px-space-xl py-space-sm bg-primary-container text-on-primary rounded-full font-label-lg text-label-lg font-bold shadow-md hover:bg-primary transition-all"
-                                data-path="explore-restaurants" href="#">
-                                <span>Explore Artisan Menu</span>
-                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </a>
+                        <div class="border-t border-surface-container-highest pt-4 flex items-baseline justify-between">
+                            <div class="flex flex-col"><span class="text-title-lg font-extrabold text-on-surface">GRAND
+                                    TOTAL</span><span class="text-[11px] text-on-surface-variant">All taxes
+                                    included</span></div><span
+                                class="font-headline-md text-headline-md font-extrabold text-primary">₹1,308</span>
+                        </div><button
+                            class="w-full mt-2 py-4 px-6 rounded-full bg-primary text-on-primary font-title-md font-bold shadow-lg hover:opacity-95 transition-all flex items-center justify-center gap-2 group"><span
+                                class="material-symbols-outlined text-[20px]">lock</span><span class="">Proceed to
+                                Checkout (₹1,308)</span><span
+                                class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span></button>
+                        <div class="pt-2 flex items-center justify-center gap-3 text-label-sm text-on-surface-variant">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[15px] text-tertiary">lock</span>256-Bit
+                                SSL</span><span class="">•</span><span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[15px] text-tertiary">shield</span>Crave
+                                Safe</span><span class="">•</span><span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[15px] text-tertiary">sanitizer</span>Zero
+                                Touch</span>
                         </div>
                     </div>
-                </section>
+                    <div
+                        class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-surface-container-highest">
+                        <h3 class="font-title-md font-bold text-on-surface mb-3 flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary text-[20px]">loyalty</span>Crave Promo
+                            Code</h3>
+                        <div class="flex items-center gap-2 mb-3"><input type="text" placeholder="Enter Promo Code"
+                                value="CRAVEFEAST"
+                                class="w-full bg-surface-container-low border border-surface-container rounded-full px-4 py-2.5 text-body-sm font-semibold uppercase tracking-wider text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20"><button
+                                class="px-5 py-2.5 bg-on-surface text-surface-container-lowest rounded-full text-label-md font-bold hover:bg-black transition-colors">Apply</button>
+                        </div>
+                        <div
+                            class="p-2.5 rounded-xl bg-tertiary-fixed/30 text-on-tertiary-fixed text-label-sm flex items-center justify-between font-medium mb-3">
+                            <span class="">✓ CRAVEFEAST applied! ₹150 saved</span><button
+                                class="text-on-surface-variant hover:text-error">✕</button>
+                        </div>
+                        <div class="flex items-center justify-between text-[12px] text-on-surface-variant"><span
+                                class="">Also valid: <strong class="text-on-surface">NAURIO20</strong>, <strong
+                                    class="text-on-surface">FIRSTBITE</strong></span><button
+                                class="text-primary font-bold hover:underline">View All (6)</button></div>
+                    </div>
+                    <div class="bg-[#201a16] text-[#e5d8cd] rounded-3xl p-5 shadow-sm space-y-2 flex items-start gap-3">
+                        <div
+                            class="w-9 h-9 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="material-symbols-outlined text-[20px]">stars</span>
+                        </div>
+                        <div><span class="font-title-md font-bold text-white block">Total Saved: ₹190 Today</span>
+                            <p class="text-body-sm text-[#c8c6c5] text-[13px] leading-relaxed mt-0.5">Plus, you'll earn
+                                65 Naurio Crave Coins upon delivery of this order!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <script>
-            function updateQty(elementId, change, pricePerUnit, priceElementId) {
-                const qtyElem = document.getElementById(elementId);
-                let currentQty = parseInt(qtyElem.innerText, 10);
-                currentQty += change;
-                if (currentQty < 1) currentQty = 1;
-                qtyElem.innerText = currentQty;
-
-                const newPrice = currentQty * pricePerUnit;
-                const priceElem = document.getElementById(priceElementId);
-                if (priceElem) {
-                    priceElem.innerText = '₹' + newPrice;
-                }
-
-                triggerToast('Cart updated: Item quantity adjusted to ' + currentQty);
-            }
-
-            function appendInstruction(text) {
-                const notes = document.getElementById('kitchen-notes');
-                if (notes) {
-                    if (notes.value.trim() === '') {
-                        notes.value = text;
-                    } else {
-                        notes.value += ', ' + text;
-                    }
-                    triggerToast('Instruction added: ' + text);
-                }
-            }
-
-            function toggleCoins(checkbox) {
-                const totalElem = document.getElementById('grand-total');
-                if (checkbox.checked) {
-                    totalElem.innerText = '₹1,308';
-                    triggerToast('Applied: 60 Naurio Coins (-₹30)');
-                } else {
-                    totalElem.innerText = '₹1,338';
-                    triggerToast('Removed: Coins discount');
-                }
-            }
-
-            function triggerToast(message) {
-                const toast = document.getElementById('cart-toast');
-                if (toast) {
-                    toast.children[1].innerText = message;
-                    toast.classList.add('bg-primary-container', 'text-on-primary');
-                    toast.classList.remove('bg-inverse-surface', 'text-inverse-on-surface');
-                    setTimeout(() => {
-                        toast.classList.remove('bg-primary-container', 'text-on-primary');
-                        toast.classList.add('bg-inverse-surface', 'text-inverse-on-surface');
-                    }, 2500);
-                }
-            }
-
-            function showEmptyCartPreview() {
-                const preview = document.getElementById('empty-cart-preview');
-                if (preview) {
-                    preview.classList.toggle('hidden');
-                }
-            }
-
-            function clearCartConfirm() {
-                if (confirm('Are you sure you want to clear your craving tray?')) {
-                    showEmptyCartPreview();
-                    triggerToast('Cart emptied');
-                }
-            }
-        </script>
     </main>
     <footer class="w-full bg-[#201a16] text-[#e5d8cd] pt-space-xl pb-space-lg">
         <div class="max-w-7xl mx-auto px-margin-desktop">
@@ -1284,32 +854,35 @@
                 <div class="space-y-space-md"><span
                         class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Culinary Curation</span>
                     <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Artisanal Sourdough &amp;
-                                Pizzeria</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Smash Wagyu &amp; Craft
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Artisanal Sourdough
+                                &amp; Pizzeria</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Smash Wagyu &amp; Craft
                                 Burgers</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Kyoto Omakase &amp; Bento
-                                Boxes</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Heritage Dumplings &amp; Dim
-                                Sum</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Botanical Smoothie &amp; Salad
-                                Bowls</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Small-Batch Gelato &amp;
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Kyoto Omakase &amp;
+                                Bento Boxes</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Heritage Dumplings &amp;
+                                Dim Sum</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Botanical Smoothie &amp;
+                                Salad Bowls</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Small-Batch Gelato &amp;
                                 Patisserie</a></li>
                     </ul>
                 </div>
                 <div class="space-y-space-md"><span
                         class="font-title-lg text-title-lg text-[#ffffff] font-bold block">Quick Links</span>
                     <ul class="space-y-space-sm font-body-sm text-body-sm text-[#c8c6c5]">
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Chef Partner Program</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">NAURIO Black Membership</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Corporate Catering &amp;
-                                Events</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Sustainability &amp;
-                                Cold-Chain</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Redeem Crave Coins</a></li>
-                        <li><a class="hover:text-[#ffffff] transition-colors" href="#">Brand Newsroom &amp; Press</a>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Chef Partner Program</a>
                         </li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">NAURIO Black
+                                Membership</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Corporate Catering &amp;
+                                Events</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Sustainability &amp;
+                                Cold-Chain</a></li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Redeem Crave Coins</a>
+                        </li>
+                        <li class=""><a class="hover:text-[#ffffff] transition-colors" href="#">Brand Newsroom &amp;
+                                Press</a></li>
                     </ul>
                 </div>
                 <div class="space-y-space-md"><span
@@ -1340,7 +913,7 @@
             </div>
             <div
                 class="border-t border-[#372f28] pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-[#c8c6c5] font-body-sm text-body-sm">
-                <div>© 2025 NAURIO Technologies Pvt. Ltd. Crafted with passion for epicures.</div>
+                <div class="">© 2025 NAURIO Technologies Pvt. Ltd. Crafted with passion for epicures.</div>
                 <div class="flex items-center gap-space-lg font-label-md text-label-md"><a
                         class="hover:text-[#ffffff] transition-colors" href="#">Privacy Policy</a><a
                         class="hover:text-[#ffffff] transition-colors" href="#">Terms of Service</a><a
@@ -1349,6 +922,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
