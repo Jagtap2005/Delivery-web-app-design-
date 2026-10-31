@@ -297,6 +297,8 @@
                 }
             }
         }</script>
+<link rel="stylesheet" href="../../shared/profile-sidebar.css" />
+    <script src="../../shared/profile-sidebar.js" defer></script>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
@@ -422,141 +424,11 @@
                     </div>
                 </div>
                 <!-- Two-Column Desktop Architecture -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+                <div class="grid grid-cols-1 profile-sidebar-layout lg:grid-cols-12 gap-gutter-desktop items-start">
                     <!-- LEFT SIDEBAR COMPONENT (~280px / 3 cols) -->
-                    <aside class="lg:col-span-4 xl:col-span-3 space-y-space-md">
-                        <!-- User Profile Card -->
-                        <div
-                            class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col items-center text-center space-y-space-sm">
-                            <div class="relative">
-                                <div
-                                    class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
-                                    <img class="w-full h-full object-cover"
-                                        data-alt="Close-up portrait of Rohan Kapoor, handsome Indian gourmet enthusiast smiling warmly wearing contemporary charcoal linen shirt, cinematic soft directional dining room lighting."
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-eUtskj0L1OilMa_KWoTOKEY-MjQF_vwu6RXXHyb107vJerhreAmlVaG6XO1JD3QKY67JVsitFoLJPzizT-3o2mIXJJfFy9SfA1RAXPnfpaKFB2dNEOh7LdecNp65Ek_jBmV2ZCA8q0Ux31NVcgOn0KheXPj8INOo4o1t-vHJ6-mMKqvOWrX691lrwFaJlQ40gYhQuVsjdKwKvOTqSFouquOXehPj5BKSgBOgwvIL" />
-                                </div>
-                                <div class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center"
-                                    title="Verified Epicure">
-                                    <span class="material-symbols-outlined text-[14px] font-bold">verified</span>
-                                </div>
-                            </div>
-                            <div class="space-y-0.5">
-                                <h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Rohan Kapoor
-                                </h2>
-                                <p class="font-body-sm text-body-sm text-on-surface-variant">rohan.kapoor@naurio.com</p>
-                            </div>
-                            <div
-                                class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-container-low rounded-full">
-                                <span class="material-symbols-outlined text-[14px] text-tertiary">star</span>
-                                <span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wide">MEMBER
-                                    SINCE OCT 2023</span>
-                            </div>
-                        </div>
-                        <!-- Sidebar Navigation Links -->
-                        <div class="bg-surface-container-lowest rounded-3xl p-space-sm shadow-sm space-y-1">
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors group"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span
-                                        class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">person</span>
-                                    <span class="font-title-md text-title-md font-semibold">My Profile</span>
-                                </div>
-                                <span
-                                    class="material-symbols-outlined text-[18px] text-outline-variant">chevron_right</span>
-                            </a>
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors group"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span
-                                        class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">receipt_long</span>
-                                    <span class="font-title-md text-title-md font-semibold">My Orders</span>
-                                </div>
-                                <span
-                                    class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">1
-                                    Active</span>
-                            </a>
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors group"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span
-                                        class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">home_pin</span>
-                                    <span class="font-title-md text-title-md font-semibold">Saved Addresses</span>
-                                </div>
-                                <span class="font-label-sm text-label-sm text-on-surface-variant">3 saved</span>
-                            </a>
-                            <!-- ACTIVE LINK: My Favourites -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl bg-primary-container text-on-primary shadow-sm"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]"
-                                        style="font-variation-settings: 'FILL' 1;">favorite</span>
-                                    <span class="font-title-md text-title-md font-bold">My Favourites</span>
-                                </div>
-                                <span
-                                    class="px-space-sm py-0.5 rounded-full bg-on-primary text-primary-container font-label-sm text-label-sm font-extrabold shadow-sm">14</span>
-                            </a>
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors group"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span
-                                        class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">local_offer</span>
-                                    <span class="font-title-md text-title-md font-semibold">Offers &amp; Coupons</span>
-                                </div>
-                                <span
-                                    class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">4
-                                    available</span>
-                            </a>
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors group"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span
-                                        class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">headset_mic</span>
-                                    <span class="font-title-md text-title-md font-semibold">Help &amp; Support</span>
-                                </div>
-                                <span class="font-label-sm text-label-sm text-tertiary font-bold">24/7 Live</span>
-                            </a>
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-2xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors group"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span
-                                        class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">tune</span>
-                                    <span class="font-title-md text-title-md font-semibold">Account Settings</span>
-                                </div>
-                                <span
-                                    class="material-symbols-outlined text-[18px] text-outline-variant">chevron_right</span>
-                            </a>
-                            <div class="pt-space-xs">
-                                <button
-                                    class="w-full flex items-center justify-between px-space-md py-space-sm rounded-2xl text-error hover:bg-error-container/20 transition-colors">
-                                    <div class="flex items-center gap-space-sm">
-                                        <span class="material-symbols-outlined text-[20px]">logout</span>
-                                        <span class="font-title-md text-title-md font-semibold">Logout</span>
-                                    </div>
-                                    <span class="material-symbols-outlined text-[18px]">exit_to_app</span>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- Membership Mini Promotion -->
-                        <div
-                            class="bg-inverse-surface rounded-3xl p-space-md text-surface flex flex-col gap-space-xs relative overflow-hidden">
-                            <div class="flex items-center justify-between">
-                                <span
-                                    class="font-label-sm text-label-sm text-tertiary-fixed uppercase font-bold tracking-wider">NAURIO
-                                    Black Tier</span>
-                                <span class="material-symbols-outlined text-tertiary-fixed text-[20px]">diamond</span>
-                            </div>
-                            <p class="font-title-md text-title-md font-bold text-inverse-on-surface">Unlimited Priority
-                                Kitchen Priority</p>
-                            <p class="font-body-sm text-body-sm text-secondary-fixed-dim">Save up to ₹4,800/yr with zero
-                                surge packaging fees.</p>
-                            <button
-                                class="mt-space-xs w-full py-space-xs bg-tertiary text-on-tertiary rounded-full font-label-md text-label-md font-bold hover:bg-tertiary-container transition-colors">
-                                Manage Black Perk
-                            </button>
-                        </div>
-                    </aside>
+                    <aside data-profile-sidebar data-active-page="favourites" data-route-set="design6"></aside>
                     <!-- MAIN CONTENT AREA (~880px / 9 cols) -->
-                    <section class="lg:col-span-8 xl:col-span-9 space-y-space-lg">
+                    <section class="lg:col-span-9 xl:col-span-9 space-y-space-lg">
                         <!-- 1. Navigation Tabs & Quick Controls Bar -->
                         <div
                             class="bg-surface-container-lowest rounded-3xl p-space-md shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">

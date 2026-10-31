@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#ede8dd", "error": "#ba1a1a", "on-tertiary-container": "#ad8640", "surface-container": "#f2ede3", "secondary-fixed-dim": "#ffb694", "surface-dim": "#dedacf", "inverse-on-surface": "#f5f0e5", "primary-container": "#172923", "primary-fixed-dim": "#b6cbc2", "primary-fixed": "#d2e7de", "on-tertiary-fixed": "#271900", "on-surface": "#1d1c15", "on-background": "#1d1c15", "on-error": "#ffffff", "on-secondary": "#ffffff", "background": "#fef9ee", "on-primary": "#ffffff", "outline": "#727875", "on-secondary-container": "#652500", "secondary": "#a14000", "on-primary-fixed": "#0d1f19", "outline-variant": "#c2c8c4", "inverse-primary": "#b6cbc2", "surface-container-highest": "#e7e2d7", "tertiary-container": "#342200", "on-tertiary-fixed-variant": "#5e4100", "secondary-container": "#fe7f3c", "on-secondary-fixed-variant": "#7b2f00", "tertiary": "#190e00", "surface-tint": "#4f625b", "on-tertiary": "#ffffff", "inverse-surface": "#323029", "on-primary-container": "#7d9189", "surface-bright": "#fef9ee", "secondary-fixed": "#ffdbcc", "tertiary-fixed": "#ffdea9", "on-error-container": "#93000a", "error-container": "#ffdad6", "primary": "#03140e", "on-secondary-fixed": "#351000", "on-primary-fixed-variant": "#384b44", "surface-container-lowest": "#ffffff", "surface-container-low": "#f8f3e8", "tertiary-fixed-dim": "#ecc074", "surface-variant": "#e7e2d7", "surface": "#fef9ee", "on-surface-variant": "#424845" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "gutter-lg": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "gutter": "1.5rem", "margin-lg": "4rem", "space-xs": "0.25rem", "margin": "1.5rem", "space-md": "1rem", "margin-md": "2.5rem", "space-xl": "2.5rem" }, "fontFamily": { "display-hero": ["Playfair Display"], "price-display": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "headline-lg": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"] }, "fontSize": { "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "price-display": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "800" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }] } } } };</script>
+    <script src="site.js" defer></script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-highest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-full border-b border-surface-container bg-surface-container-low/60">
+            <div
+                class="max-w-7xl mx-auto px-margin lg:px-margin-lg h-9 flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                <div class="flex items-center gap-space-md">
+                    <div
+                        class="flex items-center gap-space-xs text-on-surface hover:text-secondary cursor-pointer transition-colors">
+                        <span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span
+                            class="font-label-md text-label-md">Deliver to:</span><span
+                            class="font-body-md text-body-md font-semibold text-on-surface">247 Maple Ave, Central
+                            District</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div>
+                    <div
+                        class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined text-[14px]">schedule</span><span class="">15-25
+                            Mins</span></div>
+                </div>
+                <div class="flex items-center gap-space-lg"><button
+                        class="flex items-center gap-space-xs hover:text-on-surface transition-colors"><span
+                            class="material-symbols-outlined text-[15px]">language</span><span class="">EN /
+                            USD</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button><a
+                        class="hover:text-on-surface transition-colors" href="#">Concierge Support</a></div>
+            </div>
+        </div>
+        <div class="w-full border-b border-surface-container-highest bg-surface">
+            <div
+                class="max-w-7xl mx-auto px-margin lg:px-margin-lg h-20 flex items-center justify-between gap-space-lg">
+                <div class="flex items-center gap-space-md shrink-0">
+                    <div class="flex flex-col"><span
+                            class="font-display-hero text-headline-sm text-primary tracking-tight font-bold leading-none">NAURIO</span><span
+                            class="font-label-caps text-[9px] uppercase tracking-widest text-on-tertiary-container">Haute
+                            Cuisine</span></div>
+                </div>
+                <div class="flex-1 max-w-2xl">
+                    <div
+                        class="relative flex items-center bg-surface-container-lowest rounded-full p-1 border border-surface-container-highest shadow-[0_2px_12px_rgba(23,41,35,0.04)] focus-within:border-primary transition-all">
+                        <button
+                            class="flex items-center gap-space-xs px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md shrink-0 hover:text-on-surface border-r border-surface-container-highest"><span
+                                class="">All Categories</span><span
+                                class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span></button>
+                        <div class="flex items-center flex-1 px-space-md gap-space-xs"><span
+                                class="material-symbols-outlined text-outline text-[18px]">search</span><input
+                                class="w-full bg-transparent border-0 outline-none text-on-surface font-body-md text-body-md placeholder:text-outline"
+                                placeholder="Search artisanal dishes, chef specialties, organic groceries..."
+                                type="text" /></div><a
+                            class="px-space-lg py-2.5 bg-secondary-container hover:bg-secondary text-on-primary font-label-md text-label-md rounded-full shadow-[0_4px_12px_rgba(244,119,53,0.25)] flex items-center gap-space-xs transition-all shrink-0 cursor-pointer"
+                            data-path="search" href="#"><span class="">Search</span><span
+                                class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-space-md shrink-0">
+                    <div
+                        class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-tertiary-fixed/40 border border-tertiary-fixed-dim/60 text-on-tertiary-fixed">
+                        <span
+                            class="material-symbols-outlined text-[18px] text-on-tertiary-container">monetization_on</span><span
+                            class="font-label-caps text-label-caps tracking-wider">1,450 COINS</span></div><a
+                        class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"
+                        data-path="favorites" href="#" title="Wishlist"><span
+                            class="material-symbols-outlined text-[20px]">favorite</span></a><a
+                        class="flex items-center gap-space-xs px-space-sm py-1 rounded-full hover:bg-surface-container text-on-surface cursor-pointer transition-colors"
+                        data-path="login" href="#" title="Customer Authentication"><span
+                            class="material-symbols-outlined text-[20px] text-on-surface-variant">person</span><span
+                            class="font-label-md text-label-md">Sign In</span></a><a
+                        class="flex items-center gap-space-md pl-space-lg pr-space-sm py-2 rounded-full bg-primary-container text-on-primary shadow-[0_8px_20px_rgba(23,41,35,0.15)] hover:bg-primary transition-all cursor-pointer"
+                        data-path="naurio---shopping-cart" href="#"><span
+                            class="font-title-md text-title-md tracking-tight">$48.50</span><span
+                            class="flex items-center justify-center bg-secondary-container text-on-primary font-label-caps text-label-caps w-6 h-6 rounded-full">3</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-margin lg:px-margin-lg h-11 flex items-center">
+                <nav class="flex items-center gap-space-xl overflow-x-auto h-full"
+                    data-active-classes="text-secondary font-bold border-b-2 border-secondary"><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="search" href="#">Search &amp; Filters</a><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="naurio---curated-menu" href="#">Curated Menu</a><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="naurio---explore-restaurants" href="#">Explore Restaurants</a><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="chefs-specials" href="#">Chef's Specials</a><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="organic-bowls" href="#">Organic Bowls</a><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="wood-fired-pizza" href="#">Wood-Fired Pizza</a><a
+                        class="h-full flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap"
+                        data-path="deals-and-offers" href="#">Deals &amp; Offers</a></nav>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-[156px] bg-surface min-h-[calc(100vh-156px)]">
+        <div class="flex flex-col w-full">
+            <div class="w-full max-w-7xl mx-auto px-margin lg:px-margin-lg py-space-lg lg:py-space-xl">
+                <!-- Breadcrumb & Authentication Bar -->
+                <div class="flex items-center justify-between pb-space-lg">
+                    <div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+                        <a class="hover:text-secondary transition-colors" href="#">Atelier Access</a>
+                        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                        <span class="text-on-surface font-semibold">Epicurean Gateway</span>
+                    </div>
+                    <div
+                        class="hidden sm:flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-full shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+                        <span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Atelier
+                            Vault Encryption · 256-Bit</span>
+                    </div>
+                </div>
+                <!-- Main Split-Screen Container -->
+                <div
+                    class="w-full rounded-xl overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 min-h-[720px] bg-surface-container-lowest">
+                    <!-- LEFT SECTION: Cinematic Culinary Narrative (50% desktop) -->
+                    <div
+                        class="relative lg:col-span-6 flex flex-col justify-between p-space-lg lg:p-margin-md overflow-hidden text-surface-bright min-h-[540px] lg:min-h-full">
+                        <!-- Background Imagery -->
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="A master culinary artist carefully plating a delicate smoked langoustine dish over charcoal ember hearth, dark atmospheric moody Michelin star restaurant lighting, deep forest green tones, rich reflections and glowing embers, fine dining haute cuisine aesthetics"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAcHe0XWliB_AkUcFaSuOmwe1XvvKU8blL88mjQj-7yUgbCHE4kbjnjqxZwBgPk_kuSvI0HVDIkRN4cDun3g3gdyIHthPe9vT6cX1Be1FL3iAmOKlJV3_ByL7wStiqIIqghDVrPA_EfWLpSEW7ZSbNha7_WAi1PIom4oKdBS55KD338FAN-2d6e6OW9Qf6cbEFghZO5vtEosN0nHrqnymhtaoOc1clf_fA0lqMck2C')">
+                        </div>
+                        <!-- Deep Forest Green Gradient Overlay -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/85 to-primary-container/80">
+                        </div>
+                        <!-- Subtle Ambient Radial Glow -->
+                        <div
+                            class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-secondary-container/15 blur-3xl pointer-events-none">
+                        </div>
+                        <!-- Left Top Content: Badge & Crest -->
+                        <div class="relative z-10 flex flex-col gap-space-md">
+                            <div
+                                class="inline-flex items-center gap-space-xs self-start px-space-md py-1.5 rounded-full bg-tertiary-fixed/20 backdrop-blur-md text-on-tertiary-container shadow-sm">
+                                <span class="material-symbols-outlined text-[16px] text-on-tertiary-container"
+                                    style="font-variation-settings: 'FILL' 1;">stars</span>
+                                <span
+                                    class="font-label-caps text-label-caps tracking-widest uppercase text-tertiary-fixed">NAURIO
+                                    GASTRONOMIE PRIVILÈGE</span>
+                            </div>
+                            <div class="space-y-space-sm max-w-lg pt-space-xs">
+                                <h1
+                                    class="font-headline-lg text-headline-lg text-surface-bright tracking-tight leading-tight">
+                                    Exceptional Flavours <br class="hidden sm:inline" />
+                                    <span class="italic text-tertiary-fixed-dim font-serif">Begin Here.</span>
+                                </h1>
+                                <p
+                                    class="font-body-lg text-body-lg text-surface-container-high/90 leading-relaxed font-normal">
+                                    Immerse yourself in Michelin-grade dining orchestrated from master culinary ateliers
+                                    directly to your residence. Access private chef drops, sommelier allocations, and
+                                    seasonal banquets.
+                                </p>
+                            </div>
+                            <!-- Atelier Perks List -->
+                            <div class="flex flex-col gap-space-sm pt-space-md max-w-md">
+                                <div
+                                    class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-lowest/5 backdrop-blur-sm">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container/20 text-secondary-container shrink-0">
+                                        <span class="material-symbols-outlined text-[18px]">lock_clock</span>
+                                    </div>
+                                    <span class="font-title-md text-title-md text-surface-bright font-medium">Bespoke
+                                        Thermal-Shield Vault Delivery</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-lowest/5 backdrop-blur-sm">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 rounded-full bg-tertiary-fixed-dim/20 text-tertiary-fixed-dim shrink-0">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                    </div>
+                                    <span class="font-title-md text-title-md text-surface-bright font-medium">Priority
+                                        Reservations at 3-Star Culinary Ateliers</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-lowest/5 backdrop-blur-sm">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container/20 text-secondary-container shrink-0">
+                                        <span class="material-symbols-outlined text-[18px]">local_bar</span>
+                                    </div>
+                                    <span class="font-title-md text-title-md text-surface-bright font-medium">Exclusive
+                                        Access to Limited Harvest Degustations</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Left Bottom: Editorial Quote Card -->
+                        <div class="relative z-10 pt-space-xl mt-auto">
+                            <div
+                                class="p-space-md rounded-lg bg-primary/40 backdrop-blur-md shadow-inner flex flex-col gap-space-xs">
+                                <div class="flex items-center gap-space-xs text-on-tertiary-container">
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span
+                                        class="font-label-caps text-label-caps text-surface-container-high ml-space-xs">CRITIC
+                                        SELECTION</span>
+                                </div>
+                                <p
+                                    class="font-headline-sm text-headline-sm italic text-surface-bright leading-snug font-serif">
+                                    “NAURIO redefines the boundary between home dining and haute cuisine.”
+                                </p>
+                                <span
+                                    class="font-label-md text-label-md text-on-primary-container tracking-wider uppercase">—
+                                    Le Guide Gastronomique, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RIGHT SECTION: Authentication Suite -->
+                    <div
+                        class="relative lg:col-span-6 flex flex-col justify-center p-space-lg lg:p-margin-md bg-surface">
+                        <!-- Interactive State Showcase Pills -->
+                        <div class="flex items-center justify-between flex-wrap gap-space-xs mb-space-lg pb-space-xs">
+                            <span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Gateway
+                                State</span>
+                            <div
+                                class="flex items-center gap-space-xs bg-surface-container p-1 rounded-full text-on-surface-variant font-label-md text-label-md">
+                                <button
+                                    class="px-space-md py-1 rounded-full bg-primary-container text-on-primary font-semibold shadow-sm transition-all"
+                                    id="toggle-state-auth" onclick="switchState('auth')">Sign In</button>
+                                <button class="px-space-md py-1 rounded-full hover:text-on-surface transition-all"
+                                    id="toggle-state-signup" onclick="switchState('signup')">Register</button>
+                                <button class="px-space-md py-1 rounded-full hover:text-on-surface transition-all"
+                                    id="toggle-state-otp" onclick="switchState('otp')">OTP Pass</button>
+                                <button class="px-space-md py-1 rounded-full hover:text-on-surface transition-all"
+                                    id="toggle-state-reset" onclick="switchState('reset')">Reset</button>
+                            </div>
+                        </div>
+                        <!-- Feedback Notification / Toast Indicators (Dynamically Switched) -->
+                        <div class="mb-space-md hidden" id="toast-container">
+                            <!-- Error Alert Template -->
+                            <div class="hidden flex items-center justify-between p-space-md rounded-DEFAULT bg-error-container text-on-error-container shadow-sm animate-fade-in"
+                                id="toast-error">
+                                <div class="flex items-center gap-space-sm">
+                                    <span class="material-symbols-outlined text-[20px] text-error">error</span>
+                                    <span class="font-body-md text-body-md font-medium">Authentication unverified.
+                                        Please check your credentials.</span>
+                                </div>
+                                <button class="p-1 hover:opacity-75 transition-opacity" onclick="dismissToast()">
+                                    <span class="material-symbols-outlined text-[16px]">close</span>
+                                </button>
+                            </div>
+                            <!-- Success Alert Template -->
+                            <div class="hidden flex items-center justify-between p-space-md rounded-DEFAULT bg-primary-container text-on-primary shadow-sm animate-fade-in"
+                                id="toast-success">
+                                <div class="flex items-center gap-space-sm">
+                                    <span
+                                        class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim">check_circle</span>
+                                    <span class="font-body-md text-body-md font-medium">Welcome to NAURIO Atelier.
+                                        Secure session initialized.</span>
+                                </div>
+                                <button class="p-1 hover:opacity-75 transition-opacity" onclick="dismissToast()">
+                                    <span class="material-symbols-outlined text-[16px]">close</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- ======================= 1. SIGN IN VIEW ======================= -->
+                        <div class="flex flex-col gap-space-lg transition-all duration-300" id="view-signin">
+                            <!-- Form Header -->
+                            <div class="flex flex-col gap-space-xs">
+                                <div class="flex items-center justify-between">
+                                    <h2 class="font-headline-md text-headline-md text-primary tracking-tight">Atelier
+                                        Sign In</h2>
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase tracking-wider text-secondary px-space-sm py-0.5 rounded-full bg-secondary/10">Member
+                                        Pass</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Welcome back to your curated cellar and private dining selections.
+                                </p>
+                            </div>
+                            <!-- Authentication Tabs Pill -->
+                            <div class="flex p-1 rounded-full bg-surface-container">
+                                <button
+                                    class="flex-1 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all text-center"
+                                    onclick="switchState('auth')">
+                                    Sign In
+                                </button>
+                                <button
+                                    class="flex-1 py-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center"
+                                    onclick="switchState('signup')">
+                                    Create Account
+                                </button>
+                            </div>
+                            <!-- Sign In Form -->
+                            <form class="flex flex-col gap-space-md"
+                                onsubmit="event.preventDefault(); triggerAuthSuccess();">
+                                <!-- Email / Mobile Input -->
+                                <div class="flex flex-col gap-space-xs">
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+                                        <span>Email Address or Concierge Mobile</span>
+                                        <span class="font-body-sm text-body-sm text-outline">patron@estate.com</span>
+                                    </label>
+                                    <div
+                                        class="relative flex items-center rounded-DEFAULT bg-surface-container-lowest shadow-sm focus-within:shadow-md transition-all">
+                                        <span
+                                            class="material-symbols-outlined absolute left- space-md text-outline text-[20px] pointer-events-none pl-3">mail</span>
+                                        <input
+                                            class="w-full pl-11 pr-space-md py-3 rounded-DEFAULT bg-transparent text-on-surface font-body-md text-body-md outline-none placeholder:text-outline"
+                                            placeholder="Enter your registered email or phone" required="" type="text"
+                                            value="lord.sterling@haute.eu" />
+                                    </div>
+                                </div>
+                                <!-- Password Input with Reveal Toggle -->
+                                <div class="flex flex-col gap-space-xs">
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+                                        <span>Atelier Password</span>
+                                        <span
+                                            class="font-body-sm text-body-sm text-on-tertiary-container flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[14px]">format_image_left</span>
+                                            Highly Protected
+                                        </span>
+                                    </label>
+                                    <div
+                                        class="relative flex items-center rounded-DEFAULT bg-surface-container-lowest shadow-sm focus-within:shadow-md transition-all">
+                                        <span
+                                            class="material-symbols-outlined absolute left- space-md text-outline text-[20px] pointer-events-none pl-3">key</span>
+                                        <input
+                                            class="w-full pl-11 pr-11 py-3 rounded-DEFAULT bg-transparent text-on-surface font-body-md text-body-md outline-none placeholder:text-outline"
+                                            id="signin-password" placeholder="••••••••••••" required="" type="password"
+                                            value="EpicureanMaster2025!" />
+                                        <button
+                                            class="absolute right-3 p-1 text-on-surface-variant hover:text-on-surface transition-colors"
+                                            onclick="togglePasswordVisibility('signin-password', 'eye-icon-signin')"
+                                            type="button">
+                                            <span class="material-symbols-outlined text-[18px]"
+                                                id="eye-icon-signin">visibility</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Remember Me & Forgot Password Row -->
+                                <div class="flex items-center justify-between pt-space-xs">
+                                    <label class="flex items-center gap-space-sm cursor-pointer select-none">
+                                        <input checked=""
+                                            class="w-4 h-4 rounded text-secondary-container bg-surface-container-lowest focus:ring-0 accent-secondary-container cursor-pointer"
+                                            type="checkbox" />
+                                        <span class="font-body-md text-body-md text-on-surface">Remember this
+                                            device</span>
+                                    </label>
+                                    <button
+                                        class="font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-colors underline decoration-secondary/30 underline-offset-4"
+                                        onclick="switchState('reset')" type="button">
+                                        Forgot Password?
+                                    </button>
+                                </div>
+                                <!-- Primary CTA -->
+                                <button
+                                    class="w-full py-3.5 px-space-lg rounded-full bg-secondary-container hover:bg-secondary text-on-primary font-label-md text-label-md tracking-wider flex items-center justify-center gap-space-xs shadow-md hover:shadow-lg transition-all mt-space-xs"
+                                    type="submit">
+                                    <span>Sign In to Atelier</span>
+                                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                                </button>
+                            </form>
+                            <!-- Divider -->
+                            <div class="relative flex items-center justify-center my-space-xs">
+                                <div class="w-full h-px bg-surface-container-highest"></div>
+                                <span
+                                    class="absolute bg-surface px-space-md font-label-caps text-label-caps text-outline uppercase tracking-widest text-[10px]">
+                                    OR CONTINUE WITH HAUTE CREDENTIALS
+                                </span>
+                            </div>
+                            <!-- Google Social Login Button -->
+                            <button
+                                class="w-full py-3 px-space-md rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-md text-title-md flex items-center justify-center gap-space-md shadow-sm transition-all"
+                                onclick="triggerAuthError()" type="button">
+                                <!-- Google Clean SVG Icon -->
+                                <svg class="w-5 h-5 shrink-0" viewbox="0 0 24 24">
+                                    <path
+                                        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"
+                                        fill="#4285F4"></path>
+                                    <path
+                                        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.4 7.37 24 12 24z"
+                                        fill="#34A853"></path>
+                                    <path
+                                        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"
+                                        fill="#FBBC05"></path>
+                                    <path
+                                        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.37 0 3.27 2.6 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+                                        fill="#EA4335"></path>
+                                </svg>
+                                <span class="font-body-md text-body-md font-medium">Continue with Google
+                                    Concierge</span>
+                            </button>
+                            <!-- Quick Switch to Signup -->
+                            <div class="text-center pt-space-xs">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    New to NAURIO?
+                                    <button
+                                        class="text-secondary font-semibold hover:text-on-secondary-container transition-colors ml-1"
+                                        onclick="switchState('signup')">
+                                        Create an Epicurean Account
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- ======================= 2. CREATE ACCOUNT VIEW ======================= -->
+                        <div class="hidden flex flex-col gap-space-md transition-all duration-300" id="view-signup">
+                            <div class="flex flex-col gap-space-xs">
+                                <div class="flex items-center justify-between">
+                                    <h2 class="font-headline-md text-headline-md text-primary tracking-tight">Create
+                                        Atelier Account</h2>
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase tracking-wider text-on-tertiary-container px-space-sm py-0.5 rounded-full bg-tertiary-fixed/40">VIP
+                                        Induction</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Join the private membership circle for haute cuisine bookings &amp; private drops.
+                                </p>
+                            </div>
+                            <!-- Authentication Tabs Pill -->
+                            <div class="flex p-1 rounded-full bg-surface-container">
+                                <button
+                                    class="flex-1 py-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center"
+                                    onclick="switchState('auth')">
+                                    Sign In
+                                </button>
+                                <button
+                                    class="flex-1 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all text-center"
+                                    onclick="switchState('signup')">
+                                    Create Account
+                                </button>
+                            </div>
+                            <form class="flex flex-col gap-space-sm pt-space-xs"
+                                onsubmit="event.preventDefault(); triggerAuthSuccess();">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                                    <!-- Full Name -->
+                                    <div class="flex flex-col gap-1">
+                                        <label class="font-label-md text-label-md text-on-surface font-semibold">Full
+                                            Legal Name</label>
+                                        <input
+                                            class="w-full px-space-md py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none shadow-sm focus:shadow-md"
+                                            placeholder="Lord Sterling Hayes" required="" type="text" />
+                                    </div>
+                                    <!-- Mobile Number -->
+                                    <div class="flex flex-col gap-1">
+                                        <label class="font-label-md text-label-md text-on-surface font-semibold">Mobile
+                                            Number</label>
+                                        <input
+                                            class="w-full px-space-md py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none shadow-sm focus:shadow-md"
+                                            placeholder="+1 (555) 382-9011" required="" type="tel" />
+                                    </div>
+                                </div>
+                                <!-- Email Address -->
+                                <div class="flex flex-col gap-1">
+                                    <label class="font-label-md text-label-md text-on-surface font-semibold">Corporate
+                                        or Estate Email</label>
+                                    <input
+                                        class="w-full px-space-md py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none shadow-sm focus:shadow-md"
+                                        placeholder="sterling@residence.com" required="" type="email" />
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                                    <!-- Password -->
+                                    <div class="flex flex-col gap-1">
+                                        <label
+                                            class="font-label-md text-label-md text-on-surface font-semibold">Security
+                                            Password</label>
+                                        <input
+                                            class="w-full px-space-md py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none shadow-sm focus:shadow-md"
+                                            placeholder="Min. 8 characters" required="" type="password" />
+                                    </div>
+                                    <!-- Confirm Password -->
+                                    <div class="flex flex-col gap-1">
+                                        <label class="font-label-md text-label-md text-on-surface font-semibold">Confirm
+                                            Password</label>
+                                        <input
+                                            class="w-full px-space-md py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none shadow-sm focus:shadow-md"
+                                            placeholder="Re-type password" required="" type="password" />
+                                    </div>
+                                </div>
+                                <!-- Gastronomic Charter Checkbox -->
+                                <div class="pt-space-xs">
+                                    <label class="flex items-start gap-space-sm cursor-pointer select-none">
+                                        <input
+                                            class="w-4 h-4 mt-0.5 rounded text-secondary-container bg-surface-container-lowest focus:ring-0 accent-secondary-container"
+                                            required="" type="checkbox" />
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                            I agree to the <a class="text-secondary underline decoration-secondary/30"
+                                                href="#">Gastronomic Charter</a> and <a
+                                                class="text-secondary underline decoration-secondary/30"
+                                                href="#">Privacy Protocol</a>, including priority temperature
+                                            validation.
+                                        </span>
+                                    </label>
+                                </div>
+                                <!-- Submit Button -->
+                                <button
+                                    class="w-full py-3.5 px-space-lg rounded-full bg-secondary-container hover:bg-secondary text-on-primary font-label-md text-label-md tracking-wider flex items-center justify-center gap-space-xs shadow-md transition-all mt-space-sm"
+                                    type="submit">
+                                    <span>Create Atelier Account</span>
+                                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                                </button>
+                            </form>
+                            <p class="font-body-md text-body-md text-center text-on-surface-variant pt-space-xs">
+                                Already verified?
+                                <button
+                                    class="text-secondary font-semibold hover:text-on-secondary-container transition-colors ml-1"
+                                    onclick="switchState('auth')">
+                                    Sign In to Atelier
+                                </button>
+                            </p>
+                        </div>
+                        <!-- ======================= 3. OTP VERIFICATION VIEW ======================= -->
+                        <div class="hidden flex flex-col gap-space-lg transition-all duration-300" id="view-otp">
+                            <div class="flex flex-col gap-space-xs">
+                                <button
+                                    class="inline-flex items-center gap-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md mb-2"
+                                    onclick="switchState('auth')">
+                                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Return to Gate
+                                </button>
+                                <h2 class="font-headline-md text-headline-md text-primary tracking-tight">Two-Factor
+                                    Passcode</h2>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Enter the 6-digit verification code transmitted to <strong
+                                        class="text-on-surface">patron@estate.com</strong>
+                                </p>
+                            </div>
+                            <div
+                                class="p-space-lg rounded-xl bg-surface-container flex flex-col items-center gap-space-md">
+                                <div class="flex items-center gap-2 sm:gap-3">
+                                    <input
+                                        class="w-11 h-13 sm:w-12 sm:h-14 text-center font-display-hero text-headline-sm rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm outline-none focus:ring-2 focus:ring-secondary-container"
+                                        maxlength="1" type="text" value="7" />
+                                    <input
+                                        class="w-11 h-13 sm:w-12 sm:h-14 text-center font-display-hero text-headline-sm rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm outline-none focus:ring-2 focus:ring-secondary-container"
+                                        maxlength="1" type="text" value="4" />
+                                    <input
+                                        class="w-11 h-13 sm:w-12 sm:h-14 text-center font-display-hero text-headline-sm rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm outline-none focus:ring-2 focus:ring-secondary-container"
+                                        maxlength="1" type="text" value="9" />
+                                    <span class="text-outline font-title-lg">-</span>
+                                    <input
+                                        class="w-11 h-13 sm:w-12 sm:h-14 text-center font-display-hero text-headline-sm rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm outline-none focus:ring-2 focus:ring-secondary-container"
+                                        maxlength="1" type="text" value="2" />
+                                    <input
+                                        class="w-11 h-13 sm:w-12 sm:h-14 text-center font-display-hero text-headline-sm rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm outline-none focus:ring-2 focus:ring-secondary-container"
+                                        maxlength="1" placeholder="•" type="text" />
+                                    <input
+                                        class="w-11 h-13 sm:w-12 sm:h-14 text-center font-display-hero text-headline-sm rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm outline-none focus:ring-2 focus:ring-secondary-container"
+                                        maxlength="1" placeholder="•" type="text" />
+                                </div>
+                                <div
+                                    class="flex items-center justify-between w-full font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                                    <span>Code expires in: <strong
+                                            class="text-secondary font-mono">03:45</strong></span>
+                                    <button class="text-on-surface font-semibold hover:underline">Resend
+                                        Passcode</button>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full py-3.5 px-space-lg rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md tracking-wider flex items-center justify-center gap-space-xs shadow-md transition-all"
+                                onclick="triggerAuthSuccess()">
+                                <span>Verify &amp; Enter Grand Atelier</span>
+                                <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                            </button>
+                        </div>
+                        <!-- ======================= 4. RESET PASSWORD VIEW ======================= -->
+                        <div class="hidden flex flex-col gap-space-lg transition-all duration-300" id="view-reset">
+                            <div class="flex flex-col gap-space-xs">
+                                <button
+                                    class="inline-flex items-center gap-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md mb-2"
+                                    onclick="switchState('auth')">
+                                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back to Login
+                                </button>
+                                <h2 class="font-headline-md text-headline-md text-primary tracking-tight">Atelier Key
+                                    Recovery</h2>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Provide your estate email or registered phone. We will dispatch a single-use
+                                    credential restoration token.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex flex-col gap-space-xs">
+                                    <label class="font-label-md text-label-md text-on-surface font-semibold">Registered
+                                        Email Address</label>
+                                    <input
+                                        class="w-full px-space-md py-3 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none shadow-sm focus:shadow-md"
+                                        placeholder="patron@estate.com" type="email" />
+                                </div>
+                                <div
+                                    class="p-space-md rounded-DEFAULT bg-surface-container flex items-center gap-space-md">
+                                    <span
+                                        class="material-symbols-outlined text-secondary text-[24px]">support_agent</span>
+                                    <div class="flex flex-col">
+                                        <span class="font-title-md text-title-md text-on-surface font-semibold">Direct
+                                            Concierge Assistance</span>
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant">Private cellar
+                                            stewards are on stand-by: +1 (800) 892-NAURIO</span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full py-3.5 px-space-lg rounded-full bg-secondary-container hover:bg-secondary text-on-primary font-label-md text-label-md tracking-wider flex items-center justify-center gap-space-xs shadow-md transition-all"
+                                    onclick="switchState('otp')">
+                                    <span>Transmit Recovery Link</span>
+                                    <span class="material-symbols-outlined text-[18px]">send</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trust & Haute Sourcing Badges -->
+                <div class="mt-space-xl grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+                    <div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center gap-1 shadow-sm">
+                        <span class="material-symbols-outlined text-secondary text-[28px]">ac_unit</span>
+                        <span class="font-title-md text-title-md text-on-surface font-bold">Cold-Chain Secure</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">Hermetic temperature seal</span>
+                    </div>
+                    <div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center gap-1 shadow-sm">
+                        <span class="material-symbols-outlined text-secondary text-[28px]">workspace_premium</span>
+                        <span class="font-title-md text-title-md text-on-surface font-bold">Culinary Pedigree</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">Michelin-vetted kitchens</span>
+                    </div>
+                    <div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center gap-1 shadow-sm">
+                        <span class="material-symbols-outlined text-secondary text-[28px]">eco</span>
+                        <span class="font-title-md text-title-md text-on-surface font-bold">Hyper-Local Harvest</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">Sustainable terroir
+                            sourcing</span>
+                    </div>
+                    <div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center gap-1 shadow-sm">
+                        <span class="material-symbols-outlined text-secondary text-[28px]">wine_bar</span>
+                        <span class="font-title-md text-title-md text-on-surface font-bold">Cellar Allocations</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">Curated rare vintages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function switchState(state) {
+                const views = ['signin', 'signup', 'otp', 'reset'];
+                views.forEach(v => {
+                    const el = document.getElementById('view-' + v);
+                    if (el) el.classList.add('hidden');
+                });
+
+                const activeView = state === 'auth' ? 'signin' : state;
+                const target = document.getElementById('view-' + activeView);
+                if (target) target.classList.remove('hidden');
+
+                // Update pill buttons active styling
+                const pillIds = ['auth', 'signup', 'otp', 'reset'];
+                pillIds.forEach(id => {
+                    const btn = document.getElementById('toggle-state-' + id);
+                    if (btn) {
+                        if (id === state) {
+                            btn.className = "px-space-md py-1 rounded-full bg-primary-container text-on-primary font-semibold shadow-sm transition-all";
+                        } else {
+                            btn.className = "px-space-md py-1 rounded-full hover:text-on-surface text-on-surface-variant transition-all";
+                        }
+                    }
+                });
+
+                dismissToast();
+            }
+
+            function togglePasswordVisibility(inputId, iconId) {
+                const input = document.getElementById(inputId);
+                const icon = document.getElementById(iconId);
+                if (!input || !icon) return;
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.textContent = 'visibility_off';
+                } else {
+                    input.type = 'password';
+                    icon.textContent = 'visibility';
+                }
+            }
+
+            function triggerAuthError() {
+                const container = document.getElementById('toast-container');
+                const err = document.getElementById('toast-error');
+                const succ = document.getElementById('toast-success');
+                if (!container || !err || !succ) return;
+
+                container.classList.remove('hidden');
+                err.classList.remove('hidden');
+                succ.classList.add('hidden');
+            }
+
+            function triggerAuthSuccess() {
+                const container = document.getElementById('toast-container');
+                const err = document.getElementById('toast-error');
+                const succ = document.getElementById('toast-success');
+                if (!container || !err || !succ) return;
+
+                container.classList.remove('hidden');
+                succ.classList.remove('hidden');
+                err.classList.add('hidden');
+            }
+
+            function dismissToast() {
+                const container = document.getElementById('toast-container');
+                const err = document.getElementById('toast-error');
+                const succ = document.getElementById('toast-success');
+                if (container) container.classList.add('hidden');
+                if (err) err.classList.add('hidden');
+                if (succ) succ.classList.add('hidden');
+            }
+        </script>
+    </main>
+    <footer class="w-full bg-primary-container text-surface-container-low pt-space-xl pb-space-lg">
+        <div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-space-xl border-b border-primary-container/40">
+                <div class="flex flex-col gap-space-md">
+                    <div class="flex flex-col"><span
+                            class="font-display-hero text-headline-md text-on-tertiary-container tracking-tight font-bold">NAURIO</span><span
+                            class="font-label-caps text-[10px] text-surface-container-highest uppercase tracking-widest">Gastronomy
+                            Elevated</span></div>
+                    <p class="font-body-md text-body-md text-surface-variant leading-relaxed">Crafting exceptional
+                        culinary experiences delivered straight to your door with restaurant-grade perfection.</p>
+                    <div class="flex items-center gap-space-md pt-space-sm"><a
+                            class="w-9 h-9 rounded-full bg-surface-container-lowest/10 flex items-center justify-center text-on-tertiary-container hover:bg-on-tertiary-container hover:text-primary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">restaurant</span></a><a
+                            class="w-9 h-9 rounded-full bg-surface-container-lowest/10 flex items-center justify-center text-on-tertiary-container hover:bg-on-tertiary-container hover:text-primary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">award_star</span></a><a
+                            class="w-9 h-9 rounded-full bg-surface-container-lowest/10 flex items-center justify-center text-on-tertiary-container hover:bg-on-tertiary-container hover:text-primary-container transition-all"
+                            href="#"><span class="material-symbols-outlined text-[18px]">share</span></a></div>
+                </div>
+                <div class="flex flex-col gap-space-md">
+                    <h4 class="font-title-lg text-title-lg text-on-tertiary-container">Quick Links</h4>
+                    <ul class="flex flex-col gap-space-sm font-body-md text-body-md text-surface-variant">
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">About Us</a></li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Our Master
+                                Chefs</a></li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Sustainable
+                                Sourcing</a></li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Partner
+                                Restaurants</a></li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-space-md">
+                    <h4 class="font-title-lg text-title-lg text-on-tertiary-container">Customer Care</h4>
+                    <ul class="flex flex-col gap-space-sm font-body-md text-body-md text-surface-variant">
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Help Center</a>
+                        </li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" data-path="order-success"
+                                href="#">Track Your Order</a></li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Delivery Zones</a>
+                        </li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Refund Policy</a>
+                        </li>
+                        <li class=""><a class="hover:text-surface-bright transition-colors" href="#">Dietary &amp;
+                                Allergens</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-space-md">
+                    <h4 class="font-title-lg text-title-lg text-on-tertiary-container">Epicurean Club</h4>
+                    <p class="font-body-md text-body-md text-surface-variant leading-relaxed">Join the Epicurean Club
+                        for 20% off your first delivery and invitations to seasonal chef tastings.</p>
+                    <div class="flex flex-col gap-space-xs">
+                        <div
+                            class="flex rounded-full overflow-hidden p-1 bg-surface-container-lowest/10 border border-surface-container-lowest/20 focus-within:border-on-tertiary-container transition-all">
+                            <input
+                                class="w-full bg-transparent px-space-md py-2 text-surface-bright text-body-md outline-none placeholder:text-surface-variant"
+                                placeholder="Your email address" type="email" /><button
+                                class="px-space-lg py-2 rounded-full bg-secondary-container hover:bg-secondary text-on-primary font-label-md text-label-md transition-all shrink-0">Subscribe</button>
+                        </div><span class="font-body-sm text-body-sm text-surface-variant/70">Unsubscribe anytime.
+                            Culinary privacy guaranteed.</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-surface-variant">
+                <div class="">© 2025 NAURIO Inc. All rights reserved.</div>
+                <div class="flex items-center gap-space-lg"><a class="hover:text-surface-bright transition-colors"
+                        href="#">Privacy Policy</a><span class="">•</span><a
+                        class="hover:text-surface-bright transition-colors" href="#">Terms of Service</a><span
+                        class="">•</span><a class="hover:text-surface-bright transition-colors" href="#">Cookie
+                        Preferences</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

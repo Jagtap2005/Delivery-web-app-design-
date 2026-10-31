@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#172923", "on-primary-container": "#7d9189", "error": "#ba1a1a", "outline-variant": "#c2c8c4", "primary": "#03140e", "on-secondary-fixed": "#351000", "secondary-fixed-dim": "#ffb694", "primary-fixed": "#d2e7de", "on-tertiary-fixed-variant": "#5e4100", "inverse-on-surface": "#f5f0e5", "primary-fixed-dim": "#b6cbc2", "surface-bright": "#fef9ee", "on-secondary-container": "#652500", "on-surface": "#1d1c15", "tertiary-fixed-dim": "#ecc074", "surface-container-highest": "#e7e2d7", "background": "#fef9ee", "tertiary-fixed": "#ffdea9", "on-background": "#1d1c15", "tertiary-container": "#342200", "secondary": "#a14000", "tertiary": "#190e00", "inverse-surface": "#323029", "surface-container-high": "#ede8dd", "surface-container-lowest": "#ffffff", "surface-tint": "#4f625b", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "surface-dim": "#dedacf", "surface-container": "#f2ede3", "error-container": "#ffdad6", "secondary-fixed": "#ffdbcc", "surface": "#fef9ee", "on-error-container": "#93000a", "on-primary-fixed-variant": "#384b44", "inverse-primary": "#b6cbc2", "on-secondary-fixed-variant": "#7b2f00", "on-primary-fixed": "#0d1f19", "on-tertiary-fixed": "#271900", "on-surface-variant": "#424845", "secondary-container": "#fe7f3c", "surface-container-low": "#f8f3e8", "outline": "#727875", "surface-variant": "#e7e2d7", "on-secondary": "#ffffff", "on-tertiary-container": "#ad8640", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "margin-md": "2.5rem", "gutter-sm": "1rem", "space-md": "1rem", "gutter-lg": "2rem", "space-xl": "2.5rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "display-hero": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"] }, "fontSize": { "price-display": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "800" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }] } } } };</script>
+    <script src="site.js" defer></script>
+</head>
+
+<body
+    class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(23,41,35,0.04)]">
+        <div
+            class="h-28 max-w-[1320px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col justify-between pt-space-sm pb-space-xs">
+            <div class="flex items-center justify-between gap-space-md">
+                <div class="flex items-center gap-space-lg"><a class="flex flex-col group"
+                        data-path="explore-restaurants" href="#"><span
+                            class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold group-hover:text-secondary transition-colors">NAURIO</span><span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Haute
+                            Cuisine</span></a>
+                    <div
+                        class="hidden xl:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.03)]">
+                        <span class="material-symbols-outlined text-secondary text-[18px]">location_on</span>
+                        <div class="flex flex-col"><span
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase">Deliver
+                                to</span><span
+                                class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[190px]">247
+                                Maple Ave, Central District</span></div><span
+                            class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+                    </div>
+                    <div
+                        class="hidden lg:flex items-center gap-space-xs bg-primary-container px-space-md py-space-xs rounded-full text-on-primary">
+                        <span class="material-symbols-outlined text-secondary-container text-[16px]">bolt</span><span
+                            class="font-label-md text-label-md font-semibold text-surface-bright">15-25 Mins</span>
+                    </div>
+                </div>
+                <div class="flex-1 max-w-md hidden md:block">
+                    <div class="relative flex items-center"><span
+                            class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">search</span><input
+                            class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm pl-11 pr-space-md py-2.5 rounded-full outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)]"
+                            placeholder="Search artisan truffles, rare wagyu, tasting menus..." type="text" /></div>
+                </div>
+                <div class="flex items-center gap-space-sm md:gap-space-md">
+                    <div
+                        class="hidden sm:flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+                        <span
+                            class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">monetization_on</span><span
+                            class="font-label-md text-label-md text-on-surface font-bold">1,450</span><span
+                            class="font-body-sm text-body-sm text-on-surface-variant">Coins</span></div><button
+                        aria-label="Wishlist"
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container-high transition-colors"
+                        type="button"><span
+                            class="material-symbols-outlined text-on-surface-variant text-[20px]">favorite</span></button><button
+                        aria-label="Active Cart"
+                        class="flex items-center gap-space-xs bg-secondary-container px-space-md py-2 rounded-full shadow-[0_4px_14px_rgba(244,119,53,0.25)] hover:bg-secondary transition-all text-on-secondary"
+                        type="button"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span
+                            class="font-label-md text-label-md font-bold text-on-secondary">$48.50</span><span
+                            class="bg-primary-container text-surface-bright font-label-caps text-label-caps px-1.5 py-0.5 rounded-full">(3)</span></button>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </div>
+            </div>
+            <nav class="flex items-center gap-space-lg overflow-x-auto whitespace-nowrap pt-space-xs"
+                data-active-classes="text-primary font-bold border-b-2 border-secondary pb-1"><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="curated-menu" href="#">Curated Menu</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="chefs-specials" href="#">Chef's Specials</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="organic-bowls" href="#">Organic Bowls</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="wood-fired-pizza" href="#">Wood-Fired Pizza</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="artisan-bakery" href="#">Artisan Bakery</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="gourmet-desserts" href="#">Gourmet Desserts</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="offers-and-vault" href="#">Offers &amp; Vault</a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-28 bg-background min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- Festive & Epicurean Curated Header Banner -->
+            <div
+                class="relative w-full overflow-hidden bg-primary-container text-surface-bright py-space-md mb-space-lg shadow-sm">
+                <div
+                    class="max-w-[1320px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-surface-bright">
+                    <div class="flex items-center gap-space-sm">
+                        <span class="material-symbols-outlined text-secondary-container text-[22px]"
+                            style="font-variation-settings: 'FILL' 1;">celebration</span>
+                        <span
+                            class="font-label-caps text-label-caps uppercase tracking-wider text-tertiary-fixed">Seasonal
+                            Harvest Gala &amp; Festive Banquet Allocation</span>
+                        <span class="hidden sm:inline-block text-on-primary-container text-xs">•</span>
+                        <span class="hidden sm:inline font-body-sm text-body-sm text-surface-dim">Complimentary
+                            artisanal saffron amouse-bouche included with this dispatch</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-space-xs text-xs font-semibold bg-surface-bright/10 px-space-md py-1 rounded-full text-tertiary-fixed">
+                        <span class="material-symbols-outlined text-[16px]">lock</span>
+                        <span>Secure Gastronomic Checkout</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Title & Progress Stepper Container -->
+            <div class="max-w-[1320px] mx-auto px-margin md:px-margin-md lg:px-margin-lg w-full mb-space-xl">
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg border-b border-surface-container-highest">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">room_service</span>
+                            <span
+                                class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Page
+                                03 / Final Verification</span>
+                        </div>
+                        <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">Complete
+                            Your Experience</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Your carefully selected
+                            flavours are almost on their way.</p>
+                    </div>
+                    <!-- Compact Checkout Progress Stepper -->
+                    <nav aria-label="Checkout Progress" class="flex items-center gap-2 sm:gap-3 flex-wrap">
+                        <!-- Step 1: Cart Completed -->
+                        <div
+                            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-highest text-primary-container font-label-md text-label-md">
+                            <span
+                                class="w-4 h-4 rounded-full bg-primary-container text-surface-bright flex items-center justify-center text-[10px]">✓</span>
+                            <span class="font-medium text-xs">Cart</span>
+                        </div>
+                        <span class="text-outline text-xs">›</span>
+                        <!-- Step 2: Delivery Details Active -->
+                        <div
+                            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-surface-bright font-label-md text-label-md shadow-sm">
+                            <span
+                                class="w-4 h-4 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center text-[10px] font-bold">2</span>
+                            <span class="font-semibold text-xs text-surface-bright">Delivery</span>
+                        </div>
+                        <span class="text-outline text-xs">›</span>
+                        <!-- Step 3: Payment Method Active -->
+                        <div
+                            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-surface-bright font-label-md text-label-md shadow-sm">
+                            <span
+                                class="w-4 h-4 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center text-[10px] font-bold">3</span>
+                            <span class="font-semibold text-xs text-surface-bright">Payment</span>
+                        </div>
+                        <span class="text-outline text-xs">›</span>
+                        <!-- Step 4: Confirmation Pending -->
+                        <div
+                            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-outline font-label-md text-label-md opacity-60">
+                            <span
+                                class="w-4 h-4 rounded-full bg-surface-dim text-on-surface flex items-center justify-center text-[10px]">4</span>
+                            <span class="text-xs">Confirmation</span>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Main Two-Column Architectural Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg mt-space-lg items-start">
+                    <!-- LEFT SECTION (65% width / 8 cols on desktop) -->
+                    <section class="lg:col-span-8 flex flex-col gap-space-xl">
+                        <!-- MODULE 1: Select Delivery Address -->
+                        <div
+                            class="bg-surface-container-lowest rounded-lg p-space-lg md:p-space-xl shadow-[0_4px_24px_rgba(23,41,35,0.03)] flex flex-col gap-space-lg">
+                            <div class="flex items-center justify-between flex-wrap gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span
+                                        class="w-7 h-7 rounded-full bg-primary-container text-surface-bright flex items-center justify-center text-xs font-bold">1</span>
+                                    <h2 class="font-headline-sm text-headline-sm text-primary font-semibold">Select
+                                        Delivery Address</h2>
+                                </div>
+                                <button
+                                    class="flex items-center gap-1 text-secondary hover:text-on-secondary-container font-label-md text-label-md transition-colors bg-secondary-fixed/30 hover:bg-secondary-fixed/50 px-3.5 py-1.5 rounded-full"
+                                    type="button">
+                                    <span class="material-symbols-outlined text-[16px]">add_circle</span>
+                                    <span>+ Add New Address</span>
+                                </button>
+                            </div>
+                            <!-- Address Cards Carousel / Selector -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="address-card-group">
+                                <!-- Card 1: Selected Primary -->
+                                <div aria-checked="true"
+                                    class="address-option relative p-space-md rounded bg-surface-container-low shadow-sm cursor-pointer transition-all border-2 border-primary-container"
+                                    onclick="selectAddress(this)" role="radio" tabindex="0">
+                                    <div class="flex items-start justify-between mb-2">
+                                        <span
+                                            class="bg-primary-container text-surface-bright font-label-caps text-label-caps px-2 py-0.5 rounded-full flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[12px]"
+                                                style="font-variation-settings: 'FILL' 1;">check</span>
+                                            Primary
+                                        </span>
+                                        <button class="text-xs text-on-surface-variant hover:text-primary underline"
+                                            type="button">Edit</button>
+                                    </div>
+                                    <h3 class="font-title-md text-title-md text-primary font-bold">Home (Primary)</h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface font-semibold mt-1">Anya Kapoor
+                                    </p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">247
+                                        Maple Ave, Central District, Penthouse 4B, Metro Hub</p>
+                                    <div class="mt-3 flex items-center gap-1 font-body-sm text-body-sm text-outline">
+                                        <span class="material-symbols-outlined text-[14px]">call</span>
+                                        <span>+91 98201 44521</span>
+                                    </div>
+                                </div>
+                                <!-- Card 2: Work Atelier -->
+                                <div aria-checked="false"
+                                    class="address-option relative p-space-md rounded bg-surface-container-lowest hover:bg-surface-container-low shadow-sm cursor-pointer transition-all border-2 border-transparent"
+                                    onclick="selectAddress(this)" role="radio" tabindex="0">
+                                    <div class="flex items-start justify-between mb-2">
+                                        <span
+                                            class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-2 py-0.5 rounded-full">Work</span>
+                                        <button class="text-xs text-outline hover:text-primary"
+                                            type="button">Edit</button>
+                                    </div>
+                                    <h3 class="font-title-md text-title-md text-primary font-bold">Work / Atelier</h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface font-semibold mt-1">Anya Kapoor
+                                    </p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                                        Studio 12, Design Quarters, South Boulevard, Phase 2</p>
+                                    <div class="mt-3 flex items-center gap-1 font-body-sm text-body-sm text-outline">
+                                        <span class="material-symbols-outlined text-[14px]">call</span>
+                                        <span>+91 98201 44521</span>
+                                    </div>
+                                </div>
+                                <!-- Card 3: Gala -->
+                                <div aria-checked="false"
+                                    class="address-option relative p-space-md rounded bg-surface-container-lowest hover:bg-surface-container-low shadow-sm cursor-pointer transition-all border-2 border-transparent"
+                                    onclick="selectAddress(this)" role="radio" tabindex="0">
+                                    <div class="flex items-start justify-between mb-2">
+                                        <span
+                                            class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-2 py-0.5 rounded-full">Venue</span>
+                                        <button class="text-xs text-outline hover:text-primary"
+                                            type="button">Edit</button>
+                                    </div>
+                                    <h3 class="font-title-md text-title-md text-primary font-bold">Private Salon / Gala
+                                    </h3>
+                                    <p class="font-body-sm text-body-sm text-on-surface font-semibold mt-1">Private
+                                        Reception</p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">18
+                                        Royal Orchard Bay, Waterfront Estate Pavilion</p>
+                                    <div class="mt-3 flex items-center gap-1 font-body-sm text-body-sm text-outline">
+                                        <span class="material-symbols-outlined text-[14px]">lock_clock</span>
+                                        <span>Concierge Gate #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Delivery Instructions & Concierge Notes -->
+                            <div
+                                class="bg-surface-container p-space-md rounded-md flex flex-col gap-space-sm mt-space-xs">
+                                <div class="flex items-center gap-1.5 text-primary">
+                                    <span class="material-symbols-outlined text-[18px]">room_service</span>
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase font-bold tracking-wider">Concierge
+                                        Protocol &amp; White-Glove Directives</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2 pt-1" id="instruction-tags">
+                                    <button
+                                        class="instruction-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-primary-container text-surface-bright transition-all flex items-center gap-1.5 shadow-sm"
+                                        onclick="toggleTag(this)" type="button">
+                                        <span class="material-symbols-outlined text-[14px]">hotel</span>
+                                        <span>Leave at Concierge</span>
+                                    </button>
+                                    <button
+                                        class="instruction-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all flex items-center gap-1.5 shadow-sm"
+                                        onclick="toggleTag(this)" type="button">
+                                        <span class="material-symbols-outlined text-[14px]">notifications_active</span>
+                                        <span>Ring Vault Chime</span>
+                                    </button>
+                                    <button
+                                        class="instruction-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all flex items-center gap-1.5 shadow-sm"
+                                        onclick="toggleTag(this)" type="button">
+                                        <span class="material-symbols-outlined text-[14px]">do_not_disturb_on</span>
+                                        <span>Do Not Disturb / Silent Delivery</span>
+                                    </button>
+                                    <button
+                                        class="instruction-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all flex items-center gap-1.5 shadow-sm"
+                                        onclick="toggleTag(this)" type="button">
+                                        <span class="material-symbols-outlined text-[14px]">ring_volume</span>
+                                        <span>Call Upon Arrival</span>
+                                    </button>
+                                </div>
+                                <div class="relative mt-2">
+                                    <input
+                                        class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm px-4 py-2.5 rounded outline-none focus:ring-1 focus:ring-primary transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)]"
+                                        placeholder="e.g. Ring lobby intercom #402, hand insulated thermal pod directly to butler..."
+                                        type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MODULE 2: Delivery Speed & Schedule -->
+                        <div
+                            class="bg-surface-container-lowest rounded-lg p-space-lg md:p-space-xl shadow-[0_4px_24px_rgba(23,41,35,0.03)] flex flex-col gap-space-lg">
+                            <div class="flex items-center gap-2.5">
+                                <span
+                                    class="w-7 h-7 rounded-full bg-primary-container text-surface-bright flex items-center justify-center text-xs font-bold">2</span>
+                                <div>
+                                    <h2 class="font-headline-sm text-headline-sm text-primary font-semibold">Delivery
+                                        Speed &amp; Schedule</h2>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Calibrated thermal
+                                        transit engineered to preserve plating temperature</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="delivery-speed-group">
+                                <!-- Option 1: Express Selected -->
+                                <div aria-checked="true"
+                                    class="speed-option relative p-space-md rounded bg-surface-container-low cursor-pointer transition-all border-2 border-secondary-container shadow-sm flex flex-col justify-between"
+                                    onclick="selectSpeed(this)" role="radio" tabindex="0">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="bg-secondary-container text-on-secondary font-label-caps text-label-caps px-2 py-0.5 rounded-full uppercase tracking-wider font-bold">Recommended</span>
+                                            <span
+                                                class="font-title-md text-title-md font-bold text-secondary">+₹75</span>
+                                        </div>
+                                        <h3
+                                            class="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
+                                            <span
+                                                class="material-symbols-outlined text-secondary-container text-[18px]">bolt</span>
+                                            Priority Express Vault
+                                        </h3>
+                                        <p class="font-price-display text-price-display text-primary mt-1">20–25 Mins
+                                        </p>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Dedicated
+                                            single-courier sprint with active temperature telemetry.</p>
+                                    </div>
+                                    <div class="mt-3 pt-2 text-xs font-semibold text-secondary flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[14px]">verified</span>
+                                        <span>Active Vault Transit</span>
+                                    </div>
+                                </div>
+                                <!-- Option 2: Standard Dispatch -->
+                                <div aria-checked="false"
+                                    class="speed-option relative p-space-md rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all border-2 border-transparent shadow-sm flex flex-col justify-between"
+                                    onclick="selectSpeed(this)" role="radio" tabindex="0">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-2 py-0.5 rounded-full uppercase tracking-wider">Eco
+                                                Insulated</span>
+                                            <span class="font-title-md text-title-md font-bold text-outline">Free</span>
+                                        </div>
+                                        <h3
+                                            class="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
+                                            <span class="material-symbols-outlined text-[18px]">eco</span>
+                                            Standard Dispatch
+                                        </h3>
+                                        <p class="font-price-display text-price-display text-on-surface mt-1">30–40 Mins
+                                        </p>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Insulated
+                                            carbon-neutral dispatch via batch route optimization.</p>
+                                    </div>
+                                    <div class="mt-3 pt-2 text-xs font-semibold text-outline flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                        <span>Standard Arrival</span>
+                                    </div>
+                                </div>
+                                <!-- Option 3: Scheduled Tasting -->
+                                <div aria-checked="false"
+                                    class="speed-option relative p-space-md rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all border-2 border-transparent shadow-sm flex flex-col justify-between"
+                                    onclick="selectSpeed(this)" role="radio" tabindex="0">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span
+                                                class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-2 py-0.5 rounded-full uppercase tracking-wider">Reserved
+                                                Slot</span>
+                                            <span class="font-title-md text-title-md font-bold text-outline">Free</span>
+                                        </div>
+                                        <h3
+                                            class="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
+                                            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                            Scheduled Tasting
+                                        </h3>
+                                        <p class="font-title-lg text-title-lg text-primary mt-1 font-bold">Today,
+                                            8:00–8:30 PM</p>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Synchronized
+                                            with dinner service and sommelier bottle preparation.</p>
+                                    </div>
+                                    <div
+                                        class="mt-3 pt-2 text-xs font-semibold text-primary underline flex items-center gap-1">
+                                        <span>Select alternative slot</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MODULE 3: Payment Method -->
+                        <div
+                            class="bg-surface-container-lowest rounded-lg p-space-lg md:p-space-xl shadow-[0_4px_24px_rgba(23,41,35,0.03)] flex flex-col gap-space-lg">
+                            <div class="flex items-center justify-between flex-wrap gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span
+                                        class="w-7 h-7 rounded-full bg-primary-container text-surface-bright flex items-center justify-center text-xs font-bold">3</span>
+                                    <h2 class="font-headline-sm text-headline-sm text-primary font-semibold">Payment
+                                        Method</h2>
+                                </div>
+                                <div
+                                    class="flex items-center gap-1 text-xs text-primary-container bg-primary-fixed/40 px-3 py-1 rounded-full font-semibold">
+                                    <span class="material-symbols-outlined text-[14px]">verified_user</span>
+                                    <span>Encrypted 256-Bit SSL Atelier Gateway</span>
+                                </div>
+                            </div>
+                            <!-- Payment Tabs Header -->
+                            <div class="flex items-center gap-1 overflow-x-auto pb-2 scrollbar-none border-b border-surface-container-highest"
+                                id="payment-tabs">
+                                <button
+                                    class="pay-tab-btn px-4 py-2.5 rounded-t font-title-md text-title-md font-bold transition-all text-secondary border-b-2 border-secondary bg-surface-container-low flex items-center gap-2"
+                                    onclick="switchPayTab('upi', this)" type="button">
+                                    <span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+                                    <span>UPI (Instant)</span>
+                                </button>
+                                <button
+                                    class="pay-tab-btn px-4 py-2.5 rounded-t font-title-md text-title-md font-medium transition-all text-on-surface-variant hover:text-primary flex items-center gap-2"
+                                    onclick="switchPayTab('card', this)" type="button">
+                                    <span class="material-symbols-outlined text-[18px]">credit_card</span>
+                                    <span>Credit / Debit Card</span>
+                                </button>
+                                <button
+                                    class="pay-tab-btn px-4 py-2.5 rounded-t font-title-md text-title-md font-medium transition-all text-on-surface-variant hover:text-primary flex items-center gap-2"
+                                    onclick="switchPayTab('banking', this)" type="button">
+                                    <span class="material-symbols-outlined text-[18px]">account_balance</span>
+                                    <span>Net Banking</span>
+                                </button>
+                                <button
+                                    class="pay-tab-btn px-4 py-2.5 rounded-t font-title-md text-title-md font-medium transition-all text-on-surface-variant hover:text-primary flex items-center gap-2"
+                                    onclick="switchPayTab('wallet', this)" type="button">
+                                    <span class="material-symbols-outlined text-[18px]">token</span>
+                                    <span>Epicurean Vault</span>
+                                </button>
+                                <button
+                                    class="pay-tab-btn px-4 py-2.5 rounded-t font-title-md text-title-md font-medium transition-all text-on-surface-variant hover:text-primary flex items-center gap-2"
+                                    onclick="switchPayTab('cod', this)" type="button">
+                                    <span class="material-symbols-outlined text-[18px]">handshake</span>
+                                    <span>Card on Arrival</span>
+                                </button>
+                            </div>
+                            <!-- Tab Content 1: UPI (Default Active) -->
+                            <div class="flex flex-col gap-space-md pt-2" id="tab-content-upi">
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+                                    <label
+                                        class="flex items-center gap-3 p-3 rounded bg-surface-container-low border border-primary-container cursor-pointer">
+                                        <input checked="" class="accent-secondary-container" name="upi_app"
+                                            type="radio" />
+                                        <span class="font-title-md text-title-md text-primary font-bold">Google
+                                            Pay</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-3 p-3 rounded bg-surface-container-low border border-transparent hover:border-outline-variant cursor-pointer">
+                                        <input class="accent-secondary-container" name="upi_app" type="radio" />
+                                        <span
+                                            class="font-title-md text-title-md text-on-surface font-semibold">PhonePe</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-3 p-3 rounded bg-surface-container-low border border-transparent hover:border-outline-variant cursor-pointer">
+                                        <input class="accent-secondary-container" name="upi_app" type="radio" />
+                                        <span class="font-title-md text-title-md text-on-surface font-semibold">Paytm
+                                            UPI</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-3 p-3 rounded bg-surface-container-low border border-transparent hover:border-outline-variant cursor-pointer">
+                                        <input class="accent-secondary-container" name="upi_app" type="radio" />
+                                        <span class="font-title-md text-title-md text-on-surface font-semibold">BHIM
+                                            UPI</span>
+                                    </label>
+                                </div>
+                                <!-- Custom UPI ID Input -->
+                                <div
+                                    class="mt-2 bg-surface-container-low p-space-md rounded flex flex-col sm:flex-row items-center justify-between gap-3">
+                                    <div class="flex-1 w-full">
+                                        <label
+                                            class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">Or
+                                            enter verified VPA / UPI ID</label>
+                                        <div class="relative flex items-center">
+                                            <input
+                                                class="w-full bg-surface-container-lowest text-primary font-title-md text-title-md font-semibold px-4 py-2.5 rounded outline-none ring-1 ring-primary-container shadow-inner"
+                                                type="text" value="patron@okhdfcbank" />
+                                            <span
+                                                class="absolute right-3 flex items-center gap-1 text-primary-container font-label-md text-label-md font-bold">
+                                                <span class="material-symbols-outlined text-[18px] text-primary"
+                                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                                Verified
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="w-full sm:w-auto mt-auto sm:mt-5 bg-primary-container text-surface-bright font-label-md text-label-md px-5 py-2.5 rounded font-bold hover:bg-primary transition-all"
+                                        type="button">Verify &amp; Pre-Authorize</button>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-on-surface-variant mt-1">
+                                    <span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span>Fast-track payment confirmation via zero-latency banking webhook.</span>
+                                </div>
+                            </div>
+                            <!-- Tab Content 2: Card (Hidden by default, switched via JS) -->
+                            <div class="hidden flex-col gap-space-md pt-2" id="tab-content-card">
+                                <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+                                    <div class="md:col-span-7 flex flex-col gap-3">
+                                        <div>
+                                            <label
+                                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">Cardholder
+                                                Name</label>
+                                            <input
+                                                class="w-full bg-surface-container-low text-primary font-body-md text-body-md px-4 py-2.5 rounded outline-none focus:ring-1 focus:ring-primary"
+                                                type="text" value="Anya Kapoor" />
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">Card
+                                                Number</label>
+                                            <div class="relative flex items-center">
+                                                <input
+                                                    class="w-full bg-surface-container-low text-primary font-price-display text-price-display px-4 py-2.5 rounded outline-none focus:ring-1 focus:ring-primary tracking-widest"
+                                                    type="text" value="•••• •••• •••• 8842" />
+                                                <span
+                                                    class="absolute right-3 font-label-caps text-label-caps font-black text-secondary">VISA
+                                                    INFINITE</span>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div>
+                                                <label
+                                                    class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">Expiry</label>
+                                                <input
+                                                    class="w-full bg-surface-container-low text-primary font-body-md text-body-md px-4 py-2.5 rounded outline-none focus:ring-1 focus:ring-primary"
+                                                    type="text" value="08/29" />
+                                            </div>
+                                            <div>
+                                                <label
+                                                    class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">CVV</label>
+                                                <input
+                                                    class="w-full bg-surface-container-low text-primary font-body-md text-body-md px-4 py-2.5 rounded outline-none focus:ring-1 focus:ring-primary"
+                                                    type="password" value="•••" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="md:col-span-5 bg-gradient-to-br from-primary-container to-primary text-surface-bright p-5 rounded-lg flex flex-col justify-between shadow-md">
+                                        <div class="flex justify-between items-start">
+                                            <span
+                                                class="font-label-caps text-label-caps tracking-widest text-tertiary-fixed font-bold">PREMIUM
+                                                PATRON</span>
+                                            <span class="material-symbols-outlined text-[24px]">contactless</span>
+                                        </div>
+                                        <div class="my-4">
+                                            <div class="w-9 h-7 bg-tertiary-fixed rounded-sm opacity-80 mb-2"></div>
+                                            <p
+                                                class="font-price-display text-price-display tracking-widest text-surface-bright">
+                                                •••• 8842</p>
+                                        </div>
+                                        <div class="flex justify-between items-end text-xs">
+                                            <div>
+                                                <p class="text-[10px] text-on-primary-container uppercase">Cardholder
+                                                </p>
+                                                <p class="font-semibold text-surface-bright">ANYA KAPOOR</p>
+                                            </div>
+                                            <span class="font-bold text-tertiary-fixed text-sm">VISA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab Content 3: Net Banking (Hidden by default) -->
+                            <div class="hidden flex-col gap-3 pt-2" id="tab-content-banking">
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Select premier banking
+                                    portal for 3D Secure 2.0 checkout:</p>
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                    <button
+                                        class="p-3.5 rounded bg-surface-container-low hover:bg-surface-container font-title-md text-title-md font-bold text-primary flex items-center justify-center gap-2"
+                                        type="button">HDFC Bank</button>
+                                    <button
+                                        class="p-3.5 rounded bg-surface-container-low hover:bg-surface-container font-title-md text-title-md font-bold text-primary flex items-center justify-center gap-2"
+                                        type="button">ICICI Bank</button>
+                                    <button
+                                        class="p-3.5 rounded bg-surface-container-low hover:bg-surface-container font-title-md text-title-md font-bold text-primary flex items-center justify-center gap-2"
+                                        type="button">State Bank</button>
+                                    <button
+                                        class="p-3.5 rounded bg-surface-container-low hover:bg-surface-container font-title-md text-title-md font-bold text-primary flex items-center justify-center gap-2"
+                                        type="button">Axis Bank</button>
+                                </div>
+                            </div>
+                            <!-- Tab Content 4: Epicurean Wallet (Hidden by default) -->
+                            <div class="hidden flex-col gap-3 pt-2" id="tab-content-wallet">
+                                <div class="p-4 rounded bg-surface-container-low flex items-center justify-between">
+                                    <div>
+                                        <span class="font-title-md text-title-md font-bold text-primary">Epicurean Gold
+                                            Coins Balance</span>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">1,450 Coins
+                                            available (Equivalent to ₹1,450)</p>
+                                    </div>
+                                    <button
+                                        class="bg-secondary text-surface-bright font-label-md text-label-md px-4 py-2 rounded-full font-bold"
+                                        type="button">Apply Maximum</button>
+                                </div>
+                            </div>
+                            <!-- Tab Content 5: Cash/Card on Delivery (Hidden by default) -->
+                            <div class="hidden flex-col gap-3 pt-2" id="tab-content-cod">
+                                <div class="p-4 rounded bg-surface-container-low">
+                                    <span class="font-title-md text-title-md font-bold text-primary">Wireless Terminal
+                                        at Doorstep</span>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Our concierge
+                                        carries a contactless sanitised POS terminal accepting AMEX, VISA, Mastercard,
+                                        and Apple Pay.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Interactive State Indicators / Micro-Proof Panel -->
+                        <div
+                            class="bg-surface-container-lowest rounded-lg p-space-md flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary-container text-tertiary-fixed flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-md text-label-md text-primary font-bold">Patron Privileges
+                                        Verified</p>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">Tasting discount
+                                        applied • Carbon-offset packaging active</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-primary">
+                                    <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+                                    Gateway Ready (SSL 3.3)
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- RIGHT SECTION (35% width / 4 cols on desktop - Sticky Summary Card) -->
+                    <aside class="lg:col-span-4 sticky top-32 flex flex-col gap-space-md">
+                        <div
+                            class="bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_8px_32px_rgba(23,41,35,0.06)] flex flex-col gap-space-md">
+                            <!-- Restaurant Attribution & Kitchen Badge -->
+                            <div class="pb-space-sm border-b border-surface-container">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span
+                                        class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-widest">Master
+                                        Kitchen Dispatch</span>
+                                    <span
+                                        class="bg-primary-container text-surface-bright text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-[12px] text-tertiary-fixed">star</span>
+                                        3-Star Atelier
+                                    </span>
+                                </div>
+                                <h2 class="font-headline-sm text-headline-sm text-primary font-bold">Osteria Mozza Vetta
+                                </h2>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Curated by Chef Vittorio
+                                    Rossi • Atelier Central Branch</p>
+                            </div>
+                            <!-- Itemized Order Review -->
+                            <div class="flex flex-col gap-space-md">
+                                <!-- Item 1 -->
+                                <div
+                                    class="flex items-start justify-between gap-space-sm pb-space-sm border-b border-surface-container/60">
+                                    <div class="flex items-start gap-2.5">
+                                        <span
+                                            class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-xs flex items-center justify-center mt-0.5">1×</span>
+                                        <div>
+                                            <h4 class="font-title-md text-title-md text-primary font-bold leading-snug">
+                                                San Marzano Burrata Wood-Fired Pizza</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">12", DOP
+                                                Buffalo Burrata, Aged Balsamic</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md text-primary font-bold whitespace-nowrap">₹1,870</span>
+                                </div>
+                                <!-- Item 2 -->
+                                <div
+                                    class="flex items-start justify-between gap-space-sm pb-space-sm border-b border-surface-container/60">
+                                    <div class="flex items-start gap-2.5">
+                                        <span
+                                            class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-xs flex items-center justify-center mt-0.5">1×</span>
+                                        <div>
+                                            <h4 class="font-title-md text-title-md text-primary font-bold leading-snug">
+                                                Truffle &amp; Morel Tagliatelle</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted Al
+                                                Dente, Fresh Shaved Winter Truffle</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md text-primary font-bold whitespace-nowrap">₹2,300</span>
+                                </div>
+                                <!-- Item 3 -->
+                                <div
+                                    class="flex items-start justify-between gap-space-sm pb-space-sm border-b border-surface-container/60">
+                                    <div class="flex items-start gap-2.5">
+                                        <span
+                                            class="w-5 h-5 rounded-full bg-surface-container text-primary font-bold text-xs flex items-center justify-center mt-0.5">1×</span>
+                                        <div>
+                                            <h4 class="font-title-md text-title-md text-primary font-bold leading-snug">
+                                                Chianti Classico Riserva 2018</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">375ml Half
+                                                Bottle, Temperature Stabilized</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-title-md text-title-md text-primary font-bold whitespace-nowrap">₹1,400</span>
+                                </div>
+                            </div>
+                            <!-- Applied Promotional Coupon Bar -->
+                            <div
+                                class="bg-secondary-fixed/30 p-2.5 rounded flex items-center justify-between text-secondary">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[18px]">loyalty</span>
+                                    <div>
+                                        <p class="font-label-caps text-label-caps uppercase font-bold tracking-wider">
+                                            Tasting Coupon Applied</p>
+                                        <p class="font-body-sm text-body-sm font-semibold">Code: EPICUREAN20</p>
+                                    </div>
+                                </div>
+                                <span class="font-title-md text-title-md font-bold text-secondary">-₹500.00</span>
+                            </div>
+                            <!-- Bill Summary Calculation -->
+                            <div
+                                class="flex flex-col gap-2 pt-2 border-t border-surface-container text-on-surface font-body-sm text-body-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-on-surface-variant">Dish Subtotal</span>
+                                    <span class="font-semibold text-primary">₹5,570.00</span>
+                                </div>
+                                <div class="flex justify-between text-secondary">
+                                    <span>Seasonal Privilege (EPICUREAN20)</span>
+                                    <span class="font-semibold">-₹500.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-on-surface-variant flex items-center gap-1">
+                                        Priority Vault Transit
+                                        <span class="material-symbols-outlined text-[14px] text-outline"
+                                            title="Thermal insulated locked dispatch">info</span>
+                                    </span>
+                                    <span class="font-semibold text-primary">₹65.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-on-surface-variant">Taxes &amp; Atelier Surcharge (GST 5%)</span>
+                                    <span class="font-semibold text-primary">₹253.50</span>
+                                </div>
+                                <!-- Grand Total -->
+                                <div
+                                    class="flex justify-between items-baseline pt-3 mt-1 border-t border-surface-container-highest">
+                                    <div>
+                                        <span class="font-title-lg text-title-lg text-primary font-bold">Total
+                                            Payable</span>
+                                        <p class="text-[11px] text-outline">Inclusive of all culinary levies &amp; vault
+                                            handling</p>
+                                    </div>
+                                    <span
+                                        class="font-price-display text-price-display text-primary text-[24px]">₹5,388.50</span>
+                                </div>
+                            </div>
+                            <!-- PRIMARY CTA BUTTON -->
+                            <button
+                                class="w-full bg-secondary-container hover:bg-secondary text-on-secondary py-3.5 px-space-md rounded-full font-label-caps text-label-caps uppercase tracking-wider font-extrabold flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(244,119,53,0.3)] transition-all hover:scale-[1.01] active:scale-[0.99] mt-2"
+                                id="place-order-cta" onclick="triggerCheckout()" type="button">
+                                <span class="material-symbols-outlined text-[18px]">lock</span>
+                                <span>Place Order • ₹5,388.50</span>
+                            </button>
+                            <!-- Security & Guarantee Proof Flags -->
+                            <div class="flex flex-col gap-2 pt-2 text-center text-outline">
+                                <div class="flex items-center justify-center gap-3 text-xs">
+                                    <span class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-[14px] text-primary-container">shield</span>
+                                        PCI-DSS Compliant
+                                    </span>
+                                    <span>•</span>
+                                    <span class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-[14px] text-primary-container">lock</span>
+                                        256-Bit SSL
+                                    </span>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">
+                                    Zero-Spill Thermal Seal Guarantee • Kitchen-sealed tamper evident locks
+                                </p>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">
+                                    Demo checkout only; no payment or courier dispatch is processed.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Sommelier Tasting Note Card -->
+                        <div class="bg-surface-container rounded-lg p-space-md flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined text-[20px]">wine_bar</span>
+                            </div>
+                            <div>
+                                <h5 class="font-title-md text-title-md text-primary font-bold">Sommelier Dispatch Notice
+                                </h5>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Chianti Classico
+                                    has been rested in cellar condition (16°C) for immediate enjoyment.</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            <!-- Order Processing Simulation Toast / Modal Mockup (Hidden by default, triggered on button click) -->
+            <div class="fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-center justify-center p-4"
+                id="processing-modal">
+                <div
+                    class="bg-surface-container-lowest rounded-lg max-w-md w-full p-space-xl shadow-2xl flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary-container text-surface-bright flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-[32px] animate-spin">cyclone</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary font-bold">Authorizing Your Atelier
+                        Experience</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2">Connecting with HDFC 3D-Secure 2.0
+                        gateway and reserving Osteria Mozza Vetta kitchen dispatch slot...</p>
+                    <div class="w-full bg-surface-container rounded-full h-2 mt-6 overflow-hidden">
+                        <div class="bg-secondary-container h-full w-2/3 animate-pulse"></div>
+                    </div>
+                    <span class="font-label-caps text-label-caps text-outline mt-3 uppercase tracking-wider">256-Bit
+                        Bank Grade Encryption</span>
+                    <button class="mt-6 text-xs text-on-surface-variant underline hover:text-primary"
+                        onclick="closeModal()" type="button">Cancel Transaction</button>
+                </div>
+            </div>
+            <!-- Client-side Interactive Logic -->
+            <script>
+                function selectAddress(element) {
+                    document.querySelectorAll('#address-card-group .address-option').forEach(card => {
+                        card.classList.remove('border-primary-container', 'bg-surface-container-low');
+                        card.classList.add('border-transparent', 'bg-surface-container-lowest');
+                        card.setAttribute('aria-checked', 'false');
+                    });
+                    element.classList.remove('border-transparent', 'bg-surface-container-lowest');
+                    element.classList.add('border-primary-container', 'bg-surface-container-low');
+                    element.setAttribute('aria-checked', 'true');
+                }
+
+                function selectSpeed(element) {
+                    document.querySelectorAll('#delivery-speed-group .speed-option').forEach(card => {
+                        card.classList.remove('border-secondary-container', 'bg-surface-container-low');
+                        card.classList.add('border-transparent', 'bg-surface-container-lowest');
+                        card.setAttribute('aria-checked', 'false');
+                    });
+                    element.classList.remove('border-transparent', 'bg-surface-container-lowest');
+                    element.classList.add('border-secondary-container', 'bg-surface-container-low');
+                    element.setAttribute('aria-checked', 'true');
+                }
+
+                function toggleTag(button) {
+                    const isSelected = button.classList.contains('bg-primary-container');
+                    if (isSelected) {
+                        button.classList.remove('bg-primary-container', 'text-surface-bright');
+                        button.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+                    } else {
+                        button.classList.add('bg-primary-container', 'text-surface-bright');
+                        button.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+                    }
+                }
+
+                function switchPayTab(tabId, btnElement) {
+                    // Toggle button styles
+                    document.querySelectorAll('.pay-tab-btn').forEach(btn => {
+                        btn.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'bg-surface-container-low', 'font-bold');
+                        btn.classList.add('text-on-surface-variant', 'font-medium');
+                    });
+                    btnElement.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'bg-surface-container-low', 'font-bold');
+                    btnElement.classList.remove('text-on-surface-variant', 'font-medium');
+
+                    // Hide all content tabs
+                    ['upi', 'card', 'banking', 'wallet', 'cod'].forEach(id => {
+                        const content = document.getElementById('tab-content-' + id);
+                        if (content) {
+                            content.classList.add('hidden');
+                            content.classList.remove('flex');
+                        }
+                    });
+
+                    // Show selected
+                    const selectedContent = document.getElementById('tab-content-' + tabId);
+                    if (selectedContent) {
+                        selectedContent.classList.remove('hidden');
+                        selectedContent.classList.add('flex');
+                    }
+                }
+
+                function triggerCheckout() {
+                    const modal = document.getElementById('processing-modal');
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    setTimeout(() => {
+                        // Simulating completion feedback
+                        const heading = modal.querySelector('h3');
+                        if (heading) {
+                            heading.innerText = 'Order Dispatched to Osteria Mozza!';
+                            modal.querySelector('p').innerText = 'Your thermal dispatch is being prepared. Redirecting to live vault courier radar...';
+                        }
+                    }, 2500);
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('processing-modal');
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            </script>
+        </div>
+    </main>
+    <footer class="w-full bg-primary-container text-surface-bright pt-space-xl pb-space-lg">
+        <div class="max-w-[1320px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl">
+                <div class="lg:col-span-4 flex flex-col gap-space-md">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md tracking-tight font-bold text-surface-bright">NAURIO</span><span
+                            class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase tracking-widest mt-space-xs">Haute
+                            Cuisine Elevated</span></div>
+                    <p class="font-body-md text-body-md text-on-primary-container max-w-sm leading-relaxed">Bridging
+                        Michelin-grade gastronomy with frictionless domestic convenience. Every plate is orchestrated by
+                        master culinary ateliers using heritage ingredients.</p>
+                    <div class="flex items-center gap-space-md pt-space-sm">
+                        <div class="flex items-center gap-space-xs text-tertiary-fixed-dim"><span
+                                class="material-symbols-outlined text-[20px]">verified</span><span
+                                class="font-label-caps text-label-caps">Heritage Certified</span></div>
+                        <div class="flex items-center gap-space-xs text-tertiary-fixed-dim"><span
+                                class="material-symbols-outlined text-[20px]">restaurant</span><span
+                                class="font-label-caps text-label-caps">Bespoke Service</span></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+                        class="font-title-md text-title-md font-semibold text-surface-bright">Atelier Heritage</span>
+                    <nav class="flex flex-col gap-space-xs"><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="our-chefs" href="#">Our Master Chefs</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="rare-harvests" href="#">Rare Harvests</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="tasting-cellars" href="#">Tasting Cellars</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="curated-menu" href="#">Private Dining</a></nav>
+                </div>
+                <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+                        class="font-title-md text-title-md font-semibold text-surface-bright">Customer Care</span>
+                    <nav class="flex flex-col gap-space-xs"><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="concierge-support" href="#">Concierge Support</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="order-tracking" href="#">Order Tracking</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="dietary-standards" href="#">Dietary Standards</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="faq" href="#">Gastronomy FAQ</a></nav>
+                </div>
+                <div class="lg:col-span-4 flex flex-col gap-space-md"><span
+                        class="font-title-md text-title-md font-semibold text-surface-bright">Epicurean Club</span>
+                    <p class="font-body-sm text-body-sm text-on-primary-container">Receive rare allocation
+                        notifications, seasonal menus, and invitations to intimate kitchen tastings.</p>
+                    <div class="flex flex-col sm:flex-row gap-space-xs"><input
+                            class="flex-1 bg-surface-container/10 text-surface-bright placeholder:text-on-primary-container font-body-sm text-body-sm px-space-md py-3 rounded-full outline-none focus:bg-surface-container/20 transition-all"
+                            placeholder="Enter your personal email" type="email" /><button
+                            class="bg-secondary-container hover:bg-secondary text-on-secondary font-label-caps text-label-caps px-space-lg py-3 rounded-full font-bold tracking-wider transition-all shadow-[0_4px_12px_rgba(254,127,60,0.25)]"
+                            type="button">JOIN CLUB</button></div>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container">
+                <span class="text-center md:text-left">© 2025 NAURIO Haute Cuisine Elevated. Handcrafted for discerning
+                    epicureans.</span>
+                <div class="flex items-center gap-space-lg"><a class="hover:text-surface-bright transition-colors"
+                        data-path="privacy-charter" href="#">Privacy Charter</a><a
+                        class="hover:text-surface-bright transition-colors" data-path="epicurean-terms" href="#">Terms
+                        of Gastronomy</a><a class="hover:text-surface-bright transition-colors" data-path="sitemap"
+                        href="#">Sitemap</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

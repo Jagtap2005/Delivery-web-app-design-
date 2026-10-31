@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#172923", "on-primary-container": "#7d9189", "error": "#ba1a1a", "outline-variant": "#c2c8c4", "primary": "#03140e", "on-secondary-fixed": "#351000", "secondary-fixed-dim": "#ffb694", "primary-fixed": "#d2e7de", "on-tertiary-fixed-variant": "#5e4100", "inverse-on-surface": "#f5f0e5", "primary-fixed-dim": "#b6cbc2", "surface-bright": "#fef9ee", "on-secondary-container": "#652500", "on-surface": "#1d1c15", "tertiary-fixed-dim": "#ecc074", "surface-container-highest": "#e7e2d7", "background": "#fef9ee", "tertiary-fixed": "#ffdea9", "on-background": "#1d1c15", "tertiary-container": "#342200", "secondary": "#a14000", "tertiary": "#190e00", "inverse-surface": "#323029", "surface-container-high": "#ede8dd", "surface-container-lowest": "#ffffff", "surface-tint": "#4f625b", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "surface-dim": "#dedacf", "surface-container": "#f2ede3", "error-container": "#ffdad6", "secondary-fixed": "#ffdbcc", "surface": "#fef9ee", "on-error-container": "#93000a", "on-primary-fixed-variant": "#384b44", "inverse-primary": "#b6cbc2", "on-secondary-fixed-variant": "#7b2f00", "on-primary-fixed": "#0d1f19", "on-tertiary-fixed": "#271900", "on-surface-variant": "#424845", "secondary-container": "#fe7f3c", "surface-container-low": "#f8f3e8", "outline": "#727875", "surface-variant": "#e7e2d7", "on-secondary": "#ffffff", "on-tertiary-container": "#ad8640", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "margin-md": "2.5rem", "gutter-sm": "1rem", "space-md": "1rem", "gutter-lg": "2rem", "space-xl": "2.5rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, "fontFamily": { "price-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "display-hero": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"] }, "fontSize": { "price-display": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "800" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }] } } } };</script>
+    <script src="site.js" defer></script>
+</head>
+
+<body
+    class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(23,41,35,0.04)]">
+        <div
+            class="h-28 max-w-[1320px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col justify-between pt-space-sm pb-space-xs">
+            <div class="flex items-center justify-between gap-space-md">
+                <div class="flex items-center gap-space-lg"><a class="flex flex-col group"
+                        data-path="explore-restaurants" href="#"><span
+                            class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold group-hover:text-secondary transition-colors">NAURIO</span><span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Haute
+                            Cuisine</span></a>
+                    <div
+                        class="hidden xl:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.03)]">
+                        <span class="material-symbols-outlined text-secondary text-[18px]">location_on</span>
+                        <div class="flex flex-col"><span
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase">Deliver
+                                to</span><span
+                                class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[190px]">247
+                                Maple Ave, Central District</span></div><span
+                            class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+                    </div>
+                    <div
+                        class="hidden lg:flex items-center gap-space-xs bg-primary-container px-space-md py-space-xs rounded-full text-on-primary">
+                        <span class="material-symbols-outlined text-secondary-container text-[16px]">bolt</span><span
+                            class="font-label-md text-label-md font-semibold text-surface-bright">15-25 Mins</span>
+                    </div>
+                </div>
+                <div class="flex-1 max-w-md hidden md:block">
+                    <div class="relative flex items-center"><span
+                            class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">search</span><input
+                            class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm pl-11 pr-space-md py-2.5 rounded-full outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)]"
+                            placeholder="Search artisan truffles, rare wagyu, tasting menus..." type="text" /></div>
+                </div>
+                <div class="flex items-center gap-space-sm md:gap-space-md">
+                    <div
+                        class="hidden sm:flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]">
+                        <span
+                            class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">monetization_on</span><span
+                            class="font-label-md text-label-md text-on-surface font-bold">1,450</span><span
+                            class="font-body-sm text-body-sm text-on-surface-variant">Coins</span></div><button
+                        aria-label="Wishlist"
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container-high transition-colors"
+                        type="button"><span
+                            class="material-symbols-outlined text-on-surface-variant text-[20px]">favorite</span></button><button
+                        aria-label="Active Cart"
+                        class="flex items-center gap-space-xs bg-secondary-container px-space-md py-2 rounded-full shadow-[0_4px_14px_rgba(244,119,53,0.25)] hover:bg-secondary transition-all text-on-secondary"
+                        type="button"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span
+                            class="font-label-md text-label-md font-bold text-on-secondary">$48.50</span><span
+                            class="bg-primary-container text-surface-bright font-label-caps text-label-caps px-1.5 py-0.5 rounded-full">(3)</span></button>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </div>
+            </div>
+            <nav class="flex items-center gap-space-lg overflow-x-auto whitespace-nowrap pt-space-xs"
+                data-active-classes="text-primary font-bold border-b-2 border-secondary pb-1"><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="explore-restaurants" href="#">Explore Restaurants</a><a aria-current="page"
+                    class="transition-colors py-1 text-primary font-bold border-b-2 border-secondary pb-1"
+                    data-path="curated-menu" href="#">Curated Menu</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="chefs-specials" href="#">Chef's Specials</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="organic-bowls" href="#">Organic Bowls</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="wood-fired-pizza" href="#">Wood-Fired Pizza</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="artisan-bakery" href="#">Artisan Bakery</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="gourmet-desserts" href="#">Gourmet Desserts</a><a
+                    class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1"
+                    data-path="offers-and-vault" href="#">Offers &amp; Vault</a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-28 bg-background min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- Festive & Gastronomy Ambient Notification Banner -->
+            <section class="w-full bg-surface-container-high py-2.5 px-margin md:px-margin-md lg:px-margin-lg">
+                <div
+                    class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-on-surface">
+                    <div class="flex items-center gap-space-sm">
+                        <span
+                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-surface-bright text-xs">
+                            <span class="material-symbols-outlined text-[15px]">festival</span>
+                        </span>
+                        <span class="font-label-caps text-label-caps tracking-wider uppercase text-secondary">Grand
+                            Festive Epiphany Selection</span>
+                        <span class="hidden md:inline text-outline-variant">•</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">Complimentary Artisanal Saffron
+                            Pralines included with all orders exceeding ₹3,500</span>
+                    </div>
+                    <div class="flex items-center gap-space-md font-label-md text-label-md">
+                        <span class="flex items-center gap-1 text-primary-container font-semibold">
+                            <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span> Dual
+                            Thermal Cloche Active
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <!-- Page Editorial Header -->
+            <section class="w-full pt-space-xl pb-space-lg px-margin md:px-margin-md lg:px-margin-lg">
+                <div class="max-w-[1320px] mx-auto">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div class="space-y-space-xs">
+                            <div class="flex items-center gap-space-sm">
+                                <span
+                                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Bag
+                                    Atelier • Review &amp; Pair</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Step 1 of 3</span>
+                            </div>
+                            <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Your Curated
+                                Selection</h1>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                                Every exceptional dining experience begins with a thoughtful selection. Crafted with
+                                provenance, sealed in heated pressurized vaults.
+                            </p>
+                        </div>
+                        <div
+                            class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-sm rounded-full shadow-sm">
+                            <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+                            <span class="font-label-md text-label-md text-on-surface font-semibold"
+                                id="cartCountHeader">3 Items from Osteria Mozza Vetta</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Main Cart Layout Grid (65% / 35%) -->
+            <section class="w-full pb-space-xl px-margin md:px-margin-md lg:px-margin-lg">
+                <div class="max-w-[1320px] mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+                        <!-- LEFT COLUMN (Cart Items & Culinary Additions - 8 cols / ~66%) -->
+                        <div class="lg:col-span-8 flex flex-col gap-space-lg" id="cartContentWrapper">
+                            <!-- Restaurant Provenance Header Card -->
+                            <div
+                                class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+                                <div class="flex items-start sm:items-center gap-space-md">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-primary-container text-surface-bright flex items-center justify-center font-headline-sm text-headline-sm">
+                                        M
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <div class="flex items-center gap-space-xs">
+                                            <span class="font-title-lg text-title-lg text-primary font-bold">Osteria
+                                                Mozza Vetta</span>
+                                            <span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim"
+                                                style="font-variation-settings: 'FILL' 1;">stars</span>
+                                        </div>
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant">Atelier Central
+                                            • 1.8 km dispatch radius • Executive Chef Luca Marin</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-space-xs bg-primary-container/5 px-space-md py-2 rounded-full">
+                                    <span class="material-symbols-outlined text-[18px] text-secondary">mode_heat</span>
+                                    <span
+                                        class="font-label-caps text-label-caps text-primary-container uppercase font-bold tracking-wider">
+                                        Piping Hot 65°C Dual-Vault Transit
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Items List Container -->
+                            <div class="flex flex-col gap-space-md" id="cartItemsList">
+                                <!-- Item 1: Burrata Pizza -->
+                                <article
+                                    class="cart-item bg-surface-container-lowest rounded-lg p-space-md md:p-space-lg shadow-sm transition-all hover:shadow-md"
+                                    data-id="item-pizza" data-price="1870">
+                                    <div class="flex flex-col sm:flex-row gap-space-md">
+                                        <div
+                                            class="w-full sm:w-36 h-36 rounded-DEFAULT overflow-hidden bg-surface-container relative flex-shrink-0">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Artisanal San Marzano wood-fired pizza with an entire fresh Pugliese burrata cheese sphere in the center, basil leaves, charred leopard-spotted crust, rich warm lighting, cinematic culinary photography"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnJOSqto8G7Xo40_jElF9qshVrkxNtpjjMEUjFeRy0zzwSJCU9RkhrZPp1ugr9XyMPDviiCEu8wSy0QUGXT0WClZwe_i-D5_rzcqaBGOG6IAHIc13MQxKJaITSXl4KYX_xA-kaa1_RhpCt7YQXE62gJ4God_o4o26cCy583eVAEAZ41hM3JxRCvPGDc_0hWLfoPpjCkx6vpYbq3ZG0zRYc8qGhHu9mh-ojXUZXKYpR" />
+                                            <span
+                                                class="absolute top-2 left-2 bg-primary-container/80 backdrop-blur-md text-surface-bright font-label-caps text-[10px] px-2 py-0.5 rounded-full uppercase">Chef
+                                                Special</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-between">
+                                            <div>
+                                                <div class="flex items-start justify-between gap-space-sm">
+                                                    <div class="space-y-0.5">
+                                                        <h3 class="font-headline-sm text-headline-sm text-primary">San
+                                                            Marzano Burrata Wood-Fired Pizza</h3>
+                                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                            Base: ₹1,550 • D.O.P. San Marzano tomatoes, 48hr fermented
+                                                            leaven, cold-pressed Ligurian olive oil</p>
+                                                    </div>
+                                                    <span
+                                                        class="font-price-display text-price-display text-primary whitespace-nowrap item-line-price">₹1,870</span>
+                                                </div>
+                                                <!-- Customizations Chip Cluster -->
+                                                <div
+                                                    class="mt-space-sm p-space-sm rounded-DEFAULT bg-surface-container-low text-on-surface-variant space-y-1">
+                                                    <div
+                                                        class="flex items-center gap-1.5 font-label-caps text-label-caps text-primary">
+                                                        <span class="material-symbols-outlined text-[14px]">tune</span>
+                                                        Selected Customizations
+                                                    </div>
+                                                    <p class="font-body-sm text-body-sm text-on-surface">
+                                                        Standard 12" • Sourdough Neapolitan Crust • Extra Pugliese
+                                                        Burrata (+₹320) • Mild Tuscan Oregano &amp; Chili Blend
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Actions / Quantity Bar -->
+                                            <div class="flex items-center justify-between pt-space-md mt-space-sm">
+                                                <button
+                                                    class="text-secondary hover:text-on-secondary-container font-label-md text-label-md flex items-center gap-1 transition-colors"
+                                                    type="button">
+                                                    <span class="material-symbols-outlined text-[16px]">edit</span>
+                                                    Edit Customization
+                                                </button>
+                                                <div class="flex items-center gap-space-md">
+                                                    <div
+                                                        class="flex items-center bg-surface-container rounded-full px-1.5 py-1 shadow-inner">
+                                                        <button
+                                                            class="btn-decrement w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors"
+                                                            type="button">
+                                                            <span
+                                                                class="material-symbols-outlined text-[16px]">remove</span>
+                                                        </button>
+                                                        <span
+                                                            class="item-qty font-title-md text-title-md px-3 text-primary">1</span>
+                                                        <button
+                                                            class="btn-increment w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors"
+                                                            type="button">
+                                                            <span
+                                                                class="material-symbols-outlined text-[16px]">add</span>
+                                                        </button>
+                                                    </div>
+                                                    <button
+                                                        class="btn-remove p-2 text-outline hover:text-error transition-colors rounded-full hover:bg-error-container/20"
+                                                        title="Remove item" type="button">
+                                                        <span
+                                                            class="material-symbols-outlined text-[20px]">delete</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Item 2: Truffle & Morel Tagliatelle -->
+                                <article
+                                    class="cart-item bg-surface-container-lowest rounded-lg p-space-md md:p-space-lg shadow-sm transition-all hover:shadow-md"
+                                    data-id="item-pasta" data-price="2300">
+                                    <div class="flex flex-col sm:flex-row gap-space-md">
+                                        <div
+                                            class="w-full sm:w-36 h-36 rounded-DEFAULT overflow-hidden bg-surface-container relative flex-shrink-0">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Plated artisan handmade egg tagliatelle pasta swirled with wild morel mushrooms, fresh black truffle shavings, creamy aged parmesan sauce, warm rustic lighting, fine dining presentation"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuARlDcWvEhsCnNVVRG2OZWa9CXmLr4z-OxNb4_iOnhQYfWLyZXt-AKgXPa-Fqk3L3_qeXI2moo9kSDGuIFFnJiW40wSbHM1kxHL6MRZ6MMRMYZrHyPs83MJFIV6LomrKOS0Il3_gOrnTbtRL_mkWB8euGtbnzZk2bVHJPgjhI33LdhauhVo8Ft_MLeBGJCRBjpQymU27BuAoCTk0tHtI90J_lSS-pw_rFLvuiqeYnLW" />
+                                            <span
+                                                class="absolute top-2 left-2 bg-primary-container/80 backdrop-blur-md text-surface-bright font-label-caps text-[10px] px-2 py-0.5 rounded-full uppercase">Signature</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-between">
+                                            <div>
+                                                <div class="flex items-start justify-between gap-space-sm">
+                                                    <div class="space-y-0.5">
+                                                        <h3 class="font-headline-sm text-headline-sm text-primary">
+                                                            Truffle &amp; Morel Tagliatelle</h3>
+                                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                            Base: ₹1,850 • Fresh hand-extruded yolk pasta, French
+                                                            morels, 36-month Parmigiano-Reggiano emulsion</p>
+                                                    </div>
+                                                    <span
+                                                        class="font-price-display text-price-display text-primary whitespace-nowrap item-line-price">₹2,300</span>
+                                                </div>
+                                                <!-- Customizations Chip Cluster -->
+                                                <div
+                                                    class="mt-space-sm p-space-sm rounded-DEFAULT bg-surface-container-low text-on-surface-variant space-y-1">
+                                                    <div
+                                                        class="flex items-center gap-1.5 font-label-caps text-label-caps text-primary">
+                                                        <span class="material-symbols-outlined text-[14px]">tune</span>
+                                                        Selected Customizations
+                                                    </div>
+                                                    <p class="font-body-sm text-body-sm text-on-surface">
+                                                        Handmade Tagliatelle • Extra Shaved Norcia Truffle (+₹450) • Al
+                                                        Dente Precision Cook
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Actions / Quantity Bar -->
+                                            <div class="flex items-center justify-between pt-space-md mt-space-sm">
+                                                <button
+                                                    class="text-secondary hover:text-on-secondary-container font-label-md text-label-md flex items-center gap-1 transition-colors"
+                                                    type="button">
+                                                    <span class="material-symbols-outlined text-[16px]">edit</span>
+                                                    Edit Customization
+                                                </button>
+                                                <div class="flex items-center gap-space-md">
+                                                    <div
+                                                        class="flex items-center bg-surface-container rounded-full px-1.5 py-1 shadow-inner">
+                                                        <button
+                                                            class="btn-decrement w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors"
+                                                            type="button">
+                                                            <span
+                                                                class="material-symbols-outlined text-[16px]">remove</span>
+                                                        </button>
+                                                        <span
+                                                            class="item-qty font-title-md text-title-md px-3 text-primary">1</span>
+                                                        <button
+                                                            class="btn-increment w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors"
+                                                            type="button">
+                                                            <span
+                                                                class="material-symbols-outlined text-[16px]">add</span>
+                                                        </button>
+                                                    </div>
+                                                    <button
+                                                        class="btn-remove p-2 text-outline hover:text-error transition-colors rounded-full hover:bg-error-container/20"
+                                                        title="Remove item" type="button">
+                                                        <span
+                                                            class="material-symbols-outlined text-[20px]">delete</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Item 3: Chianti Classico Riserva -->
+                                <article
+                                    class="cart-item bg-surface-container-lowest rounded-lg p-space-md md:p-space-lg shadow-sm transition-all hover:shadow-md"
+                                    data-id="item-wine" data-price="1400">
+                                    <div class="flex flex-col sm:flex-row gap-space-md">
+                                        <div
+                                            class="w-full sm:w-36 h-36 rounded-DEFAULT overflow-hidden bg-surface-container relative flex-shrink-0">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Half bottle 375ml of Chianti Classico Riserva Italian red wine against soft vineyard dusk aesthetic, dew drops on glass, cellar temperature sommelier presentation"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlrQm4XCqkAxB9gdhRljxPbGFIKmcK-B1berI1ICYPkcFrYf2ZZbu48p67Ch4Hwas7hSFDYnvokGgVFS5xKO6d14-s2pm69C6tIXI6lItWlrRlwscdEIIPXbYga8BqUu0_3jVou2voIpw8CUrEdylgp2MXFLlHU7sy8Bk1aWI_Zi76C7dRPmKOqbZIG6wWDTLDJb0oea-14NhAu4AyOnbZZ4ZYS1m2_Mke5ra8uvjG" />
+                                            <span
+                                                class="absolute top-2 left-2 bg-secondary text-surface-bright font-label-caps text-[10px] px-2 py-0.5 rounded-full uppercase">Cellar
+                                                Reserve</span>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-between">
+                                            <div>
+                                                <div class="flex items-start justify-between gap-space-sm">
+                                                    <div class="space-y-0.5">
+                                                        <h3 class="font-headline-sm text-headline-sm text-primary">
+                                                            Chianti Classico Riserva 2018 (Half Bottle 375ml)</h3>
+                                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                            Tuscan Sangiovese • Castellina in Chianti • Ruby red, wild
+                                                            berries &amp; sweet tobacco finish</p>
+                                                    </div>
+                                                    <span
+                                                        class="font-price-display text-price-display text-primary whitespace-nowrap item-line-price">₹1,400</span>
+                                                </div>
+                                                <!-- Customizations Chip Cluster -->
+                                                <div
+                                                    class="mt-space-sm p-space-sm rounded-DEFAULT bg-surface-container-low text-on-surface-variant space-y-1">
+                                                    <div
+                                                        class="flex items-center gap-1.5 font-label-caps text-label-caps text-primary">
+                                                        <span class="material-symbols-outlined text-[14px]">tune</span>
+                                                        Cellar Specifications
+                                                    </div>
+                                                    <p class="font-body-sm text-body-sm text-on-surface">
+                                                        Sommelier Recommended Pairing • Temperature Controlled 16°C
+                                                        Chamber Pre-Packed
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Actions / Quantity Bar -->
+                                            <div class="flex items-center justify-between pt-space-md mt-space-sm">
+                                                <span
+                                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase flex items-center gap-1">
+                                                    <span
+                                                        class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">verified</span>
+                                                    Cellar Verified Vintage
+                                                </span>
+                                                <div class="flex items-center gap-space-md">
+                                                    <div
+                                                        class="flex items-center bg-surface-container rounded-full px-1.5 py-1 shadow-inner">
+                                                        <button
+                                                            class="btn-decrement w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors"
+                                                            type="button">
+                                                            <span
+                                                                class="material-symbols-outlined text-[16px]">remove</span>
+                                                        </button>
+                                                        <span
+                                                            class="item-qty font-title-md text-title-md px-3 text-primary">1</span>
+                                                        <button
+                                                            class="btn-increment w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors"
+                                                            type="button">
+                                                            <span
+                                                                class="material-symbols-outlined text-[16px]">add</span>
+                                                        </button>
+                                                    </div>
+                                                    <button
+                                                        class="btn-remove p-2 text-outline hover:text-error transition-colors rounded-full hover:bg-error-container/20"
+                                                        title="Remove item" type="button">
+                                                        <span
+                                                            class="material-symbols-outlined text-[20px]">delete</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Add More Dishes Dashed CTA -->
+                            <a class="w-full py-4 px-space-md rounded-lg bg-surface-container-lowest/60 hover:bg-surface-container-lowest transition-all flex items-center justify-center gap-2 group shadow-sm"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform text-[20px]">add_circle</span>
+                                <span
+                                    class="font-label-md text-label-md text-primary font-bold group-hover:text-secondary transition-colors">
+                                    + Add More Dishes from Osteria Mozza Vetta
+                                </span>
+                            </a>
+                            <!-- Special Preparation & Dietary Instructions -->
+                            <div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm space-y-space-sm">
+                                <div class="flex items-center gap-space-sm">
+                                    <span
+                                        class="material-symbols-outlined text-secondary text-[22px]">restaurant_menu</span>
+                                    <label class="font-title-md text-title-md text-primary font-semibold"
+                                        for="prepInstructions">
+                                        Special Cooking &amp; Atelier Preparation Instructions
+                                    </label>
+                                </div>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    Every detail is respected by our chefs. Inform us of strict allergies, plating
+                                    temperature requests, or portion division preferences.
+                                </p>
+                                <div class="relative">
+                                    <textarea
+                                        class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md p-space-md rounded-DEFAULT outline-none focus:bg-surface-container-lowest shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)] resize-none"
+                                        id="prepInstructions"
+                                        placeholder="e.g. Please ensure pizza is pre-sliced into 8 pieces, wine chilled at 16°C, dressing packaged separately in dual glass ramekins..."
+                                        rows="3"></textarea>
+                                    <div
+                                        class="absolute bottom-3 right-3 flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant">
+                                        <span class="material-symbols-outlined text-[14px]">edit_note</span> Atelier
+                                        Direct Note
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sommelier & Chef Pairings (Editorial Carousel) -->
+                            <div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm space-y-space-md">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-space-sm">
+                                        <span
+                                            class="material-symbols-outlined text-tertiary-fixed-dim text-[24px]">recommend</span>
+                                        <div>
+                                            <h3 class="font-headline-sm text-headline-sm text-primary">Sommelier &amp;
+                                                Chef Pairings</h3>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">Complementary
+                                                creations tuned to elevate your chosen dishes</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-label-caps text-label-caps text-secondary uppercase font-bold">Curated
+                                        for tonight</span>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+                                    <!-- Pairing Item 1: Tiramisu -->
+                                    <div
+                                        class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center gap-space-md shadow-xs hover:bg-surface-container transition-colors">
+                                        <div class="w-20 h-20 rounded-DEFAULT overflow-hidden flex-shrink-0 bg-surface">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Traditional Sicilian Tiramisu served in a delicate glass ramekin dusted with dark Valrhona cocoa powder, espresso ladyfingers, golden ambient setting"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzi1vwP9b6AgpUxDMsAPgJTNQHXN9BbXZJ8RNLO13rO3Pe09mpfvCnHfMNxwWuNqBa32iDFbrbHRPUUXNMtD1juYgK6WSWlCGX_cDVxlvrK4PQIBtit7fUyAYPZ6pP_P_IoudGFp3qz6EyUk0TWpUnrBDrmAoxLhh04QnKh1yG4biAcOKXoeOS9OJTf4VLRz7j4Vc__4XuYG1IWuI8bpx_sGqATS2oTihPCEk0phSU" />
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="font-title-md text-title-md text-primary truncate">Traditional
+                                                Sicilian Tiramisu</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                                                Mascarpone, Marsala, Valrhona 70%</p>
+                                            <div class="flex items-center justify-between mt-2">
+                                                <span
+                                                    class="font-price-display text-price-display text-primary">₹550</span>
+                                                <button
+                                                    class="add-pairing-btn bg-secondary-container hover:bg-secondary text-on-secondary font-label-caps text-label-caps px-space-md py-1.5 rounded-full transition-all shadow-sm"
+                                                    data-name="Traditional Sicilian Tiramisu" data-price="550"
+                                                    type="button">
+                                                    + ADD
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Pairing Item 2: Focaccia -->
+                                    <div
+                                        class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center gap-space-md shadow-xs hover:bg-surface-container transition-colors">
+                                        <div class="w-20 h-20 rounded-DEFAULT overflow-hidden flex-shrink-0 bg-surface">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Freshly baked Wood-Fired Garlic Focaccia with rosemary sprigs, flaky Maldon sea salt, golden blistered crust, dark rustic ceramic platter"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjupS65oK90pa1-YcgpTY5ZlWHMIvLd6PNRNrLWzDUKtEpwGI2M5hHfcfEhjlbMhtdMRDIgZ1x5hhWx9h8zhPWldHWSQKHiE0It4sOuwasulHehEDlvKWBkNcawm0So5nxcLk5blk1Owd4j2SZNaQUljBQGbcujZ975P0Vt1eYSGDz6yLyxn8vSgBtxh1d2-f1PRLTsNBsS73xP8MMAIJEMnVlnMPpXQtpQfr3OF7j" />
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="font-title-md text-title-md text-primary truncate">Wood-Fired
+                                                Garlic Focaccia</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Confit
+                                                garlic butter, wild rosemary</p>
+                                            <div class="flex items-center justify-between mt-2">
+                                                <span
+                                                    class="font-price-display text-price-display text-primary">₹680</span>
+                                                <button
+                                                    class="add-pairing-btn bg-secondary-container hover:bg-secondary text-on-secondary font-label-caps text-label-caps px-space-md py-1.5 rounded-full transition-all shadow-sm"
+                                                    data-name="Wood-Fired Garlic Focaccia" data-price="680"
+                                                    type="button">
+                                                    + ADD
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RIGHT COLUMN (Sticky Order Bill & Summary - 4 cols / ~34%) -->
+                        <aside class="lg:col-span-4 sticky top-32 flex flex-col gap-space-md">
+                            <div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-md space-y-space-md">
+                                <div class="flex items-center justify-between pb-space-sm">
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-secondary text-[22px]">receipt_long</span>
+                                        <h2 class="font-headline-sm text-headline-sm text-primary">Order Bill &amp;
+                                            Summary</h2>
+                                    </div>
+                                    <span
+                                        class="font-label-caps text-label-caps bg-primary-container text-surface-bright px-2.5 py-0.5 rounded-full uppercase">Vault
+                                        04</span>
+                                </div>
+                                <!-- Promo Code Module -->
+                                <div class="space-y-space-xs">
+                                    <label class="font-label-md text-label-md text-on-surface-variant"
+                                        for="promoInput">Atelier Epicurean Promo Voucher</label>
+                                    <div class="flex items-center gap-2">
+                                        <div class="relative flex-1">
+                                            <input
+                                                class="w-full bg-surface-container-low text-primary uppercase font-title-md text-title-md tracking-wider px-space-md py-2.5 rounded-full outline-none focus:bg-surface-container-lowest transition-all"
+                                                id="promoInput" type="text" value="EPICUREAN20" />
+                                            <span
+                                                class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-tertiary-fixed-dim">verified</span>
+                                        </div>
+                                        <button
+                                            class="bg-primary-container text-surface-bright hover:bg-primary font-label-caps text-label-caps px-space-lg py-2.5 rounded-full font-bold transition-all shadow-xs"
+                                            id="applyPromoBtn" type="button">
+                                            APPLIED
+                                        </button>
+                                    </div>
+                                    <!-- Active Discount Badge -->
+                                    <div class="flex items-center gap-2 bg-primary-fixed/30 text-on-primary-fixed p-2.5 rounded-DEFAULT"
+                                        id="promoBadge">
+                                        <span
+                                            class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                                        <div class="flex-1 font-body-sm text-body-sm">
+                                            <span class="font-bold">₹500 Atelier Tasting Discount</span> applied to fine
+                                            order total.
+                                        </div>
+                                        <button
+                                            class="text-on-surface-variant hover:text-error text-xs font-bold uppercase"
+                                            id="removePromoBtn" type="button">✕</button>
+                                    </div>
+                                </div>
+                                <!-- Line Items Breakdown -->
+                                <div class="space-y-3 pt-space-xs font-body-md text-body-md text-on-surface">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-on-surface-variant">Item Subtotal</span>
+                                        <span class="font-title-md text-title-md text-primary font-semibold"
+                                            id="subtotalVal">₹5,570.00</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-secondary" id="couponRow">
+                                        <span class="flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[16px]">local_offer</span>
+                                            Coupon (EPICUREAN20)
+                                        </span>
+                                        <span class="font-title-md text-title-md font-semibold"
+                                            id="couponDiscountVal">-₹500.00</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-col">
+                                            <span class="text-on-surface-variant flex items-center gap-1">
+                                                Dual-Vault Insulated Transit
+                                                <span class="material-symbols-outlined text-[14px] text-outline"
+                                                    title="Dual vacuum seal maintains temperature from kitchen pass to doorstep">info</span>
+                                            </span>
+                                            <span
+                                                class="font-label-caps text-label-caps text-secondary font-bold">Waived
+                                                on orders &gt; ₹1,999</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="line-through text-outline text-xs block">₹95.00</span>
+                                            <span
+                                                class="font-label-md text-label-md text-secondary font-bold uppercase">FREE</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-on-surface-variant flex items-center gap-1">
+                                            Curation &amp; Vault Packaging Fee
+                                            <span class="material-symbols-outlined text-[14px] text-outline"
+                                                title="Biodegradable linen seal &amp; bespoke crystal tableware casing">help_outline</span>
+                                        </span>
+                                        <span class="font-title-md text-title-md text-primary">₹65.00</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-on-surface-variant">GST &amp; Municipal Taxes (5%)</span>
+                                        <span class="font-title-md text-title-md text-primary"
+                                            id="taxVal">₹253.50</span>
+                                    </div>
+                                    <!-- Grand Total Pill Accent -->
+                                    <div class="pt-space-sm">
+                                        <div
+                                            class="bg-surface-container p-space-md rounded-DEFAULT flex justify-between items-baseline shadow-xs">
+                                            <div>
+                                                <span
+                                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">Grand
+                                                    Total</span>
+                                                <span class="font-body-sm text-body-sm text-outline">Inclusive of all
+                                                    culinary levies</span>
+                                            </div>
+                                            <span
+                                                class="font-headline-md text-headline-md text-primary font-bold tracking-tight"
+                                                id="grandTotalVal">₹5,388.50</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Primary Checkout CTA Button -->
+                                <button
+                                    class="w-full bg-secondary-container hover:bg-secondary text-on-secondary py-4 px-space-lg rounded-full font-title-lg text-title-lg font-bold flex items-center justify-between shadow-lg transition-all transform active:scale-[0.99] group"
+                                    id="proceedCheckoutBtn" type="button">
+                                    <span class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">lock</span>
+                                        Proceed to Checkout
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span id="btnPayAmount">₹5,388.50</span>
+                                        <span
+                                            class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </span>
+                                </button>
+                                <!-- Guarantee Micro Badges -->
+                                <div class="pt-space-xs space-y-2 text-on-surface-variant font-body-sm text-body-sm">
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                                        <span><strong>100% Thermal Guard Guarantee:</strong> Delivered piping hot or
+                                            cellar chilled</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-secondary text-[18px]">shield</span>
+                                        <span><strong>Contactless Vault Delivery:</strong> Sanitized tamper-evident gold
+                                            seal</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+                                        <span><strong>Guaranteed ETA:</strong> 25-35 mins straight from Osteria
+                                            oven</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Empty Cart State Interactive Toggle Preview -->
+                            <div class="text-center pt-2">
+                                <button
+                                    class="text-on-surface-variant hover:text-primary font-label-md text-label-md underline underline-offset-4 transition-colors"
+                                    id="toggleEmptyStateBtn" type="button">
+                                    View Empty Cart State Preview
+                                </button>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- Elegantly Designed Empty Cart View (Hidden by default, toggled via script) -->
+                    <div class="hidden flex-col items-center justify-center py-20 px-4 text-center max-w-xl mx-auto"
+                        id="emptyCartView">
+                        <div
+                            class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center text-outline mb-space-md shadow-inner">
+                            <span class="material-symbols-outlined text-[44px]">shopping_basket</span>
+                        </div>
+                        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1">Your
+                            Curated Collection</span>
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-space-xs">Your bag is waiting for
+                            master creations</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg max-w-md">
+                            Explore heritage Italian wood-fired trattorias, Michelin degustations, or reserve cellars to
+                            begin your bespoke feast.
+                        </p>
+                        <a class="bg-primary-container hover:bg-primary text-surface-bright font-title-md text-title-md font-bold px-space-xl py-3.5 rounded-full transition-all shadow-md"
+                            href="#">
+                            Browse Curated Menu
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive Logic for Cart Adjustments & Micro-Interactions -->
+            <script>
+                (function initCartSystem() {
+                    const state = {
+                        discount: 500,
+                        taxRate: 0.05,
+                        packagingFee: 65,
+                        deliveryFee: 0,
+                        items: {
+                            'item-pizza': { unit: 1870, qty: 1 },
+                            'item-pasta': { unit: 2300, qty: 1 },
+                            'item-wine': { unit: 1400, qty: 1 }
+                        }
+                    };
+
+                    let savedItems = [];
+                    try {
+                        savedItems = JSON.parse(localStorage.getItem('naurio-demo-cart') || '[]');
+                    } catch (error) {
+                        console.error('Unable to load saved demo cart items.', error);
+                    }
+
+                    function persistSavedItems() {
+                        try {
+                            const items = Object.keys(state.items)
+                                .filter(id => id.startsWith('site-item-'))
+                                .map(id => ({
+                                    id,
+                                    name: state.items[id].name,
+                                    price: state.items[id].unit,
+                                    quantity: state.items[id].qty,
+                                    currency: state.items[id].currency || '₹',
+                                    customizations: state.items[id].customizations || ''
+                                }));
+                            localStorage.setItem('naurio-demo-cart', JSON.stringify(items));
+                        } catch (error) {
+                            console.error('Unable to save demo cart changes.', error);
+                        }
+                    }
+
+                    savedItems.forEach(item => {
+                        if (!item.id || !item.name || !Number.isFinite(Number(item.price))) return;
+                        const id = item.id;
+                        state.items[id] = {
+                            unit: Number(item.price),
+                            qty: Math.max(1, Number(item.quantity) || 1),
+                            currency: item.currency || '₹',
+                            name: item.name,
+                            customizations: item.customizations || ''
+                        };
+
+                        const card = document.createElement('article');
+                        card.className = 'cart-item bg-surface-container-lowest rounded-lg p-space-md md:p-space-lg shadow-sm';
+                        card.setAttribute('data-id', id);
+                        const heading = document.createElement('h3');
+                        heading.className = 'font-headline-sm text-headline-sm text-primary';
+                        heading.textContent = item.name;
+                        const details = document.createElement('p');
+                        details.className = 'font-body-sm text-body-sm text-on-surface-variant mt-1';
+                        details.textContent = item.customizations || 'Selected from the NAURIO menu';
+                        const linePrice = document.createElement('span');
+                        linePrice.className = 'item-line-price font-price-display text-price-display text-primary';
+                        const currency = item.currency || '₹';
+                        const lineAmount = Number(Number(item.price) * state.items[id].qty);
+                        linePrice.textContent = currency + lineAmount.toLocaleString('en-IN', currency === '₹'
+                            ? { maximumFractionDigits: 0 }
+                            : { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                        const quantity = document.createElement('span');
+                        quantity.className = 'item-qty';
+                        quantity.textContent = String(state.items[id].qty);
+                        const controls = document.createElement('div');
+                        controls.className = 'mt-space-sm flex items-center gap-space-sm';
+                        const decrease = document.createElement('button');
+                        decrease.className = 'btn-decrement px-2 py-1 rounded-full bg-surface-container-low';
+                        decrease.type = 'button';
+                        decrease.textContent = '−';
+                        decrease.setAttribute('aria-label', `Decrease ${item.name} quantity`);
+                        const increase = document.createElement('button');
+                        increase.className = 'btn-increment px-2 py-1 rounded-full bg-surface-container-low';
+                        increase.type = 'button';
+                        increase.textContent = '+';
+                        increase.setAttribute('aria-label', `Increase ${item.name} quantity`);
+                        const remove = document.createElement('button');
+                        remove.className = 'btn-remove ml-auto text-error';
+                        remove.type = 'button';
+                        remove.textContent = 'Remove';
+                        controls.append(decrease, quantity, increase, remove);
+                        card.append(heading, details, linePrice, controls);
+                        document.getElementById('cartItemsList').append(card);
+                    });
+
+                    const formatINR = (val) => '₹' + Number(val).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                    const formatCleanINR = (val) => '₹' + Number(val).toLocaleString('en-IN', { maximumFractionDigits: 0 });
+                    const formatItemPrice = (val, currency = '₹') => currency + Number(val).toLocaleString(
+                        'en-IN',
+                        currency === '₹' ? { maximumFractionDigits: 0 } : { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                    );
+
+                    function recalculate() {
+                        let subtotal = 0;
+                        let totalCount = 0;
+                        const foreignSubtotals = {};
+
+                        Object.keys(state.items).forEach(key => {
+                            const item = state.items[key];
+                            const currency = item.currency || '₹';
+                            if (currency === '₹') {
+                                subtotal += item.unit * item.qty;
+                            } else {
+                                foreignSubtotals[currency] = (foreignSubtotals[currency] || 0) + item.unit * item.qty;
+                            }
+                            totalCount += item.qty;
+                        });
+
+                        const couponDisc = (subtotal > 0 && state.discount) ? Math.min(state.discount, subtotal) : 0;
+                        const taxableAmount = Math.max(0, subtotal - couponDisc);
+                        const tax = (subtotal > 0) ? (taxableAmount * state.taxRate) : 0;
+                        const packaging = (totalCount > 0) ? state.packagingFee : 0;
+                        const grandTotal = Math.max(0, taxableAmount + tax + packaging + state.deliveryFee);
+                        const foreignSuffix = Object.entries(foreignSubtotals)
+                            .map(([currency, amount]) => ` + ${currency}${Number(amount).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`)
+                            .join('');
+                        const subtotalDisplay = `${formatINR(subtotal)}${foreignSuffix}`;
+                        const totalDisplay = `${formatINR(grandTotal)}${foreignSuffix}`;
+
+                        // Update DOM
+                        const subtotalEl = document.getElementById('subtotalVal');
+                        const taxEl = document.getElementById('taxVal');
+                        const grandTotalEl = document.getElementById('grandTotalVal');
+                        const btnPayEl = document.getElementById('btnPayAmount');
+                        const cartCountHeader = document.getElementById('cartCountHeader');
+
+                        if (subtotalEl) subtotalEl.textContent = subtotalDisplay;
+                        if (taxEl) taxEl.textContent = formatINR(tax);
+                        if (grandTotalEl) grandTotalEl.textContent = totalDisplay;
+                        if (btnPayEl) btnPayEl.textContent = totalDisplay;
+                        if (cartCountHeader) cartCountHeader.textContent = `${totalCount} Items from Osteria Mozza Vetta`;
+
+                        // Check if cart is depleted
+                        if (totalCount === 0) {
+                            showEmptyCart();
+                        }
+                    }
+
+                    function showEmptyCart() {
+                        const cartWrapper = document.getElementById('cartContentWrapper');
+                        const emptyView = document.getElementById('emptyCartView');
+                        if (cartWrapper && emptyView) {
+                            cartWrapper.parentElement.classList.add('hidden');
+                            emptyView.classList.remove('hidden');
+                            emptyView.classList.add('flex');
+                        }
+                    }
+
+                    // Quantity buttons listener
+                    document.querySelectorAll('.cart-item').forEach(card => {
+                        const id = card.getAttribute('data-id');
+                        const linePriceEl = card.querySelector('.item-line-price');
+                        const qtyEl = card.querySelector('.item-qty');
+                        const incBtn = card.querySelector('.btn-increment');
+                        const decBtn = card.querySelector('.btn-decrement');
+                        const removeBtn = card.querySelector('.btn-remove');
+
+                        if (incBtn) {
+                            incBtn.addEventListener('click', () => {
+                                if (!state.items[id]) return;
+                                state.items[id].qty += 1;
+                                qtyEl.textContent = state.items[id].qty;
+                                linePriceEl.textContent = formatItemPrice(state.items[id].unit * state.items[id].qty, state.items[id].currency);
+                                if (id.startsWith('site-item-')) persistSavedItems();
+                                recalculate();
+                            });
+                        }
+
+                        if (decBtn) {
+                            decBtn.addEventListener('click', () => {
+                                if (!state.items[id]) return;
+                                if (state.items[id].qty > 1) {
+                                    state.items[id].qty -= 1;
+                                    qtyEl.textContent = state.items[id].qty;
+                                    linePriceEl.textContent = formatItemPrice(state.items[id].unit * state.items[id].qty, state.items[id].currency);
+                                    if (id.startsWith('site-item-')) persistSavedItems();
+                                    recalculate();
+                                } else {
+                                    deleteItem(card, id);
+                                }
+                            });
+                        }
+
+                        if (removeBtn) {
+                            removeBtn.addEventListener('click', () => {
+                                deleteItem(card, id);
+                            });
+                        }
+                    });
+
+                    function deleteItem(cardEl, id) {
+                        cardEl.style.opacity = '0';
+                        cardEl.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            cardEl.remove();
+                            delete state.items[id];
+                            if (id.startsWith('site-item-')) persistSavedItems();
+                            recalculate();
+                        }, 200);
+                    }
+
+                    // Pairing add-ons
+                    document.querySelectorAll('.add-pairing-btn').forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            const name = btn.getAttribute('data-name');
+                            const price = parseInt(btn.getAttribute('data-price'), 10);
+                            btn.textContent = 'ADDED ✓';
+                            btn.classList.replace('bg-secondary-container', 'bg-primary-container');
+
+                            const uniqueId = 'pairing-' + Math.random().toString(36).substring(7);
+                            state.items[uniqueId] = { unit: price, qty: 1 };
+
+                            // Prepend small item tag
+                            const itemsContainer = document.getElementById('cartItemsList');
+                            const newArticle = document.createElement('article');
+                            newArticle.className = 'cart-item bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex items-center justify-between';
+                            newArticle.setAttribute('data-id', uniqueId);
+                            newArticle.innerHTML = `
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-secondary text-[20px]">stars</span>
+              <div>
+                <h4 class="font-title-md text-title-md text-primary">${name}</h4>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Atelier Pairing Special</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-md">
+              <span class="font-price-display text-price-display text-primary">${formatCleanINR(price)}</span>
+              <button type="button" class="btn-remove p-1 text-outline hover:text-error">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+          `;
+                            itemsContainer.appendChild(newArticle);
+
+                            newArticle.querySelector('.btn-remove').addEventListener('click', () => {
+                                deleteItem(newArticle, uniqueId);
+                                btn.textContent = '+ ADD';
+                                btn.classList.replace('bg-primary-container', 'bg-secondary-container');
+                            });
+
+                            recalculate();
+                        });
+                    });
+
+                    // Voucher discount toggle
+                    const removePromoBtn = document.getElementById('removePromoBtn');
+                    const promoBadge = document.getElementById('promoBadge');
+                    const couponRow = document.getElementById('couponRow');
+
+                    if (removePromoBtn && promoBadge && couponRow) {
+                        removePromoBtn.addEventListener('click', () => {
+                            state.discount = 0;
+                            promoBadge.classList.add('hidden');
+                            couponRow.classList.add('hidden');
+                            recalculate();
+                        });
+                    }
+
+                    // Empty State Preview Toggle
+                    const toggleEmptyStateBtn = document.getElementById('toggleEmptyStateBtn');
+                    if (toggleEmptyStateBtn) {
+                        toggleEmptyStateBtn.addEventListener('click', () => {
+                            const parentGrid = document.querySelector('#cartContentWrapper').parentElement;
+                            const emptyView = document.getElementById('emptyCartView');
+                            if (emptyView.classList.contains('hidden')) {
+                                parentGrid.classList.add('hidden');
+                                emptyView.classList.remove('hidden');
+                                emptyView.classList.add('flex');
+                                toggleEmptyStateBtn.textContent = 'Restore Active Cart Items';
+                            } else {
+                                emptyView.classList.add('hidden');
+                                emptyView.classList.remove('flex');
+                                parentGrid.classList.remove('hidden');
+                                toggleEmptyStateBtn.textContent = 'View Empty Cart State Preview';
+                            }
+                        });
+                    }
+
+                    recalculate();
+                })();
+            </script>
+        </div>
+    </main>
+    <footer class="w-full bg-primary-container text-surface-bright pt-space-xl pb-space-lg">
+        <div class="max-w-[1320px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl">
+                <div class="lg:col-span-4 flex flex-col gap-space-md">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md tracking-tight font-bold text-surface-bright">NAURIO</span><span
+                            class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase tracking-widest mt-space-xs">Haute
+                            Cuisine Elevated</span></div>
+                    <p class="font-body-md text-body-md text-on-primary-container max-w-sm leading-relaxed">Bridging
+                        Michelin-grade gastronomy with frictionless domestic convenience. Every plate is orchestrated by
+                        master culinary ateliers using heritage ingredients.</p>
+                    <div class="flex items-center gap-space-md pt-space-sm">
+                        <div class="flex items-center gap-space-xs text-tertiary-fixed-dim"><span
+                                class="material-symbols-outlined text-[20px]">verified</span><span
+                                class="font-label-caps text-label-caps">Heritage Certified</span></div>
+                        <div class="flex items-center gap-space-xs text-tertiary-fixed-dim"><span
+                                class="material-symbols-outlined text-[20px]">restaurant</span><span
+                                class="font-label-caps text-label-caps">Bespoke Service</span></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+                        class="font-title-md text-title-md font-semibold text-surface-bright">Atelier Heritage</span>
+                    <nav class="flex flex-col gap-space-xs"><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="our-chefs" href="#">Our Master Chefs</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="rare-harvests" href="#">Rare Harvests</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="tasting-cellars" href="#">Tasting Cellars</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="curated-menu" href="#">Private Dining</a></nav>
+                </div>
+                <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+                        class="font-title-md text-title-md font-semibold text-surface-bright">Customer Care</span>
+                    <nav class="flex flex-col gap-space-xs"><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="concierge-support" href="#">Concierge Support</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="order-tracking" href="#">Order Tracking</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="dietary-standards" href="#">Dietary Standards</a><a
+                            class="font-body-md text-body-md text-on-primary-container hover:text-surface-bright transition-colors"
+                            data-path="faq" href="#">Gastronomy FAQ</a></nav>
+                </div>
+                <div class="lg:col-span-4 flex flex-col gap-space-md"><span
+                        class="font-title-md text-title-md font-semibold text-surface-bright">Epicurean Club</span>
+                    <p class="font-body-sm text-body-sm text-on-primary-container">Receive rare allocation
+                        notifications, seasonal menus, and invitations to intimate kitchen tastings.</p>
+                    <div class="flex flex-col sm:flex-row gap-space-xs"><input
+                            class="flex-1 bg-surface-container/10 text-surface-bright placeholder:text-on-primary-container font-body-sm text-body-sm px-space-md py-3 rounded-full outline-none focus:bg-surface-container/20 transition-all"
+                            placeholder="Enter your personal email" type="email" /><button
+                            class="bg-secondary-container hover:bg-secondary text-on-secondary font-label-caps text-label-caps px-space-lg py-3 rounded-full font-bold tracking-wider transition-all shadow-[0_4px_12px_rgba(254,127,60,0.25)]"
+                            type="button">JOIN CLUB</button></div>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container">
+                <span class="text-center md:text-left">© 2025 NAURIO Haute Cuisine Elevated. Handcrafted for discerning
+                    epicureans.</span>
+                <div class="flex items-center gap-space-lg"><a class="hover:text-surface-bright transition-colors"
+                        data-path="privacy-charter" href="#">Privacy Charter</a><a
+                        class="hover:text-surface-bright transition-colors" data-path="epicurean-terms" href="#">Terms
+                        of Gastronomy</a><a class="hover:text-surface-bright transition-colors" data-path="sitemap"
+                        href="#">Sitemap</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

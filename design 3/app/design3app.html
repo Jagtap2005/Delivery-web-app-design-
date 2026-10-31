@@ -1,446 +1,1035 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#3e2c25", "on-error-container": "#93000a", "on-secondary-container": "#663b00", "surface-bright": "#fff8f6", "primary-fixed": "#ffdad4", "on-primary-fixed-variant": "#920502", "on-tertiary-fixed": "#002113", "surface-dim": "#f1d4c9", "surface-container-highest": "#faddd1", "error": "#ba1a1a", "on-primary": "#ffffff", "on-primary-container": "#ffeae7", "surface-container-low": "#fff1ec", "tertiary-fixed-dim": "#99d3b3", "error-container": "#ffdad6", "surface-variant": "#faddd1", "tertiary": "#265e45", "secondary-fixed-dim": "#ffb86b", "inverse-primary": "#ffb4a8", "on-secondary-fixed": "#2c1700", "tertiary-container": "#40775c", "secondary-container": "#fd9d1a", "outline": "#8f706b", "inverse-on-surface": "#ffede7", "surface-tint": "#b52518", "on-tertiary-fixed-variant": "#165038", "secondary-fixed": "#ffdcbc", "outline-variant": "#e3beb8", "primary-container": "#c93424", "on-primary-fixed": "#410000", "surface-container-lowest": "#ffffff", "background": "#fff8f6", "on-surface": "#271811", "on-tertiary": "#ffffff", "on-surface-variant": "#5a403c", "primary": "#a6190e", "on-secondary": "#ffffff", "surface-container-high": "#ffe2d7", "secondary": "#895100", "on-error": "#ffffff", "surface-container": "#ffe9e1", "primary-fixed-dim": "#ffb4a8", "on-background": "#271811", "on-tertiary-container": "#c1fcdb", "tertiary-fixed": "#b5f0cf", "on-secondary-fixed-variant": "#683d00", "surface": "#fff8f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "display-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }] } } } };</script><style>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport" />
+  <meta content="mobile_tab" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#3e2c25", "on-error-container": "#93000a", "on-secondary-container": "#663b00", "surface-bright": "#fff8f6", "primary-fixed": "#ffdad4", "on-primary-fixed-variant": "#920502", "on-tertiary-fixed": "#002113", "surface-dim": "#f1d4c9", "surface-container-highest": "#faddd1", "error": "#ba1a1a", "on-primary": "#ffffff", "on-primary-container": "#ffeae7", "surface-container-low": "#fff1ec", "tertiary-fixed-dim": "#99d3b3", "error-container": "#ffdad6", "surface-variant": "#faddd1", "tertiary": "#265e45", "secondary-fixed-dim": "#ffb86b", "inverse-primary": "#ffb4a8", "on-secondary-fixed": "#2c1700", "tertiary-container": "#40775c", "secondary-container": "#fd9d1a", "outline": "#8f706b", "inverse-on-surface": "#ffede7", "surface-tint": "#b52518", "on-tertiary-fixed-variant": "#165038", "secondary-fixed": "#ffdcbc", "outline-variant": "#e3beb8", "primary-container": "#c93424", "on-primary-fixed": "#410000", "surface-container-lowest": "#ffffff", "background": "#fff8f6", "on-surface": "#271811", "on-tertiary": "#ffffff", "on-surface-variant": "#5a403c", "primary": "#a6190e", "on-secondary": "#ffffff", "surface-container-high": "#ffe2d7", "secondary": "#895100", "on-error": "#ffffff", "surface-container": "#ffe9e1", "primary-fixed-dim": "#ffb4a8", "on-background": "#271811", "on-tertiary-container": "#c1fcdb", "tertiary-fixed": "#b5f0cf", "on-secondary-fixed-variant": "#683d00", "surface": "#fff8f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "title-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "display-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }] } } } };</script>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[18px]">location_on</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Deliver To</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="flex items-center gap-1 cursor-pointer"><span class="font-title-md text-title-md text-on-surface font-bold truncate">Indiranagar, Bengaluru</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="h-9 px-space-sm bg-secondary-fixed/50 rounded-full flex items-center gap-1 text-on-secondary-fixed" title="Naurio Coins"><span class="material-symbols-outlined text-secondary-container text-[18px]">monetization_on</span><span class="font-label-md text-label-md font-bold text-on-secondary-container">420</span></div><button aria-label="Search" class="w-11 h-11 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-20">
-<!-- Search & Voice Input Box -->
-<section class="px-margin-mobile pt-space-xs pb-space-sm">
-<div class="relative flex items-center bg-surface-container-lowest rounded-full shadow-[0_4px_16px_rgba(48,32,25,0.06)] px-4 py-2.5">
-<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mr-2.5">search</span>
-<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/50 font-body-md text-body-md outline-none" placeholder="Cravings, dishes, trattorias or chaat..." type="text"/>
-<button aria-label="Voice Search" class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-low text-primary ml-1 shrink-0 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-[19px]">mic</span>
-</button>
-</div>
-</section>
-<!-- Quick Filter Strip (Horizontal Scroll) -->
-<section class="w-full overflow-x-auto no-scrollbar px-margin-mobile pb-space-md flex gap-2">
-<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
-<span>Offers 40% Off</span>
-</button>
-<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span>
-<span>Under 30 Mins</span>
-</button>
-<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
-<span class="inline-block w-2.5 h-2.5 rounded-full bg-tertiary"></span>
-<span>Pure Veg</span>
-</button>
-<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-[16px] text-secondary">workspace_premium</span>
-<span>Gourmet</span>
-</button>
-<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-[16px] text-secondary-container">star</span>
-<span>Top Rated 4.5+</span>
-</button>
-</section>
-<!-- Promotional Hero Banner Slider -->
-<section class="px-margin-mobile mb-space-lg">
-<div class="relative w-full rounded-xl overflow-hidden shadow-[0_12px_32px_rgba(48,32,25,0.12)] bg-inverse-surface text-inverse-on-surface">
-<div class="bg-cover bg-center h-48 w-full relative" data-alt="Close up artisanal wood fired Neapolitan pizza with blistered crust, melted fresh buffalo mozzarella pulling into delicate strings, vibrant San Marzano tomato sauce, fresh basil leaves, soft warm lighting, fine dining Italian food photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQEAh9gPRS0Na5zmzeTLT28sJELSHSEQtM7SJR6Px1acqyFK3NbjKWZ7QtizaKmLxPCmujcuMz7R4BodFggIBKNnh7KAXJk1aVToT7z3XF0J8ohu_NBCYCVGPfoc2W_VvNzPa2vIoVZ6c66jpzjONqh_fT3Kdu7TwDxQYg0Q8TKOQDmUJoHi-sLo5rBNo2fQPGKYf6vp2hk4bvDMqhDzpCefyQIs9vpXVlC1njeKM')">
-<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/60 to-transparent"></div>
-<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-secondary-container/90 backdrop-blur-md text-on-secondary-container px-2.5 py-1 rounded-full shadow-sm">
-<span class="material-symbols-outlined text-[14px]">timer</span>
-<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Flash Deal • 04h:22m</span>
-</div>
-<div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded-full text-primary font-label-sm text-label-sm">
-<span>CODE: <strong>CRAVE20</strong></span>
-</div>
-</div>
-<div class="p-space-md flex flex-col gap-2 relative -mt-6">
-<div class="flex items-baseline justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Artisan Spotlight</span>
-<span class="text-tertiary-fixed text-body-sm font-body-sm">Save 20% on orders &gt; ₹399</span>
-</div>
-<h2 class="font-headline-sm text-headline-sm text-surface-container-lowest font-bold leading-tight">
-          Wood-Fired Crusts &amp; Street Delights
-        </h2>
-<p class="font-body-sm text-body-sm text-surface-container-high line-clamp-1">
-          Slow-fermented 48-hr dough, San Marzano coulis, and charred Mumbai spices.
-        </p>
-<div class="flex items-center justify-between pt-1">
-<div class="flex items-center gap-1.5 text-secondary-fixed-dim">
-<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
-<span class="font-label-md text-label-md">Fresh oven batch ready</span>
-</div>
-<button class="bg-primary-container hover:bg-primary text-on-primary px-4 py-2 rounded-xl font-label-lg text-label-lg shadow-md active:scale-95 transition-transform flex items-center gap-1">
-<span>Claim Deal</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Quick Trust / Service Signals -->
-<section class="px-margin-mobile mb-space-lg">
-<div class="grid grid-cols-3 gap-2">
-<div class="flex items-center gap-1.5 p-2 bg-surface-container-lowest rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-primary text-[18px] shrink-0">electric_bolt</span>
-<div class="flex flex-col min-w-0">
-<span class="font-label-sm text-label-sm font-bold truncate">25-30 Min</span>
-<span class="text-on-surface-variant font-body-sm text-body-sm text-[10px] truncate">Fast Delivery</span>
-</div>
-</div>
-<div class="flex items-center gap-1.5 p-2 bg-surface-container-lowest rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">verified_user</span>
-<div class="flex flex-col min-w-0">
-<span class="font-label-sm text-label-sm font-bold truncate">Hot &amp; Fresh</span>
-<span class="text-on-surface-variant font-body-sm text-body-sm text-[10px] truncate">Thermal Sealed</span>
-</div>
-</div>
-<div class="flex items-center gap-1.5 p-2 bg-surface-container-lowest rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-secondary-container text-[18px] shrink-0">local_shipping</span>
-<div class="flex flex-col min-w-0">
-<span class="font-label-sm text-label-sm font-bold truncate">Free Del.</span>
-<span class="text-on-surface-variant font-body-sm text-body-sm text-[10px] truncate">Orders &gt; ₹110</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Quick Category Avatars (Horizontal Scroll) -->
-<section class="mb-space-lg">
-<div class="px-margin-mobile flex items-center justify-between mb-space-sm">
-<h3 class="font-title-lg text-title-lg font-bold text-on-surface">Explore Crave Hubs</h3>
-<span class="font-label-md text-label-md text-primary font-bold">See All (14)</span>
-</div>
-<div class="w-full overflow-x-auto no-scrollbar px-margin-mobile flex gap-4">
-<!-- Cat 1 -->
-<div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
-<div class="w-16 h-16 rounded-full overflow-hidden shadow-sm bg-surface-container relative">
-<img class="w-full h-full object-cover" data-alt="Top down shot of a personal gourmet pizza slice with melted cheese and fresh basil leaf on a warm marble plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAJfuwB2QYe0qAB68mYl_-jFRasfyFWjNUqr8zL9x2obH3Uwx8sCZ8hRB7F5qtV1l_ifLHm2t07ZAKZdl2WecPSSniRMKj18wjCB16QjyHNsGCjlR5hvygaylzlu-iE1HFfE6z7u0KcEzHQ0Qe7JFa9NAvx73nQfb4E5YEWsl6fFCsOc4t-oWZ1Tn2V6-vp5haxNVu-V0-zDXAFG26pCzvpOon0mksPVM206sW5mU"/>
-<div class="absolute inset-0 bg-primary/10"></div>
-</div>
-<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary">Wood-Fired</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">18 Styles</span>
-</div>
-<!-- Cat 2 -->
-<div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
-<div class="w-16 h-16 rounded-full overflow-hidden shadow-sm bg-surface-container relative">
-<img class="w-full h-full object-cover" data-alt="Thick smashed beef and cheese burger dripping with spicy chipotle aioli sauce, toasted brioche bun, editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOu3YZncY8ZIDNKwo9KbL8Pzpa07aKP0bF6rYPDUFwH7Pxc2hNzw7bhPUZiN1rCVCV_6c68ubu8NM9263BGHnaPOEYT4y6xSrTwVd35DPwU4TVA4HXUnHT2PwC9nIlc31YF_Z-47n_e_VVfi5eeqYgzwy-zdrCFkDav9bPizF_9Z6aWzfN2-eiQRmqKkba0kOHnbiafZsqP-jyUd1KsTPmL2g27RXdnL-IgF9C6M8"/>
-<div class="absolute inset-0 bg-secondary-container/10"></div>
-</div>
-<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary">Smash Burgers</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">12 Combos</span>
-</div>
-<!-- Cat 3 -->
-<div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
-<div class="w-16 h-16 rounded-full overflow-hidden shadow-sm bg-surface-container relative">
-<img class="w-full h-full object-cover" data-alt="Traditional Indian street food Sev Puri arranged beautifully with crispy puris topped with potatoes, chutneys, nylon sev, and fresh coriander" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI0WXJsuYZBib_8dXfWcqeAitfDSGqHG3R_KTqGoZLHtsXit-rLxVCjifoLuAglzpS_Cvk6_2_SLnCrk5Ohl1JH4dYnq3izM72RjUqORRaiBBgysgCXkZDCutWcI1e0ZiWKiWJb0N1LZdgBD-7NOc3hazbc5qpRwB_8DxctLax1UaIzcFelOaM-ye8KE_AM_BlXNbyUQOXRH5QdvhEGyCeipBP32HvOkr1Nse9E6s"/>
-<div class="absolute inset-0 bg-tertiary/10"></div>
-</div>
-<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary">Bombay Chaat</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Street Icon</span>
-</div>
-<!-- Cat 4 -->
-<div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
-<div class="w-16 h-16 rounded-full overflow-hidden shadow-sm bg-surface-container relative">
-<img class="w-full h-full object-cover" data-alt="Golden crisp deep fried samosas served with fresh mint and tangy tamarind dipping sauce on a rustic ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClmMBDWRRNaYM0Ra1ENv73OOncojTC1zS3wKgPus8dG5gpTNpyaEo4vPMggNb7HHh23SUEmIyURWC3sWf0SddO0mAgo9qeqXLY6vx-rDSP_o2aKxPSrye2pK51ZfmNy7tcj7zGnje67PPdn-Ci3715ctgE0_0mT5P5BK7rK6NJc984TDJYV6tx-k2PcQIlnjTxFNa8yThHnn05n-dV9vUDWics1rwhMYjJ3ZPRjV4"/>
-<div class="absolute inset-0 bg-primary/10"></div>
-</div>
-<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary">Crispy Samosa</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">All-Time Fav</span>
-</div>
-<!-- Cat 5 -->
-<div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
-<div class="w-16 h-16 rounded-full overflow-hidden shadow-sm bg-surface-container relative">
-<img class="w-full h-full object-cover" data-alt="Creamy hand rolled fettuccine pasta in rich parmigiano reggiano truffle cream with cracked black pepper in a terracotta bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSUxwVSJvHCAODkZGDfCLVaWAlEr0qI0kOIlMVmgNHa82pP6OkmG_ueojgOxxQckdIhg2dFtykVrWiFvFkzqb_2-JdEFf2ve-49nXLVO1oJXQHNKAFiWE0CCwb1pzljz_ad58I35ol1dAu4J7xxybcuR5H-E2lsK6RU8MwsVYazQf-TNjz9Pj4t1vpKZenJ__gPRtIrYcRbGVWZWvQDMqFZ-hRYXT5g-Pxwmwotw0"/>
-<div class="absolute inset-0 bg-secondary/10"></div>
-</div>
-<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary">Pastas</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Handcrafted</span>
-</div>
-<!-- Cat 6 -->
-<div class="flex flex-col items-center gap-1.5 shrink-0 cursor-pointer group">
-<div class="w-16 h-16 rounded-full overflow-hidden shadow-sm bg-surface-container relative">
-<img class="w-full h-full object-cover" data-alt="Scoops of authentic Italian pistachio and Madagascar vanilla gelato topped with caramelized roasted hazelnuts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7pGw_wYl9uB7GGRNYWTy4JeAZrgEEcEBE2Vv7sUID6Lzz2RxocbEWEqEW6v3qcX63PxV-gubai9d6H7A2ZbahUfeGA3sOWKHM2d6B0SNOI7lX7eOz4U1EzylJatF4c8C8JcFTktGXnhd4hlHs86Xh8tq7ZSMAgwFGdTcnPPLiOoyvWTaKX7aTOPkNnqdmyzfF6Y-BOhLQ0YfdeRlRE27D5od9s2VL0tJ3CCWQjuw"/>
-<div class="absolute inset-0 bg-primary/10"></div>
-</div>
-<span class="font-label-md text-label-md font-bold text-on-surface group-hover:text-primary">Gelato</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Sweet Indulge</span>
-</div>
-</div>
-</section>
-<!-- Today's Flash Deals (Horizontal Snap Cards) -->
-<section class="mb-space-lg">
-<div class="px-margin-mobile flex items-center justify-between mb-space-sm">
-<div class="flex items-center gap-2">
-<h3 class="font-title-lg text-title-lg font-bold text-on-surface">Flash Hour Steals</h3>
-<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm uppercase font-bold">Limited</span>
-</div>
-<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
-</div>
-<div class="w-full overflow-x-auto no-scrollbar px-margin-mobile flex gap-3.5 snap-x snap-mandatory">
-<!-- Flash Card 1 -->
-<div class="w-72 shrink-0 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(48,32,25,0.06)] overflow-hidden snap-start flex flex-col">
-<div class="relative h-36 w-full">
-<img class="w-full h-full object-cover" data-alt="Artisan Quattro Formaggi pizza topped with wild forest truffle mushrooms, blistered crust, melted gorgonzola and fontina, cinematic close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABScq4XRJ_WVafvFSdxNvsvz7s8n06sbyvMf9GKpL26KZrzfASd1gzai9Eu7h8Q_UlPoulG5axvmi63orZKfzlxXleVu7xeJB5XOMqRwfb_MBHThcywA1aSxpaNgq4ieIaMa8rXtbYuj5bQFvcwc794gixepvUiwlrYQo8FTbTfG-8qLoJMZxayWuAHXrE9Gj9yJeNXdaRs9r5MDLVZb4hDXQApG_jMkzxMfAlZ5Q"/>
-<div class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
-            30% OFF
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen">
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm">
+      <div class="flex flex-col justify-center min-w-0 flex-1">
+        <div class="flex items-center gap-1"><span
+            class="material-symbols-outlined text-primary text-[18px]">location_on</span><span
+            class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Deliver To</span><span
+            class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div>
+        <div class="flex items-center gap-1 cursor-pointer"><span
+            class="font-title-md text-title-md text-on-surface font-bold truncate">Indiranagar, Bengaluru</span></div>
+      </div>
+      <div class="flex items-center gap-space-sm shrink-0">
+        <div class="h-9 px-space-sm bg-secondary-fixed/50 rounded-full flex items-center gap-1 text-on-secondary-fixed"
+          title="Naurio Coins"><span
+            class="material-symbols-outlined text-secondary-container text-[18px]">monetization_on</span><span
+            class="font-label-md text-label-md font-bold text-on-secondary-container">420</span></div><button
+          aria-label="Search"
+          class="w-11 h-11 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"><span
+            class="material-symbols-outlined text-[20px]">search</span></button>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- SECTION 1: Top Mobile App Bar / Header -->
+      <div class="px-margin-mobile pt-space-xs pb-space-sm flex flex-col gap-space-sm bg-surface">
+        <!-- Brand identity & Store selector -->
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-headline-sm text-headline-sm text-primary font-extrabold tracking-tight">NAURIO</span>
+              <span
+                class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">Cucina</span>
+            </div>
+            <p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Authentic Italian Flavors &amp;
+              Spiced Craft</p>
           </div>
-<div class="absolute top-2 right-2 bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[13px] text-secondary-container">monetization_on</span>
-<span>+25 Coins</span>
-</div>
-</div>
-<div class="p-3.5 flex flex-col justify-between flex-grow gap-2">
-<div>
-<div class="flex items-center justify-between">
-<span class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-[14px]">eco</span> Veg Choice
-              </span>
-<div class="flex items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-secondary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-bold text-on-surface">4.9</span> (120+)
-              </div>
-</div>
-<h4 class="font-title-md text-title-md font-bold text-on-surface line-clamp-1 mt-0.5">Truffle Quattro Formaggi</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Wild porcini, smoked scamorza &amp; black truffle oil</p>
-</div>
-<div class="flex items-center justify-between pt-1">
-<div class="flex items-baseline gap-1.5">
-<span class="font-title-lg text-title-lg font-bold text-on-surface">₹349</span>
-<span class="text-on-surface-variant line-through font-body-sm text-body-sm">₹499</span>
-</div>
-<button class="bg-primary text-on-primary px-3.5 py-1.5 rounded-lg font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1">
-<span>ADD</span>
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Flash Card 2 -->
-<div class="w-72 shrink-0 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(48,32,25,0.06)] overflow-hidden snap-start flex flex-col">
-<div class="relative h-36 w-full">
-<img class="w-full h-full object-cover" data-alt="Double smash burger with dripping cheddar cheese, caramelized onions, crispy smoky bacon bits, warm lighting, high end commercial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ81pwEg1-0HDb12oCqdFDqkbNMglf8UK1JGfLCg1uGAATy1mRCryBacscUruLfY4na1V63H8P7F2Qo3fi_WCSI_oa9c6ilXKVWi1xe-Z4L_IXqtw40rCtcbyBCj-OL3Otm9HZ9Y4pNi3k5LGqquHXfCwDLrugdD7SZ1dwAW8ikv2lUGo_4TzzG6y-GqQeFqaQ3dXWhDUVAQC6RjK6FmojaQhhda14BnYOo67RFOg"/>
-<div class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
-            25% OFF
+          <div class="flex items-center gap-2">
+            <div
+              class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed shadow-sm">
+              <span class="material-symbols-outlined text-secondary text-[16px]">monetization_on</span>
+              <span class="font-label-sm text-label-sm font-bold text-on-secondary-container">240</span>
+            </div>
+            <button aria-label="Cart"
+              class="relative w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors">
+              <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+              <span
+                class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">3</span>
+            </button>
           </div>
-<div class="absolute top-2 right-2 bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[13px] text-secondary-container">monetization_on</span>
-<span>+18 Coins</span>
-</div>
-</div>
-<div class="p-3.5 flex flex-col justify-between flex-grow gap-2">
-<div>
-<div class="flex items-center justify-between">
-<span class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-[14px]">local_fire_department</span> Chef's Pick
-              </span>
-<div class="flex items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-secondary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-bold text-on-surface">4.8</span> (88)
-              </div>
-</div>
-<h4 class="font-title-md text-title-md font-bold text-on-surface line-clamp-1 mt-0.5">Smoky Chipotle Smash</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Crisp edges, house secret smoked tomato glaze</p>
-</div>
-<div class="flex items-center justify-between pt-1">
-<div class="flex items-baseline gap-1.5">
-<span class="font-title-lg text-title-lg font-bold text-on-surface">₹249</span>
-<span class="text-on-surface-variant line-through font-body-sm text-body-sm">₹330</span>
-</div>
-<button class="bg-primary text-on-primary px-3.5 py-1.5 rounded-lg font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1">
-<span>ADD</span>
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Flash Card 3 -->
-<div class="w-72 shrink-0 bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(48,32,25,0.06)] overflow-hidden snap-start flex flex-col">
-<div class="relative h-36 w-full">
-<img class="w-full h-full object-cover" data-alt="Festive Mumbai sev puri platter garnished with spicy sev, diced red onions, pomegranate jewels, coriander leaves, mouthwatering street food presentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-jgThDd_KrY7QGD-dEHQMlQZDGhab0XO86dfNNoOfY73LqhCndL030T4w1ysDmtRvYQlr98dric_JoTx1MGeugb6gWXvYB-JrFoGneKPiiHoa15fnbktMALDwvnQGy3t30xbrCBn8QAHARXfrKelGfLAn8j_L34GUIk-rI4YMwxAKHGiKziCecaeEUpE52pl-fuw5aDR4oR6ZhK-9dXkzPp48pGPSVcDNWA6U_nM"/>
-<div class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
-            30% OFF
-          </div>
-<div class="absolute top-2 right-2 bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-[13px] text-secondary-container">monetization_on</span>
-<span>+12 Coins</span>
-</div>
-</div>
-<div class="p-3.5 flex flex-col justify-between flex-grow gap-2">
-<div>
-<div class="flex items-center justify-between">
-<span class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-[14px]">eco</span> Authentic
-              </span>
-<div class="flex items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-secondary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="font-bold text-on-surface">5.0</span> (340+)
-              </div>
-</div>
-<h4 class="font-title-md text-title-md font-bold text-on-surface line-clamp-1 mt-0.5">Royal Mumbai Sev Puri</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">8 loaded crisps, double chutney infusion</p>
-</div>
-<div class="flex items-center justify-between pt-1">
-<div class="flex items-baseline gap-1.5">
-<span class="font-title-lg text-title-lg font-bold text-on-surface">₹139</span>
-<span class="text-on-surface-variant line-through font-body-sm text-body-sm">₹199</span>
-</div>
-<button class="bg-primary text-on-primary px-3.5 py-1.5 rounded-lg font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1">
-<span>ADD</span>
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Interactive Fusion Flavor Meter Promo -->
-<section class="px-margin-mobile mb-space-lg">
-<div class="p-4 bg-surface-container rounded-xl flex flex-col gap-2 shadow-sm">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-primary text-[20px]">soup_kitchen</span>
-<span class="font-label-lg text-label-lg font-bold text-on-surface">Crave Signature Fusion Index</span>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Today's Balance</span>
-</div>
-<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden flex">
-<div class="bg-tertiary w-[55%] h-full"></div>
-<div class="bg-primary-container w-[45%] h-full"></div>
-</div>
-<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant pt-0.5">
-<span class="flex items-center gap-1">
-<span class="w-2 h-2 rounded-full bg-tertiary inline-block"></span>
-          55% Italian Trattoria Elegance
-        </span>
-<span class="flex items-center gap-1">
-<span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
-          45% Zesty Indian Street Flare
-        </span>
-</div>
-</div>
-</section>
-<!-- Bestsellers & Chef's Picks (2-Column Asymmetrical Grid) -->
-<section class="px-margin-mobile">
-<div class="flex items-center justify-between mb-space-sm">
-<div>
-<h3 class="font-title-lg text-title-lg font-bold text-on-surface">Chef's Handpicked Picks</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Prepared fresh per order with artisanal touch</p>
-</div>
-<button class="text-primary font-label-md text-label-md font-bold flex items-center">
-        Filters
-        <span class="material-symbols-outlined text-[16px]">tune</span>
-</button>
-</div>
-<div class="grid grid-cols-2 gap-3">
-<!-- Dish 1 -->
-<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-[0_4px_16px_rgba(48,32,25,0.05)] flex flex-col justify-between">
-<div class="relative w-full h-32 rounded-lg overflow-hidden mb-2">
-<img class="w-full h-full object-cover" data-alt="Plated artisanal Neapolitan pizza with whole fresh burrata cheese bulb in the center, basil oil drizzle, rich rustic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYT-vKLZz9r3sFsRnH3Dq6YfnXRH47T0dtBy1KSHVf6ffqf_LY8IndZeSvPet3UwLi5UenqN6Faax9hWSbkYoYgUtYh9tXtZ6X89TYitvC8rvx30g14Kaix8fel1Y7i3YhpuMGZoa5D5LuEDob8M7g3rN0QWxMJG5an_0d9Q1VR5D6JBMoB-8DZHJv9i-37sP6mbF-7f5iQE5jwbFTO-PJsDG6gLSymKECei2mSTk"/>
-<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded">
-<span class="block w-2.5 h-2.5 rounded-full bg-tertiary"></span>
-</span>
-<div class="absolute bottom-1.5 right-1.5 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-secondary-container text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span>4.9</span>
-</div>
-</div>
-<div class="flex flex-col flex-grow">
-<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">Burrata Margherita</h4>
-<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">San Marzano &amp; Pesto</span>
-<div class="flex items-center justify-between mt-3">
-<span class="font-title-md text-title-md font-bold text-on-surface">₹389</span>
-<button class="bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary px-3 py-1 rounded-md font-label-md text-label-md font-bold transition-colors">
-              + ADD
-            </button>
-</div>
-</div>
-</div>
-<!-- Dish 2 -->
-<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-[0_4px_16px_rgba(48,32,25,0.05)] flex flex-col justify-between">
-<div class="relative w-full h-32 rounded-lg overflow-hidden mb-2">
-<img class="w-full h-full object-cover" data-alt="Toasted artisan sourdough sandwich with melted spicy paneer filling, bell peppers, fresh herbs, gourmet cafe style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUhwA1ZPc1_XOZgIGsYiZr9VJkOs_7GPj7Frk79p6n--oC6pggDfoP74u9Zx007tI6ZWTk6QpaMmXjfjCfgzUMdaZxGzLedfVMfxnQSm6CnCGSJNdj7rnoto36y3XSss8h7txRgjRk-H8Ti6FpIBMwA4mKjwiSBeIvWbj_WfZjlMYRSXWnIciFzrSpf9Kaa982ShtXxFSqcgaIWQnWY-7_Am_w3Y6xljMIHILWzEk"/>
-<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded">
-<span class="block w-2.5 h-2.5 rounded-full bg-tertiary"></span>
-</span>
-<div class="absolute bottom-1.5 right-1.5 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-secondary-container text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span>4.8</span>
-</div>
-</div>
-<div class="flex flex-col flex-grow">
-<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">Peri Peri Paneer Sourdough</h4>
-<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Wood-fired crunch</span>
-<div class="flex items-center justify-between mt-3">
-<span class="font-title-md text-title-md font-bold text-on-surface">₹229</span>
-<button class="bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary px-3 py-1 rounded-md font-label-md text-label-md font-bold transition-colors">
-              + ADD
-            </button>
-</div>
-</div>
-</div>
-<!-- Dish 3 -->
-<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-[0_4px_16px_rgba(48,32,25,0.05)] flex flex-col justify-between">
-<div class="relative w-full h-32 rounded-lg overflow-hidden mb-2">
-<img class="w-full h-full object-cover" data-alt="Traditional Indian Mumbai sev puri arranged on brass platter with mint chutney drizzle, fine sev and spices, appetizing food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnPpNfmMiKgkxkzmCNpA4ufkee_mWJjHcy2XQXw27Tju0S9wRIafXPHe0FNiAtdQTVIQ6y1b5mFIl7A6WRdkBzLY_fZY5Nu6FX13ZpqSLL6ZEWfGPd58JDrujSdvWQ2bweE7AgQBDYDGsHqMYwFmfit0o2Uw_JVVPkz0pz2rgEq9mqIqHRY9QMRnCYy_zL_hgNMX3sbf6iHFbjgo5NqS76Ckjsz83thv7x2ljm60"/>
-<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded">
-<span class="block w-2.5 h-2.5 rounded-full bg-tertiary"></span>
-</span>
-<div class="absolute bottom-1.5 right-1.5 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-secondary-container text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span>5.0</span>
-</div>
-</div>
-<div class="flex flex-col flex-grow">
-<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">Classic Mumbai Sev Puri</h4>
-<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Fresh crisp 6 pcs</span>
-<div class="flex items-center justify-between mt-3">
-<span class="font-title-md text-title-md font-bold text-on-surface">₹120</span>
-<button class="bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary px-3 py-1 rounded-md font-label-md text-label-md font-bold transition-colors">
-              + ADD
-            </button>
-</div>
-</div>
-</div>
-<!-- Dish 4 -->
-<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-[0_4px_16px_rgba(48,32,25,0.05)] flex flex-col justify-between">
-<div class="relative w-full h-32 rounded-lg overflow-hidden mb-2">
-<img class="w-full h-full object-cover" data-alt="Double gourmet BBQ burger stacked high with melted sharp cheddar, caramelized onions, crispy bacon strips and house smoked glaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtG5oUd1tD0gf0EEsLiI_MMD5g9sCMpy55xu-vKCgTWL3xSjMBEDgQfSijkne7EVm78er5CSJ2O5kDmhZouc9E9c6q1IsmNmdC84uBAebK9WgcgwQlairFkQIjyLqHVKCF5zM0Pe3rj5xuYMYJG4RX5zVkVzh7XmntggNMMCWM4xvvBqV3uBjPuwLEywVD2n1AYR4bTiuEWwWwC3E3oCfJ5BI2Mo1bvFvte1FOHis"/>
-<span class="absolute top-1.5 left-1.5 bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded">
-<span class="block w-2.5 h-2.5 rounded-full bg-primary"></span>
-</span>
-<div class="absolute bottom-1.5 right-1.5 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-0.5">
-<span class="material-symbols-outlined text-secondary-container text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span>4.8</span>
-</div>
-</div>
-<div class="flex flex-col flex-grow">
-<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">Double BBQ Bacon Melt</h4>
-<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Smoked brioche stack</span>
-<div class="flex items-center justify-between mt-3">
-<span class="font-title-md text-title-md font-bold text-on-surface">₹329</span>
-<button class="bg-surface-container-low hover:bg-primary hover:text-on-primary text-primary px-3 py-1 rounded-md font-label-md text-label-md font-bold transition-colors">
-              + ADD
-            </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Floating Bite-Counter Sticky Cart Bar -->
-<aside class="fixed bottom-20 left-4 right-4 z-40 max-w-lg mx-auto">
-<div class="bg-inverse-surface text-inverse-on-surface rounded-full px-4 py-3 shadow-[0_12px_32px_rgba(201,52,36,0.28),0_2px_8px_rgba(48,32,25,0.12)] flex items-center justify-between active:scale-[0.99] transition-transform cursor-pointer">
-<div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">
-          2
         </div>
-<div class="flex flex-col">
-<span class="font-label-lg text-label-lg font-bold leading-tight">2 items in cart • ₹618</span>
-<span class="font-body-sm text-body-sm text-surface-dim text-[11px]">Free delivery coupon applied</span>
-</div>
-</div>
-<div class="flex items-center gap-1 text-secondary-fixed font-title-md text-title-md font-bold pl-2">
-<span>View Cart</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</div>
-</div>
-</aside>
-</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(48,32,25,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] transition-colors text-primary font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">cottage</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="menu-explore" href="#"><span class="material-symbols-outlined text-[24px]">restaurant_menu</span><span class="font-label-sm text-label-sm">Explore</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="font-label-sm text-label-sm">Orders</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="profile-cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>
+        <!-- Quick Location Chips -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+          <div
+            class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-primary text-[15px]">storefront</span>
+            <span class="font-label-sm text-label-sm font-bold truncate max-w-[130px]">Little Italy Trattoria</span>
+            <span class="material-symbols-outlined text-outline text-[14px]">expand_more</span>
+          </div>
+          <div
+            class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-tertiary text-[15px]">navigation</span>
+            <span class="font-label-sm text-label-sm font-semibold truncate max-w-[120px]">Indiranagar, BLR</span>
+            <span class="material-symbols-outlined text-outline text-[14px]">expand_more</span>
+          </div>
+        </div>
+        <!-- Search Input & Filter trigger -->
+        <div class="flex items-center gap-2">
+          <div
+            class="flex-1 flex items-center gap-2 px-3.5 h-11 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+            <span class="material-symbols-outlined text-outline text-[18px]">search</span>
+            <input
+              class="bg-transparent border-0 outline-none w-full font-body-sm text-body-sm text-on-surface placeholder:text-outline/70"
+              placeholder="Search dishes, wood-fired pizza, pastas..." type="text" />
+          </div>
+          <button aria-label="Filter"
+            class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm shrink-0 active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-[20px]">tune</span>
+          </button>
+        </div>
+        <!-- Category Quick-Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile pt-1">
+          <button
+            class="px-4 py-1.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold whitespace-nowrap shadow-sm">Overview</button>
+          <button
+            class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md font-medium whitespace-nowrap hover:bg-surface-container">Artisan
+            Pizzas</button>
+          <button
+            class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md font-medium whitespace-nowrap hover:bg-surface-container">Pasta
+            &amp; Risotto</button>
+          <button
+            class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md font-medium whitespace-nowrap hover:bg-surface-container">Gourmet
+            Burgers</button>
+          <button
+            class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md font-medium whitespace-nowrap hover:bg-surface-container">Street
+            Bites</button>
+          <button
+            class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md font-medium whitespace-nowrap hover:bg-surface-container">Desserts</button>
+        </div>
+      </div>
+      <!-- SECTION 2: Cinematic Hero Section -->
+      <div class="px-margin-mobile pt-space-sm pb-space-md">
+        <div
+          class="relative w-full rounded-2xl overflow-hidden shadow-md bg-inverse-surface min-h-[360px] flex flex-col justify-end p-5">
+          <div class="absolute inset-0 bg-cover bg-center"
+            data-alt="Artisanal wood-fired sourdough pizza with bubbly charred blistered crust, melted fresh Fior di Latte mozzarella, San Marzano tomato sauce, fresh basil leaves, cinematic warm rustic Italian trattoria lighting, shallow depth of field, appetizing golden hour glow"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1RcGOCXzY31fPxK9A72h5YRW1A0Q_jM_Z5vEnSKS2YSav-Gui_3MxrGRA_EUR3OfrmZbMMxuz2fa7eH0va_1EBzxfgfA-x5sxRddQ8oI0lijvCkvMS-_DAsETvsLiY4KMuD1qAsoijckR-Gd9ZtwdtxRAXDdxCxr_Bi00C042_tBn7HsCVaZCP28bl7RUsihwaiViXAOK3qcPUEo_i-V8OzJxj7N5mvIIdEoFpc0')">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/60 to-transparent">
+          </div>
+          <!-- Hero Content -->
+          <div class="relative z-10 flex flex-col gap-2">
+            <div
+              class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-tertiary-container/90 text-on-tertiary-container backdrop-blur-md shadow-sm">
+              <span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+              <span class="font-label-sm text-label-sm font-bold tracking-wide">Peak Flavor Hour • Under 30 Mins
+                Guaranteed</span>
+            </div>
+            <h1
+              class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-on-surface font-extrabold leading-tight">
+              Authentic Wood-Fired Slices &amp; Artisan Delights
+            </h1>
+            <p class="font-body-sm text-body-sm text-inverse-on-surface/90 line-clamp-2">
+              Handcrafted Italian San Marzano tomatoes, pure Fior di Latte cheese, and 48-hr slow-fermented sourdough.
+            </p>
+            <div class="flex items-center gap-2.5 pt-2">
+              <button
+                class="flex-1 h-11 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform">
+                <span>Order Now (20% Off)</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+              <button
+                class="h-11 px-4 rounded-xl bg-surface-container-lowest/20 backdrop-blur-md text-inverse-on-surface font-label-md text-label-md font-semibold flex items-center justify-center hover:bg-surface-container-lowest/30 transition-colors">
+                Explore Menu
+              </button>
+            </div>
+            <!-- Carousel Indicators -->
+            <div class="flex items-center justify-center gap-1.5 pt-3">
+              <span class="w-6 h-1.5 rounded-full bg-secondary-container"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-inverse-on-surface/40"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-inverse-on-surface/40"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 3: 3 Key Service Highlights -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="flex gap-2.5 overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile">
+          <div class="min-w-[210px] flex-1 p-3.5 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">electric_moped</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface">30 Min Delivery</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Piping hot to doorstep</p>
+            </div>
+          </div>
+          <div class="min-w-[210px] flex-1 p-3.5 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">verified</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface">Free Over ₹110</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Zero surcharge applied</p>
+            </div>
+          </div>
+          <div class="min-w-[210px] flex-1 p-3.5 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">spa</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface">100% Fresh</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Locally sourced organic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 4: Shop by Category -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="flex items-center justify-between pb-3">
+          <div>
+            <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Shop by Category</h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted culinary stations</p>
+          </div>
+          <button class="font-label-md text-label-md font-bold text-primary flex items-center gap-0.5">
+            View All (4)
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+          </button>
+        </div>
+        <!-- 2x2 Category Grid -->
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Category 1 -->
+          <div
+            class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-sm h-36 flex flex-col justify-end p-3 group">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+              data-alt="Classic Italian Neapolitan wood-fired pizza with fresh basil, bubbling Fior di Latte cheese, and charred crust on dark stone background"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKB59KMwRBf64a8KHA-AGHR62sYUFHFoS-kRFeudHdrBNwFFEOpRtwjB0sAwodWC7ShILaOKoGFRxQQUm2HGqVsx3VneBieus8u5aHrN5h6a54nJj2fbmHWU6DZrpI93tOyqHmhkJw1Op9FQepOxZ4Oi5ygmOlrW7op22-EpvLoos3ZcSP4tid1Q-hoZ_bXe9aQcU3FZ6m_5Rv_HxdIfA2uWJ172hw6zg6X61NUT0')">
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent">
+            </div>
+            <div class="relative z-10">
+              <span class="font-title-md text-title-md font-bold text-inverse-on-surface block leading-tight">Artisan
+                Pizzas</span>
+              <span class="font-label-sm text-label-sm text-secondary-fixed font-semibold">18 Styles</span>
+            </div>
+          </div>
+          <!-- Category 2 -->
+          <div
+            class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-sm h-36 flex flex-col justify-end p-3 group">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+              data-alt="Juicy gourmet brioche burger with double smash beef patties, melted cheddar, crisp lettuce, and chipotle mayo sauce on wooden board"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeJrNa1tuUEcdaxGpXZ-y5tJv11Up4U6_kBYgImAO2nc3fFoV0StuYjdioZCxG9b7pKLNuqZkKV2zYtppOUEWik4yEkbyw33LXVnW-PA0KhXNunJ1314kU5Fshr6yXFjtlJYUbpVw8W22PRYRJFVnZ5xf4FBMqEhUxHgPTgQY2b967KXlgYNrLZvS3LSI8YzwiE7zFgdOkg6_rFL_Dni2VeM2N5wsjw9p5vjCTaHw')">
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent">
+            </div>
+            <div class="relative z-10">
+              <span class="font-title-md text-title-md font-bold text-inverse-on-surface block leading-tight">Burgers
+                &amp; Fast</span>
+              <span class="font-label-sm text-label-sm text-secondary-fixed font-semibold">12 Combos</span>
+            </div>
+          </div>
+          <!-- Category 3 -->
+          <div
+            class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-sm h-36 flex flex-col justify-end p-3 group">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+              data-alt="Authentic Bombay sev puri chaat with spiced potato, tamarind chutney, mint chutney, crispy sev garnish, and fresh coriander"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAr-kdDqFL7EIoK0py7Op9jg74Cm0yr9MAGimMrVTu78yCUG4xOK0dQdq6F2GHtMdvBP2hdETLZZAM3q4J6-FaJsZJwqUi1TVd6ch_sD_oJJUmvxs2TSyMm2BHGFYC2FrDoHsEW5en6ckFkX_FsRzoQgdWcnFHXJ8EQtxv01TQRYoZt_hob679kbBoRrAboQDJ6exSZs9ZzaazgLfsduYGYXLHf5wsgWtG2dP0mqCc')">
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent">
+            </div>
+            <div class="relative z-10">
+              <span class="font-title-md text-title-md font-bold text-inverse-on-surface block leading-tight">Bombay Sev
+                Puri</span>
+              <span class="font-label-sm text-label-sm text-secondary-fixed font-semibold">Street Icon</span>
+            </div>
+          </div>
+          <!-- Category 4 -->
+          <div
+            class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-sm h-36 flex flex-col justify-end p-3 group">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+              data-alt="Golden crisp freshly fried Punjabi samosas served with sweet tamarind dip and spicy green chutney on rustic clay plate"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMB4PKj4m87Fa1JzSoC15L0ittbIkRUMPOGRXUdkkELGUGx0QX3N9MGRiqhM0_V_vqAcZFvXdW91rd0JPdbGwGGuc24BX6uQ00iA_zRET5qIbkUEk-iM20BbZX2-LJbBfRF3Y0uUJhn5sGyXO3NaapEUXR9q_Tn-6skkiFdJfeaLP0fMyDnO7xCkVSrk4Nt6TMQqBAXfpdRRtu7aW_IexzFbYqiiklzW0_pigOopY')">
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent">
+            </div>
+            <div class="relative z-10">
+              <span class="font-title-md text-title-md font-bold text-inverse-on-surface block leading-tight">Crispy
+                Samosas</span>
+              <span class="font-label-sm text-label-sm text-secondary-fixed font-semibold">All-Time Fav</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 5: Today's Special Offers (Deep Basil Green Container) -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="rounded-2xl bg-tertiary text-on-tertiary p-4 shadow-md flex flex-col gap-3">
+          <!-- Header with Countdown -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span
+                class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-extrabold uppercase">HOT
+                DEALS TODAY</span>
+            </div>
+            <div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+              <span class="material-symbols-outlined text-[15px]">timer</span>
+              <span>04h : 22m : 15s</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-tertiary">Today's Special Offers</h3>
+            <p class="font-body-sm text-body-sm text-on-tertiary/80">Limited-batch cravings at peak discount</p>
+          </div>
+          <!-- Horizontal Swiper of Offer Cards -->
+          <div class="flex gap-3 overflow-x-auto no-scrollbar -mx-4 px-4 pt-1">
+            <!-- Offer Card 1 -->
+            <div class="min-w-[250px] rounded-xl bg-surface text-on-surface p-3 shadow-md flex flex-col gap-2 shrink-0">
+              <div class="relative h-28 rounded-lg overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Truffle mushroom quattro formaggi pizza with melted gorgonzola, parmesan, mozzarella, and shaved black truffles"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA88YAKemdXTiwNI7HtHzFnoLHA4fv3QEnGy_lne3LQWFztezHhk88gfrkOSdqU_SmCpjZGkH1-uDOEoSwQKRbHMHYPwOpAasaasj1o2UOm0c6a5xG9B-C5zKJQ05XbYmksemXFJINXJFL1oF3S2cvSfskyX2f5Z_o8HlRTbTW-nTbIKo1nEg5PXCiZzrb0Y7zgMzkRrrwNHzl7_CylXnpN9FsFaqTIyW9kzWojYgk')">
+                </div>
+                <span
+                  class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">SAVE
+                  30%</span>
+              </div>
+              <div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface truncate">Truffle 4-Formaggi</h4>
+                <div class="flex items-baseline gap-2 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-primary">₹349</span>
+                  <span class="font-body-sm text-body-sm text-outline line-through">₹499</span>
+                </div>
+              </div>
+              <button
+                class="w-full h-9 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1 active:scale-95 transition-transform">
+                Claim Offer
+              </button>
+            </div>
+            <!-- Offer Card 2 -->
+            <div class="min-w-[250px] rounded-xl bg-surface text-on-surface p-3 shadow-md flex flex-col gap-2 shrink-0">
+              <div class="relative h-28 rounded-lg overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Double smash chipotle burger with charred edges, jalapeños, and flowing cheese on toasted brioche"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDts2uqrM8kz3AUXV1iy-l5sQCuJaLyOgp2KOIypZUYLPK8HkMVr8Zn86uq5RRZ65RD5q6pTiRX5IB071GIsMFNCSMhsU3OXyfKBye8o4Cdzjo2OlkYQTF_zt4W_5Niglhpn3RkmF3_QBar99nzlknRhPQBuscDlHu1jKIXgNXPTaCiXdZEWU5vQYyfGC62WKtoguVkVv6lV33NMZu2NhX2MIkHP-Uyllq8u4r-LZQ')">
+                </div>
+                <span
+                  class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">SAVE
+                  20%</span>
+              </div>
+              <div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface truncate">Chipotle Smash Burger</h4>
+                <div class="flex items-baseline gap-2 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-primary">₹249</span>
+                  <span class="font-body-sm text-body-sm text-outline line-through">₹310</span>
+                </div>
+              </div>
+              <button
+                class="w-full h-9 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1 active:scale-95 transition-transform">
+                Claim Offer
+              </button>
+            </div>
+            <!-- Offer Card 3 -->
+            <div class="min-w-[250px] rounded-xl bg-surface text-on-surface p-3 shadow-md flex flex-col gap-2 shrink-0">
+              <div class="relative h-28 rounded-lg overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Royal platter of Mumbai sev puri loaded with pomegranate, chopped onion, coriander, and three artisanal chutneys"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9UqVcn_H4SVqXOxGJ6f6aBaO-814kztvBPJFcrYmtb6qYpnf4puMiujT_DHWajB5Iw969y0gOI5oa4x6Solbhirfn6uyejUZx3WJkXpJtUn9YcNMy2meCT83gAlh1YA58W-7HI_KSOAFF3QfKdDabikF7UKEOXMwTYu36suCz_sCp6escQYLi-cfNUNqId8zUzb8R31FuUBB8yJgLBfAWD3t3lzaQ3NscnnaXWDs')">
+                </div>
+                <span
+                  class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">SAVE
+                  30%</span>
+              </div>
+              <div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface truncate">Royal Sev Puri Platter</h4>
+                <div class="flex items-baseline gap-2 mt-0.5">
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-primary">₹139</span>
+                  <span class="font-body-sm text-body-sm text-outline line-through">₹199</span>
+                </div>
+              </div>
+              <button
+                class="w-full h-9 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1 active:scale-95 transition-transform">
+                Claim Offer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 6: New Arrivals -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="flex items-center justify-between pb-3">
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+              <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">New Arrivals</h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Fresh from master trattoria kitchens</p>
+          </div>
+          <button class="font-label-md text-label-md font-bold text-primary">See All</button>
+        </div>
+        <!-- Product Stack Cards -->
+        <div class="flex flex-col gap-3">
+          <!-- Item 1 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex gap-3 relative">
+            <div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Fresh Italian Burrata Margherita pizza with whole burrata cheese center, fresh cherry tomatoes, basil, extra virgin olive oil drizzle"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaeoWvgm19HZreBrXnqC_AXuYmk_VXBuVzine1C1bKoqTq9IwB-5VI_ob17URtMCljxwyKnbQ2yOg0-4S6QOijYgJUwd_-AVg93K9-dM_WiFPgr3Bz0zmq4zisO_5z_iR6qu2kHAlz4EekYUEjzQs-kDYJlWL0XftjIgR1JW4VtjUAaxMWhOym-wnSwuK7JXHedc--2-LyJdtwre_GkOIrlSwDwC2ROR0KyH6qe1w')">
+              </div>
+              <span
+                class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold">NEW</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-between min-w-0">
+              <div>
+                <div class="flex items-center justify-between gap-1">
+                  <div class="flex items-center gap-1">
+                    <span class="w-3.5 h-3.5 rounded-sm bg-tertiary/20 flex items-center justify-center" title="Veg">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    </span>
+                    <span class="font-label-sm text-label-sm text-outline font-semibold">4.9 ★ (120+)</span>
+                  </div>
+                  <button aria-label="Favorite" class="text-outline hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">favorite_border</span>
+                  </button>
+                </div>
+                <h3 class="font-title-md text-title-md font-bold text-on-surface truncate mt-0.5">Burrata Margherita
+                  Speciale</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Whole imported burrata ball,
+                  cold-pressed olive oil</p>
+              </div>
+              <div class="flex items-center justify-between pt-1">
+                <div>
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹389</span>
+                  <span class="block font-label-sm text-[10px] text-secondary font-bold">+15 Naurio Coins</span>
+                </div>
+                <button
+                  class="h-8 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-[16px]">add</span> ADD
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex gap-3 relative">
+            <div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Artisanal peri peri spiced paneer sourdough flatbread with bell peppers and smoked cheese"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBydD_BnqlSaYqStfsF9Hso1djy6OLsb26AAW51ywlAt1DCLIaM7BeuJhqkK7_TviPNaC5Y_dmFBurKknp4eRSc4eJMAVRVnkNkbXzkI3_oGSWyIiGULWXMD8x2-TYARL_ZPpSFy7bRd2pJ637h3slBFb2iv1JKUPUlEorZ2AZZ-WBYxo6WF22ybVVZxy2tbuk3d_b_hrz69cESO734yESsmzHG4AAHPIVdsUdQyvg')">
+              </div>
+              <span
+                class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold">NEW</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-between min-w-0">
+              <div>
+                <div class="flex items-center justify-between gap-1">
+                  <div class="flex items-center gap-1">
+                    <span class="w-3.5 h-3.5 rounded-sm bg-tertiary/20 flex items-center justify-center" title="Veg">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    </span>
+                    <span class="font-label-sm text-label-sm text-outline font-semibold">4.8 ★ (85)</span>
+                  </div>
+                  <button aria-label="Favorite" class="text-outline hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">favorite_border</span>
+                  </button>
+                </div>
+                <h3 class="font-title-md text-title-md font-bold text-on-surface truncate mt-0.5">Peri Peri Paneer
+                  Sourdough</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Charred malai paneer with
+                  spicy herb glaze</p>
+              </div>
+              <div class="flex items-center justify-between pt-1">
+                <div>
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹229</span>
+                  <span class="block font-label-sm text-[10px] text-secondary font-bold">+10 Naurio Coins</span>
+                </div>
+                <button
+                  class="h-8 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-[16px]">add</span> ADD
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex gap-3 relative">
+            <div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Artisanal crispy corn chaat tossed with fresh lime, chaat masala, diced red onion, cilantro and butter garlic glaze"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA75KRe3l3uuzjKyI0t9RTmYz8tXfty4fWAg6CcZrEoyK2Tb8ce7Z-Ddv-bn3pmN99_WKGt5wW2Wkdyn1KImknIeCqLx78Jd06RVxs44U5GOvUeT-J4XqO8De4hbUyphOcOtSZPxSNd0ryadKnrrTQVVu8ahxLHtwc24VePWEzMEFSFIbkWnMbgLjEogWW-w-YLj6Wf14NDklK58xSNss1RrrySdhtewae0WBd8yoY')">
+              </div>
+              <span
+                class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold">NEW</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-between min-w-0">
+              <div>
+                <div class="flex items-center justify-between gap-1">
+                  <div class="flex items-center gap-1">
+                    <span class="w-3.5 h-3.5 rounded-sm bg-tertiary/20 flex items-center justify-center" title="Veg">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    </span>
+                    <span class="font-label-sm text-label-sm text-outline font-semibold">4.9 ★ (92)</span>
+                  </div>
+                  <button aria-label="Favorite" class="text-outline hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">favorite_border</span>
+                  </button>
+                </div>
+                <h3 class="font-title-md text-title-md font-bold text-on-surface truncate mt-0.5">Artisanal Crispy Corn
+                  Chaat</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Golden sweet corn kernel with
+                  lime-butter zest</p>
+              </div>
+              <div class="flex items-center justify-between pt-1">
+                <div>
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹169</span>
+                  <span class="block font-label-sm text-[10px] text-secondary font-bold">+8 Naurio Coins</span>
+                </div>
+                <button
+                  class="h-8 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-[16px]">add</span> ADD
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex gap-3 relative">
+            <div class="relative w-28 h-28 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Authentic Italian pistachio gelato cup garnished with roasted Sicilian pistachio nuts and delicate waffle crisp"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKwi-ZWuC4UIZURSrAQfNXWx4roTPcTIz3tJkNrNFkZtTV-tuQeopJga69CgLJejBk8EVzbz53JETzhf5HR9v9j3s7ag733t3xuCVRSrt1JYl34Y1JhGJyW-bhxOTljpOF0BknPCIGhBvQJPV9ckV7fM4fIRF6uHvyk1VffdQgIBkYvXfY-ijvrlM8Gaze_rP_p1ilbQvhYV7qINMNZtIFn5621finTuU-WOEIg6M')">
+              </div>
+              <span
+                class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[10px] font-bold">NEW</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-between min-w-0">
+              <div>
+                <div class="flex items-center justify-between gap-1">
+                  <div class="flex items-center gap-1">
+                    <span class="w-3.5 h-3.5 rounded-sm bg-tertiary/20 flex items-center justify-center" title="Veg">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    </span>
+                    <span class="font-label-sm text-label-sm text-outline font-semibold">5.0 ★ (64)</span>
+                  </div>
+                  <button aria-label="Favorite" class="text-outline hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">favorite_border</span>
+                  </button>
+                </div>
+                <h3 class="font-title-md text-title-md font-bold text-on-surface truncate mt-0.5">Pistachio Gelato Cup
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Slow-churned Sicilian
+                  pistachio and whole milk</p>
+              </div>
+              <div class="flex items-center justify-between pt-1">
+                <div>
+                  <span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹179</span>
+                  <span class="block font-label-sm text-[10px] text-secondary font-bold">+8 Naurio Coins</span>
+                </div>
+                <button
+                  class="h-8 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-[16px]">add</span> ADD
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 7: Bestsellers -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="flex items-center justify-between pb-3">
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-secondary-container text-[20px]">local_fire_department</span>
+              <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Bestsellers</h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Most loved by our Indiranagar foodies</p>
+          </div>
+          <button class="font-label-md text-label-md font-bold text-primary">All (24)</button>
+        </div>
+        <!-- 2-Column Mobile Grid -->
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Bestseller 1 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="relative h-28 w-full rounded-xl overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Classic Margherita Rustica pizza with fresh basil leaf and molten mozzarella"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVfQ9fCd4z6wKQNCZMsLRklwFk72MSMM0KBYKF21olDc5j1hJ9c9SHiYTOA7CXZSGakmYDFva15XItHxCI5X06Qx50WUktIBcmqw3I2bMBSDCgwMrJNYE_cfC4GTt-ho2uY5yex7oczTpVLgksooGTLIouZBgcSJdZVVboN-YIVKy3L5Hei-ENvSRzkHG4is1PKpy6eOL1zAOAYP3ZYe8yu2q88vequsloZtDneo4')">
+                </div>
+                <span
+                  class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm font-label-sm text-[10px] font-bold">★
+                  4.9</span>
+              </div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface mt-2 truncate">Margherita Rustica</h4>
+              <span class="font-label-sm text-label-sm text-outline">Italian Sourdough</span>
+            </div>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-title-lg text-title-lg font-extrabold text-on-surface">₹299</span>
+              <button
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+          </div>
+          <!-- Bestseller 2 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="relative h-28 w-full rounded-xl overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Double BBQ bacon cheese burger with crispy onions and rich barbecue glaze"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdC_zp2ThgKbQ_QJp9cP6qF8Ran1tNhWw2yzCeQzVS5ApjHrfLh4VKLWfFajTDPKnDXTglF1oRjcEBiKer9DvhVNLZKQTproeDsEqalwoG3pwgwAxVBhIB9VofKYhUWupNu88t-r7ITfVfOGwiIcZ_0I-vrzqeZAA9kuMA9gepCzN-0k8vDV-370tgMCwBLyKMyeHzM8cOzjBLVsbJakSYoV0QeJph3B9e7rwfJtg')">
+                </div>
+                <span
+                  class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm font-label-sm text-[10px] font-bold">★
+                  4.8</span>
+              </div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface mt-2 truncate">Double BBQ Bacon</h4>
+              <span class="font-label-sm text-label-sm text-outline">Gourmet Burger</span>
+            </div>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-title-lg text-title-lg font-extrabold text-on-surface">₹329</span>
+              <button
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+          </div>
+          <!-- Bestseller 3 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="relative h-28 w-full rounded-xl overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Classic Mumbai sev puri arranged neatly with raw mango, onions and yellow sev"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiIwodcM_6dwq8HT_bSHyHtpU5P5s2sb0qG8s8LsqT8icn0BE3qhgCESBD3XrJAXxZjaO_TdEjBtpV4Z_u6x5v7COId0LCwOgtVWmBKIHQjH1tMKSBgZ_xfhUKiLPaGMZ2gr48qBy_-sm1ppYXP0moBkeKAWsC_jm9p5tD5r2zJBSHzFMl4Xu7XKnN253wWdqeh07DiTCAoyRKkQJ-TOMUpnjJw4wAjmUhIUFjenM')">
+                </div>
+                <span
+                  class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm font-label-sm text-[10px] font-bold">★
+                  5.0</span>
+              </div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface mt-2 truncate">Classic Sev Puri</h4>
+              <span class="font-label-sm text-label-sm text-outline">Chaat Icon</span>
+            </div>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-title-lg text-title-lg font-extrabold text-on-surface">₹120</span>
+              <button
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+          </div>
+          <!-- Bestseller 4 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="relative h-28 w-full rounded-xl overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Khasta paneer samosa cracked open showing spiced cottage cheese filling with raisins and cashews"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-8v6IbP5uMDp_YbqNJEC6G3IERAQh7hF9_FS0T2fcYNiI0dXCegepMRQ3m1lt_W0XtJq591xJJmu_iSgxYEkLFFANHM0YWlnY4AiKm2xMZLOe7OQspOpli_aHOtHP-PvivF51s5e7vx1kXxN_FG_1V4P6jS5-T2QwScAfl4AQdXIYFB1apGu0RP9jTb5mAKzgCda8fnITMyXhwrj32bWXvM-nUXL7lvzg_JcYcGA')">
+                </div>
+                <span
+                  class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm font-label-sm text-[10px] font-bold">★
+                  4.9</span>
+              </div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface mt-2 truncate">Khasta Paneer Samosa</h4>
+              <span class="font-label-sm text-label-sm text-outline">Desi Snack (2pcs)</span>
+            </div>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-title-lg text-title-lg font-extrabold text-on-surface">₹90</span>
+              <button
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+          </div>
+          <!-- Bestseller 5 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="relative h-28 w-full rounded-xl overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Penne arrabbiata with spicy garlic tomato sauce, grated parmesan cheese, and fresh Italian parsley"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5LojGJM5ZdVizpD1gbLDz9VDu4T3tWmq16CFLSQC571xp3Iuk_nOze2btNuSi9z-kZg9MPQRYDe8jSvL25Ogs0iRqug01vugqJfps4hG1p1pcv4PJl_23mka92NC4p1VD6TCm6Fc9O0GqS-JI_5wK60odW9cggnYtV6O5-c2yJ9lAJpOwad4chfe8PSAMYm7eXTGLlisdLiVHuWzuecao2e4B4uNw6Jo2UX6ziwo')">
+                </div>
+                <span
+                  class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm font-label-sm text-[10px] font-bold">★
+                  4.8</span>
+              </div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface mt-2 truncate">Penne Arrabbiata</h4>
+              <span class="font-label-sm text-label-sm text-outline">Artisanal Pasta</span>
+            </div>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-title-lg text-title-lg font-extrabold text-on-surface">₹280</span>
+              <button
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+          </div>
+          <!-- Bestseller 6 -->
+          <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="relative h-28 w-full rounded-xl overflow-hidden bg-surface-container">
+                <div class="w-full h-full bg-cover bg-center"
+                  data-alt="Warm chocolate lava cake with flowing dark Belgian chocolate center and dusting of powdered sugar"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAs74ZfjRnJFgzzbRHplmTh6OSqaDeZAKHfd20ldb0KIHT0dbKE-44LNDp2nWYFtg6uaaxH6V8rV2nOyrMyjwCRPTfauzY1FUaGp6psshekuKJadCLs4XSuGu706DESsZR5Ii-a5GIfRbVGr4e3QCSQ0FlAqpgmqeD05erpsBUnkoD9j6gIQGcdEVsfvTG9N-BhVpjYf0CVOK8NzUc_sp2MGtwLGk1OwpW96Zh7dts')">
+                </div>
+                <span
+                  class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-sm font-label-sm text-[10px] font-bold">★
+                  4.9</span>
+              </div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface mt-2 truncate">Chocolate Lava Cake</h4>
+              <span class="font-label-sm text-label-sm text-outline">Warm Dessert</span>
+            </div>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-title-lg text-title-lg font-extrabold text-on-surface">₹180</span>
+              <button
+                class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 8: Explore Our Complete Culinary Collection Banner -->
+      <div class="px-margin-mobile pb-space-md">
+        <div
+          class="p-5 rounded-2xl bg-surface-container-high text-on-surface shadow-sm text-center flex flex-col items-center gap-3">
+          <span
+            class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+            FULL MENU EXPERIENCE
+          </span>
+          <h2 class="font-headline-sm text-headline-sm font-extrabold text-on-surface">
+            Explore Our Complete Culinary Collection
+          </h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+            Over 60 signature recipes bridging genuine Italian trattoria standards with beloved street indulgence.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
+            <span
+              class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-tertiary"></span> 100% Veg Range
+            </span>
+            <span
+              class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-primary"></span> 48h Natural Leavening
+            </span>
+            <span
+              class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-secondary-container"></span> Pure Desi Ghee
+            </span>
+          </div>
+          <button
+            class="w-full mt-2 h-11 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-md active:scale-95 transition-transform">
+            Browse Full Menu &amp; Order Now
+          </button>
+        </div>
+      </div>
+      <!-- SECTION 9: Why Choose Naurio? -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="pb-3">
+          <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Why Choose Naurio?</h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">The uncompromising promise behind every bite</p>
+        </div>
+        <div class="flex flex-col gap-2.5">
+          <div class="p-3.5 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-tertiary/15 text-tertiary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface">Premium Italian Sourcing</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                San Marzano D.O.P. tomatoes, Italian 00 flour, and cold-pressed extra virgin olive oil without
+                shortcuts.
+              </p>
+            </div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[22px]">bolt</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface">Lightning Fast Dispatch</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Insulated thermal carriers guarantee crust crispness and melty cheese right at your dining table.
+              </p>
+            </div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-surface-container-low shadow-sm flex items-start gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[22px]">sentiment_very_satisfied</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md font-bold text-on-surface">10K+ Happy Foodies</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Rated 4.9 across Bengaluru for consistency, generous gourmet toppings, and friendly service.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 10: What Our Customers Say (Reviews) -->
+      <div class="px-margin-mobile pb-space-md">
+        <div class="flex items-center justify-between pb-3">
+          <div>
+            <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">What Our Customers Say</h2>
+            <div class="flex items-center gap-1.5 mt-0.5">
+              <span class="font-title-md text-title-md font-extrabold text-primary">4.9 / 5.0</span>
+              <div class="flex text-secondary-container">
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <span class="font-body-sm text-body-sm text-outline">(1,420+ reviews)</span>
+            </div>
+          </div>
+        </div>
+        <!-- Review Horizontal Scroll -->
+        <div class="flex gap-3 overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile">
+          <!-- Review 1 -->
+          <div
+            class="min-w-[270px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between shrink-0">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-8 h-8 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-label-md text-label-md">
+                  AS</div>
+                <div>
+                  <h4 class="font-title-md text-title-md font-bold text-on-surface leading-tight">Ananya Sharma</h4>
+                  <span class="font-label-sm text-label-sm text-outline">Indiranagar • Margherita Fan</span>
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “The crust blister on the Margherita Rustica was textbook Neapolitan! Reached in 24 mins steaming hot.”
+              </p>
+            </div>
+            <div class="pt-3 flex items-center gap-1 text-secondary-container">
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div
+            class="min-w-[270px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between shrink-0">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary font-bold flex items-center justify-center font-label-md text-label-md">
+                  RV</div>
+                <div>
+                  <h4 class="font-title-md text-title-md font-bold text-on-surface leading-tight">Rohan Verma</h4>
+                  <span class="font-label-sm text-label-sm text-outline">Koramangala • Chaat Connoisseur</span>
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “Never expected an Italian house to nail Mumbai Sev Puri this hard. Chutneys were delightfully tangy!”
+              </p>
+            </div>
+            <div class="pt-3 flex items-center gap-1 text-secondary-container">
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div
+            class="min-w-[270px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between shrink-0">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-8 h-8 rounded-full bg-secondary-container/30 text-secondary font-bold flex items-center justify-center font-label-md text-label-md">
+                  PN</div>
+                <div>
+                  <h4 class="font-title-md text-title-md font-bold text-on-surface leading-tight">Priya Nair</h4>
+                  <span class="font-label-sm text-label-sm text-outline">Domlur • Smash Burger Regular</span>
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                “The smoky chipotle smash burger paired with the coin discounts is unmatched value in town.”
+              </p>
+            </div>
+            <div class="pt-3 flex items-center gap-1 text-secondary-container">
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION 11: Download Our Apps & Delivery Partner -->
+      <div class="px-margin-mobile pb-space-md flex flex-col gap-3">
+        <!-- App Download Card -->
+        <div class="p-4 rounded-2xl bg-secondary-fixed text-on-secondary-fixed shadow-sm flex items-center gap-3">
+          <div
+            class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+            <span class="material-symbols-outlined text-[28px]">install_mobile</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 class="font-title-md text-title-md font-bold text-on-secondary-fixed leading-tight">Get the NAURIO Food
+              App</h4>
+            <p class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Unlock ₹100 instant welcome coins</p>
+          </div>
+          <button
+            class="h-9 px-3.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold shrink-0 shadow-sm active:scale-95 transition-transform">
+            Get App
+          </button>
+        </div>
+        <!-- Partner CTA Card -->
+        <div class="p-4 rounded-2xl bg-surface-container text-on-surface shadow-sm flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+            <span class="material-symbols-outlined text-[28px]">sports_motorsports</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 class="font-title-md text-title-md font-bold text-on-surface leading-tight">Deliver with NAURIO</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Flexible payouts &amp; fuel bonus</p>
+          </div>
+          <button
+            class="h-9 px-3.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold shrink-0 hover:bg-surface-container-high transition-colors">
+            Join Us
+          </button>
+        </div>
+      </div>
+      <!-- SECTION 12: Mobile Footer (Espresso Brown #302019 / inverse-surface) -->
+      <footer class="bg-inverse-surface text-inverse-on-surface px-margin-mobile pt-6 pb-8 flex flex-col gap-5">
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span
+              class="font-headline-sm text-headline-sm font-extrabold text-primary-fixed tracking-tight">NAURIO</span>
+            <span
+              class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold">Trattoria
+              &amp; Street</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-inverse-on-surface/80">
+            Crafting artisanal wood-fired sourdough pizzas, fresh handmade pastas, and heritage Mumbai snacks with
+            genuine devotion.
+          </p>
+        </div>
+        <!-- Kitchen Hours & Support -->
+        <div class="grid grid-cols-2 gap-3 pt-1">
+          <div class="p-3 rounded-xl bg-inverse-on-surface/10 flex flex-col gap-1">
+            <span class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase">Kitchen Hours</span>
+            <span class="font-body-sm text-body-sm font-semibold">11:00 AM – 03:00 AM</span>
+            <span class="font-label-sm text-label-sm text-inverse-on-surface/70">Open Everyday</span>
+          </div>
+          <div class="p-3 rounded-xl bg-inverse-on-surface/10 flex flex-col gap-1">
+            <span class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase">Need Help?</span>
+            <span class="font-body-sm text-body-sm font-semibold">+91 80 4912 3400</span>
+            <span class="font-label-sm text-label-sm text-inverse-on-surface/70">support@naurio.in</span>
+          </div>
+        </div>
+        <!-- Quick Links Grid -->
+        <div class="grid grid-cols-2 gap-2 pt-2 font-label-md text-label-md text-inverse-on-surface/80">
+          <a class="py-1 hover:text-primary-fixed transition-colors" href="#">Our Kitchen Hygiene</a>
+          <a class="py-1 hover:text-primary-fixed transition-colors" href="#">Dietary &amp; Allergens</a>
+          <a class="py-1 hover:text-primary-fixed transition-colors" href="#">Sourdough Fermentation</a>
+          <a class="py-1 hover:text-primary-fixed transition-colors" href="#">Terms &amp; Refund Policy</a>
+        </div>
+        <!-- Copyright -->
+        <div
+          class="pt-4 border-t-0 flex flex-col sm:flex-row items-center justify-between gap-2 text-inverse-on-surface/60 font-body-sm text-body-sm">
+          <p>© 2025 NAURIO Cucina Italiana. Crafted with craving.</p>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[18px]">eco</span>
+            <span>Eco-friendly biodegradable packaging</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <nav
+    class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(48,32,25,0.06)]"
+    data-active-classes="text-primary font-bold">
+    <div class="flex justify-around items-center h-16 px-space-sm"><a
+        class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors"
+        data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">cottage</span><span
+          class="font-label-sm text-label-sm">Home</span></a><a
+        class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors"
+        data-path="menu-explore" href="#"><span
+          class="material-symbols-outlined text-[24px]">restaurant_menu</span><span
+          class="font-label-sm text-label-sm">Explore</span></a><a
+        class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors"
+        data-path="orders" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span
+          class="font-label-sm text-label-sm">Orders</span></a><a
+        class="flex flex-col items-center justify-center gap-0.5 min-w-[54px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors"
+        data-path="profile-cart" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span
+          class="font-label-sm text-label-sm">Profile</span></a></div>
+  </nav>
+</body>
+
+</html>

@@ -297,6 +297,8 @@
                 }
             }
         }</script>
+<link rel="stylesheet" href="../../shared/profile-sidebar.css" />
+    <script src="../../shared/profile-sidebar.js" defer></script>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
@@ -423,140 +425,11 @@
             </div>
             <!-- Primary Account Layout: Sidebar + Main Stream -->
             <div
-                class="max-w-7xl w-full mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+                class="max-w-7xl w-full mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 profile-sidebar-layout lg:grid-cols-12 gap-gutter-desktop">
                 <!-- LEFT SIDEBAR COMPONENT (~280px equivalent: 3 of 12 cols) -->
-                <aside class="lg:col-span-4 xl:col-span-3 space-y-space-md">
-                    <!-- Mini User Profile Card -->
-                    <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm space-y-space-md">
-                        <div class="flex items-center gap-space-md">
-                            <div class="relative w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
-                                <img class="w-full h-full object-cover"
-                                    data-alt="Editorial close-up portrait of a sophisticated modern food connoisseur and culinary diner with warm directional golden hour cafe lighting, clean aesthetic styling, deep natural espresso background"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgbsfU0l4huWoEnSgrGqSI__nkEi8dGat1nU1eBq5t7WExIYHvV0mdKGf8MpezVmiclYuFZTfzQsJx_lgs9jz8rWJqCOBGcc5_aSDmJ-91ckWLnb2M6TgeZLTB8fgD56Fe8J-8H9a1FBAN7h3hUeMSOE_kiBxmWLSbwUIRWDFwEYWrxBLenED3VZ5DztzeUOU-vrv_ce-yMZcuB_zf6F4uAWc2uj0nbFYfEV5EkmK2" />
-                            </div>
-                            <div class="min-w-0 flex-1">
-                                <div class="flex items-center gap-1">
-                                    <h2 class="font-title-md text-title-md font-bold text-on-surface truncate">Rohan
-                                        Kapoor</h2>
-                                    <span class="material-symbols-outlined text-primary text-[16px] shrink-0"
-                                        style="font-variation-settings: 'FILL' 1;">verified</span>
-                                </div>
-                                <p class="font-body-sm text-body-sm text-on-surface-variant truncate">
-                                    rohan.kapoor@naurio.com</p>
-                                <span class="font-label-sm text-label-sm text-secondary block mt-0.5">Member since Oct
-                                    2023</span>
-                            </div>
-                        </div>
-                        <!-- Sidebar Navigation Pill Menu -->
-                        <nav class="space-y-1">
-                            <!-- Active: My Profile -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl bg-primary text-on-primary shadow-sm font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]"
-                                        style="font-variation-settings: 'FILL' 1;">person</span>
-                                    <span>My Profile</span>
-                                </div>
-                                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                            </a>
-                            <!-- My Orders -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]">receipt_long</span>
-                                    <span>My Orders</span>
-                                </div>
-                                <span
-                                    class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">1
-                                    Active</span>
-                            </a>
-                            <!-- Saved Addresses -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]">pin_drop</span>
-                                    <span>Saved Addresses</span>
-                                </div>
-                                <span class="font-label-sm text-label-sm text-secondary">3 saved</span>
-                            </a>
-                            <!-- My Favourites -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]">favorite</span>
-                                    <span>My Favourites</span>
-                                </div>
-                                <span class="font-label-sm text-label-sm text-secondary">14 items</span>
-                            </a>
-                            <!-- Offers & Coupons -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]">local_offer</span>
-                                    <span>Offers &amp; Coupons</span>
-                                </div>
-                                <span
-                                    class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">4
-                                    new</span>
-                            </a>
-                            <!-- Help & Support -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]">headset_mic</span>
-                                    <span>Help &amp; Support</span>
-                                </div>
-                                <span
-                                    class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
-                                    24/7 Live
-                                </span>
-                            </a>
-                            <!-- Account Settings -->
-                            <a class="flex items-center justify-between px-space-md py-space-sm rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
-                                href="#">
-                                <div class="flex items-center gap-space-sm">
-                                    <span class="material-symbols-outlined text-[20px]">tune</span>
-                                    <span>Account Settings</span>
-                                </div>
-                                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-                            </a>
-                        </nav>
-                        <!-- Divider -->
-                        <div class="h-px bg-surface-container-high w-full"></div>
-                        <!-- Logout Action -->
-                        <button
-                            class="w-full flex items-center gap-space-sm px-space-md py-space-xs rounded-xl hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-colors font-label-md text-label-md"
-                            type="button">
-                            <span class="material-symbols-outlined text-[20px]">logout</span>
-                            <span>Logout</span>
-                        </button>
-                    </div>
-                    <!-- Chef Concierge Teaser Card -->
-                    <div
-                        class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-space-md space-y-space-sm shadow-sm relative overflow-hidden">
-                        <div
-                            class="absolute -right-4 -bottom-4 w-28 h-28 bg-primary/20 rounded-full blur-2xl pointer-events-none">
-                        </div>
-                        <div
-                            class="flex items-center gap-space-xs text-primary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">
-                            <span class="material-symbols-outlined text-[16px]">room_service</span>
-                            <span>Sommelier Desk</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm font-bold text-surface-bright leading-snug">Private
-                            Tasting Reservation?</h3>
-                        <p class="font-body-sm text-body-sm text-secondary-fixed-dim leading-relaxed">
-                            As a Black Connoisseur, access bespoke multi-course kitchen previews 48 hours early.
-                        </p>
-                        <button
-                            class="mt-2 w-full py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md font-bold hover:bg-surface-bright transition-colors shadow-sm"
-                            type="button">
-                            Connect Concierge
-                        </button>
-                    </div>
-                </aside>
+                <aside data-profile-sidebar data-active-page="profile" data-route-set="design6"></aside>
                 <!-- MAIN CONTENT AREA (9 of 12 cols) -->
-                <main class="lg:col-span-8 xl:col-span-9 space-y-space-lg">
+                <main class="lg:col-span-9 xl:col-span-9 space-y-space-lg">
                     <!-- 1. Customer Profile Banner Card -->
                     <section
                         class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md relative overflow-hidden">
