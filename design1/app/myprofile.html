@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport" />
+    <meta content="mobile_stack" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#1d1c15", "surface-variant": "#e7e2d7", "inverse-surface": "#323029", "error": "#ba1a1a", "on-primary-container": "#7d9189", "inverse-primary": "#b6cbc2", "on-error-container": "#93000a", "secondary-container": "#fe7f3c", "on-primary-fixed-variant": "#384b44", "primary-fixed": "#d2e7de", "on-tertiary-container": "#ad8640", "surface-dim": "#dedacf", "tertiary-container": "#342200", "surface-bright": "#fef9ee", "tertiary-fixed-dim": "#ecc074", "surface-container": "#f2ede3", "surface-container-lowest": "#ffffff", "on-secondary-container": "#652500", "on-surface": "#1d1c15", "surface": "#fef9ee", "on-tertiary-fixed": "#271900", "primary-container": "#172923", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#5e4100", "secondary-fixed": "#ffdbcc", "primary-fixed-dim": "#b6cbc2", "surface-container-high": "#ede8dd", "surface-tint": "#4f625b", "on-secondary": "#ffffff", "surface-container-highest": "#e7e2d7", "background": "#fef9ee", "on-error": "#ffffff", "outline": "#727875", "on-secondary-fixed-variant": "#7b2f00", "on-primary": "#ffffff", "outline-variant": "#c2c8c4", "on-surface-variant": "#424845", "tertiary": "#190e00", "surface-container-low": "#f8f3e8", "secondary-fixed-dim": "#ffb694", "tertiary-fixed": "#ffdea9", "secondary": "#a14000", "on-secondary-fixed": "#351000", "on-primary-fixed": "#0d1f19", "primary": "#03140e", "inverse-on-surface": "#f5f0e5" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-lg": "4rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin": "1.5rem", "gutter-lg": "2rem", "margin-md": "2.5rem", "space-md": "1rem", "gutter-sm": "1rem" }, fontFamily: { "display-hero": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"] }, fontSize: { "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "title-lg": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "price-display": ["20px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-sm": ["22px", { lineHeight: "28px", fontWeight: "500" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "800" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }] } } } };</script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-16 px-gutter flex items-center justify-between">
+            <div class="flex items-center gap-space-sm"><button aria-label="Go back"
+                    class="min-w-[44px] min-h-[44px] -ml-2 flex items-center justify-center text-on-surface hover:text-secondary transition-colors"
+                    onclick="history.back()" type="button"><span
+                        class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button>
+                <div class="flex flex-col"><span class="font-label-caps text-label-caps text-secondary uppercase">NAURIO
+                        HAUTE</span>
+                    <h1 class="font-title-lg text-title-lg text-on-surface leading-tight tracking-tight">My Profile
+                        &amp; Account Settings</h1>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen">
+        <div class="flex flex-col w-full px-gutter pb-margin-lg space-y-space-lg">
+            <!-- Header Subtitle Narrative -->
+            <div class="flex flex-col pt-space-sm">
+                <div class="flex items-center gap-space-xs mb-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Gastronomic
+                        Atelier Profile</span>
+                </div>
+                <p class="font-headline-sm text-headline-sm text-on-surface">A more personal culinary experience.</p>
+            </div>
+            <!-- Luxury Patron Profile Card -->
+            <div
+                class="relative overflow-hidden rounded-lg bg-surface-container-lowest p-space-lg shadow-[0_12px_32px_-4px_rgba(37,37,37,0.06),0_4px_12px_-2px_rgba(244,119,53,0.04)]">
+                <!-- Ambient Festive Warmth Gradient (Inspired by celebratory riverside glow) -->
+                <div
+                    class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-gradient-to-br from-secondary-fixed via-tertiary-fixed to-transparent opacity-40 blur-2xl pointer-events-none">
+                </div>
+                <div class="relative z-10 flex flex-col space-y-space-md">
+                    <!-- Member Identity Header -->
+                    <div class="flex items-center justify-between">
+                        <div class="relative flex items-center">
+                            <div
+                                class="relative w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-on-tertiary-container via-secondary to-tertiary-fixed-dim">
+                                <img class="w-full h-full object-cover rounded-full"
+                                    data-alt="Close-up portrait of Anya Kapoor, an elegant South Asian culinary connoisseur with graceful expression, warm golden hour ambient lighting, captured with subtle cinema depth of field in soft ivory and amber tones."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKpi79Jtf-QXSdEp9zP_frmRu4IGTSlRu95_ZjX9_N-BgYl6q5Lu1h60s9N5MGSEO_PEQESBF6EZdd9juZiuiRoHkeYmKEqC3y-WwdXbcmnQhxARHWuoKvZC_whSLLbgXcT7iHkT0lXfM_V4d5VoiJBPYf2gt9nZZt9rqDE48kEKGovxZYTXBcc1ERxHMYs-7lSgEXn1LzP1TNizdYoPwmHMlS2ueABKZ1wHJ42GRP" />
+                                <div
+                                    class="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-primary-container text-tertiary-fixed-dim flex items-center justify-center shadow-md">
+                                    <span class="material-symbols-outlined text-[13px]"
+                                        style="font-variation-settings: 'FILL' 1;">verified</span>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">
+                                    Anya Kapoor</h2>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-[170px]">
+                                    anya.kapoor@epicurean.estate</p>
+                            </div>
+                        </div>
+                        <button
+                            class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform"
+                            type="button">
+                            <span class="material-symbols-outlined text-[16px]">edit</span>
+                            <span>Edit</span>
+                        </button>
+                    </div>
+                    <!-- Membership Tier Pill -->
+                    <div
+                        class="flex items-center justify-between px-3 py-2 rounded-DEFAULT bg-primary-container text-on-primary">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]"
+                                style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                            <span
+                                class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase tracking-wider">Grand
+                                Cru Privilège</span>
+                        </div>
+                        <span
+                            class="font-body-sm text-body-sm text-inverse-primary font-mono tracking-tight">#EK-9821</span>
+                    </div>
+                    <!-- Metrics Triplet -->
+                    <div class="grid grid-cols-3 gap-2 pt-1">
+                        <div
+                            class="flex flex-col items-center justify-center p-2.5 rounded-DEFAULT bg-surface-container-low text-center">
+                            <span class="font-price-display text-price-display text-secondary">14</span>
+                            <span
+                                class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase mt-0.5">Favourites</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center p-2.5 rounded-DEFAULT bg-surface-container-low text-center">
+                            <span class="font-price-display text-price-display text-primary">28</span>
+                            <span
+                                class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase mt-0.5">Orders</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center p-2.5 rounded-DEFAULT bg-surface-container-low text-center">
+                            <div class="flex items-center gap-0.5 justify-center">
+                                <span
+                                    class="font-price-display text-price-display text-on-tertiary-container">1,450</span>
+                            </div>
+                            <span
+                                class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase mt-0.5">Coins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Festive Private Concierge Mobile Card -->
+            <div class="relative overflow-hidden rounded-lg bg-primary-container text-on-primary p-space-lg shadow-md">
+                <div
+                    class="absolute -right-12 -bottom-12 w-40 h-40 rounded-full bg-secondary opacity-25 blur-3xl pointer-events-none">
+                </div>
+                <div class="flex items-start justify-between relative z-10">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-tertiary-fixed text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">room_service</span>
+                        <span
+                            class="font-label-caps text-label-caps text-tertiary-fixed uppercase tracking-wider">Private
+                            Concierge Desk</span>
+                    </div>
+                    <span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+                </div>
+                <p
+                    class="relative z-10 font-body-md text-body-md text-inverse-on-surface mt-space-sm mb-space-md opacity-90">
+                    Need a bespoke tasting flight or sommelier reservation? Devraj &amp; Maître D’ are on standby for
+                    your autumn gathering.
+                </p>
+                <button
+                    class="relative z-10 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-on-primary font-label-md text-label-md active:scale-95 transition-transform shadow-sm"
+                    type="button">
+                    <span>Initiate Priority Desk</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+            </div>
+            <!-- Collapsible Personal Information Section -->
+            <div class="rounded-lg bg-surface-container-lowest p-space-lg shadow-sm">
+                <div class="flex items-center justify-between pb-space-sm">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+                        <h3 class="font-title-md text-title-md text-on-surface font-semibold">Personal Dossier</h3>
+                    </div>
+                    <button
+                        class="text-on-surface-variant font-label-caps text-label-caps uppercase flex items-center gap-0.5"
+                        id="toggleDossierBtn" type="button">
+                        <span id="dossierToggleText">Review</span>
+                        <span class="material-symbols-outlined text-[18px]" id="dossierChevron">expand_more</span>
+                    </button>
+                </div>
+                <!-- Editable Fields Container -->
+                <div class="space-y-space-md pt-space-sm" id="dossierForm">
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Full Legal
+                            Name</label>
+                        <div
+                            class="px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md">
+                            Anya Kapoor
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-space-sm">
+                        <div class="space-y-1">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Email
+                                Address</label>
+                            <div
+                                class="px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md truncate">
+                                anya.kapoor@epicurean.estate
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Direct
+                                Mobile Contact</label>
+                            <div
+                                class="px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md">
+                                +91 98201 44521
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-space-sm">
+                        <div class="space-y-1">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Date of
+                                Birth</label>
+                            <div
+                                class="px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md">
+                                14 Aug 1992
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Dietary
+                                Note</label>
+                            <div
+                                class="px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-low text-secondary font-label-md text-label-md">
+                                Pescatarian • Truffle
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Primary
+                            Delivery Residence</label>
+                        <div
+                            class="p-3 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md flex items-start gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">home_pin</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-on-surface">Penthouse 4B, Metro Hub Residence</span>
+                                <span class="text-body-sm text-on-surface-variant">Central Boulevard, Nariman Point,
+                                    Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md text-center active:scale-[0.98] transition-transform"
+                        type="button">
+                        Update Details
+                    </button>
+                </div>
+            </div>
+            <!-- Gastronomic Visual Memoir Highlight -->
+            <div class="rounded-lg bg-surface-container-lowest p-space-md shadow-sm">
+                <div class="flex items-center justify-between mb-space-sm">
+                    <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-secondary text-[18px]">local_fire_department</span>
+                        <span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Festival
+                            Harvest Showcase</span>
+                    </div>
+                    <span class="font-body-sm text-body-sm text-secondary font-medium">Bespoke Banquet</span>
+                </div>
+                <div class="relative w-full h-36 rounded-DEFAULT overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        data-alt="An opulent outdoor waterfront feast during evening twilight illuminated by warm terracotta oil lamps and shimmering brass thalis overflowing with saffron sweets, tropical fruits, and delicate floral garlands alongside tranquil celebratory river reflections."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY1VM-UBoqAam9p1boUCRNSRTsBdEBt5Muzx16tUIEu99JfwfieaDoIkMpR-OomBgbNUXVrrYgzimth0mlJINAc4FuEYHy5zBefzlcc7pkl5m_M-hItfwmWtOYFsn41LJpMgk78Ve8goNnzBcP0coKre6TeSxFxVgfm1DuNr7HtNoEPNfS4_HHBTyFuCKvtACPq1Bf3nqsywLYbIa5VgqGz79qFSnPNmLsB9-dz4Wu" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-sm">
+                        <p class="font-headline-sm text-headline-sm text-surface-bright italic">Autumnal Grand Thali
+                            curated by Chef Sanjeev</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Account Navigation Menu -->
+            <div class="rounded-lg bg-surface-container-lowest overflow-hidden shadow-sm">
+                <div class="p-space-md bg-surface-container-low flex items-center justify-between">
+                    <span
+                        class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Account
+                        Orchestration</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">9 Modules</span>
+                </div>
+                <div class="flex flex-col">
+                    <!-- 1. Personal Information -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#dossier">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">person</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">Personal
+                                Information</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase">Verified</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                        </div>
+                    </a>
+                    <!-- 2. My Orders -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#orders">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">My Orders</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps font-bold">1
+                                Active</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                        </div>
+                    </a>
+                    <!-- 3. Saved Addresses -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#addresses">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">pin_drop</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">Saved Addresses</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">3 Locations</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                        </div>
+                    </a>
+                    <!-- 4. My Favourites -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#favourites">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined text-[20px]"
+                                    style="font-variation-settings: 'FILL' 1;">favorite</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">My Favourites</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps">14
+                                Saved</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                        </div>
+                    </a>
+                    <!-- 5. Offers & Coupons -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#offers">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-tertiary-fixed-dim">
+                                <span class="material-symbols-outlined text-[20px]">loyalty</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">Offers &amp;
+                                Coupons</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-secondary text-on-primary font-label-caps text-label-caps">2
+                                Active Codes</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                        </div>
+                    </a>
+                    <!-- 6. Payment Methods & Vault -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#vault">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">credit_card</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">Payment Vault</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">HDFC Infinia + UPI</span>
+                            <span
+                                class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                        </div>
+                    </a>
+                    <!-- 7. Notification Preferences -->
+                    <div class="flex items-center justify-between p-space-md">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">notifications_active</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-title-md text-title-md text-on-surface font-medium">Sommelier Dispatch
+                                    Alerts</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">SMS &amp; Live order
+                                    notifications</span>
+                            </div>
+                        </div>
+                        <button aria-checked="true"
+                            class="w-11 h-6 rounded-full bg-primary-container p-0.5 flex items-center transition-colors"
+                            id="notifToggle" role="switch" type="button">
+                            <span
+                                class="w-5 h-5 rounded-full bg-surface-bright shadow-sm transform translate-x-5 transition-transform"
+                                id="notifKnob"></span>
+                        </button>
+                    </div>
+                    <!-- 8. Help & Sommelier Support -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#support">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">support_agent</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">Help &amp; Sommelier
+                                Support</span>
+                        </div>
+                        <span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                    </a>
+                    <!-- 9. Privacy & Security Settings -->
+                    <a class="flex items-center justify-between p-space-md hover:bg-surface-container-low active:bg-surface-container transition-colors"
+                        href="#security">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[20px]">security</span>
+                            </div>
+                            <span class="font-title-md text-title-md text-on-surface font-medium">Privacy &amp; Security
+                                Settings</span>
+                        </div>
+                        <span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Account Security & Protocol Zone -->
+            <div class="rounded-lg bg-surface-container-lowest p-space-lg space-y-space-md shadow-sm">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-title-md text-title-md text-on-surface font-semibold">Security &amp; Atelier Access
+                    </h3>
+                    <span class="material-symbols-outlined text-primary text-[20px]">encrypted</span>
+                </div>
+                <!-- Password Row -->
+                <div class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low">
+                    <div class="flex flex-col">
+                        <span class="font-body-md text-body-md text-on-surface font-semibold">Change Password</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">Last rotated 42 days ago</span>
+                    </div>
+                    <button
+                        class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md"
+                        type="button">
+                        Update
+                    </button>
+                </div>
+                <!-- Biometric Row -->
+                <div class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[22px]">face</span>
+                        <div class="flex flex-col">
+                            <span class="font-body-md text-body-md text-on-surface font-semibold">Biometric
+                                Sign-In</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">Apple FaceID / Passkey
+                                enabled</span>
+                        </div>
+                    </div>
+                    <button aria-checked="true"
+                        class="w-11 h-6 rounded-full bg-primary p-0.5 flex items-center transition-colors"
+                        id="bioToggle" role="switch" type="button">
+                        <span
+                            class="w-5 h-5 rounded-full bg-surface-bright shadow-sm transform translate-x-5 transition-transform"
+                            id="bioKnob"></span>
+                    </button>
+                </div>
+                <!-- Atelier Sign Out Button -->
+                <button
+                    class="w-full py-3 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 active:bg-surface-variant transition-colors"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">logout</span>
+                    <span>Log Out of Atelier</span>
+                </button>
+                <!-- Danger Zone: Account Purge -->
+                <div class="pt-2 text-center">
+                    <button
+                        class="font-body-sm text-body-sm text-error font-medium underline underline-offset-4 active:opacity-75"
+                        id="openDangerModal" type="button">
+                        Request Permanent Account Deletion
+                    </button>
+                </div>
+            </div>
+            <!-- Security Reassurance Footer -->
+            <div
+                class="flex flex-col items-center justify-center text-center space-y-1 pt-space-xs text-on-surface-variant">
+                <div class="flex items-center gap-1.5 justify-center">
+                    <span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+                    <span class="font-label-caps text-label-caps uppercase tracking-wider">NAURIO Vault Protocol •
+                        256-Bit SSL</span>
+                </div>
+                <span class="font-body-sm text-body-sm opacity-70">Version 2.4.0 Haute Mobile • Curated for Discerning
+                    Palates</span>
+            </div>
+            <!-- Deletion Warning Modal (Hidden by Default) -->
+            <div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex-col justify-end p-gutter"
+                id="dangerModal">
+                <div class="w-full rounded-lg bg-surface-bright p-space-lg space-y-space-md shadow-2xl">
+                    <div
+                        class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[26px]">warning</span>
+                    </div>
+                    <div>
+                        <h4 class="font-title-lg text-title-lg text-on-surface font-semibold">Relinquish Haute
+                            Patronage?</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                            Deleting your profile permanently removes your Sommelier reservation status, 1,450 NAURIO
+                            Coins, and tasting diaries. This action is irreversible.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <button
+                            class="w-full py-3 rounded-full bg-error text-on-error font-label-md text-label-md font-semibold"
+                            id="confirmDeleteBtn" type="button">
+                            Confirm Deletion
+                        </button>
+                        <button
+                            class="w-full py-3 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md"
+                            id="closeDangerModal" type="button">
+                            Retain Membership
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Dossier Toggle Micro-interaction
+            const toggleBtn = document.getElementById('toggleDossierBtn');
+            const dossierForm = document.getElementById('dossierForm');
+            const dossierChevron = document.getElementById('dossierChevron');
+            const dossierText = document.getElementById('dossierToggleText');
+
+            if (toggleBtn && dossierForm) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = dossierForm.classList.contains('hidden');
+                    if (isHidden) {
+                        dossierForm.classList.remove('hidden');
+                        dossierChevron.textContent = 'expand_more';
+                        dossierText.textContent = 'Review';
+                    } else {
+                        dossierForm.classList.add('hidden');
+                        dossierChevron.textContent = 'expand_less';
+                        dossierText.textContent = 'Expand';
+                    }
+                });
+            }
+
+            // Generic Switch Interactive State
+            function setupToggle(buttonId, knobId) {
+                const btn = document.getElementById(buttonId);
+                const knob = document.getElementById(knobId);
+                if (!btn || !knob) return;
+
+                btn.addEventListener('click', () => {
+                    const isChecked = btn.getAttribute('aria-checked') === 'true';
+                    if (isChecked) {
+                        btn.setAttribute('aria-checked', 'false');
+                        btn.classList.remove('bg-primary-container', 'bg-primary');
+                        btn.classList.add('bg-surface-variant');
+                        knob.classList.remove('translate-x-5');
+                        knob.classList.add('translate-x-0.5');
+                    } else {
+                        btn.setAttribute('aria-checked', 'true');
+                        btn.classList.remove('bg-surface-variant');
+                        btn.classList.add('bg-primary');
+                        knob.classList.remove('translate-x-0.5');
+                        knob.classList.add('translate-x-5');
+                    }
+                });
+            }
+
+            setupToggle('notifToggle', 'notifKnob');
+            setupToggle('bioToggle', 'bioKnob');
+
+            // Danger Modal Logic
+            const dangerModal = document.getElementById('dangerModal');
+            const openDangerBtn = document.getElementById('openDangerModal');
+            const closeDangerBtn = document.getElementById('closeDangerModal');
+
+            if (openDangerBtn && dangerModal && closeDangerBtn) {
+                openDangerBtn.addEventListener('click', () => {
+                    dangerModal.classList.remove('hidden');
+                    dangerModal.classList.add('flex');
+                });
+
+                closeDangerBtn.addEventListener('click', () => {
+                    dangerModal.classList.add('hidden');
+                    dangerModal.classList.remove('flex');
+                });
+            }
+        </script>
+    </main>
+    <script src="app-navigation.js" defer></script>
+</body>
+
+</html>

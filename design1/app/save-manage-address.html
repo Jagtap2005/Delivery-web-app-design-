@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport" />
+    <meta content="mobile_stack" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { tertiary: "#190e00", "tertiary-container": "#342200", "inverse-on-surface": "#f5f0e5", "surface-container-highest": "#e7e2d7", "tertiary-fixed": "#ffdea9", "on-surface-variant": "#424845", "secondary-fixed-dim": "#ffb694", "surface-variant": "#e7e2d7", "on-secondary-fixed": "#351000", "on-tertiary-fixed": "#271900", "on-tertiary": "#ffffff", "secondary-container": "#fe7f3c", "on-surface": "#1d1c15", "surface-dim": "#dedacf", "tertiary-fixed-dim": "#ecc074", "on-error": "#ffffff", "outline-variant": "#c2c8c4", "surface-bright": "#fef9ee", primary: "#03140e", "on-primary-fixed": "#0d1f19", "primary-container": "#172923", "on-background": "#1d1c15", surface: "#fef9ee", background: "#fef9ee", "secondary-fixed": "#ffdbcc", "on-secondary": "#ffffff", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5e4100", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#7b2f00", "surface-container-low": "#f8f3e8", secondary: "#a14000", outline: "#727875", "on-secondary-container": "#652500", "inverse-primary": "#b6cbc2", "on-primary-fixed-variant": "#384b44", "on-tertiary-container": "#ad8640", "error-container": "#ffdad6", error: "#ba1a1a", "inverse-surface": "#323029", "primary-fixed-dim": "#b6cbc2", "surface-tint": "#4f625b", "surface-container": "#f2ede3", "primary-fixed": "#d2e7de", "surface-container-high": "#ede8dd", "on-primary-container": "#7d9189" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "gutter-lg": "2rem", margin: "1.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-md": "2.5rem", gutter: "1.5rem" }, fontFamily: { "display-hero": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "price-display": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-sm": ["22px", { lineHeight: "28px", fontWeight: "500" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", fontWeight: "600" }], "price-display": ["20px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "700" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }] } } } };</script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+        <div class="h-16 px-space-sm flex items-center justify-between">
+            <div class="flex items-center gap-space-xs"><button aria-label="Go back"
+                    class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container transition-colors"
+                    onclick="history.back()"><span
+                        class="material-symbols-outlined text-[22px]">arrow_back</span></button>
+                <h1 class="font-headline-sm text-headline-sm text-primary tracking-tight line-clamp-1">Saved Addresses
+                </h1>
+            </div>
+            <div class="flex items-center gap-space-xs"><button aria-label="More options"
+                    class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span
+                        class="material-symbols-outlined text-[20px]">tune</span></button>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center mr-space-xs"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen pb-safe">
+        <div class="flex flex-col w-full">
+            <!-- Interactive State Switcher Dock (For Design Review & Dynamic States) -->
+            <aside aria-label="UX State Switcher" class="px-margin pt-space-xs pb-space-sm bg-surface-container-low">
+                <div class="flex items-center justify-between gap-space-xs mb-space-xs">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px] text-secondary">tune</span>
+                        PROTOTYPE CONTROLS
+                    </span>
+                    <span class="font-body-sm text-[11px] text-outline">Touch to toggle states</span>
+                </div>
+                <div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+                    <button
+                        class="state-chip shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-body-sm shadow-sm transition-all"
+                        id="btn-state-default" onclick="showState('active')" type="button">
+                        Active Hubs (3)
+                    </button>
+                    <button
+                        class="state-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm hover:bg-surface-container-high transition-all flex items-center gap-1"
+                        id="btn-state-modal" onclick="toggleAddressDrawer(true)" type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span>
+                        Drawer Form
+                    </button>
+                    <button
+                        class="state-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm hover:bg-surface-container-high transition-all flex items-center gap-1"
+                        id="btn-state-delete" onclick="toggleDeleteModal(true)" type="button">
+                        <span class="material-symbols-outlined text-[14px]">delete</span>
+                        Delete Alert
+                    </button>
+                    <button
+                        class="state-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm hover:bg-surface-container-high transition-all"
+                        id="btn-state-empty" onclick="showState('empty')" type="button">
+                        Empty State
+                    </button>
+                    <button
+                        class="state-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm hover:bg-surface-container-high transition-all"
+                        id="btn-state-validation" onclick="simulateValidationError()" type="button">
+                        Field Errors
+                    </button>
+                </div>
+            </aside>
+            <!-- Editorial Page Intro Section -->
+            <section class="px-margin pt-space-lg pb-space-md">
+                <div class="flex items-center gap-1.5 text-secondary">
+                    <span class="material-symbols-outlined text-[15px]">ac_unit</span>
+                    <p class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+                        Cold-Chain Delivery Hubs
+                    </p>
+                </div>
+                <h2 class="font-headline-md text-headline-lg-mobile text-primary mt-1 tracking-tight">
+                    Your Saved Addresses
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                    Exceptional flavours, maintained at precise thermal envelopes wherever you reside.
+                </p>
+                <!-- Primary Add Action -->
+                <div class="mt-space-md">
+                    <button
+                        class="w-full py-3.5 px-space-md rounded-full bg-secondary-container text-on-secondary font-label-md text-title-md flex items-center justify-center gap-2 shadow-md hover:bg-secondary active:scale-[0.99] transition-all"
+                        onclick="openAddressDrawer('new')" type="button">
+                        <span class="material-symbols-outlined text-[20px]">add</span>
+                        <span>+ Add New Address</span>
+                    </button>
+                </div>
+            </section>
+            <!-- Cold-Chain Vault Telemetry Micro-Bar -->
+            <section
+                class="mx-margin mb-space-md p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+                    <span class="font-label-caps text-[11px] text-primary">SECURE VAULT DISPATCH</span>
+                </div>
+                <div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-[11px]">
+                    <span class="material-symbols-outlined text-[13px] text-primary">verified_user</span>
+                    <span>256-Bit Thermal GPS Geofence</span>
+                </div>
+            </section>
+            <!-- Main Address Container (Active State) -->
+            <main class="flex flex-col gap-space-md px-margin pb-space-xl" id="address-list-container">
+                <!-- CARD 1: DEFAULT ADDRESS (Penthouse 4B) -->
+                <article
+                    class="relative rounded-lg p-space-md bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm overflow-hidden"
+                    id="address-card-1">
+                    <!-- Ambient Thermal Accent Ribbon -->
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+                    <!-- Top Badges & Type Row -->
+                    <div class="flex items-center justify-between gap-space-xs pt-1">
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span
+                                class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container text-surface font-label-caps text-[10px]">
+                                <span class="material-symbols-outlined text-[12px] text-surface-tint"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                DEFAULT ADDRESS
+                            </span>
+                            <span
+                                class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-[10px]">
+                                <span class="material-symbols-outlined text-[12px]">home</span>
+                                HOME
+                            </span>
+                        </div>
+                        <span class="font-body-sm text-outline flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[15px] text-primary">lock</span>
+                            <span>Verified</span>
+                        </span>
+                    </div>
+                    <!-- Recipient & Phone -->
+                    <div>
+                        <h3 class="font-title-lg text-title-lg text-primary">Anya Kapoor</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+                            <span class="material-symbols-outlined text-[14px]">call</span>
+                            +91 98201 44521
+                        </p>
+                    </div>
+                    <!-- Physical Address -->
+                    <div class="p-space-sm rounded bg-surface-container-low">
+                        <p class="font-body-md text-body-md text-primary leading-snug">
+                            Penthouse 4B, Metro Hub Residence, 247 Maple Ave, Central District
+                        </p>
+                        <p class="font-body-sm text-on-surface-variant mt-1">
+                            Mumbai 400001, Maharashtra • <span class="text-primary font-semibold">Opp. Royal Opera
+                                House</span>
+                        </p>
+                    </div>
+                    <!-- Cold-Chain Butler Protocol Box -->
+                    <div class="p-space-sm rounded bg-surface-container flex items-start gap-2.5">
+                        <span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">room_service</span>
+                        <div class="flex flex-col">
+                            <span class="font-label-caps text-[10px] text-secondary font-bold">BUTLER PROTOCOL</span>
+                            <p class="font-body-sm text-[12px] text-on-surface mt-0.5">
+                                Ring vault chime • Hand-deliver pod at <span
+                                    class="font-semibold text-secondary">68°C</span> to service foyer.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Action Row -->
+                    <div class="flex items-center justify-between pt-1 gap-2">
+                        <button
+                            class="py-2 px-3 rounded-full bg-surface-container-low text-primary font-label-md text-body-sm hover:bg-surface-container flex items-center gap-1 transition-colors"
+                            onclick="openAddressDrawer('edit', 'Penthouse 4B, Metro Hub Residence')" type="button">
+                            <span class="material-symbols-outlined text-[16px]">edit</span>
+                            Edit Details
+                        </button>
+                        <div class="flex items-center gap-1.5">
+                            <button
+                                class="p-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors"
+                                onclick="copyCoordinates(this)" title="Share Coordinate" type="button">
+                                <span class="material-symbols-outlined text-[18px]">share_location</span>
+                            </button>
+                            <span
+                                class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-caps text-[10px]">
+                                VAULT #108
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- CARD 2: WORK ADDRESS (Level 18, Apex) -->
+                <article
+                    class="relative rounded-lg p-space-md bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm"
+                    id="address-card-2">
+                    <!-- Top Badges & Type Row -->
+                    <div class="flex items-center justify-between gap-space-xs">
+                        <span
+                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-[10px]">
+                            <span class="material-symbols-outlined text-[12px]">apartment</span>
+                            WORK
+                        </span>
+                        <button
+                            class="font-label-md text-body-sm text-secondary hover:underline flex items-center gap-1"
+                            onclick="setAsDefault(2)" type="button">
+                            <span class="material-symbols-outlined text-[14px]">flag</span>
+                            Set as Default
+                        </button>
+                    </div>
+                    <!-- Recipient & Phone -->
+                    <div>
+                        <h3 class="font-title-lg text-title-lg text-primary">Anya Kapoor</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+                            <span class="material-symbols-outlined text-[14px]">call</span>
+                            +91 98201 44521
+                        </p>
+                    </div>
+                    <!-- Physical Address -->
+                    <div class="p-space-sm rounded bg-surface-container-low">
+                        <p class="font-body-md text-body-md text-primary leading-snug">
+                            Level 18, Apex Executive Tower, Financial District
+                        </p>
+                        <p class="font-body-sm text-on-surface-variant mt-1">
+                            Bandra Kurla Complex, Mumbai 400051, Maharashtra
+                        </p>
+                    </div>
+                    <!-- Cold-Chain Spec -->
+                    <div
+                        class="px-space-sm py-1.5 rounded bg-surface-container flex items-center justify-between text-[11px] text-on-surface-variant">
+                        <span class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[14px] text-primary">security</span>
+                            Tower Reception Escort
+                        </span>
+                        <span class="text-primary font-medium">Locker Box #44</span>
+                    </div>
+                    <!-- Action Row -->
+                    <div class="flex items-center justify-between pt-1">
+                        <button
+                            class="py-2 px-3 rounded-full bg-surface-container-low text-primary font-label-md text-body-sm hover:bg-surface-container flex items-center gap-1 transition-colors"
+                            onclick="openAddressDrawer('edit', 'Level 18, Apex Executive Tower')" type="button">
+                            <span class="material-symbols-outlined text-[16px]">edit</span>
+                            Edit
+                        </button>
+                        <button
+                            class="py-2 px-3 rounded-full text-error hover:bg-error-container/20 font-label-md text-body-sm flex items-center gap-1 transition-colors"
+                            onclick="triggerDeleteConfirm('Level 18, Apex Executive Tower', 2)" type="button">
+                            <span class="material-symbols-outlined text-[16px]">delete</span>
+                            Remove
+                        </button>
+                    </div>
+                </article>
+                <!-- CARD 3: PRIVATE RESIDENCE (Villa Serene) -->
+                <article
+                    class="relative rounded-lg p-space-md bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm"
+                    id="address-card-3">
+                    <!-- Top Badges & Type Row -->
+                    <div class="flex items-center justify-between gap-space-xs">
+                        <span
+                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-[10px]">
+                            <span class="material-symbols-outlined text-[12px]">villa</span>
+                            OTHER / PRIVATE RESIDENCE
+                        </span>
+                        <button
+                            class="font-label-md text-body-sm text-secondary hover:underline flex items-center gap-1"
+                            onclick="setAsDefault(3)" type="button">
+                            <span class="material-symbols-outlined text-[14px]">flag</span>
+                            Set as Default
+                        </button>
+                    </div>
+                    <!-- Recipient & Phone -->
+                    <div>
+                        <h3 class="font-title-lg text-title-lg text-primary">Devraj &amp; Anya Kapoor</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+                            <span class="material-symbols-outlined text-[14px]">call</span>
+                            +91 98201 44521
+                        </p>
+                    </div>
+                    <!-- Physical Address -->
+                    <div class="p-space-sm rounded bg-surface-container-low">
+                        <p class="font-body-md text-body-md text-primary leading-snug">
+                            Villa Serene, Pali Hill, Bandra West
+                        </p>
+                        <p class="font-body-sm text-on-surface-variant mt-1">
+                            Mumbai 400050, Maharashtra
+                        </p>
+                    </div>
+                    <!-- Action Row -->
+                    <div class="flex items-center justify-between pt-1">
+                        <button
+                            class="py-2 px-3 rounded-full bg-surface-container-low text-primary font-label-md text-body-sm hover:bg-surface-container flex items-center gap-1 transition-colors"
+                            onclick="openAddressDrawer('edit', 'Villa Serene, Pali Hill')" type="button">
+                            <span class="material-symbols-outlined text-[16px]">edit</span>
+                            Edit
+                        </button>
+                        <button
+                            class="py-2 px-3 rounded-full text-error hover:bg-error-container/20 font-label-md text-body-sm flex items-center gap-1 transition-colors"
+                            onclick="triggerDeleteConfirm('Villa Serene, Pali Hill', 3)" type="button">
+                            <span class="material-symbols-outlined text-[16px]">delete</span>
+                            Remove
+                        </button>
+                    </div>
+                </article>
+            </main>
+            <!-- EMPTY STATE CONTAINER (Hidden by default, switchable via control) -->
+            <section class="hidden flex-col items-center justify-center px-margin py-space-xl text-center"
+                id="empty-state-view">
+                <div
+                    class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-space-md text-secondary">
+                    <span class="material-symbols-outlined text-[36px]">travel_explore</span>
+                </div>
+                <span class="font-label-caps text-label-caps text-secondary font-bold tracking-widest">NO LOCATIONS
+                    SAVED</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary mt-1">Your Culinary Map is Awaiting</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-[280px]">
+                    Add your residence or private suites to enable calibrated thermal delivery across the metropolitan
+                    area.
+                </p>
+                <button
+                    class="mt-space-md px-space-lg py-3 rounded-full bg-secondary-container text-on-secondary font-label-md text-body-lg shadow hover:bg-secondary transition-all"
+                    onclick="toggleAddressDrawer(true)" type="button">
+                    + Register First Hub
+                </button>
+            </section>
+            <!-- INTERACTIVE ADDRESS FORM: BOTTOM DRAWER / MODAL -->
+            <div class="hidden fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm transition-opacity flex flex-col justify-end"
+                id="address-drawer-backdrop">
+                <!-- Sliding Panel Content -->
+                <div class="w-full bg-surface rounded-t-xl max-h-[777px] overflow-y-auto shadow-2xl flex flex-col transform transition-transform duration-300"
+                    id="address-drawer">
+                    <!-- Drawer Pull Notch & Header -->
+                    <div
+                        class="sticky top-0 bg-surface/95 backdrop-blur px-margin pt-space-sm pb-space-sm z-10 flex flex-col items-center">
+                        <div class="w-12 h-1.5 rounded-full bg-surface-container-highest mb-3"></div>
+                        <div class="w-full flex items-center justify-between">
+                            <div>
+                                <span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Vault
+                                    Configuration</span>
+                                <h3 class="font-headline-sm text-headline-sm text-primary" id="drawer-headline">Add New
+                                    Delivery Address</h3>
+                            </div>
+                            <button
+                                class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary"
+                                onclick="toggleAddressDrawer(false)" type="button">
+                                <span class="material-symbols-outlined text-[20px]">close</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Address Input Form -->
+                    <form class="px-margin pb-space-xl flex flex-col gap-space-sm mt-1" id="address-form"
+                        onsubmit="handleFormSubmit(event)">
+                        <!-- Recipient Information Group -->
+                        <div class="flex flex-col gap-1">
+                            <label class="font-label-md text-body-sm text-primary" for="input-fullname">Full
+                                Name</label>
+                            <input
+                                class="w-full px-3.5 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low transition-colors"
+                                id="input-fullname" placeholder="e.g. Anya Kapoor" required="" type="text"
+                                value="Anya Kapoor" />
+                            <p class="hidden font-body-sm text-[11px] text-error" id="err-fullname">Recipient identity
+                                is required for high-tier vault access.</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="font-label-md text-body-sm text-primary" for="input-mobile">Mobile Number
+                                (Cold-Chain SMS Alerts)</label>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-3 py-3 rounded bg-surface-container-low text-primary font-body-md text-body-md select-none">+91</span>
+                                <input
+                                    class="w-full px-3.5 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low transition-colors"
+                                    id="input-mobile" placeholder="10-digit mobile number" required="" type="tel"
+                                    value="98201 44521" />
+                            </div>
+                            <p class="hidden font-body-sm text-[11px] text-error" id="err-mobile">Valid contact number
+                                needed for delivery code.</p>
+                        </div>
+                        <!-- Address Type Segmented Selector -->
+                        <div class="flex flex-col gap-1.5 mt-1">
+                            <label class="font-label-md text-body-sm text-primary">Hub Classification</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button
+                                    class="type-segment py-2.5 px-2 rounded-full bg-primary text-on-primary font-label-md text-body-sm flex items-center justify-center gap-1 shadow-sm"
+                                    onclick="selectType(this, 'Home')" type="button">
+                                    <span class="material-symbols-outlined text-[16px]">home</span>
+                                    Home
+                                </button>
+                                <button
+                                    class="type-segment py-2.5 px-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high"
+                                    onclick="selectType(this, 'Work')" type="button">
+                                    <span class="material-symbols-outlined text-[16px]">apartment</span>
+                                    Work
+                                </button>
+                                <button
+                                    class="type-segment py-2.5 px-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high"
+                                    onclick="selectType(this, 'Other')" type="button">
+                                    <span class="material-symbols-outlined text-[16px]">villa</span>
+                                    Other
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Location Fields -->
+                        <div class="grid grid-cols-2 gap-2 mt-1">
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-body-sm text-primary" for="input-flat">Flat / Floor /
+                                    Suite</label>
+                                <input
+                                    class="w-full px-3.5 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low transition-colors"
+                                    id="input-flat" placeholder="Penthouse 4B" required="" type="text"
+                                    value="Penthouse 4B" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-body-sm text-primary" for="input-building">Building /
+                                    Society</label>
+                                <input
+                                    class="w-full px-3.5 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low transition-colors"
+                                    id="input-building" placeholder="Building name" required="" type="text"
+                                    value="Metro Hub Residence" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="font-label-md text-body-sm text-primary" for="input-street">Street / Avenue /
+                                Enclave</label>
+                            <input
+                                class="w-full px-3.5 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low transition-colors"
+                                id="input-street" placeholder="Street details" required="" type="text"
+                                value="247 Maple Ave, Central District" />
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="font-label-md text-body-sm text-primary" for="input-landmark">Landmark for
+                                Courier Guidance</label>
+                            <input
+                                class="w-full px-3.5 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low transition-colors"
+                                id="input-landmark" placeholder="Nearby notable reference" type="text"
+                                value="Opposite Royal Opera House" />
+                        </div>
+                        <!-- City, State, PIN -->
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-body-sm text-primary" for="input-city">City</label>
+                                <input
+                                    class="w-full px-3 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low"
+                                    id="input-city" required="" type="text" value="Mumbai" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-body-sm text-primary" for="input-state">State</label>
+                                <input
+                                    class="w-full px-3 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low"
+                                    id="input-state" required="" type="text" value="Maharashtra" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <label class="font-label-md text-body-sm text-primary" for="input-pin">PIN Code</label>
+                                <input
+                                    class="w-full px-3 py-3 rounded bg-surface-container-lowest text-primary text-body-md outline-none focus:bg-surface-container-low"
+                                    id="input-pin" maxlength="6" required="" type="text" value="400001" />
+                            </div>
+                        </div>
+                        <!-- Default Checkbox -->
+                        <label
+                            class="flex items-center gap-3 p-space-sm rounded bg-surface-container cursor-pointer mt-2">
+                            <input checked=""
+                                class="w-5 h-5 rounded accent-primary text-primary focus:ring-0 cursor-pointer"
+                                id="chk-default" type="checkbox" />
+                            <span class="flex flex-col">
+                                <span class="font-label-md text-body-sm text-primary">Set as primary cold-chain dispatch
+                                    address</span>
+                                <span class="font-body-sm text-[11px] text-on-surface-variant">Default recipient for
+                                    Haute Gourmet subscriptions.</span>
+                            </span>
+                        </label>
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col gap-2 mt-space-sm">
+                            <button
+                                class="w-full py-3.5 px-space-md rounded-full bg-secondary-container text-on-secondary font-label-md text-title-md flex items-center justify-center gap-2 shadow-md hover:bg-secondary transition-all"
+                                type="submit">
+                                <span class="material-symbols-outlined text-[20px]">task_alt</span>
+                                <span>Save Address &amp; Sync Vault</span>
+                            </button>
+                            <button
+                                class="w-full py-3 px-space-md rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-md hover:bg-surface-container-high transition-colors"
+                                onclick="toggleAddressDrawer(false)" type="button">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- DELETE CONFIRMATION DIALOG -->
+            <div class="hidden fixed inset-0 z-50 bg-primary/45 backdrop-blur-sm flex items-center justify-center px-margin"
+                id="delete-modal">
+                <div class="w-full max-w-[340px] rounded-lg bg-surface p-space-lg shadow-2xl flex flex-col text-center">
+                    <div
+                        class="w-12 h-12 rounded-full bg-error-container/40 text-error mx-auto flex items-center justify-center mb-space-sm">
+                        <span class="material-symbols-outlined text-[26px]">delete_forever</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Remove Address?</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2" id="delete-target-label">
+                        Are you sure you want to remove <span class="font-semibold text-primary">Villa Serene, Pali
+                            Hill</span> from your saved vaults?
+                    </p>
+                    <div class="flex flex-col gap-2 mt-space-md">
+                        <button
+                            class="w-full py-3 rounded-full bg-error text-on-error font-label-md text-body-md shadow-sm hover:opacity-90 transition-opacity"
+                            onclick="confirmDelete()" type="button">
+                            Yes, Remove Address
+                        </button>
+                        <button
+                            class="w-full py-3 rounded-full bg-surface-container text-primary font-label-md text-body-md hover:bg-surface-container-high transition-colors"
+                            onclick="toggleDeleteModal(false)" type="button">
+                            Keep Address
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- TOAST NOTIFICATION -->
+            <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden items-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-body-sm text-[13px] shadow-lg transition-all duration-300"
+                id="toast">
+                <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                <span id="toast-text">Address vault updated successfully.</span>
+            </div>
+        </div>
+        <script>
+            let activeDeleteTargetIndex = null;
+
+            function toggleAddressDrawer(show) {
+                const backdrop = document.getElementById('address-drawer-backdrop');
+                if (show) {
+                    backdrop.classList.remove('hidden');
+                } else {
+                    backdrop.classList.add('hidden');
+                }
+            }
+
+            function openAddressDrawer(mode, title) {
+                const headline = document.getElementById('drawer-headline');
+                if (mode === 'edit') {
+                    headline.textContent = 'Edit Delivery Address';
+                } else {
+                    headline.textContent = 'Add New Delivery Address';
+                }
+                toggleAddressDrawer(true);
+            }
+
+            function toggleDeleteModal(show) {
+                const modal = document.getElementById('delete-modal');
+                if (show) {
+                    modal.classList.remove('hidden');
+                } else {
+                    modal.classList.add('hidden');
+                }
+            }
+
+            function triggerDeleteConfirm(label, index) {
+                activeDeleteTargetIndex = index;
+                const targetText = document.getElementById('delete-target-label');
+                targetText.innerHTML = `Are you sure you want to remove <span class="font-semibold text-primary">${label}</span> from your thermal vault dispatch list?`;
+                toggleDeleteModal(true);
+            }
+
+            function confirmDelete() {
+                toggleDeleteModal(false);
+                if (activeDeleteTargetIndex) {
+                    const card = document.getElementById(`address-card-${activeDeleteTargetIndex}`);
+                    if (card) {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            card.remove();
+                            showToast('Address removed from vault.');
+                        }, 250);
+                    }
+                }
+            }
+
+            function setAsDefault(index) {
+                showToast(`Hub #${index} set as primary thermal destination.`);
+            }
+
+            function showState(mode) {
+                const list = document.getElementById('address-list-container');
+                const empty = document.getElementById('empty-state-view');
+                const btnDefault = document.getElementById('btn-state-default');
+                const btnEmpty = document.getElementById('btn-state-empty');
+
+                if (mode === 'empty') {
+                    list.classList.add('hidden');
+                    empty.classList.remove('hidden');
+                    empty.classList.add('flex');
+                    btnEmpty.classList.replace('bg-surface-container', 'bg-primary');
+                    btnEmpty.classList.replace('text-on-surface-variant', 'text-on-primary');
+                    btnDefault.classList.replace('bg-primary', 'bg-surface-container');
+                    btnDefault.classList.replace('text-on-primary', 'text-on-surface-variant');
+                } else {
+                    list.classList.remove('hidden');
+                    empty.classList.add('hidden');
+                    empty.classList.remove('flex');
+                    btnDefault.classList.replace('bg-surface-container', 'bg-primary');
+                    btnDefault.classList.replace('text-on-surface-variant', 'text-on-primary');
+                    btnEmpty.classList.replace('bg-primary', 'bg-surface-container');
+                    btnEmpty.classList.replace('text-on-primary', 'text-on-surface-variant');
+                }
+            }
+
+            function selectType(button, type) {
+                document.querySelectorAll('.type-segment').forEach(btn => {
+                    btn.className = 'type-segment py-2.5 px-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high';
+                });
+                button.className = 'type-segment py-2.5 px-2 rounded-full bg-primary text-on-primary font-label-md text-body-sm flex items-center justify-center gap-1 shadow-sm';
+            }
+
+            function simulateValidationError() {
+                toggleAddressDrawer(true);
+                const errName = document.getElementById('err-fullname');
+                const errMobile = document.getElementById('err-mobile');
+                const inputName = document.getElementById('input-fullname');
+                inputName.value = '';
+                errName.classList.remove('hidden');
+                errMobile.classList.remove('hidden');
+                showToast('Highlighting validation boundary rules.');
+            }
+
+            function handleFormSubmit(e) {
+                e.preventDefault();
+                toggleAddressDrawer(false);
+                showToast('New cold-chain address synchronized.');
+            }
+
+            function copyCoordinates(btn) {
+                showToast('GPS Vault Coordinates copied to clipboard.');
+            }
+
+            function showToast(message) {
+                const toast = document.getElementById('toast');
+                const toastText = document.getElementById('toast-text');
+                toastText.textContent = message;
+                toast.classList.remove('hidden');
+                toast.classList.add('flex');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                    toast.classList.remove('flex');
+                }, 2800);
+            }
+        </script>
+    </main>
+    <script src="app-navigation.js" defer></script>
+</body>
+
+</html>

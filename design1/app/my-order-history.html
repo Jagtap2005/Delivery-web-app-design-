@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport" />
+    <meta content="mobile_tab" name="shell-type" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#1d1c15", "surface-variant": "#e7e2d7", "inverse-surface": "#323029", "error": "#ba1a1a", "on-primary-container": "#7d9189", "inverse-primary": "#b6cbc2", "on-error-container": "#93000a", "secondary-container": "#fe7f3c", "on-primary-fixed-variant": "#384b44", "primary-fixed": "#d2e7de", "on-tertiary-container": "#ad8640", "surface-dim": "#dedacf", "tertiary-container": "#342200", "surface-bright": "#fef9ee", "tertiary-fixed-dim": "#ecc074", "surface-container": "#f2ede3", "surface-container-lowest": "#ffffff", "on-secondary-container": "#652500", "on-surface": "#1d1c15", "surface": "#fef9ee", "on-tertiary-fixed": "#271900", "primary-container": "#172923", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#5e4100", "secondary-fixed": "#ffdbcc", "primary-fixed-dim": "#b6cbc2", "surface-container-high": "#ede8dd", "surface-tint": "#4f625b", "on-secondary": "#ffffff", "surface-container-highest": "#e7e2d7", "background": "#fef9ee", "on-error": "#ffffff", "outline": "#727875", "on-secondary-fixed-variant": "#7b2f00", "on-primary": "#ffffff", "outline-variant": "#c2c8c4", "on-surface-variant": "#424845", "tertiary": "#190e00", "surface-container-low": "#f8f3e8", "secondary-fixed-dim": "#ffb694", "tertiary-fixed": "#ffdea9", "secondary": "#a14000", "on-secondary-fixed": "#351000", "on-primary-fixed": "#0d1f19", "primary": "#03140e", "inverse-on-surface": "#f5f0e5" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-lg": "4rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin": "1.5rem", "gutter-lg": "2rem", "margin-md": "2.5rem", "space-md": "1rem", "gutter-sm": "1rem" }, fontFamily: { "display-hero": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "price-display": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"] }, fontSize: { "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "title-lg": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "price-display": ["20px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-sm": ["22px", { lineHeight: "28px", fontWeight: "500" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "800" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }] } } } };</script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-16 px-gutter flex items-center justify-between">
+            <div class="flex flex-col"><span class="font-label-caps text-label-caps text-secondary uppercase">Haute
+                    Gastronomie</span>
+                <h1 class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">NAURIO HAUTE
+                </h1>
+            </div>
+            <div class="flex items-center gap-space-sm">
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- Festive & Haute Brand Ambient Banner (Inspired by Celebratory Illumination & Warm Glow) -->
+            <div
+                class="relative w-full overflow-hidden bg-primary-container text-on-primary px-gutter py-space-md shadow-md">
+                <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
+                    data-alt="Golden festive lanterns, twilight riverside reflection with shimmering oil lamps, opulent floral garlands, celebration warmth in cinematic candlelight, warm cream and burnt orange atmospheric tones, 8k luxury editorial photography"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_lH-BuRodNwDmtoxlfJnsubdttchCzwdNDsbLO_-5HUOzXrK79lsDKfSIXP7li3jryBHbg-rYeWyv501zgvekZsYCQie0Ytxfb9dzFi8dbyApQ9xOZRfVL1Ea-hUJ27AnzspFOr7I5ezBDILe3A3X4AF6xXoEWlN4BefUD_FJL-AOJe3Gbv_JOg9qyH2zVIoDUQFNa4up4fpnyzTF9gYsuJOp4Qp49b8lhs7Z4CMC')">
+                </div>
+                <div class="relative z-10 flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <span
+                            class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-widest flex items-center gap-1.5">
+                            <span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+                            Celebration Season • Private Concierge
+                        </span>
+                        <span
+                            class="font-headline-sm text-headline-sm text-surface-bright font-serif mt-0.5">Complimentary
+                            Petit Fours</span>
+                    </div>
+                    <div
+                        class="px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps uppercase flex items-center gap-1 shadow-sm">
+                        <span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+                        Active
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header -->
+            <section class="px-gutter pt-space-lg pb-space-sm flex flex-col">
+                <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-1">
+                    • ATELIER ARCHIVE &amp; ACTIVE MANIFEST •
+                </span>
+                <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-serif tracking-tight">
+                    Your Orders
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    Every exceptional flavour, all in one place.
+                </p>
+            </section>
+            <!-- Search & Filter Controls -->
+            <section class="px-gutter py-space-sm flex flex-col gap-space-sm">
+                <!-- Search Bar -->
+                <div class="relative flex items-center w-full">
+                    <span
+                        class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">search</span>
+                    <input
+                        class="w-full pl-11 pr-space-md py-3 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/70 font-body-md text-body-md shadow-sm outline-none transition-all duration-200 focus:bg-surface-bright"
+                        id="orderSearchInput" placeholder="Search orders by dish or restaurant..." type="text" />
+                    <button class="hidden absolute right-space-md text-on-surface-variant hover:text-on-surface"
+                        id="clearSearchBtn">
+                        <span class="material-symbols-outlined text-[18px]">cancel</span>
+                    </button>
+                </div>
+                <!-- Filter Pills Row -->
+                <div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+                    <button
+                        class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
+                        <span>All Time</span>
+                        <span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+                    </button>
+                    <button
+                        class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
+                        <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                        <span>Filter by Date</span>
+                    </button>
+                    <button
+                        class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm active:scale-95 transition-transform">
+                        <span>Sort: Newest</span>
+                        <span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+                    </button>
+                </div>
+            </section>
+            <!-- Order Status Segment Tabs -->
+            <section class="px-gutter pt-space-sm pb-space-md">
+                <div class="flex items-center p-1 rounded-full bg-surface-container-high shadow-inner">
+                    <button
+                        class="tab-btn flex-1 py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 bg-primary-container text-on-primary shadow-sm font-semibold flex items-center justify-center gap-1"
+                        data-tab="ongoing">
+                        <span>Ongoing</span>
+                        <span
+                            class="w-5 h-5 rounded-full bg-secondary text-on-secondary text-[11px] font-bold flex items-center justify-center">1</span>
+                    </button>
+                    <button
+                        class="tab-btn flex-1 py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface font-medium flex items-center justify-center gap-1"
+                        data-tab="delivered">
+                        <span>Delivered</span>
+                        <span class="text-body-sm text-on-surface-variant">(5)</span>
+                    </button>
+                    <button
+                        class="tab-btn flex-1 py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface font-medium flex items-center justify-center gap-1"
+                        data-tab="cancelled">
+                        <span>Cancelled</span>
+                        <span class="text-body-sm text-on-surface-variant">(1)</span>
+                    </button>
+                </div>
+            </section>
+            <!-- CONTENT PANELS CONTAINER -->
+            <div class="flex flex-col gap-space-lg px-gutter">
+                <!-- TAB 1: ONGOING ORDERS -->
+                <div class="tab-panel flex flex-col gap-space-md" id="panel-ongoing">
+                    <!-- Section Tag -->
+                    <div class="flex items-center justify-between">
+                        <span
+                            class="font-label-caps text-label-caps text-secondary uppercase tracking-widest flex items-center gap-2">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+                            </span>
+                            Active Culinary Dispatch
+                        </span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant font-mono">LIVE GPS FEED</span>
+                    </div>
+                    <!-- Prominent Active Order Card -->
+                    <article
+                        class="flex flex-col rounded-lg bg-surface-container-lowest p-space-md shadow-md relative overflow-hidden transition-all duration-300">
+                        <!-- Ambient Top Accent Gradient -->
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary-container via-secondary to-primary-container">
+                        </div>
+                        <!-- Card Header: Restaurant & Metadata -->
+                        <div class="flex items-start justify-between gap-space-sm pt-1">
+                            <div class="flex items-center gap-space-sm min-w-0">
+                                <div class="w-13 h-13 rounded-lg overflow-hidden shrink-0 shadow-sm">
+                                    <img class="w-12 h-12 rounded-DEFAULT object-cover"
+                                        data-alt="Gourmet artisanal pizza chef wood-fired oven interior, rustic Milanese luxury trattoria, dramatic warm ember lighting, deep greens and rustic terra cotta palette, culinary detail photograph"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnECVoIE7-xEHWtRF4ZWgPl99jVxmJjDhcmu79Hqv_lfQzOhD92J5sW0CDuJbSkL3B2Htk6jtGTk5DTXlUBcKvphIYOsfP1AYrMoPbCg7Njv3Heu0JT0sGR8D3ZhpbHYAa9J7T7eVbyakAil7OshKLKnYqIr2f8FrIrY-hsDHCZNv1i5Q6yp7L68vBzpnedGCfRP9V2w7qlzUoGGEZcFDdZz65xmAWxFi1vGiIkv1l" />
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <h3 class="font-title-lg text-title-lg text-on-surface font-serif truncate">Osteria
+                                        Mozza Vetta</h3>
+                                    <div
+                                        class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                                        <span class="font-mono text-on-primary-fixed-variant">#NAU-84920</span>
+                                        <span>•</span>
+                                        <span>Today, 20:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span
+                                class="shrink-0 p-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+                                <span class="material-symbols-outlined text-[18px]">share</span>
+                            </span>
+                        </div>
+                        <!-- Live Telemetry Badges -->
+                        <div class="flex flex-col gap-space-xs mt-space-md">
+                            <!-- Status Badge -->
+                            <div
+                                class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed shadow-sm">
+                                <div class="flex items-center gap-2 min-w-0">
+                                    <span
+                                        class="material-symbols-outlined text-secondary text-[20px]">two_wheeler</span>
+                                    <span class="font-label-md text-label-md font-bold truncate">Out for Delivery</span>
+                                </div>
+                                <span
+                                    class="font-label-caps text-label-caps text-secondary uppercase font-extrabold tracking-wider shrink-0">ETA
+                                    18–25 Mins (20:08)</span>
+                            </div>
+                            <!-- Thermal Telemetry Pill -->
+                            <div
+                                class="flex items-center justify-between px-space-sm py-1.5 rounded-DEFAULT bg-surface-container text-on-surface-variant">
+                                <div class="flex items-center gap-1.5 font-body-sm text-body-sm">
+                                    <span
+                                        class="material-symbols-outlined text-on-tertiary-container text-[16px]">thermostat</span>
+                                    <span>Climate Pod #04 Active</span>
+                                </div>
+                                <span class="font-label-caps text-label-caps text-primary font-bold">68°C Target
+                                    Maintained</span>
+                            </div>
+                        </div>
+                        <!-- Progress Tracker Mini-Timeline -->
+                        <div class="py-space-md flex flex-col gap-2">
+                            <div class="relative w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary rounded-full transition-all duration-500 w-[72%]"></div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps">
+                                <span class="text-on-surface">Kitchen Plated</span>
+                                <span class="text-secondary font-bold">Courier En Route</span>
+                                <span class="opacity-40">White Glove Drop</span>
+                            </div>
+                        </div>
+                        <!-- Ordered Dishes Preview -->
+                        <div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+                            <span
+                                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Curated
+                                Selections</span>
+                            <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                1x San Marzano Burrata Pizza, 1x Truffle &amp; Morel Tagliatelle, 1x Traditional
+                                Sicilian Tiramisu (+1 pairing)
+                            </p>
+                            <div
+                                class="flex items-center justify-between pt-1 text-on-surface-variant font-body-sm text-body-sm">
+                                <span
+                                    class="font-price-display text-price-display text-on-surface font-serif">£4,168.50</span>
+                                <span>3 Items • Paid via UPI</span>
+                            </div>
+                        </div>
+                        <!-- Order Actions -->
+                        <div class="flex items-center gap-space-sm mt-space-md pt-1">
+                            <button
+                                class="flex-1 py-3 px-space-md rounded-full bg-secondary text-on-secondary font-title-md text-title-md flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all">
+                                <span class="material-symbols-outlined text-[18px]">near_me</span>
+                                <span>Track Live Order →</span>
+                            </button>
+                            <button
+                                class="py-3 px-space-md rounded-full bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors active:scale-95">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Chef's Note Delight Card -->
+                    <div
+                        class="flex items-start gap-space-sm p-space-md rounded-lg bg-surface-container-low text-on-surface shadow-sm">
+                        <span class="material-symbols-outlined text-secondary text-[24px] shrink-0">room_service</span>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-wider">Haute
+                                Courier Protocol</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-normal">
+                                Your courier is certified in gentle transport handling. Truffle aromas are
+                                vacuum-isolated to ensure maximum freshness upon unboxing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- TAB 2: DELIVERED ORDERS -->
+                <div class="tab-panel flex flex-col gap-space-md" id="panel-delivered">
+                    <!-- Section Header -->
+                    <div class="flex items-center justify-between">
+                        <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                            Delivered Feasts
+                        </span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">5 Completed</span>
+                    </div>
+                    <!-- Delivered Card 1: L'Arpège Pavilion -->
+                    <article
+                        class="flex flex-col rounded-lg bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-space-sm">
+                            <div class="flex items-center gap-space-sm min-w-0">
+                                <div class="w-12 h-12 rounded-DEFAULT overflow-hidden shrink-0 shadow-sm">
+                                    <img class="w-12 h-12 object-cover"
+                                        data-alt="Michelin star french cuisine duck breast plated with caramelized shallots and truffle foam, fine bone china plate, dim candlelight, deep bottle green velvet backdrop, high gastronomy luxury"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhgUDWoEZhRJOj4UERLQqIINqEflGQ4_pgobcymoV94wuoW_9hct_aZCJsKq3uHkXqxc4V3ro7GzVGVc4FPU-uH7NtiWG5UPJaFMOOwOR7QH3u0nD-PW_VcZwRSS_YULvx0r5VxqdtiFNM2qBSP7XUOFMLfdUf4zuXhELzLlG5w4255GIXoqm1hqAIZ9MZu5w1QX0m5LbXVZhr2_JkufIA4dliggyjV88of0IClp9q" />
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <h3 class="font-title-lg text-title-lg text-on-surface font-serif truncate">L'Arpège
+                                        Pavilion</h3>
+                                    <div
+                                        class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                                        <span class="font-mono text-on-primary-fixed-variant">#NAU-81042</span>
+                                        <span>•</span>
+                                        <span>14 Nov 2025, 20:45</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase font-bold shrink-0">
+                                Delivered
+                            </span>
+                        </div>
+                        <!-- Ordered Items Summary -->
+                        <div class="my-space-sm py-space-xs flex flex-col gap-1">
+                            <p class="font-body-md text-body-md text-on-surface">
+                                1x Black Truffle Risotto, 1x Roasted Heritage Duck Breast, 1x Valrhona Grand Cru Soufflé
+                            </p>
+                            <div
+                                class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+                                <span
+                                    class="font-price-display text-price-display text-on-surface font-serif">£6,850.00</span>
+                                <span class="flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-[15px] text-on-surface-variant">apartment</span>
+                                    Penthouse 4B
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Card CTAs -->
+                        <div class="flex items-center gap-space-sm pt-space-xs">
+                            <button
+                                class="flex-1 py-2.5 px-space-md rounded-full bg-secondary text-on-secondary font-title-md text-title-md shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+                                <span class="material-symbols-outlined text-[18px]">replay</span>
+                                <span>Reorder Items</span>
+                            </button>
+                            <button
+                                class="py-2.5 px-space-md rounded-full bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors flex items-center gap-1 active:scale-95">
+                                <span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span>5.0</span>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Delivered Card 2: Sakura Teppan & Raw Bar -->
+                    <article
+                        class="flex flex-col rounded-lg bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-space-sm">
+                            <div class="flex items-center gap-space-sm min-w-0">
+                                <div class="w-12 h-12 rounded-DEFAULT overflow-hidden shrink-0 shadow-sm">
+                                    <img class="w-12 h-12 object-cover"
+                                        data-alt="Omakase sushi flight on black basalt stone plate, torched A5 wagyu nigiri with caviar, gold leaf flaking, dramatic ambient light, opulent culinary photography, dark olive and warm cream tones"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC0JtkPaQYVKO4fBV0G-2A9VPz-4_4xCN_n1gxHNNLW_3fi2-6kxnRFscJZy9kCIji9jEG1wu6qPr3sH8fXsq0BNKWmmEhlvE8DjYB_x9-gYs3x_5HKp3Nb85DKT5xyLcpIcgHVRwThWSxGwN6iXgiA2Xq_HueniHOu9btGZzaGiOE1hTCqehyk-LmHCCbjayDG-4vpu4WtscCE3GTlOPpkVo3sx8L1YuxZhcoTXmv" />
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <h3 class="font-title-lg text-title-lg text-on-surface font-serif truncate">Sakura
+                                        Teppan &amp; Raw Bar</h3>
+                                    <div
+                                        class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                                        <span class="font-mono text-on-primary-fixed-variant">#NAU-78411</span>
+                                        <span>•</span>
+                                        <span>08 Nov 2025, 19:30</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase font-bold shrink-0">
+                                Delivered
+                            </span>
+                        </div>
+                        <!-- Ordered Items Summary -->
+                        <div class="my-space-sm py-space-xs flex flex-col gap-1">
+                            <p class="font-body-md text-body-md text-on-surface">
+                                1x Bluefin Chutoro Degustation, 1x Wagyu A5 Nigiri Flight, 1x Sencha Green Tea
+                            </p>
+                            <div
+                                class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+                                <span
+                                    class="font-price-display text-price-display text-on-surface font-serif">£5,420.00</span>
+                                <span class="flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-[15px] text-on-surface-variant">apartment</span>
+                                    Penthouse 4B
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Card CTAs -->
+                        <div class="flex items-center gap-space-sm pt-space-xs">
+                            <button
+                                class="flex-1 py-2.5 px-space-md rounded-full bg-secondary text-on-secondary font-title-md text-title-md shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+                                <span class="material-symbols-outlined text-[18px]">replay</span>
+                                <span>Reorder Items</span>
+                            </button>
+                            <button
+                                class="py-2.5 px-space-md rounded-full bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors flex items-center gap-1 active:scale-95">
+                                <span class="material-symbols-outlined text-[18px]">description</span>
+                                <span>Invoice (PDF)</span>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Delivered Card 3: Le Botaniste Privé -->
+                    <article
+                        class="flex flex-col rounded-lg bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-space-sm">
+                            <div class="flex items-center gap-space-sm min-w-0">
+                                <div class="w-12 h-12 rounded-DEFAULT overflow-hidden shrink-0 shadow-sm">
+                                    <img class="w-12 h-12 object-cover"
+                                        data-alt="Artisanal heirloom beetroot tartare with goat cheese quenelle and micro herbs, presented in a handcrafted ceramic bowl, warm natural kitchen lighting, quiet luxury French gastronomy"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt8ocAlGuVRWkxRUML-xjfhcEI4ZZmfUYzFR-53O2Ce5I3lTBYLjcLcwBzJXD-nF3hFYmxmDDHmuddFLvoSPY959Y_Yxpn3ZIWhNsRBu4YLw6OZ0DO7ZzuxYOtGx9_OPIqejXrOQOI7VGn2rQW1JhesOUCvU-Y_SazyMhaaIFGgeQlKBLATr5ni_P-Z9fsXSjbbVw5WC90Tgt0niBoZu5iYbEy2zceSAAJUOSb6AW9" />
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <h3 class="font-title-lg text-title-lg text-on-surface font-serif truncate">Le
+                                        Botaniste Privé</h3>
+                                    <div
+                                        class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                                        <span class="font-mono text-on-primary-fixed-variant">#NAU-77290</span>
+                                        <span>•</span>
+                                        <span>21 Oct 2025, 21:10</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase font-bold shrink-0">
+                                Delivered
+                            </span>
+                        </div>
+                        <div class="my-space-sm py-space-xs flex flex-col gap-1">
+                            <p class="font-body-md text-body-md text-on-surface">
+                                2x Heirloom Beetroot Tartare, 1x Pan-Seared Chilean Sea Bass, 2x Elderflower Spritz
+                            </p>
+                            <div
+                                class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+                                <span
+                                    class="font-price-display text-price-display text-on-surface font-serif">£3,950.00</span>
+                                <span class="flex items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-[15px] text-on-surface-variant">apartment</span>
+                                    Penthouse 4B
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-space-sm pt-space-xs">
+                            <button
+                                class="flex-1 py-2.5 px-space-md rounded-full bg-secondary text-on-secondary font-title-md text-title-md shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+                                <span class="material-symbols-outlined text-[18px]">replay</span>
+                                <span>Reorder Items</span>
+                            </button>
+                            <button
+                                class="py-2.5 px-space-md rounded-full bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors flex items-center gap-1 active:scale-95">
+                                <span class="material-symbols-outlined text-[18px]">rate_review</span>
+                                <span>Review</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <!-- TAB 3: CANCELLED ORDERS -->
+                <div class="tab-panel flex flex-col gap-space-md" id="panel-cancelled">
+                    <!-- Section Header -->
+                    <div class="flex items-center justify-between">
+                        <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                            Archived &amp; Cancelled
+                        </span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">1 Order</span>
+                    </div>
+                    <!-- Cancelled Card: The Guild Burger Bar -->
+                    <article
+                        class="flex flex-col rounded-lg bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200">
+                        <div class="flex items-start justify-between gap-space-sm">
+                            <div class="flex items-center gap-space-sm min-w-0">
+                                <div
+                                    class="w-12 h-12 rounded-DEFAULT overflow-hidden shrink-0 grayscale opacity-80 shadow-sm">
+                                    <img class="w-12 h-12 object-cover"
+                                        data-alt="Gourmet wagyu beef slider burger with truffle aioli on a rustic slate board, moody dramatic pub studio shot, warm mahogany and copper highlights"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_lOtTOJ-1fSkIv94W1wwq5SzDhbZLTMgoYZ7UzMdDGY8qNwHDUwjp9puO14kgeT-tMrMwuwOPzQFUL60AMB2MCvh-5jJVVFStW9CzXYjF72Q6JxDFEPYTrPbMHnM2BmXER1SrfJQnSTiJ-ldQHcw0W_xZrRafRo9iS8Xngsp84FGnncJMEOSX6b7pn-ttGeDrHx23mg9GIRTRqPRJXJZcHjX7tCjygMjKZwqDkUL8" />
+                                </div>
+                                <div class="flex flex-col min-w-0">
+                                    <h3 class="font-title-lg text-title-lg text-on-surface font-serif truncate">The
+                                        Guild Burger Bar</h3>
+                                    <div
+                                        class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                                        <span class="font-mono text-on-primary-fixed-variant">#NAU-75210</span>
+                                        <span>•</span>
+                                        <span>28 Oct 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span
+                                class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase font-bold shrink-0">
+                                Cancelled
+                            </span>
+                        </div>
+                        <!-- Refund Status Pill -->
+                        <div
+                            class="mt-space-sm p-space-sm rounded-DEFAULT bg-error-container text-on-error-container flex items-center justify-between">
+                            <div class="flex items-center gap-1.5 font-label-md text-label-md font-semibold">
+                                <span class="material-symbols-outlined text-[18px]">verified</span>
+                                <span>Refund Credited to UPI</span>
+                            </div>
+                            <span
+                                class="font-price-display text-price-display font-serif text-on-error-container">£2,450.00</span>
+                        </div>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+                            Reason: Atelier kitchen capacity reached during private dinner event. Instant concierge
+                            refund was dispatched.
+                        </p>
+                        <div class="flex items-center justify-end gap-space-sm pt-space-sm">
+                            <button
+                                class="py-2.5 px-space-md rounded-full bg-surface-container text-on-surface font-title-md text-title-md hover:bg-surface-container-high transition-colors active:scale-95">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <!-- DELIGHTFUL EMPTY STATE SIMULATOR (Accessible via Quick Toggle) -->
+                <div class="tab-panel hidden flex-col items-center text-center p-space-xl rounded-lg bg-surface-container-lowest shadow-sm my-space-md"
+                    id="panel-empty">
+                    <div
+                        class="relative w-24 h-24 mb-space-md flex items-center justify-center rounded-full bg-surface-container-high">
+                        <!-- Elegant Decorative Cloche / Serving Icon -->
+                        <span class="material-symbols-outlined text-secondary text-[48px]">restaurant</span>
+                        <span
+                            class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary text-on-secondary font-bold text-[12px] flex items-center justify-center shadow-md">✦</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface font-serif">No Past Feasts Found</h3>
+                    <p
+                        class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-space-xs mb-space-lg leading-relaxed">
+                        Your culinary parchment is currently pristine. Experience Michelin-curated menus delivered
+                        straight to your door.
+                    </p>
+                    <button
+                        class="py-3 px-space-xl rounded-full bg-primary-container text-on-primary font-title-md text-title-md shadow-md active:scale-95 transition-transform flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[18px]">explore</span>
+                        <span>Explore Curated Menus</span>
+                    </button>
+                </div>
+                <!-- Empty State QA Preview Trigger (Tester Utility) -->
+                <div class="flex items-center justify-center pt-space-xs pb-space-lg">
+                    <button
+                        class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase transition-colors"
+                        id="toggleEmptyStateBtn">
+                        <span class="material-symbols-outlined text-[14px]">toggle_on</span>
+                        <span>Toggle Empty State Preview</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function initOrdersScreen() {
+                const tabs = document.querySelectorAll('.tab-btn');
+                const panels = {
+                    ongoing: document.getElementById('panel-ongoing'),
+                    delivered: document.getElementById('panel-delivered'),
+                    cancelled: document.getElementById('panel-cancelled')
+                };
+                const emptyPanel = document.getElementById('panel-empty');
+                const toggleEmptyBtn = document.getElementById('toggleEmptyStateBtn');
+                const searchInput = document.getElementById('orderSearchInput');
+                const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+                let currentActiveTab = 'ongoing';
+                let emptyStateActive = false;
+
+                // Tab Switching Micro-interaction
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const target = tab.dataset.tab;
+                        currentActiveTab = target;
+                        emptyStateActive = false;
+                        emptyPanel.classList.add('hidden');
+
+                        // Style tabs
+                        tabs.forEach(t => {
+                            t.className = 'tab-btn flex-1 py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface font-medium flex items-center justify-center gap-1';
+                        });
+
+                        tab.className = 'tab-btn flex-1 py-2 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 bg-primary-container text-on-primary shadow-sm font-semibold flex items-center justify-center gap-1';
+
+                        // Render appropriate panels
+                        Object.keys(panels).forEach(key => {
+                            if (key === target) {
+                                panels[key].classList.remove('hidden');
+                            } else {
+                                panels[key].classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+
+                // Toggle Empty State Simulator for QA and inspection
+                if (toggleEmptyBtn) {
+                    toggleEmptyBtn.addEventListener('click', () => {
+                        emptyStateActive = !emptyStateActive;
+                        if (emptyStateActive) {
+                            Object.values(panels).forEach(p => p.classList.add('hidden'));
+                            emptyPanel.classList.remove('hidden');
+                            emptyPanel.classList.add('flex');
+                            toggleEmptyBtn.classList.add('bg-secondary', 'text-on-secondary');
+                        } else {
+                            emptyPanel.classList.add('hidden');
+                            emptyPanel.classList.remove('flex');
+                            panels[currentActiveTab].classList.remove('hidden');
+                            toggleEmptyBtn.classList.remove('bg-secondary', 'text-on-secondary');
+                        }
+                    });
+                }
+
+                // Search Micro-interaction
+                if (searchInput && clearSearchBtn) {
+                    searchInput.addEventListener('input', (e) => {
+                        const query = e.target.value.toLowerCase().trim();
+                        clearSearchBtn.classList.toggle('hidden', query.length === 0);
+
+                        // Filter cards in the active panel
+                        const activeCards = panels[currentActiveTab].querySelectorAll('article');
+                        let visibleCount = 0;
+
+                        activeCards.forEach(card => {
+                            const text = card.textContent.toLowerCase();
+                            if (text.includes(query)) {
+                                card.classList.remove('hidden');
+                                visibleCount++;
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        });
+
+                        // Show empty panel if filtered to zero
+                        if (visibleCount === 0 && query.length > 0) {
+                            emptyPanel.classList.remove('hidden');
+                            emptyPanel.classList.add('flex');
+                        } else if (!emptyStateActive) {
+                            emptyPanel.classList.add('hidden');
+                            emptyPanel.classList.remove('flex');
+                        }
+                    });
+
+                    clearSearchBtn.addEventListener('click', () => {
+                        searchInput.value = '';
+                        clearSearchBtn.classList.add('hidden');
+                        searchInput.dispatchEvent(new Event('input'));
+                        searchInput.focus();
+                    });
+                }
+
+                // Set Initial tab view: Ongoing active by default
+                panels.delivered.classList.add('hidden');
+                panels.cancelled.classList.add('hidden');
+            })();
+        </script>
+    </main>
+    <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.04)]"
+        data-active-classes="text-secondary">
+        <div class="flex items-center justify-around h-16 px-space-xs"><a
+                class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors"
+                data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span
+                    class="font-label-caps text-label-caps mt-0.5">Home</span></a><a
+                class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors"
+                data-path="search" href="#"><span class="material-symbols-outlined text-[24px]">search</span><span
+                    class="font-label-caps text-label-caps mt-0.5">Search</span></a><a
+                class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors"
+                data-path="menu" href="#"><span
+                    class="material-symbols-outlined text-[24px]">restaurant_menu</span><span
+                    class="font-label-caps text-label-caps mt-0.5">Menu</span></a><a aria-current="page"
+                class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 transition-colors text-secondary"
+                data-path="my-orders-&amp;-order-history" href="#"><span
+                    class="material-symbols-outlined text-[24px]">receipt_long</span><span
+                    class="font-label-caps text-label-caps mt-0.5">Orders</span></a><a
+                class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors relative"
+                data-path="cart" href="#">
+                <div class="relative"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span
+                        class="absolute -top-1 -right-2 min-w-[16px] h-4 px-1 rounded-full bg-secondary text-on-secondary font-label-caps text-[10px] flex items-center justify-center leading-none">3</span>
+                </div><span class="font-label-caps text-label-caps mt-0.5">Cart</span>
+            </a></div>
+    </nav>
+    <script src="app-navigation.js" defer></script>
+</body>
+
+</html>

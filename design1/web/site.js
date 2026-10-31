@@ -93,30 +93,91 @@
         return nav;
     }
 
-    function connectCategoryNavigation() {
-        const existingNav = Array.from(document.querySelectorAll("header nav")).find((nav) =>
-            Array.from(nav.querySelectorAll("a")).some((link) =>
-                categoryNavigation.some((item) => link.dataset.path === item.path)
-            )
-        );
+    function createSharedHeader() {
+        const header = document.createElement("header");
+        header.className = "fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-highest shadow-[0_1px_8px_rgba(0,0,0,0.04)]";
+        header.innerHTML = `
+            <div class="w-full border-b border-surface-container bg-surface-container-low/60">
+                <div class="max-w-7xl mx-auto px-margin lg:px-margin-lg min-h-9 flex flex-wrap items-center justify-between gap-x-space-md gap-y-space-xs py-1 font-body-sm text-body-sm text-on-surface-variant">
+                    <div class="flex items-center gap-space-md">
+                        <div class="flex items-center gap-space-xs text-on-surface">
+                            <span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+                            <span class="font-label-md text-label-md">Deliver to:</span>
+                            <span class="font-body-md text-body-md font-semibold text-on-surface">247 Maple Avenue, Central District</span>
+                        </div>
+                        <span class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps">
+                            <span class="material-symbols-outlined text-[14px]">schedule</span>15-25 Mins
+                        </span>
+                    </div>
+                    <a class="hover:text-on-surface transition-colors" href="my-profile-page.html">Help &amp; Support</a>
+                </div>
+            </div>
+            <div class="w-full border-b border-surface-container-highest bg-surface">
+                <div class="max-w-7xl mx-auto px-margin lg:px-margin-lg min-h-20 flex flex-wrap items-center justify-between gap-space-md py-space-sm">
+                    <a class="flex flex-col shrink-0" href="design1web.html" aria-label="NAURIO home">
+                        <span class="font-display-hero text-headline-sm text-primary tracking-tight font-bold leading-none">NAURIO</span>
+                        <span class="font-label-caps text-[9px] uppercase tracking-widest text-on-tertiary-container">Haute Cuisine</span>
+                    </a>
+                    <div class="relative order-3 w-full md:order-none md:w-auto md:flex-1 md:max-w-2xl">
+                        <div class="flex items-center bg-surface-container-lowest rounded-full p-1 border border-surface-container-highest shadow-[0_2px_12px_rgba(23,41,35,0.04)] focus-within:border-primary transition-all">
+                            <button class="flex items-center gap-space-xs px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md shrink-0 hover:text-on-surface border-r border-surface-container-highest" type="button" aria-label="Browse menu">
+                                <span>Menu</span><span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+                            </button>
+                            <div class="flex items-center flex-1 min-w-0 px-space-md gap-space-xs">
+                                <span class="material-symbols-outlined text-outline text-[18px]">search</span>
+                                <input class="w-full min-w-0 bg-transparent border-0 outline-none text-on-surface font-body-md text-body-md placeholder:text-outline" placeholder="Search dishes and restaurants..." type="text" aria-label="Search dishes and restaurants">
+                            </div>
+                            <button class="px-space-lg py-2.5 bg-secondary-container hover:bg-secondary text-on-primary font-label-md text-label-md rounded-full shadow-[0_4px_12px_rgba(244,119,53,0.25)] flex items-center gap-space-xs transition-all shrink-0" type="button">
+                                <span>Search</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-space-sm sm:gap-space-md shrink-0">
+                        <span class="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-tertiary-fixed/40 border border-tertiary-fixed-dim/60 text-on-tertiary-fixed">
+                            <span class="material-symbols-outlined text-[18px] text-on-tertiary-container">monetization_on</span>
+                            <span class="font-label-caps text-label-caps tracking-wider">1,450 COINS</span>
+                        </span>
+                        <a class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" data-path="favorites" href="fvt-food-page.html" aria-label="Favourites">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span>
+                        </a>
+                        <a class="flex items-center gap-space-xs px-space-sm py-1 rounded-full hover:bg-surface-container text-on-surface transition-colors" href="customer-login-page.html">
+                            <span class="material-symbols-outlined text-[20px] text-on-surface-variant">person</span>
+                            <span class="font-label-md text-label-md">Sign In</span>
+                        </a>
+                        <button class="flex items-center gap-space-sm pl-space-md sm:pl-space-lg pr-space-sm py-2 rounded-full bg-primary-container text-on-primary shadow-[0_8px_20px_rgba(23,41,35,0.15)] hover:bg-primary transition-all" type="button" aria-label="Shopping cart">
+                            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                            <span class="font-title-md text-title-md tracking-tight">$48.50</span>
+                            <span class="flex items-center justify-center bg-secondary-container text-on-primary font-label-caps text-label-caps w-6 h-6 rounded-full">3</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-surface-container-low border-b border-surface-container-highest">
+                <div data-category-nav-container class="max-w-7xl mx-auto px-margin lg:px-margin-lg h-11 flex items-center"></div>
+            </div>`;
 
-        if (existingNav) {
-            existingNav.replaceWith(createCategoryNavigation());
-            return;
+        const navContainer = header.querySelector("[data-category-nav-container]");
+        navContainer.append(createCategoryNavigation());
+
+        document.querySelectorAll("header").forEach((existingHeader) => existingHeader.remove());
+        document.body.insertBefore(header, document.body.firstChild);
+
+        const updateMainOffset = () => {
+            const headerHeight = header.offsetHeight;
+            document.querySelectorAll("main").forEach((main) => {
+                main.style.paddingTop = `${headerHeight}px`;
+                if (main.closest(".min-h-screen")) {
+                    main.style.minHeight = `calc(100vh - ${headerHeight}px)`;
+                }
+            });
+        };
+        updateMainOffset();
+        window.addEventListener("load", updateMainOffset, { once: true });
+        window.addEventListener("resize", updateMainOffset);
+        window.requestAnimationFrame(updateMainOffset);
+        if ("ResizeObserver" in window) {
+            new ResizeObserver(updateMainOffset).observe(header);
         }
-
-        const body = document.body;
-        const main = body.querySelector("main");
-        if (!main) return;
-
-        const row = document.createElement("div");
-        row.className = "w-full bg-surface-container-low border-b border-surface-container-highest";
-        const inner = document.createElement("div");
-        inner.className = "max-w-7xl mx-auto px-margin lg:px-margin-lg h-11 flex items-center";
-        inner.append(createCategoryNavigation());
-        row.append(inner);
-        body.insertBefore(row, main);
-        main.style.minHeight = "calc(100vh - 44px)";
     }
 
     function readStorage(key, fallback) {
@@ -770,7 +831,7 @@
         if (reference && order && order.id) reference.textContent = order.id;
     }
 
-    connectCategoryNavigation();
+    createSharedHeader();
     connectLinks();
     connectSearch();
     connectSearchFilterControls();

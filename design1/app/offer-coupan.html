@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport" />
+    <meta content="mobile_stack" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { tertiary: "#190e00", "tertiary-container": "#342200", "inverse-on-surface": "#f5f0e5", "surface-container-highest": "#e7e2d7", "tertiary-fixed": "#ffdea9", "on-surface-variant": "#424845", "secondary-fixed-dim": "#ffb694", "surface-variant": "#e7e2d7", "on-secondary-fixed": "#351000", "on-tertiary-fixed": "#271900", "on-tertiary": "#ffffff", "secondary-container": "#fe7f3c", "on-surface": "#1d1c15", "surface-dim": "#dedacf", "tertiary-fixed-dim": "#ecc074", "on-error": "#ffffff", "outline-variant": "#c2c8c4", "surface-bright": "#fef9ee", primary: "#03140e", "on-primary-fixed": "#0d1f19", "primary-container": "#172923", "on-background": "#1d1c15", surface: "#fef9ee", background: "#fef9ee", "secondary-fixed": "#ffdbcc", "on-secondary": "#ffffff", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5e4100", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#7b2f00", "surface-container-low": "#f8f3e8", secondary: "#a14000", outline: "#727875", "on-secondary-container": "#652500", "inverse-primary": "#b6cbc2", "on-primary-fixed-variant": "#384b44", "on-tertiary-container": "#ad8640", "error-container": "#ffdad6", error: "#ba1a1a", "inverse-surface": "#323029", "primary-fixed-dim": "#b6cbc2", "surface-tint": "#4f625b", "surface-container": "#f2ede3", "primary-fixed": "#d2e7de", "surface-container-high": "#ede8dd", "on-primary-container": "#7d9189" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "gutter-lg": "2rem", margin: "1.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-lg": "4rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-md": "2.5rem", gutter: "1.5rem" }, fontFamily: { "display-hero": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "price-display": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, fontSize: { "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }], "headline-sm": ["22px", { lineHeight: "28px", fontWeight: "500" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", fontWeight: "600" }], "price-display": ["20px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "700" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }] } } } };</script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+        <div class="h-16 px-space-sm flex items-center justify-between">
+            <div class="flex items-center gap-space-xs"><button aria-label="Go back"
+                    class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container transition-colors"
+                    onclick="history.back()"><span
+                        class="material-symbols-outlined text-[22px]">arrow_back</span></button>
+                <h1 class="font-headline-sm text-headline-sm text-primary tracking-tight line-clamp-1">Offers And
+                    Coupons</h1>
+            </div>
+            <div class="flex items-center gap-space-xs"><button aria-label="More options"
+                    class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span
+                        class="material-symbols-outlined text-[20px]">tune</span></button>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center mr-space-xs"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen pb-safe">
+        <div class="flex flex-col w-full pb-12 selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+            <!-- Toast Notification Container (Floating Top/Bottom Micro-delight) -->
+            <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none w-[90%] max-w-[360px]"
+                id="toastNotification">
+                <div
+                    class="bg-primary text-on-primary px-space-md py-space-sm rounded-full shadow-2xl flex items-center justify-between gap-space-sm">
+                    <div class="flex items-center gap-space-xs min-w-0">
+                        <span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim shrink-0"
+                            style="font-variation-settings: 'FILL' 1;">verified</span>
+                        <span class="font-label-md text-label-md truncate" id="toastMessage">Code EPICUREAN20 copied to
+                            clipboard!</span>
+                    </div>
+                    <button class="text-on-primary-container hover:text-on-primary shrink-0 p-1"
+                        onclick="dismissToast()">
+                        <span class="material-symbols-outlined text-[16px]">close</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Editorial Masthead Section -->
+            <section class="px-margin pt-space-md pb-space-xs flex flex-col">
+                <div class="flex items-center gap-1.5 mb-1.5">
+                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                    <p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+                        Privilège &amp; Tasting Concessions</p>
+                </div>
+                <h2
+                    class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight font-display-hero">
+                    A Little More to Savour</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-1">Exclusive privileges for extraordinary
+                    dining reservations and atelier dispatch.</p>
+            </section>
+            <!-- Coupon Input Bar & Real-time Validation Bar -->
+            <section class="px-margin mt-space-md">
+                <div
+                    class="bg-surface-container-lowest p-space-xs rounded-full shadow-sm flex items-center justify-between gap-2">
+                    <div class="flex items-center pl-3 gap-2 flex-1 min-w-0">
+                        <span
+                            class="material-symbols-outlined text-outline text-[20px] shrink-0">confirmation_number</span>
+                        <input
+                            class="w-full bg-transparent font-title-md text-title-md text-primary placeholder:text-outline-variant uppercase focus:outline-none tracking-wider"
+                            id="couponInput" placeholder="e.g. HAUTE500" type="text" value="HAUTE500" />
+                    </div>
+                    <button
+                        class="bg-secondary-container text-on-primary px-5 py-2.5 rounded-full font-label-md text-label-md font-semibold tracking-wide shadow-sm hover:brightness-105 active:scale-95 transition-transform shrink-0"
+                        onclick="applyCouponFromInput()">
+                        Apply
+                    </button>
+                </div>
+                <!-- Feedback pill / Status Indicator -->
+                <div class="mt-2.5 px-3 py-1.5 rounded-full bg-surface-container-high flex items-center gap-2"
+                    id="cartStatusPill">
+                    <span class="material-symbols-outlined text-secondary text-[16px]">shopping_bag</span>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                        <span class="font-semibold text-secondary">2 coupons</span> currently applicable to your current
+                        cart (₹3,450)
+                    </p>
+                </div>
+            </section>
+            <!-- Hero Featured Tasting Concession Banner -->
+            <section class="px-margin mt-space-lg">
+                <div class="relative bg-primary-container text-on-primary rounded-lg overflow-hidden shadow-xl">
+                    <!-- Ambient Gastronomy Atmosphere Texture / Imagery -->
+                    <div class="bg-cover bg-center w-full h-44 absolute inset-0 opacity-40 mix-blend-luminosity"
+                        data-alt="Cinematic macro food photography of gold-leaf roasted black cod with emulsion and fresh truffles bathed in dramatic mood lighting, Michelin star restaurant aesthetics, deep emerald shadows and warm ember highlights"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcMRY3Ir8fwtLAblOcjgIDySWWZI_0x1TuYQD1lDHy-Ib0r8lVshhH7xHeb5fLIwzOI5bunYuIpYgncbY2OU1Y8VzeBn0ZK7KUB9pTe1n8aD57DFZ4PI5pqSkggDAsxkiEtc0sA8zYqyIlBVWBsv299ZQ3N2mvw5K9JZwjg4XXnI56FtxmgM1qHAglHopf-0N_FhZjfSE-rkWn16wU92np9wNWsY2J-x03qqOuF8iY')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/80 to-transparent">
+                    </div>
+                    <!-- Golden Foil Crest Indicator -->
+                    <div class="relative p-space-md flex flex-col">
+                        <div class="flex items-center justify-between">
+                            <span
+                                class="bg-tertiary-container text-tertiary-fixed font-label-caps text-label-caps px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-sm">
+                                <span class="material-symbols-outlined text-[13px]"
+                                    style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+                                Curator Highlight
+                            </span>
+                            <span
+                                class="text-tertiary-fixed-dim font-body-sm text-body-sm tracking-widest uppercase">Expires
+                                in 2d</span>
+                        </div>
+                        <h3
+                            class="font-headline-sm text-headline-sm font-headline-sm text-surface-bright mt-space-sm font-semibold tracking-tight">
+                            The Grand Autumn Degustation
+                        </h3>
+                        <p class="font-body-sm text-body-sm text-surface-container-highest mt-1 leading-relaxed">
+                            Enjoy ₹500 off your curated tasting menu accompanied by a complimentary sommelier reserve
+                            glass.
+                        </p>
+                        <!-- Passcode & Immediate Action Strip -->
+                        <div
+                            class="mt-space-md pt-space-xs flex items-center justify-between gap-space-xs bg-primary/60 backdrop-blur-md p-2 rounded-lg">
+                            <div class="flex items-center gap-2 pl-2">
+                                <span
+                                    class="font-title-md text-title-md font-bold tracking-widest text-tertiary-fixed font-price-display">EPICUREAN20</span>
+                                <button
+                                    class="text-on-primary-container hover:text-surface-bright p-1 rounded-full hover:bg-surface-container/20 transition-colors"
+                                    onclick="copyCode('EPICUREAN20')" title="Copy coupon code">
+                                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                                </button>
+                            </div>
+                            <button
+                                class="bg-secondary-container text-on-primary px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold tracking-tight flex items-center gap-1 hover:brightness-105 active:scale-95 transition-transform"
+                                onclick="applySpecialOffer('EPICUREAN20')">
+                                <span>Apply to Cart</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Horizontally Scrollable Category Filter Pills -->
+            <section class="mt-space-lg w-full">
+                <div class="flex items-center gap-2 px-margin overflow-x-auto no-scrollbar scroll-smooth">
+                    <button
+                        class="category-pill active-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary font-medium shadow-sm transition-all"
+                        onclick="filterOffers('all', this)">
+                        All Offers (6)
+                    </button>
+                    <button
+                        class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all"
+                        onclick="filterOffers('restaurant', this)">
+                        Restaurant Offers
+                    </button>
+                    <button
+                        class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all"
+                        onclick="filterOffers('delivery', this)">
+                        Free Delivery
+                    </button>
+                    <button
+                        class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all"
+                        onclick="filterOffers('first_order', this)">
+                        First Order
+                    </button>
+                    <button
+                        class="category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all"
+                        onclick="filterOffers('vault', this)">
+                        Payment &amp; Vault
+                    </button>
+                </div>
+            </section>
+            <!-- Available Coupons Feed (Vertically Stacked Cards) -->
+            <section class="px-margin mt-space-md flex flex-col gap-space-md" id="offersContainer">
+                <!-- CARD 1: Chef Allocation Exclusive -->
+                <article
+                    class="coupon-item offer-restaurant bg-surface-container-lowest rounded-lg p-space-md shadow-sm relative flex flex-col">
+                    <div class="flex items-start justify-between gap-2">
+                        <span
+                            class="bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps px-2.5 py-1 rounded-full uppercase tracking-wider font-extrabold flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[13px]"
+                                style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+                            Chef Allocation Exclusive
+                        </span>
+                        <div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full">
+                            <span class="material-symbols-outlined text-tertiary-fixed-dim text-[14px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="font-body-sm text-body-sm font-semibold text-primary">Michelin Tier</span>
+                        </div>
+                    </div>
+                    <div class="mt-space-sm flex items-baseline justify-between">
+                        <div>
+                            <span class="font-headline-md text-headline-md font-headline-md text-primary font-bold">₹500
+                                OFF</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">On degustations &amp; signature
+                                courses</p>
+                        </div>
+                        <div class="bg-surface-container-low px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                            <span
+                                class="font-label-md text-label-md text-primary font-bold tracking-wider">EPICUREAN20</span>
+                            <button aria-label="Copy EPICUREAN20" class="text-on-surface-variant hover:text-primary"
+                                onclick="copyCode('EPICUREAN20')">
+                                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface mt-2.5 leading-relaxed">
+                        Flat ₹500 discount on orders above ₹2,500 across Michelin-selected culinary houses.
+                    </p>
+                    <div
+                        class="mt-space-sm pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+                        <span>Min. Order: <strong class="text-on-surface">₹2,500</strong></span>
+                        <span>Valid till: <strong class="text-on-surface">30 Nov 2025</strong></span>
+                    </div>
+                    <!-- Action Footer -->
+                    <div class="mt-space-md pt-space-xs flex items-center justify-between gap-3">
+                        <button
+                            class="font-label-md text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors"
+                            onclick="toggleTerms('terms1', this)">
+                            <span>Terms &amp; Conditions</span>
+                            <span
+                                class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+                        </button>
+                        <button
+                            class="bg-secondary-container text-on-primary px-5 py-2 rounded-full font-label-md text-label-md font-semibold tracking-wide shadow-sm hover:brightness-105 active:scale-95 transition-all"
+                            id="btnApply-EPICUREAN20" onclick="applySpecificCoupon('EPICUREAN20', this)">
+                            Apply Now
+                        </button>
+                    </div>
+                    <!-- Expandable Terms Container -->
+                    <div class="hidden mt-3 pt-3 bg-surface-container-low p-3 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant space-y-1"
+                        id="terms1">
+                        <p class="font-semibold text-primary">Eligible Ateliers:</p>
+                        <p>• Osteria Mozza Vetta, L'Arpège Pavilion, Sakura Teppan Table.</p>
+                        <p>• Valid for both tableside reservations and white-glove dispatched courses.</p>
+                        <p>• Cannot be combined with bank concierge cashback schemes.</p>
+                    </div>
+                </article>
+                <!-- CARD 2: White-Glove Dispatch (Free Delivery) -->
+                <article
+                    class="coupon-item offer-delivery bg-surface-container-lowest rounded-lg p-space-md shadow-sm relative flex flex-col">
+                    <div class="flex items-start justify-between gap-2">
+                        <span
+                            class="bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps px-2.5 py-1 rounded-full uppercase tracking-wider font-extrabold flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[13px]">room_service</span>
+                            White-Glove Dispatch
+                        </span>
+                        <span class="font-label-caps text-label-caps text-secondary font-bold">Complimentary</span>
+                    </div>
+                    <div class="mt-space-sm flex items-baseline justify-between">
+                        <div>
+                            <span class="font-headline-md text-headline-md font-headline-md text-primary font-bold">FREE
+                                DELIVERY</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Hermetic thermal cloche service
+                            </p>
+                        </div>
+                        <div class="bg-surface-container-low px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                            <span
+                                class="font-label-md text-label-md text-primary font-bold tracking-wider">CLOCHEPREMIER</span>
+                            <button aria-label="Copy CLOCHEPREMIER" class="text-on-surface-variant hover:text-primary"
+                                onclick="copyCode('CLOCHEPREMIER')">
+                                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface mt-2.5 leading-relaxed">
+                        Complimentary hermetically sealed thermal cloche delivery on any atelier hearth order.
+                    </p>
+                    <div
+                        class="mt-space-sm pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+                        <span>Min. Order: <strong class="text-on-surface">₹1,500</strong></span>
+                        <span>Valid till: <strong class="text-on-surface">15 Dec 2025</strong></span>
+                    </div>
+                    <!-- Action Footer -->
+                    <div class="mt-space-md pt-space-xs flex items-center justify-between gap-3">
+                        <button
+                            class="font-label-md text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors"
+                            onclick="toggleTerms('terms2', this)">
+                            <span>Terms &amp; Conditions</span>
+                            <span
+                                class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+                        </button>
+                        <button
+                            class="bg-secondary-container text-on-primary px-5 py-2 rounded-full font-label-md text-label-md font-semibold tracking-wide shadow-sm hover:brightness-105 active:scale-95 transition-all"
+                            id="btnApply-CLOCHEPREMIER" onclick="applySpecificCoupon('CLOCHEPREMIER', this)">
+                            Apply Now
+                        </button>
+                    </div>
+                    <div class="hidden mt-3 pt-3 bg-surface-container-low p-3 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant space-y-1"
+                        id="terms2">
+                        <p class="font-semibold text-primary">Thermal Dispatch Protocol:</p>
+                        <p>• Applicable across 18km radius from city centre cloud pavilions.</p>
+                        <p>• Valet retains cloche temperature guarantee between 62°C – 68°C.</p>
+                    </div>
+                </article>
+                <!-- CARD 3: New Connoisseur (First Order) -->
+                <article
+                    class="coupon-item offer-first_order bg-surface-container-lowest rounded-lg p-space-md shadow-sm relative flex flex-col">
+                    <div class="flex items-start justify-between gap-2">
+                        <span
+                            class="bg-surface-container-highest text-primary font-label-caps text-label-caps px-2.5 py-1 rounded-full uppercase tracking-wider font-extrabold flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[13px]">workspace_premium</span>
+                            New Connoisseur
+                        </span>
+                        <span class="font-body-sm text-body-sm font-semibold text-secondary">First Atelier Order</span>
+                    </div>
+                    <div class="mt-space-sm flex items-baseline justify-between">
+                        <div>
+                            <span class="font-headline-md text-headline-md font-headline-md text-primary font-bold">20%
+                                OFF</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Savings capped at ₹750</p>
+                        </div>
+                        <div class="bg-surface-container-low px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                            <span
+                                class="font-label-md text-label-md text-primary font-bold tracking-wider">HAUTEWELCOME</span>
+                            <button aria-label="Copy HAUTEWELCOME" class="text-on-surface-variant hover:text-primary"
+                                onclick="copyCode('HAUTEWELCOME')">
+                                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface mt-2.5 leading-relaxed">
+                        Welcome privilege on your debut atelier order across all curated kitchens and cellar pairings.
+                    </p>
+                    <div
+                        class="mt-space-sm pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+                        <span>Min. Order: <strong class="text-on-surface">₹1,800</strong></span>
+                        <span>Valid till: <strong class="text-on-surface">31 Dec 2025</strong></span>
+                    </div>
+                    <!-- Action Footer -->
+                    <div class="mt-space-md pt-space-xs flex items-center justify-between gap-3">
+                        <button
+                            class="font-label-md text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors"
+                            onclick="toggleTerms('terms3', this)">
+                            <span>Terms &amp; Conditions</span>
+                            <span
+                                class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+                        </button>
+                        <button
+                            class="bg-secondary-container text-on-primary px-5 py-2 rounded-full font-label-md text-label-md font-semibold tracking-wide shadow-sm hover:brightness-105 active:scale-95 transition-all"
+                            id="btnApply-HAUTEWELCOME" onclick="applySpecificCoupon('HAUTEWELCOME', this)">
+                            Apply Now
+                        </button>
+                    </div>
+                    <div class="hidden mt-3 pt-3 bg-surface-container-low p-3 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant space-y-1"
+                        id="terms3">
+                        <p class="font-semibold text-primary">Privilege Terms:</p>
+                        <p>• Applicable only on verified debut registered phone numbers.</p>
+                        <p>• One redemption per epicurean profile.</p>
+                    </div>
+                </article>
+                <!-- CARD 4: Vault Partner HDFC Infinia -->
+                <article
+                    class="coupon-item offer-vault bg-surface-container-lowest rounded-lg p-space-md shadow-sm relative flex flex-col">
+                    <div class="flex items-start justify-between gap-2">
+                        <span
+                            class="bg-primary text-tertiary-fixed font-label-caps text-label-caps px-2.5 py-1 rounded-full uppercase tracking-wider font-extrabold flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-[13px]">credit_card</span>
+                            Vault Partner • HDFC Infinia
+                        </span>
+                        <span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Metal
+                            Tier</span>
+                    </div>
+                    <div class="mt-space-sm flex items-baseline justify-between">
+                        <div>
+                            <span
+                                class="font-headline-md text-headline-md font-headline-md text-primary font-bold">₹1,000
+                                SAVINGS</span>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Direct settlement concession
+                            </p>
+                        </div>
+                        <div class="bg-surface-container-low px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                            <span
+                                class="font-label-md text-label-md text-primary font-bold tracking-wider">INFINIAGOURMET</span>
+                            <button aria-label="Copy INFINIAGOURMET" class="text-on-surface-variant hover:text-primary"
+                                onclick="copyCode('INFINIAGOURMET')">
+                                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface mt-2.5 leading-relaxed">
+                        Instant concession on luxury dining orders paid via HDFC Infinia Metal Card vault gateway.
+                    </p>
+                    <div
+                        class="mt-space-sm pt-2 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+                        <span>Min. Order: <strong class="text-on-surface">₹4,000</strong></span>
+                        <span>Valid till: <strong class="text-on-surface">Ongoing</strong></span>
+                    </div>
+                    <!-- Action Footer -->
+                    <div class="mt-space-md pt-space-xs flex items-center justify-between gap-3">
+                        <button
+                            class="font-label-md text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors"
+                            onclick="toggleTerms('terms4', this)">
+                            <span>Terms &amp; Conditions</span>
+                            <span
+                                class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+                        </button>
+                        <button
+                            class="bg-secondary-container text-on-primary px-5 py-2 rounded-full font-label-md text-label-md font-semibold tracking-wide shadow-sm hover:brightness-105 active:scale-95 transition-all"
+                            id="btnApply-INFINIAGOURMET" onclick="applySpecificCoupon('INFINIAGOURMET', this)">
+                            Apply Now
+                        </button>
+                    </div>
+                    <div class="hidden mt-3 pt-3 bg-surface-container-low p-3 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant space-y-1"
+                        id="terms4">
+                        <p class="font-semibold text-primary">Banking Verification:</p>
+                        <p>• Applicable automatically during checkout upon entering BIN digits: 437551 or 437552.</p>
+                        <p>• Max 2 redemptions per calendar month.</p>
+                    </div>
+                </article>
+            </section>
+            <!-- Empty Offers State (Hidden by default, used for interaction preview) -->
+            <section
+                class="hidden px-margin mt-space-lg flex-col items-center text-center py-10 bg-surface-container-low rounded-xl"
+                id="emptyStateSection">
+                <div
+                    class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-sm">
+                    <span class="material-symbols-outlined text-[32px]">dinner_dining</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-headline-sm text-primary">No Matching Privileges</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1">
+                    All cellar allocations for this segment have been claimed for today. Check back at sunset.
+                </p>
+                <button
+                    class="mt-space-md bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md"
+                    onclick="resetFilters()">
+                    View All Curations
+                </button>
+            </section>
+            <!-- Concierge Assistance Micro-banner -->
+            <section class="px-margin mt-space-lg">
+                <div class="bg-surface-container-high p-space-md rounded-lg flex items-center gap-space-sm">
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary-container text-tertiary-fixed flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[20px]">support_agent</span>
+                    </div>
+                    <div class="min-w-0">
+                        <h4 class="font-title-md text-title-md text-primary font-semibold">Bespoke Concierge Code?</h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">Private club allocations can be
+                            verified via our 24/7 Sommelier Desk.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive States Preview Bar (Delight & QA Testing Toggles) -->
+            <section class="px-margin mt-space-xl pt-space-md border-t-0 flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                    <span
+                        class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Interactive
+                        States Preview</span>
+                    <span class="font-body-sm text-body-sm text-outline">Tap to test</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mt-1">
+                    <button
+                        class="bg-surface-container text-on-surface p-2 rounded-md font-body-sm text-body-sm text-left hover:bg-surface-container-highest transition-colors flex items-center gap-1.5"
+                        onclick="triggerCopyToastDemo()">
+                        <span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span>
+                        <span>Copied Toast</span>
+                    </button>
+                    <button
+                        class="bg-surface-container text-on-surface p-2 rounded-md font-body-sm text-body-sm text-left hover:bg-surface-container-highest transition-colors flex items-center gap-1.5"
+                        onclick="simulateCouponAppliedState()">
+                        <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                        <span>Coupon Applied</span>
+                    </button>
+                    <button
+                        class="bg-surface-container text-on-surface p-2 rounded-md font-body-sm text-body-sm text-left hover:bg-surface-container-highest transition-colors flex items-center gap-1.5"
+                        onclick="simulateInvalidCouponState()">
+                        <span class="material-symbols-outlined text-[16px] text-error">error</span>
+                        <span>Invalid Code</span>
+                    </button>
+                    <button
+                        class="bg-surface-container text-on-surface p-2 rounded-md font-body-sm text-body-sm text-left hover:bg-surface-container-highest transition-colors flex items-center gap-1.5"
+                        onclick="toggleEmptyOffersState()">
+                        <span class="material-symbols-outlined text-[16px] text-outline">hourglass_empty</span>
+                        <span id="emptyToggleText">Empty State</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <script>
+            let toastTimer = null;
+
+            function showToast(message, isError = false) {
+                const toast = document.getElementById('toastNotification');
+                const toastMsg = document.getElementById('toastMessage');
+                if (!toast || !toastMsg) return;
+
+                toastMsg.textContent = message;
+
+                // Style adjustments for errors vs success
+                if (isError) {
+                    toast.firstElementChild.className = "bg-error text-on-error px-space-md py-space-sm rounded-full shadow-2xl flex items-center justify-between gap-space-sm";
+                } else {
+                    toast.firstElementChild.className = "bg-primary text-on-primary px-space-md py-space-sm rounded-full shadow-2xl flex items-center justify-between gap-space-sm";
+                }
+
+                // Slide in
+                toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                if (toastTimer) clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => {
+                    dismissToast();
+                }, 3200);
+            }
+
+            function dismissToast() {
+                const toast = document.getElementById('toastNotification');
+                if (!toast) return;
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            }
+
+            function copyCode(code) {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(code).catch(() => { });
+                }
+                showToast(`Code ${code} copied to clipboard!`);
+            }
+
+            function applyCouponFromInput() {
+                const input = document.getElementById('couponInput');
+                const code = input.value.trim().toUpperCase();
+                if (!code) {
+                    showToast("Please enter a privilege code", true);
+                    return;
+                }
+                if (code === 'HAUTE500' || code === 'EPICUREAN20' || code === 'CLOCHEPREMIER') {
+                    showToast(`Privilege '${code}' applied! ₹500 saved.`);
+                    updateCartStatusPill(code, "₹500 concession added to order.");
+                } else {
+                    showToast(`'${code}' is not valid for today's menu`, true);
+                }
+            }
+
+            function applySpecificCoupon(code, buttonElement) {
+                // Visual feedback on button
+                const originalText = buttonElement.innerHTML;
+                buttonElement.innerHTML = `
+      <span class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+        Applied
+      </span>
+    `;
+                showToast(`Privilege ${code} applied successfully!`);
+                updateCartStatusPill(code, `Active discount: ${code} has been applied.`);
+
+                // Reset other buttons if any
+                setTimeout(() => {
+                    buttonElement.innerHTML = "Applied";
+                }, 1500);
+            }
+
+            function applySpecialOffer(code) {
+                showToast(`Autumn Degustation privilege (${code}) applied!`);
+                updateCartStatusPill(code, "₹500 Autumn Concession active on cart.");
+            }
+
+            function updateCartStatusPill(code, note) {
+                const pill = document.getElementById('cartStatusPill');
+                if (pill) {
+                    pill.innerHTML = `
+        <span class="material-symbols-outlined text-tertiary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <p class="font-body-sm text-body-sm text-on-surface truncate">
+          <strong>${code}:</strong> ${note}
+        </p>
+      `;
+                    pill.classList.add('bg-surface-variant');
+                }
+            }
+
+            function toggleTerms(id, button) {
+                const element = document.getElementById(id);
+                if (!element) return;
+                const isHidden = element.classList.contains('hidden');
+                const icon = button.querySelector('.material-symbols-outlined');
+
+                if (isHidden) {
+                    element.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    element.classList.add('hidden');
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            function filterOffers(category, btn) {
+                // Reset active styles
+                const pills = document.querySelectorAll('.category-pill');
+                pills.forEach(p => {
+                    p.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-all';
+                });
+                btn.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary font-medium shadow-sm transition-all';
+
+                const items = document.querySelectorAll('.coupon-item');
+                let visibleCount = 0;
+
+                items.forEach(item => {
+                    if (category === 'all' || item.classList.contains(`offer-${category}`)) {
+                        item.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                const empty = document.getElementById('emptyStateSection');
+                const offersContainer = document.getElementById('offersContainer');
+                if (visibleCount === 0) {
+                    empty.classList.remove('hidden');
+                    empty.classList.add('flex');
+                } else {
+                    empty.classList.add('hidden');
+                    empty.classList.remove('flex');
+                }
+            }
+
+            function resetFilters() {
+                const allPill = document.querySelector('.category-pill');
+                if (allPill) filterOffers('all', allPill);
+            }
+
+            /* Test Toggles */
+            function triggerCopyToastDemo() {
+                showToast("Code EPICUREAN20 copied to clipboard!");
+            }
+
+            function simulateCouponAppliedState() {
+                const btn = document.getElementById('btnApply-EPICUREAN20');
+                if (btn) {
+                    applySpecificCoupon('EPICUREAN20', btn);
+                }
+            }
+
+            function simulateInvalidCouponState() {
+                const input = document.getElementById('couponInput');
+                if (input) input.value = "EXPIRED99";
+                showToast("Coupon EXPIRED99 is invalid or expired.", true);
+            }
+
+            function toggleEmptyOffersState() {
+                const container = document.getElementById('offersContainer');
+                const empty = document.getElementById('emptyStateSection');
+                const toggleLabel = document.getElementById('emptyToggleText');
+                const isCurrentlyEmpty = !empty.classList.contains('hidden');
+
+                if (isCurrentlyEmpty) {
+                    empty.classList.add('hidden');
+                    empty.classList.remove('flex');
+                    container.classList.remove('hidden');
+                    toggleLabel.textContent = "Empty State";
+                } else {
+                    empty.classList.remove('hidden');
+                    empty.classList.add('flex');
+                    container.classList.add('hidden');
+                    toggleLabel.textContent = "Show Offers";
+                }
+            }
+        </script>
+    </main>
+    <script src="app-navigation.js" defer></script>
+</body>
+
+</html>
